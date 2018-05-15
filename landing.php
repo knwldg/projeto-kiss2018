@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
 <head>
 
@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
     <title>Cubo</title>
@@ -19,13 +19,16 @@
 
     <div id="conteudo">
 
-        <img src="img/cubo.png" class="cuboinicial" >
+        <img src="img/marca/marca.png" class="cuboinicial" >
 
-        <h1>desafia-te</h1>
+        <!--<h1>desafia-te</h1>-->
 
-        <button id="login">Login</button>
+        <div id="conteudo-login-registo" class="login-registo">
+            <a href="" id="login" class="login-registo-style">log in</a>
 
-        <button id="registar">Registar</button>
+            <a href="" id="registar" class="login-registo-style">registar</a>
+        </div>
+
 
     </div>
 
