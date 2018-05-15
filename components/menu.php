@@ -2,7 +2,13 @@
 
     <div id="menu">
 
-        <div></div>
+        <div id="profile">
+
+
+
+        </div>
+
+
 
 
     </div>
