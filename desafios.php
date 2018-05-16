@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Cubo_Admin</title>
+    <title>Desafios</title>
 </head>
 
 <body>
