@@ -1,6 +1,5 @@
 body {
-    text-align: center;
-    margin-top: 5vh;
+
     font-family: "Montserrat", sans-serif;
 }
 
@@ -16,8 +15,9 @@ body {
 }
 
 #conteudo {
-
-    margin: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-top: 2.3em;
 
 }
 
@@ -39,6 +39,7 @@ body {
     background: linear-gradient(to right, #F98E61 , #F6B53E);
     color: white;
 }
+
 
 .login-registo-style{
 
