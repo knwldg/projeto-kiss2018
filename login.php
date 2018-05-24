@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<?php session_start(); ?>
 <head>
 
     <meta charset="utf-8">
@@ -16,22 +17,23 @@
 <body>
 
 <div id="laranja">
+
     <img src="img/marca/logo.png" class="cubologin" >
 
     <div id="caixa">
 
         <h2>Log In</h2>
 
-        <form id="log">
+        <form id="loginForm" action="components/php/loginform.php" method="post" role="form">
 
             <img src="img/icon/user.png" class="loginimg">
             <!-- Parte do formulário para utilizador-->
-            <input type="text" name="username" placeholder="Username" class="formlogin">
-            </br>
+            <input type="text" name="inputUsername" id="inputUsername" placeholder="Username" class="formlogin">
+            <br/>
             <img src="img/icon/pass_icon.png" class="loginimg">
             <!-- Parte do formulário para pass-->
-            <input type="password" name="pass" placeholder="Password" class="formlogin">
-            </br>
+            <input type="password" name="inputPassword" id="inputPassword" placeholder="Password" class="formlogin">
+            <br/>
             <input type="submit" name="submitlogin" class="submit">
         </form>
 
