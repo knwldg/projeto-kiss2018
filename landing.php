@@ -25,7 +25,6 @@
 
         <div id="conteudo-login-registo" class="login-registo">
             <a href="" id="login" class="login-registo-style">log in</a>
-
             <a href="" id="registar" class="login-registo-style">registar</a>
         </div>
 
