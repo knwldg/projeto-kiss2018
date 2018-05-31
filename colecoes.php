@@ -7,28 +7,55 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <link rel="stylesheet" href="css/style.css">
+
     <title>Coleções</title>
 </head>
 
 <body>
 
-<div id="colecoes">
+<div class="background">
 
+    <div class="flex-column">
 
+        <?php include "components/public/header.php"; ?>
 
-<div class="colecao"> <!--  div para repetir colecoes -->
-    <h2>Nome da Coleção</h2>
-    <h1> 0/5</h1> <!-- contagem de cartas -->
-    <div class="cartas_colecoes">
-        <!-- cartas  -->
-        <img class="colecao_1" src="">
-        <img class="colecao_2" src="">
-        <img class="colecao_3" src="">
-        <img class="colecao_4" src="">
-        <img class="colecao_5" src="">
+        <!-- barra que aparece em cima dos elementos recentes/antigos -->
+
+        <?php include "components/public/barra_recente_antigo.php"; ?>
+
+        <!-- barra que aparece em cima dos elementos recentes/antigos -->
+
+        <div class="desafio flex-column">
+
+            <div class="premios-title flex-row">
+
+                    <span class="premios-title-size font800 orange equipa-color">EQUIPA</span>
+                <span id="premios-subtitle" class="premios-subtitle font600 gray">(5/5)</span><!-- quantidade de cartas desbloqueadas -->
+
+                <div class="premios-unlock flex-column">
+                    <img id="premios-unlock-logo" class="premios-unlock-logo" src="img/marca/logo.png" ><!-- colecao bloqueada -> opacity: 0.4 -->
+                    <span id="premios-unlock-title" class="premios-unlock-title font600 orange">CONCLUÍDO</span><!-- colecao bloqueada -> display: none -->
+                </div>
+
+            </div>
+
+            <div class="colection flex-row font700 equipa-color">
+                <!-- array das cartas -->
+                <div class="carta flex-column"><img class="carta-size" src="img/cartas/equipa/frente/equipa1.png"><span class="colection-numbers">0</span></div>
+                <div class="carta flex-column"><img class="carta-size" src="img/cartas/equipa/frente/equipa2.png"><span class="colection-numbers">0</span></div>
+                <div class="carta flex-column"><img class="carta-size" src="img/cartas/equipa/frente/equipa3.png"><span class="colection-numbers">0</span></div>
+                <div class="carta flex-column"><img class="carta-size" src="img/cartas/equipa/frente/equipa4.png"><span class="colection-numbers">0</span></div>
+                <div class="carta flex-column"><img class="carta-size" src="img/cartas/equipa/frente/equipa5.png"><span class="colection-numbers">0</span></div>
+
+            </div>
+
+        </div>
+
+        <!--<img class="chest_down" src="">-->
+
     </div>
 </div>
-</div>
-<img class="chest_down" src="">
+
 
 </body>

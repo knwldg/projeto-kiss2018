@@ -1,16 +1,138 @@
 body {
-
+    margin: 0;
+    padding: 0;
     font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.05em;
 }
 
 
+a{
+    text-decoration: none;
+}
+
+form {
+    margin: 0;
+}
+.font500{
+    font-weight: 500;
+}
+
+.font600{
+    font-weight: 600;
+}
+
+.font700{
+    font-weight: 700;
+}
+
+.font800{
+    font-weight: 800;
+}
+
+.font900{
+    font-weight: 900;
+}
+
+.gradient-border {
+    border-radius: 5px;
+    border-left: 2px solid #F68E65;
+    border-right: 2px solid #F4B540;
+    background-position: 0 0, 0 100%;
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 2px;
+    -moz-background-size: 100% 2px;
+    background-size: 100% 2px;
+    background-image: -webkit-linear-gradient(left, #F68E65 0%, #F4B540 100%), -webkit-linear-gradient(left, #F68E65 0%, #F4B540 100%);
+    background-image: -moz-linear-gradient(left, #F68E65 0%, #F4B540 100%), -moz-linear-gradient(left, #F68E65 0%, #F4B540 100%);
+    background-image: -o-linear-gradient(left, #F68E65 0%, #F4B540 100%), -o-linear-gradient(left, #F68E65 0%, #F4B540 100%);
+    background-image: linear-gradient(to right, #F68E65 0%, #F4B540 100%), linear-gradient(to right, #F68E65 0%, #F4B540 100%);
+}
+
+.gradient-border-homepage {
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 2px;
+    -moz-background-size: 100% 2px;
+    background-size: 100% 2px;
+    background-image: -webkit-linear-gradient(left, #F68E65 0%, #F4B540 100%), -webkit-linear-gradient(left, #F68E65 0%, #F4B540 100%);
+    background-image: -moz-linear-gradient(left, #F68E65 0%, #F4B540 100%), -moz-linear-gradient(left, #F68E65 0%, #F4B540 100%);
+    background-image: -o-linear-gradient(left, #F68E65 0%, #F4B540 100%), -o-linear-gradient(left, #F68E65 0%, #F4B540 100%);
+    background-image: linear-gradient(to right, #F68E65 0%, #F4B540 100%), linear-gradient(to right, #F68E65 0%, #F4B540 100%);
+}
+
+.gradient-background{
+    background: linear-gradient(to right, rgba(247,152,104,0.90) , rgba(246,181,62,0.90));
+}
+
+/* COLORS */
+.white{
+    color: #F9FAFB;
+}
+
+.gray{
+    color: #8C8C8C;
+}
+
+.orange{
+    color: rgba(247,152,104,1);
+}
+
+.equipa-color{
+    color: #242627;
+}
+/* COLORS */
+
+.flex-column{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.flex-row{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+/* elementos recentes/antigos */
+
+.lines{
+    display: none;
+}
+
+.lines-content{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.line-content-border{
+    border-top: 2px solid rgba(247,152,104,1);
+    border-radius: 1px;
+    max-height: 1%;
+}
+
+.line-content-title{
+    color: rgba(247,152,104,0.65);
+}
+
+.line1-content-width{
+    width: 15%;
+}
+
+.line2-content-width{
+    width: 52%;
+}
+
+/* elementos recentes/antigos */
+
+/* LANDING PAGE */
 .cuboinicial {
 
     width: 20%;
     min-width: 12em;
     position: relative;
-    top: 1.6em
-;
+    top: 1.6em;
 
 }
 
@@ -30,14 +152,13 @@ body {
 
 .login-registo{
     padding-top: 7.5em;
-    font-weight: 700;
     font-size: 1.15em;
 }
 
 #login {
 
     background: linear-gradient(to right, #F98E61 , #F6B53E);
-    color: white;
+    color: #F9FAFB;
 }
 
 
@@ -45,18 +166,7 @@ body {
 
     width: 19%;
     padding: 10px;
-    border-radius: 5px;
-    border-left: 2px solid #F68E65;
-    border-right: 2px solid #F4B540;
-    background-position: 0 0, 0 100%;
-    background-repeat: no-repeat;
-    -webkit-background-size: 100% 2px;
-    -moz-background-size: 100% 2px;
-    background-size: 100% 2px;
-    background-image: -webkit-linear-gradient(left, #F68E65 0%, #F4B540 100%), -webkit-linear-gradient(left, #F68E65 0%, #F4B540 100%);
-    background-image: -moz-linear-gradient(left, #F68E65 0%, #F4B540 100%), -moz-linear-gradient(left, #F68E65 0%, #F4B540 100%);
-    background-image: -o-linear-gradient(left, #F68E65 0%, #F4B540 100%), -o-linear-gradient(left, #F68E65 0%, #F4B540 100%);
-    background-image: linear-gradient(to right, #F68E65 0%, #F4B540 100%), linear-gradient(to right, #F68E65 0%, #F4B540 100%);
+
 }
 
 #registar{
@@ -64,6 +174,517 @@ body {
     color: #F68E65;
 }
 
+/* LANDING PAGE */
+
+
+/* MENU */
+
+.profile-font-size{
+    font-size: 2.1em;
+}
+
+#keys{
+    padding: 0.5em 1em 1.3em 0;
+}
+
+#keys-number{
+    padding: 0.4em 0.4em 0 0;
+}
+
+.back-style{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(249, 250, 251, 0.75);
+    opacity: 0.75;
+}
+
+.main-menu-style{
+    width: 100%;
+    height: auto;
+    background-color: #8C8C8C;
+    color: #F9FAFB;
+    padding-bottom: 0.5em;
+}
+
+.profile-menu-style{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3em;
+    padding-top: 0.5em;
+}
+
+
+#user-name{
+    font-size: 92%;
+    padding-left: 3em;
+}
+
+.vertical-align-style{
+
+}
+
+input[name="image-uploaded"] {
+    width: 70px;
+    height: 70px;
+    opacity: 0;
+    position: relative;
+    left: -1.5em;
+    top: -1.2em;
+    cursor: pointer;
+}
+
+.count-keys{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#icon-key{
+    width: 20%;
+    min-width: 3.5em;
+    padding-right: 1em;
+}
+
+.center {
+    margin: auto;
+}
+
+
+    /* PAGES */
+
+    .lineB{
+        border-bottom: 0 solid rgba(249, 250, 251, 0.78);
+    }
+
+    .lineT{
+        border-top: 0 solid rgba(249, 250, 251, 0.78);
+    }
+
+    .stroke1{
+        border-width: 1px;
+    }
+
+    .stroke2{
+        border-width: 2px;
+        border-color: rgba(249, 250, 251, 1);
+    }
+
+    .menu-pages{
+        text-align: center;
+        margin: -1.5em 0 0 0.63em;
+    }
+
+    #menu ul{
+        list-style-type:none;
+        padding-left: 0.3em;
+        font-weight: 600;
+        font-size: 82%;
+        letter-spacing: 0.08em;
+    }
+
+    #menu ul li a span {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    #main-pages ul{
+        text-align: left;
+        font-weight: 500;
+        font-size: 72%;
+        letter-spacing: 0.08em;
+        padding: 0;
+        color: rgba(249, 250, 251, 0.78);
+    }
+
+    #menu-pages a{
+        cursor: pointer;
+        text-decoration: none;
+        color: rgba(249, 250, 251, 1);
+    }
+
+    .click-area{
+        padding: 1em 0 1em 0;
+    }
+
+        .click-area:active{
+            background-color: rgba(249, 250, 251, 0.30);
+            color: rgba(249, 250, 251, 1);
+        }
+
+    #main-pages a{
+        cursor: pointer;
+        color: rgba(249, 250, 251, 0.78);
+    }
+
+        #main-pages ul li a span {
+            padding: 1.5em 0 1.5em 2.5em;
+        }
+
+            #main-pages ul li a span:active{
+                background-color: rgba(249, 250, 251, 0.30);
+                color: rgba(249, 250, 251, 1);
+            }
+
+    .pages{
+        display: flex;
+        flex-direction: row;
+        padding: 1em 1em 1em 1em;
+    }
+
+    /* PAGES */
+
+
+.menu-text{
+    align-self: center;
+    width: 80%; /* cria um espaçamento entre os elementos sem precisar de utilizar padding*/
+    margin: auto;
+}
+
+.menu-icon{
+    width: 10%;
+    min-width: 2em;
+    align-self: center; /*flex items*/
+}
+
+.menu-icon-arrow{
+    width: 5%;
+    height: 5%;
+    min-width: 5%;
+    align-self: center;
+    cursor: pointer;
+}
+
+.image-upload{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.default-position{
+    position: relative;
+    left: 3.5em;
+    top: 1em;
+    background-color: transparent;
+    border-radius: 33px;
+}
+
+.preview-position{
+    position: relative;
+    left: 3.5em;
+    top: -5em;
+}
+
+.select-image{
+    padding-left: 1em;
+}
+
+/* MENU */
+
+/* HOMEPAGE */
+
+.background{
+    background-color: rgba(249, 250, 251, 0.75);
+    padding-bottom: 2em;
+}
+
+
+.homepage-header{
+    background: linear-gradient(to right, rgba(247,152,104,0.90) , rgba(246,181,62,0.90)); /* GRADIENT */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding: 0.5em 0 0.5em 0;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 1px 6px rgba(0,0,0,0.23);
+    margin-bottom: 0.5em;
+}
+
+.homepage-header img {
+    cursor: pointer;
+}
+
+.homepage-header span {
+    width: 84%;
+    text-align: center;
+    align-self: center;
+    letter-spacing: 0.08em;
+}
+
+.profile {
+    background: linear-gradient(to right, rgba(247,152,104,0.70) , rgba(246,181,62,0.70));
+    color:  rgba(249, 250, 251, 0.75);;
+}
+
+.day-challenge-title{
+    background: linear-gradient(to right, rgba(247,152,104,0.70) , rgba(246,181,62,0.70));
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding: 0.5em 0 0.5em 0;
+    align-self: center;
+    width: 50%;
+    margin-top: 2em;
+    border-radius: 0.2em;
+}
+
+.day-challenge{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin: 0 0.2em 0 0.2em;
+}
+
+.day-challenge-description{
+    color: #8C8C8C;
+    align-self: center;
+    text-align: center;
+    width: 72%;
+    padding: 1em 0 1em 0;
+}
+
+.accept-or-decline{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.accept-or-decline-item{
+    align-self: center;
+    text-align: center;
+    width: 35%;
+    padding: 0.5em 0 0.5em 0;
+    margin-right: 0.5em;
+}
+
+.challenge-time-keys{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2em 0 0.8em 0;
+}
+
+.time{
+    width: 7%;
+    min-width: 2em;
+    color: rgba(247,152,104,1);
+}
+
+.challenge-time{
+    color: rgba(247,152,104,1);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding-left: 0.5em;
+    font-size: 0.82em;
+}
+
+.challenge-keys{
+    width: 9%;
+    min-width: 2em;
+    padding-right: 0.5em;
+}
+
+.homepage-content{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding-top: 3em;
+}
+
+.homepage-content-line{
+    width: 28%;
+    margin-top: 3.2em;
+    color: transparent;
+}
+
+.homepage-content-elements{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+    .homepage-content-icon-lootboxes{
+        width: 28%;
+        min-width: 2em;
+    }
+
+    .homepage-content-icon-keys{
+        width: 28%;
+        min-width: 2em;
+    }
+
+    .homepage-content-icon-colections{
+        width: 28%;
+        min-width: 2em;
+    }
+
+    .homepage-content-icon-awards{
+        width: 25%;
+        min-width: 2em;
+    }
+
+.homepage-content-description{
+    width: 72%;
+    text-align: center;
+    padding: 1.5em 0 1.5em 0;
+    color: #8C8C8C;
+}
+
+.homepage-content-link-item{
+    align-self: center;
+    text-align: center;
+    width: 35%;
+    padding: 0.5em 0 0.5em 0;
+}
+
+/* HOMEPAGE */
+
+/* DESAFIOS */
+
+.desafio{
+    padding: 0.8em 0 0 0;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 7px;
+    margin: 0.5em 0.4em 0.5em 0.4em;
+}
+
+.desafio-content-items {
+    justify-content: space-evenly;
+    padding-top: 1em;
+}
+
+.desafio-title{
+    color: rgba(247,152,104,1);
+    font-size: 1.2em;
+    text-align: center;
+    letter-spacing: 0.05em;
+    align-self: center;
+    margin-left: 2.5em;
+}
+
+.desafio-subtitle{
+    text-align: center;
+    width: 16%;
+    color: rgba(247,152,104,1);
+    letter-spacing: 0.03em;
+}
+
+.desafio-description{
+    width: 48%;
+    color: #8C8C8C;
+    letter-spacing: 0;
+}
+
+.desafio-logo{
+    width: 9%;
+    min-width: 2em;
+    align-self: center;
+}
+
+.desafio-time-keys{
+    padding: 1.2em 0 0.8em 4.6em;
+}
+
+/* DESAFIOS */
+
+
+/* PREMIOS */
+
+.premios-title{
+    align-self: center;
+    width: 92%;
+}
+
+.premios-title-size{
+    font-size: 1.2em;
+    padding-right: 0.4em;
+    align-self: center;
+}
+
+.premios-subtitle{
+    align-self: center;
+}
+
+.premios-unlock{
+    align-items: end;
+}
+
+.premios-unlock-logo{
+    max-width: 17%;
+    padding-right: 0.4em;
+}
+
+.premios-unlock-title{
+    font-size: 40%;
+    padding-top: 0.6em;
+}
+
+.colection{
+    padding: 1em 0.7em 0.7em 0.7em;
+}
+
+.carta-size{
+    padding: 0 0.2em 0 0.2em;
+    max-width: 100%;
+}
+
+/* PREMIOS */
+
+/* COLECOES */
+
+.carta{
+    padding: 0 0.2em 0 0.2em;
+    align-items: center;
+}
+
+.colection-numbers{
+    padding-top: 0.5em;
+    font-size: 1.2em;
+}
+
+/* COLECOES */
+
+@media screen and (max-width: 800px) {
+
+    .login-registo-style{
+
+        width: 51%;
+        text-align: center;
+        padding: 0.8em;
+    }
+
+    /* MENU */
+    .main-menu-style{
+        width: 85%;
+        height: auto;
+    }
+
+    .border{
+        width: 90%;
+    }
+
+    .image-default{
+        width: 60%;
+        min-width: 2em;
+    }
+
+    input[name="image-uploaded"] {
+
+    }
+
+
+    /* MENU */
+}
 
 
 @media screen and (max-width: 400px) {
@@ -75,6 +696,26 @@ body {
         padding: 0.8em;
     }
 
+    /* MENU */
+    .main-menu-style{
+        width: 85%;
+        height: auto;
+    }
+
+    .border{
+        width: 90%;
+    }
+
+    .image-default{
+        width: 50%;
+        min-width: 2em;
+    }
+
+    input[name="image-uploaded"] {
+
+    }
+
+    /* MENU */
 
 
 }

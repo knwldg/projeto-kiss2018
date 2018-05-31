@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
     <meta charset="utf-8">
@@ -24,18 +25,19 @@
 
         <form id="registo">
 
+
             <!-- Parte do formulário para utilizador-->
             <img src="img/icon/user.png" class="loginimg">
             <input type="text" name="username" placeholder="Username" class="formregisto">
-            </br>
+
             <!-- Parte do formulário para mail-->
             <img src="img/icon/mail_icon.png" class="loginimg">
             <input type="text" name="username" placeholder="Email" class="formregisto">
-            </br>
+
             <!-- Parte do formulário para pass-->
             <img src="img/icon/pass_icon.png" class="loginimg">
             <input type="password" name="pass" placeholder="Password" class="formregisto">
-            </br>
+
             <input type="submit" name="submitlogin" class="submit">
         </form>
 

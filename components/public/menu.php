@@ -2,43 +2,48 @@
     <?php include "../../css/style.css"; ?>
 </style>
 
-<div id="back">
+<div id="back" class="back-style">
 
-    <div id="main-menu">
+    <div id="main-menu" class="main-menu-style">
 
-        <div id="profile-menu">
+        <div id="profile-menu" class="profile-menu-style">
         <?php include "profile_details.php"; ?>
         </div>
 
-        <div id="menu-pages" style="text-align: center"><!-- responsive mode: width 15% -->
+        <div id="menu" class="menu-pages border"><!-- responsive mode: width 15% -->
 
-            <ul style="list-style-type:none; padding-left: 0.3em">
-                <li style="border-top: 1px solid black; border-bottom: 1px solid black"><img src="">PÁGINA PRINCIPAL<span></span></li><!--icon e seta-->
-                <li>
-                    <ul id="main-pages" style="list-style-type:none; padding-left: 0.3em; text-align: left; display: block"> <!-- main pages -->
+            <ul id="menu-pages" style="padding-left: 0.3em">
 
-                        <li style="border-bottom: 1px solid black">DESAFIO DO DIA</li>
-                        <li style="border-bottom: 1px solid black">BAÚS</li>
-                        <li style="border-bottom: 1px solid black">DESAFIOS</li>
-                        <li style="border-bottom: 1px solid black">COLEÇÕES</li>
-                        <li style="border-bottom: 1px solid black">PRÊMIOS</li>
+                <li class="pages lineT stroke2"><img class="menu-icon" src="../../img/icon/menu-home.png"><span class="menu-text">PÁGINA PRINCIPAL</span><img class="menu-icon-arrow" src="../../img/icon/arrow-down.png"></li><!--icon e seta-->
+
+                <li id="main-pages" class="lineT stroke2">
+
+                    <ul id="pages"> <!-- pages -->
+
+                        <li class="lineB stroke1"><a href=""><span>DESAFIO DO DIA</span></a></li>
+                        <li class="lineB stroke1"><a href=""><span>BAÚS</span></a></li>
+                        <li class="lineB stroke1"><a href=""><span>DESAFIOS</span></a></li>
+                        <li class="lineB stroke1"><a href=""><div><span>COLEÇÕES</span></a></li>
+                        <li><a href=""><span>PRÊMIOS</span></a></li>
 
                     </ul>
-                </li>
-                <li><img src="">NOVIDADES<span></span></li><!--icon e seta-->
-                <li>
-                    <ul id="notification-pages" style="list-style-type:none; padding-left: 0.3em; text-align: left; display: block"> <!-- notification pages -->
 
-                        <li>Tea</li>
-                        <li>Milk</li>
+                </li>
+
+                <li class="pages lineB lineT stroke2"><img class="menu-icon" src="../../img/icon/menu-home.png"><span class="menu-text">NOVIDADES</span><img class="menu-icon-arrow" src="../../img/icon/arrow-down.png"></li><!--icon e seta-->
+
+                <li id="main-pages">
+
+                    <ul id="notification-pages"> <!-- notification pages -->
+                        <li class="pages-item lineB stroke1"><a href=""><span>DESAFIOS</span></a></li>
+                        <li class="pages-item"><a href=""><span>PRÊMIOS</span></a></li>
                     </ul>
+
                 </li>
 
+                <li class="lineB lineT stroke2"><a href=""><span class="click-area"><img src="">AJUDA</span></a></li><!--icon-->
 
-                <li><img src="">AJUDA</li><!--icon-->
-
-                <li><img src="">SAIR</li><!--icon-->
-
+                <li class="lineB stroke2"><a href=""><span class="click-area"><img src="">SAIR</span></a></li><!--icon-->
 
             </ul>
 
