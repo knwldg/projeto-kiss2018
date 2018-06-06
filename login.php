@@ -8,39 +8,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Cubo</title>
+    <title>Log In</title>
 </head>
+
 
 <body>
 
-<div id="laranja">
+<div class="background">
 
-    <img src="img/marca/logo.png" class="cubologin" >
+    <div class="background-color">
 
-    <div id="caixa">
+        <div class="flex login-logo">
+            <img srcset="img/marca/logo-320w.svg 320w,
+                            img/marca/logo-480w.svg 480w,
+                            img/marca/logo-800w.svg 800w" sizes="(max-width: 320px) 100px,
+                           (max-width: 480px) 150px,
+                           200px" src="img/marca/logo-800w.svg" class="background-color-item">
+        </div>
 
-        <h2>Log In</h2>
+        <div class="login-box flex-column shadow">
 
-        <form id="loginForm" action="components/php/loginform.php" method="post" role="form">
+            <span class="login-register-title font800 orange">Log In</span>
 
-            <img src="img/icon/user.png" class="loginimg">
-            <!-- Parte do formulário para utilizador-->
-            <input type="text" name="inputUsername" id="inputUsername" placeholder="Username" class="formlogin">
-            <br/>
-            <img src="img/icon/pass_icon.png" class="loginimg">
-            <!-- Parte do formulário para pass-->
-            <input type="password" name="inputPassword" id="inputPassword" placeholder="Password" class="formlogin">
-            <br/>
-            <input type="submit" name="submitlogin" class="submit">
-        </form>
+            <form id="loginForm" action="components/php/loginform.php" method="post" role="form">
 
+                <div class="login-item flex-row">
+                    <img src="img/icon/user.jpg" class="login-item-img">
+                    <!-- Parte do formulário para utilizador-->
+                    <input type="text" name="inputUsername" id="inputUsername" placeholder="username" class="login-item-form gray font700">
+                </div>
+
+                <div class="login-item flex-row">
+                    <img src="img/icon/pass.jpg" class="login-item-img">
+                    <!-- Parte do formulário para pass-->
+                    <input type="password" name="inputPassword" id="inputPassword" placeholder="password" class="login-item-form gray font700">
+                </div>
+
+                <div class="login-register-link text-center gray font500">Já se registou? <a href="" class="pointer orange font600">Crie agora</a></div>
+
+                <div class="submit text-center"><input id="submit" type="submit" name="submitlogin" value="log in" class="login-btn gradient-background gradient-border pointer white font700"></div>
+            </form>
+
+        </div>
     </div>
-
-
 </div>
+
+
 
 
 </body>

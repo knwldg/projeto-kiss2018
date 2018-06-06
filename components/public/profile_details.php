@@ -9,7 +9,7 @@
 
                     <img id="default-image" class="default-position image-default" src="../../img/icon/default_profile.png"> <!-- php -->
 
-                    <input type="file" name="image-uploaded" class=""><!-- default-image; background-image; display:block -> display:none -->
+                    <input type="file" name="image-uploaded" class="pointer"><!-- default-image; background-image; display:block -> display:none -->
 
                 </div>
 

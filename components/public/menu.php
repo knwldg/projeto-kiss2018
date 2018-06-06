@@ -14,7 +14,7 @@
 
             <ul id="menu-pages" style="padding-left: 0.3em">
 
-                <li class="pages lineT stroke2"><img class="menu-icon" src="../../img/icon/menu-home.png"><span class="menu-text">PÁGINA PRINCIPAL</span><img class="menu-icon-arrow" src="../../img/icon/arrow-down.png"></li><!--icon e seta-->
+                <li class="pages lineT stroke2"><img class="menu-icon" src="../../img/icon/menu-home.png"><span class="menu-text">PÁGINA PRINCIPAL</span><img class="menu-icon-arrow pointer" src="../../img/icon/arrow-down.png"></li><!--icon e seta-->
 
                 <li id="main-pages" class="lineT stroke2">
 

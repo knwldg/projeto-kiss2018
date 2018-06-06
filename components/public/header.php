@@ -1,7 +1,7 @@
-<div class="homepage-header font700 white header">
+<div id="header" class="homepage-header flex-row shadow font700 white">
 
     <img src="img/icon/menu-home.png"><!-- hamburguer menu-->
     <span>PÁGINA PRINCIPAL</span>
-    <button><img src=""></button><!-- filter -->
+    <img src="img/icon/menu-home.png"><!-- filter -->
 
 </div>

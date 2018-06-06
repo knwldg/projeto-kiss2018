@@ -17,7 +17,7 @@
 
     <div class="homepage-header font700 white">
 
-        <img src="img/icon/menu-home.png"><!-- hamburguer menu-->
+        <img class="pointer" src="img/icon/menu-home.png"><!-- hamburguer menu-->
         <span>PÁGINA PRINCIPAL</span>
 
     </div>
@@ -90,7 +90,7 @@
 
         <div class="homepage-content-elements">
 
-            <div class="homepage-content-lines">
+            <div class="homepage-content-lines flex-row">
                 <div class="homepage-content-line gradient-border-homepage"> line1</div>
                 <img class="homepage-content-icon-lootboxes" src="img/icon/colecoes_icon.png"> <!-- icon de cada conteudo (desafio, premio, colecao, etc) css: colocar por cima da div "lines" -->
                 <div class="homepage-content-line gradient-border-homepage"> lin2</div>
@@ -113,7 +113,7 @@
 
         <div class="homepage-content-elements">
 
-            <div class="homepage-content-lines">
+            <div class="homepage-content-lines flex-row">
                 <div class="homepage-content-line gradient-border-homepage"> line1</div>
                 <img class="homepage-content-icon-keys" src="img/icon/premios_icon.png"> <!-- icon de cada conteudo (desafio, premio, colecao, etc) css: colocar por cima da div "lines" -->
                 <div class="homepage-content-line gradient-border-homepage"> lin2</div>
@@ -123,7 +123,7 @@
             <span class="homepage-content-description font500">Necessitas de limpar o mais rapido possivel</span> <!-- descricao do conteudo -->
 
 
-            <a class="homepage-content-link-item gradient-background gradient-border white font600" href="">abrir báus</a> <!-- hiperligaçao de cada pagina; #links = #login -->
+            <a class="homepage-content-link-item gradient-background gradient-border white font600" href="">desafios</a> <!-- hiperligaçao de cada pagina; #links = #login -->
 
 
         </div>
@@ -136,7 +136,7 @@
 
         <div class="homepage-content-elements">
 
-            <div class="homepage-content-lines">
+            <div class="homepage-content-lines flex-row">
                 <div class="homepage-content-line gradient-border-homepage"> line1</div>
                 <img class="homepage-content-icon-colections" src="img/icon/premios_icon.png"> <!-- icon de cada conteudo (desafio, premio, colecao, etc) css: colocar por cima da div "lines" -->
                 <div class="homepage-content-line gradient-border-homepage"> lin2</div>
@@ -146,7 +146,7 @@
             <span class="homepage-content-description font500">Necessitas de limpar o mais rapido possivel</span> <!-- descricao do conteudo -->
 
 
-            <a class="homepage-content-link-item gradient-background gradient-border white font600" href="">abrir báus</a> <!-- hiperligaçao de cada pagina; #links = #login -->
+            <a class="homepage-content-link-item gradient-background gradient-border white font600" href="">coleções</a> <!-- hiperligaçao de cada pagina; #links = #login -->
 
 
         </div>
@@ -159,7 +159,7 @@
 
         <div class="homepage-content-elements">
 
-            <div class="homepage-content-lines">
+            <div class="homepage-content-lines flex-row">
                 <div class="homepage-content-line gradient-border-homepage"> line1</div>
                 <img class="homepage-content-icon-awards" src="img/icon/premios_icon.png"> <!-- icon de cada conteudo (desafio, premio, colecao, etc) css: colocar por cima da div "lines" -->
                 <div class="homepage-content-line gradient-border-homepage"> lin2</div>
@@ -169,7 +169,7 @@
             <span class="homepage-content-description font500">Necessitas de limpar o mais rapido possivel</span> <!-- descricao do conteudo -->
 
 
-            <a class="homepage-content-link-item gradient-background gradient-border white font600" href="">abrir báus</a> <!-- hiperligaçao de cada pagina; #links = #login -->
+            <a class="homepage-content-link-item gradient-background gradient-border white font600" href="">prêmios</a> <!-- hiperligaçao de cada pagina; #links = #login -->
 
 
         </div>

@@ -17,7 +17,7 @@
 <body>
 
 <div id="laranja">
-    <img src="img/marca/logo.png" class="cubologin" >
+    <img src="img/marca/logo-800w.svg" class="cubologin" >
 
     <div id="caixa">
 

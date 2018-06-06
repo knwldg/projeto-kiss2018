@@ -13,6 +13,15 @@ a{
 form {
     margin: 0;
 }
+
+input{
+    font-family: "Montserrat", sans-serif;
+}
+
+.font400{
+    font-weight: 400;
+}
+
 .font500{
     font-weight: 500;
 }
@@ -81,6 +90,12 @@ form {
 }
 /* COLORS */
 
+.flex{
+    display: flex;
+    justify-content: center;
+}
+
+
 .flex-column{
     display: flex;
     flex-flow: column nowrap;
@@ -91,6 +106,23 @@ form {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
+}
+
+.black-background{
+    background-color: #8C8C8C;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1;
+    overflow: auto;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.shadow{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 1px 6px rgba(0,0,0,0.23);
 }
 
 /* elementos recentes/antigos */
@@ -122,6 +154,9 @@ form {
 
 .line2-content-width{
     width: 52%;
+}
+.text-center{
+    text-align: center;
 }
 
 /* elementos recentes/antigos */
@@ -232,7 +267,6 @@ input[name="image-uploaded"] {
     position: relative;
     left: -1.5em;
     top: -1.2em;
-    cursor: pointer;
 }
 
 .count-keys{
@@ -360,7 +394,6 @@ input[name="image-uploaded"] {
     height: 5%;
     min-width: 5%;
     align-self: center;
-    cursor: pointer;
 }
 
 .image-upload{
@@ -393,30 +426,22 @@ input[name="image-uploaded"] {
 /* HOMEPAGE */
 
 .background{
-    background-color: rgba(249, 250, 251, 0.75);
+    background-color: rgba(249, 250, 251, 0.75); /* quando clicar no desafio -> background-color: rgba(140,140,140,0.70) */
     padding-bottom: 2em;
 }
 
 
 .homepage-header{
     background: linear-gradient(to right, rgba(247,152,104,0.90) , rgba(246,181,62,0.90)); /* GRADIENT */
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
     padding: 0.5em 0 0.5em 0;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 1px 6px rgba(0,0,0,0.23);
     margin-bottom: 0.5em;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 0; /* quando clicar no desafio -> z-index: -1 */
 }
 
 .homepage-header img {
-    cursor: pointer;
-}
-
-.homepage-header span {
-    width: 84%;
-    text-align: center;
-    align-self: center;
-    letter-spacing: 0.08em;
+    padding: 0 0.6em 0 0.6em;
 }
 
 .profile {
@@ -501,10 +526,15 @@ input[name="image-uploaded"] {
     padding-top: 3em;
 }
 
+.homepage-content-lines{
+    width: 100%;
+    margin: auto;
+    align-items: center;
+}
+
 .homepage-content-line{
-    width: 28%;
-    margin-top: 3.2em;
     color: transparent;
+    width: 100%;
 }
 
 .homepage-content-elements{
@@ -514,23 +544,23 @@ input[name="image-uploaded"] {
 }
 
     .homepage-content-icon-lootboxes{
-        width: 28%;
-        min-width: 2em;
+        padding: 0 2em 0 2em;
+        max-width: 50%;
     }
 
     .homepage-content-icon-keys{
-        width: 28%;
-        min-width: 2em;
+        padding: 0 2em 0 2em;
+        max-width: 50%;
     }
 
     .homepage-content-icon-colections{
-        width: 28%;
-        min-width: 2em;
+        padding: 0 2em 0 2em;
+        max-width: 50%;
     }
 
     .homepage-content-icon-awards{
-        width: 25%;
-        min-width: 2em;
+        padding: 0 2em 0 2em;
+        max-width: 50%;
     }
 
 .homepage-content-description{
@@ -551,9 +581,7 @@ input[name="image-uploaded"] {
 
 /* DESAFIOS */
 
-.desafio{
-    padding: 0.8em 0 0 0;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+.desafio-premios-colecoes{
     border-radius: 7px;
     margin: 0.5em 0.4em 0.5em 0.4em;
 }
@@ -595,33 +623,64 @@ input[name="image-uploaded"] {
     padding: 1.2em 0 0.8em 4.6em;
 }
 
+    /* DESAFIOS-DETALHES */
+
+    .yes-or-not-display{
+        display: none; /*quando clicar no desafio -> .yes-or-not-display -> display: flex*/
+        background: linear-gradient(to right, rgba(247,152,104,0.70) , rgba(246,181,62,0.70));
+    }
+
+    .hide-desafio{
+        display: block; /* quando clicar no desafio -> display: none */
+        padding: 0.8em 0 0 0;
+    }
+
+    .yes-or-not{
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .yes-or-not-item{
+        width: 70%;
+    }
+
+    .yes-or-not-item-width{
+        width: 65%;
+    }
+
+    .yes-or-not-item-padding{
+        padding: 0.8em 0 0.8em 0;
+    }
+    /* DESAFIOS-DETALHES */
+
+
 /* DESAFIOS */
 
 
 /* PREMIOS */
 
 .premios-title{
-    align-self: center;
-    width: 92%;
+    justify-content: space-between;
 }
 
 .premios-title-size{
     font-size: 1.2em;
-    padding-right: 0.4em;
+    padding-left: 1em;
     align-self: center;
 }
 
 .premios-subtitle{
-    align-self: center;
+    padding-left: 0.4em;
 }
 
 .premios-unlock{
-    align-items: end;
+    align-items: center;
+    width: 4%;
+    padding: 0.6em 1em 0 0;
 }
 
 .premios-unlock-logo{
-    max-width: 17%;
-    padding-right: 0.4em;
+    width: 100%;
 }
 
 .premios-unlock-title{
@@ -635,7 +694,7 @@ input[name="image-uploaded"] {
 
 .carta-size{
     padding: 0 0.2em 0 0.2em;
-    max-width: 100%;
+    width: 100%;
 }
 
 /* PREMIOS */
@@ -645,6 +704,7 @@ input[name="image-uploaded"] {
 .carta{
     padding: 0 0.2em 0 0.2em;
     align-items: center;
+    width: 12%;
 }
 
 .colection-numbers{
@@ -654,7 +714,122 @@ input[name="image-uploaded"] {
 
 /* COLECOES */
 
-@media screen and (max-width: 800px) {
+/* LOGIN */
+
+.background-color{
+    background: linear-gradient(to right, rgba(247,152,104,0.70) , rgba(246,181,62,0.70));
+}
+
+.login-logo{
+
+}
+
+.background-color-item{
+    padding: 2.8em 0 1.5em 0;
+}
+
+.login-box{
+    background-color: rgb(249, 250, 251);
+    margin: 0.5em 0.4em 0.5em 0.4em;
+    align-items: center;
+    max-height: 32.8em;
+    height: 32.8em;
+    border-radius: 7px 7px 0 0;
+    justify-content: normal;
+}
+
+.login-btn{
+    width: 65%;
+    padding: 0.9em 0 0.9em 0;
+    font-size: 120%;
+    border: none;
+    letter-spacing: 1.5px;
+}
+
+.login-item{
+    align-items: center;
+    padding-bottom: 1.5em;
+}
+
+.login-item-form{
+    width: 100%;
+    border-radius: 7px;
+    border: 2px solid rgba(140,140,140,0.70);
+    background-color: transparent;
+    padding: 1.3em 1em 1.3em 2.7em;
+    font-size: 88%;
+    position: relative;
+    left: -1.5em;
+    letter-spacing: 1px;
+}
+
+.login-item-img{
+    max-width: 12%;
+    padding-left: 0.7em;
+    z-index: 1;
+}
+
+
+/* LOGIN */
+
+.login-register-title{
+    padding: 1.5em 0 1.5em 0;
+    font-size: 150%;
+    letter-spacing: 2px;
+}
+
+.login-register-link{
+    font-size: 85%;
+    letter-spacing: 0.6px;
+    color: rgba(140,140,140,0.70);
+}
+
+.submit{
+    padding-top: 3em;
+}
+
+
+@media screen and (max-width: 992px) {
+
+    /*
+        .login-registo-style{
+
+            width: 51%;
+            text-align: center;
+            padding: 0.8em;
+        }
+
+        .main-menu-style{
+            width: 85%;
+            height: auto;
+        }
+
+        .border{
+            width: 90%;
+        }
+
+        .image-default{
+            width: 60%;
+            min-width: 2em;
+        }
+    */
+
+    .carta{
+        width: 18%;
+    }
+
+    .premios-unlock{
+        width: 6%;
+    }
+
+    /* MENU */
+
+    .background-color{
+        height: 24em;
+    }
+}
+
+@media screen and (max-width: 768px) {
 
     .login-registo-style{
 
@@ -677,17 +852,36 @@ input[name="image-uploaded"] {
         width: 60%;
         min-width: 2em;
     }
+    /* MENU */
 
-    input[name="image-uploaded"] {
-
+    .carta{
+        width: 20%;
     }
 
+    .premios-unlock{
+        width: 8%;
+    }
 
-    /* MENU */
+    .yes-or-not-item{
+        width: 60%;
+    }
+
+    .yes-or-not-item-width{
+        width: 55%;
+    }
+
+    /*.background-color-item{
+        width: 15%;
+    }*/
+
+    .background-color{
+        height: 13em;
+    }
+
 }
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 576px) {
 
     .login-registo-style{
 
@@ -711,11 +905,39 @@ input[name="image-uploaded"] {
         min-width: 2em;
     }
 
-    input[name="image-uploaded"] {
+    /* MENU */
+
+    .carta{
+        width: 25%;
+    }
+
+    .premios-unlock{
+        width: 10%;
+    }
+
+    .yes-or-not-item{
+        width: 50%;
+    }
+
+    .yes-or-not-item-width{
+        width: 45%;
+    }
+
+    /*.login-box{
+        position: relative;
+        top: -7.4em;
+    }*/
+
+    .background-color{
+        height: 13em;
+    }
+
+    .login-logo{
 
     }
 
-    /* MENU */
-
+    /*.background-color-item{
+        width: 17%;
+    }*/
 
 }
