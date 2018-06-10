@@ -1,7 +1,17 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: josemarinho
- * Date: 15/05/18
- * Time: 22:57
- */
+<div class="navbar">
+    <div class="dropdown">
+        <button class="dropbtn">
+            <p>BURGER</p>
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="dashboard.php">Dashboard</a>
+            <a href="caixas.php">Caixas</a>
+            <a href="chaves.php">Chaves</a>
+            <a href="cromos.php">Cromos</a>
+            <a href="desafios.php">Desafios</a>
+            <a href="premios.php">Prémios</a>
+            <a href="users.php">Utilizadores</a>
+        </div>
+    </div>
+</div>

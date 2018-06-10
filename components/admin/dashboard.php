@@ -6,18 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link href="../../css/admin_css.css" rel="stylesheet">
 
     <title>Cubo_Admin</title>
 </head>
 
 
 <body>
+<?php require_once "navigation.php"; ?>
+
 <div id="dashboard">
     <div id="dash">
         <h1>Dashboard</h1>
     </div>
     <div id="estatistica_caixas">
-        <h2>Caixas/Caixas Abertas</h2>
+        <h2>Caixas / Caixas Abertas</h2>
         <!--js para gráficos(2) -->
     </div>
     <div id="estatisticas_users">

@@ -1,0 +1,299 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.05em;
+}
+/*DASHBOARD */
+#dashboard {
+background-color: white;
+
+}
+
+#dash{
+    color: rgba(247,152,104,1);
+}
+
+#estatistica_caixas{
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.05em;
+    border-bottom: lightgrey 1px;
+
+}
+
+#estatistica_caixas h2{
+    color: rgba(247,152,104,1);
+}
+
+
+#estatisticas_users{
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.05em;
+    border-bottom: lightgrey 1px;
+
+}
+
+#estatisticas_users table, tr, th {
+    border: 1px lightgrey;
+}
+
+#estatisticas_users table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#estatisticas_users th {
+    color: rgba(247,152,104,1);
+}
+
+/* Navbar container */
+.navbar {
+    overflow: hidden;
+    background-color: rgba(247,152,104,1);
+    font-family: Montserrat, sans-serif;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: rgba(247,152,104,1);
+    font-family: inherit; /* vertical align on mobile phones */
+    margin: 0; /* vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgba(247,152,104,1);
+}
+
+/* Dropdown content  */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(247,152,104,1);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* DESAFIOS */
+
+#desafios {
+    background-color: white;
+
+}
+
+#desafios_title{
+    color: rgba(247,152,104,1);
+}
+
+
+#estatisticas_users{
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.05em;
+    border-bottom: lightgrey 1px;
+
+}
+
+#table_desafios table, tr, th {
+    border: 1px lightgrey;
+}
+
+#table_desafios table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#table_desafios th {
+    color: rgba(247,152,104,1);
+}
+
+.apagar_desafio{
+    color: white;
+    background-color: rgba(247,152,104,1);
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.apagar_desafio:hover {
+    color: white;
+    background-color: lightgrey;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.adicionar_desafio{
+    color: white;
+    background-color: rgba(247,152,104,1);
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.adicionar_desafio:hover {
+    color: white;
+    background-color: lightgrey;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.editar_desafio{
+    color: white;
+    background-color: rgba(247,152,104,1);
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.editar_desafio:hover {
+    color: white;
+    background-color: lightgrey;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+
+
+/* Prémios */
+
+#premios {
+    background-color: white;
+
+}
+
+#premios_title{
+    color: rgba(247,152,104,1);
+}
+
+
+#table_premios table, tr, th {
+    border: 1px lightgrey;
+}
+
+#table_premios table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#table_premios th {
+    color: rgba(247,152,104,1);
+
+}
+
+.apagar_premio{
+    color: white;
+    background-color: rgba(247,152,104,1);
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.apagar_premio:hover {
+    color: white;
+    background-color: lightgrey;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.adicionar_premio{
+    color: white;
+    background-color: rgba(247,152,104,1);
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.adicionar_premio:hover {
+    color: white;
+    background-color: lightgrey;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+
+
+
+/* Users */
+
+#users {
+    background-color: white;
+
+}
+
+#utilizadores{
+    color: rgba(247,152,104,1);
+}
+
+
+#table_users table, tr, th {
+    border: 1px lightgrey;
+}
+
+#table_users table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#table_users th {
+    color: rgba(247,152,104,1);
+}
+
+.apagar_utilizador{
+    color: white;
+    background-color: rgba(247,152,104,1);
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.apagar_utilizador:hover {
+    color: white;
+    background-color: lightgrey;
+    border: none;
+    outline: none;
+    padding: 5px;
+}

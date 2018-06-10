@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link href="../../css/admin_css.css" rel="stylesheet">
 
     <title>Cubo_Admin</title>
 </head>
@@ -19,6 +20,7 @@ listUsers();
 ?>
 
 <body>
+<?php require_once "navigation.php"; ?>
 <div id="boxes">
     <!-- /.row -->
     <div id="caixas">
