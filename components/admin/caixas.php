@@ -10,6 +10,14 @@
     <title>Cubo_Admin</title>
 </head>
 
+<?php
+
+require_once "../php/general.php";
+
+listUsers();
+
+?>
+
 <body>
 <div id="boxes">
     <!-- /.row -->

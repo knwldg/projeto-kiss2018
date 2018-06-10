@@ -10,6 +10,7 @@
     <title>Cubo_Admin</title>
 </head>
 
+
 <body>
 <div id="dashboard">
     <div id="dash">

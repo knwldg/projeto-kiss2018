@@ -6,5 +6,5 @@
  * Time: 22:26
  */
 
-$sql_connection = new mysqli('localhost', 'root', '', 'boxdb');
+$sql_connection = new mysqli('localhost', 'root', '', 'kiss');
 mysqli_set_charset($sql_connection, "utf8");
