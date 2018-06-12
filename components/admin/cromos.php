@@ -11,13 +11,6 @@
     <title>Cubo_Admin</title>
 </head>
 
-<?php
-
-require_once "../php/general.php";
-
-listUsers();
-
-?>
 
 <body>
 <?php require_once "navigation.php"; ?>
@@ -31,6 +24,14 @@ listUsers();
         <table>
             <tr>
                 <th>Coleção</th>
+                <?php
+
+                require_once "../php/general.php";
+
+                listUsers();
+
+                ?>
+
                 <th>Raridade</th>
                 <th>Descrição</th>
             </tr>

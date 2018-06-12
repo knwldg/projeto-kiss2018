@@ -297,3 +297,193 @@ background-color: white;
     outline: none;
     padding: 5px;
 }
+
+/* caixas */
+
+#boxes {
+    background-color: white;
+
+}
+
+#caixas{
+    color: rgba(247,152,104,1);
+}
+
+
+#table_caixas table, tr, th {
+    border: 1px lightgrey;
+}
+
+#table_caixas table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#table_caixas th {
+    color: rgba(247,152,104,1);
+
+}
+
+.apagar_caixa{
+    color: white;
+    background-color: rgba(247,152,104,1);
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.apagar_caixa:hover {
+    color: white;
+    background-color: lightgrey;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.adicionar_caixa{
+    color: white;
+    background-color: rgba(247,152,104,1);
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.adicionar_caixa:hover {
+    color: white;
+    background-color: lightgrey;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+/* cromos */
+
+#cromos {
+    background-color: white;
+
+}
+
+#cards{
+    color: rgba(247,152,104,1);
+}
+
+
+#table_cromos table, tr, th {
+    border: 1px lightgrey;
+}
+
+#table_cromos table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#table_cromos th {
+    color: rgba(247,152,104,1);
+
+}
+
+.apagar_cromo{
+    color: white;
+    background-color: rgba(247,152,104,1);
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.apagar_cromo:hover {
+    color: white;
+    background-color: lightgrey;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.adicionar_cromo{
+    color: white;
+    background-color: rgba(247,152,104,1);
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.adicionar_cromo:hover {
+    color: white;
+    background-color: lightgrey;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+.editar_descrição{
+    color: white;
+    background-color: rgba(247,152,104,1);
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.editar_descrição:hover {
+    color: white;
+    background-color: lightgrey;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+
+/* chaves */
+
+#keys {
+    background-color: white;
+
+}
+
+#chaves{
+    color: rgba(247,152,104,1);
+}
+
+
+#table_chaves table, tr, th {
+    border: 1px lightgrey;
+}
+
+#table_chaves table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#table_chaves th {
+    color: rgba(247,152,104,1);
+
+}
+
+.apagar_chaves{
+    color: white;
+    background-color: rgba(247,152,104,1);
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.apagar_chaves:hover {
+    color: white;
+    background-color: lightgrey;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.adicionar_chaves{
+    color: white;
+    background-color: rgba(247,152,104,1);
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.adicionar_chaves:hover {
+    color: white;
+    background-color: lightgrey;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
