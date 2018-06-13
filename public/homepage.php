@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <title>Página Principal</title>
 </head>
@@ -17,7 +17,7 @@
 
     <div class="homepage-header font700 white">
 
-        <img class="pointer" src="img/icon/menu-home.png"><!-- hamburguer menu-->
+        <img class="pointer" src="../img/icon/menu-home.png"><!-- hamburguer menu-->
         <span>PÁGINA PRINCIPAL</span>
 
     </div>
@@ -34,7 +34,7 @@
 
                 <div class="select-image">
 
-                    <img id="default-image" class="default-position image-default" src="img/icon/default_profile.png"> <!-- php -->
+                    <img id="default-image" class="default-position image-default" src="../img/icon/default_profile.png"> <!-- php -->
 
                     <input type="file" name="image-uploaded" class=""><!-- default-image; background-image; display:block -> display:none -->
 
@@ -49,7 +49,7 @@
 
         <div class="count-keys font700">
             <span id="keys">CHAVES</span>
-            <img src="img/icon/chave_icon.png" id="icon-key" class="center">
+            <img src="../img/icon/chave_icon.png" id="icon-key" class="center">
             <span id="keys-number" class="profile-font-size">0</span>
         </div>
 
@@ -73,9 +73,9 @@
 
         </div>
 
-        <div class="challenge-time-keys font500">                                                   <!-- start  end -->
-             <!-- icon time --> <span class="challenge-time"><img class="time" src="img/icon/relogio.png">14:00 - 14:35</span>
-            <img class="challenge-keys" src="img/icon/chave_laranja.png"> <!-- img nr chaves -->
+        <div class="flex-row challenge-time-keys font500">                                                   <!-- start  end -->
+             <!-- icon time --> <span class="challenge-time flex-row orange"><img class="time" src="../img/icon/relogio.png">14:00 - 14:35</span>
+            <img class="challenge-keys" src="../img/icon/chave_laranja.png"> <!-- img nr chaves -->
         </div>
 
     </div>
@@ -92,7 +92,7 @@
 
             <div class="homepage-content-lines flex-row">
                 <div class="homepage-content-line gradient-border-homepage"> line1</div>
-                <img class="homepage-content-icon-lootboxes" src="img/icon/colecoes_icon.png"> <!-- icon de cada conteudo (desafio, premio, colecao, etc) css: colocar por cima da div "lines" -->
+                <img class="homepage-content-icon-lootboxes" src="../img/icon/colecoes_icon.png"> <!-- icon de cada conteudo (desafio, premio, colecao, etc) css: colocar por cima da div "lines" -->
                 <div class="homepage-content-line gradient-border-homepage"> lin2</div>
             </div>
 
@@ -115,7 +115,7 @@
 
             <div class="homepage-content-lines flex-row">
                 <div class="homepage-content-line gradient-border-homepage"> line1</div>
-                <img class="homepage-content-icon-keys" src="img/icon/premios_icon.png"> <!-- icon de cada conteudo (desafio, premio, colecao, etc) css: colocar por cima da div "lines" -->
+                <img class="homepage-content-icon-keys" src="../img/icon/premios_icon.png"> <!-- icon de cada conteudo (desafio, premio, colecao, etc) css: colocar por cima da div "lines" -->
                 <div class="homepage-content-line gradient-border-homepage"> lin2</div>
             </div>
 
@@ -138,7 +138,7 @@
 
             <div class="homepage-content-lines flex-row">
                 <div class="homepage-content-line gradient-border-homepage"> line1</div>
-                <img class="homepage-content-icon-colections" src="img/icon/premios_icon.png"> <!-- icon de cada conteudo (desafio, premio, colecao, etc) css: colocar por cima da div "lines" -->
+                <img class="homepage-content-icon-colections" src="../img/icon/premios_icon.png"> <!-- icon de cada conteudo (desafio, premio, colecao, etc) css: colocar por cima da div "lines" -->
                 <div class="homepage-content-line gradient-border-homepage"> lin2</div>
             </div>
 
@@ -161,7 +161,7 @@
 
             <div class="homepage-content-lines flex-row">
                 <div class="homepage-content-line gradient-border-homepage"> line1</div>
-                <img class="homepage-content-icon-awards" src="img/icon/premios_icon.png"> <!-- icon de cada conteudo (desafio, premio, colecao, etc) css: colocar por cima da div "lines" -->
+                <img class="homepage-content-icon-awards" src="../img/icon/premios_icon.png"> <!-- icon de cada conteudo (desafio, premio, colecao, etc) css: colocar por cima da div "lines" -->
                 <div class="homepage-content-line gradient-border-homepage"> lin2</div>
             </div>
 

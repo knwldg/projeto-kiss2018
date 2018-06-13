@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <title>Prémios</title>
 </head>
@@ -18,11 +18,11 @@
 
     <div class="flex-column">
 
-        <?php include "components/public/header.php"; ?>
+        <?php include "../components/public/header.php"; ?>
 
         <!-- barra que aparece em cima dos elementos recentes/antigos -->
 
-        <?php include "components/public/barra_recente_antigo.php"; ?>
+        <?php include "../components/public/barra_recente_antigo.php"; ?>
 
         <!-- barra que aparece em cima dos elementos recentes/antigos -->
 
@@ -34,7 +34,7 @@
 
 
                 <div class="premios-unlock flex-column">
-                    <img id="premios-unlock-logo" class="premios-unlock-logo" src="img/marca/logo-480w.svg" ><!-- colecao bloqueada -> opacity: 0.4 -->
+                    <img id="premios-unlock-logo" class="premios-unlock-logo" src="../img/marca/logo-480w.svg" ><!-- colecao bloqueada -> opacity: 0.4 -->
                     <span id="premios-unlock-title" class="premios-unlock-title font500 orange">CONCLUÍDO</span><!-- colecao bloqueada -> display: none -->
                 </div>
 
@@ -42,11 +42,11 @@
 
             <div class="colection flex-row">
                 <!-- array das cartas -->
-                <img class="carta-size" src="img/cartas/equipa/frente/equipa1.png">
-                <img class="carta-size" src="img/cartas/equipa/frente/equipa2.png">
-                <img class="carta-size" src="img/cartas/equipa/frente/equipa3.png">
-                <img class="carta-size" src="img/cartas/equipa/frente/equipa4.png">
-                <img class="carta-size" src="img/cartas/equipa/frente/equipa5.png">
+                <img class="carta-size" src="../img/cartas/equipa/frente/equipa1.png">
+                <img class="carta-size" src="../img/cartas/equipa/frente/equipa2.png">
+                <img class="carta-size" src="../img/cartas/equipa/frente/equipa3.png">
+                <img class="carta-size" src="../img/cartas/equipa/frente/equipa4.png">
+                <img class="carta-size" src="../img/cartas/equipa/frente/equipa5.png">
 
             </div>
 

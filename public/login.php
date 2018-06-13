@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <title>Log In</title>
 </head>
@@ -22,27 +22,27 @@
     <div class="background-color">
 
         <div class="flex login-logo">
-            <img srcset="img/marca/logo-320w.svg 320w,
-                            img/marca/logo-480w.svg 480w,
-                            img/marca/logo-800w.svg 800w" sizes="(max-width: 320px) 100px,
+            <img srcset="   ../img/marca/logo-320w.svg 320w,
+                            ../img/marca/logo-480w.svg 480w,
+                            ../img/marca/logo-800w.svg 800w" sizes="(max-width: 320px) 100px,
                            (max-width: 480px) 150px,
-                           200px" src="img/marca/logo-800w.svg" class="background-color-item">
+                           200px" src="../img/marca/logo-800w.svg" class="background-color-item">
         </div>
 
         <div class="login-box flex-column shadow">
 
             <span class="login-register-title font800 orange">Log In</span>
 
-            <form id="loginForm" action="components/php/loginform.php" method="post" role="form">
+            <form id="loginForm" action="../components/php/loginform.php" method="post" role="form">
 
                 <div class="login-item flex-row">
-                    <img src="img/icon/user.jpg" class="login-item-img">
+                    <img src="../img/icon/user.jpg" class="login-item-img">
                     <!-- Parte do formulário para utilizador-->
                     <input type="text" name="inputUsername" id="inputUsername" placeholder="username" class="login-item-form gray font700">
                 </div>
 
                 <div class="login-item flex-row">
-                    <img src="img/icon/pass.jpg" class="login-item-img">
+                    <img src="../img/icon/pass.jpg" class="login-item-img">
                     <!-- Parte do formulário para pass-->
                     <input type="password" name="inputPassword" id="inputPassword" placeholder="password" class="login-item-form gray font700">
                 </div>
