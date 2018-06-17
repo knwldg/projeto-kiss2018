@@ -14,9 +14,9 @@
 
 <body>
 
-<div class="background">
+<div id="background" class="background">
 
-    <div class="flex-column">
+    <div class="flex-column position-chest">
 
         <?php include "../components/public/header.php"; ?>
 
@@ -26,36 +26,19 @@
 
         <!-- barra que aparece em cima dos elementos recentes/antigos -->
 
-        <div class="desafio-premios-colecoes flex-column shadow">
+        <?php include "../components/public/colecao.php"; ?>
 
-            <div class="premios-title flex-row">
+        <?php include "../components/public/baus.php"; ?>
 
-                    <span class="premios-title-size font800 orange equipa-color">EQUIPA<span id="premios-subtitle" class="premios-subtitle font600 gray">(5/5)</span></span><!-- quantidade de cartas desbloqueadas -->
+        <?php include "../components/public/zoom_carta.php"; ?>
 
-
-                <div class="premios-unlock flex-column">
-                    <img id="premios-unlock-logo" class="premios-unlock-logo" src="../img/marca/logo-480w.svg" ><!-- colecao bloqueada -> opacity: 0.4 -->
-                    <span id="premios-unlock-title" class="premios-unlock-title font600 orange">CONCLUÍDO</span><!-- colecao bloqueada -> display: none -->
-                </div>
-
-            </div>
-
-            <div class="colection flex-row font700 equipa-color">
-                <!-- array das cartas -->
-                <div class="carta flex-column"><img class="carta-size" src="../img/cartas/equipa/frente/equipa1.png"><span class="colection-numbers">0</span></div>
-                <div class="carta flex-column"><img class="carta-size" src="../img/cartas/equipa/frente/equipa2.png"><span class="colection-numbers">0</span></div>
-                <div class="carta flex-column"><img class="carta-size" src="../img/cartas/equipa/frente/equipa3.png"><span class="colection-numbers">0</span></div>
-                <div class="carta flex-column"><img class="carta-size" src="../img/cartas/equipa/frente/equipa4.png"><span class="colection-numbers">0</span></div>
-                <div class="carta flex-column"><img class="carta-size" src="../img/cartas/equipa/frente/equipa5.png"><span class="colection-numbers">0</span></div>
-
-            </div>
-
-        </div>
-
-        <!--<img class="chest_down" src="">-->
+        <?php include "../components/public/icon_chest.php"; ?>
 
     </div>
 </div>
+
+<script type="text/javascript" src="../js/baus_cartas.js"></script>
+<script type="text/javascript" src="../js/modal.js"></script>
 
 
 </body>

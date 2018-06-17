@@ -10,6 +10,7 @@ body {
 
 a{
     text-decoration: none;
+    color: inherit;
 }
 
 form {
@@ -86,6 +87,10 @@ button{
     color: #F9FAFB;
 }
 
+.black{
+    color: #000000;
+}
+
 .gray{
     color: rgba(140,140,140,0.75);
 }
@@ -107,29 +112,51 @@ button{
 }
 /* COLORS */
 
-/* CORES DO BAU */
+/* ANIMACAO / POP-UP-CARTAS */
 
 .bau-branco{
-    background-color: #F9FAFB;
+    background-color: rgb(255,255,255);
 }
 
 .bau-verde{
-    background-color: #47C166;
+    background-color: rgb(71,193,102);
 }
 
 .bau-azul{
-    background-color: #26A0DA;
+    background-color: rgb(38,160,218);
 }
 
 .bau-roxo{
-    background-color: #7F7FD5;
+    background-color: rgb(127,127,213);
 }
 
 .bau-dourado{
-    background-color: #FDD151;
+    background-color: rgb(253,209,81);
 }
 
-/* CORES DO BAU */
+.fundo-branco{
+    background-color: rgba(255,255,255,0.65);
+}
+
+.fundo-verde{
+    background-color: rgba(71,193,102,0.65);
+}
+
+.fundo-azul{
+    background-color: rgba(38,160,218,0.65);
+}
+
+.fundo-roxo{
+    background-color: rgba(127,127,213,0.65);
+}
+
+.fundo-dourado{
+    background-color: rgba(253,209,81,0.65);
+}
+
+
+
+/* ANIMACAO / POP-UP-CARTAS  */
 
 .flex{
     display: flex;
@@ -167,6 +194,10 @@ button{
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 1px 6px rgba(0,0,0,0.23);
 }
 
+.center {
+    margin: auto;
+}
+
 .center-item{
     align-self: center;
     margin: auto;
@@ -185,7 +216,7 @@ button{
 }
 
 .voltar-size{
-    width: 75%;
+    width: 30%;
 }
 
 .voltar{
@@ -197,12 +228,17 @@ button{
 }
 
 .chest{
-    position: absolute;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 5.1em;
+    height: 5.1em;
+    margin: 1.5em;
     z-index: 10;
-    right: 1em;
-    padding: 0 1em 1em 0;
     cursor: pointer;
 }
+
+
 
 /* CLASSES GERAIS */
 
@@ -297,14 +333,6 @@ button{
     font-size: 2.1em;
 }
 
-#keys{
-    padding: 0.5em 1em 1.3em 0;
-}
-
-#keys-number{
-    padding: 0.4em 0.4em 0 0;
-}
-
 .back-style{
     width: 100%;
     height: 100%;
@@ -323,16 +351,23 @@ button{
 .profile-menu-style{
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin-bottom: 3em;
     padding-top: 0.5em;
 }
 
+.profile-menu-style-homepage{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em;
+}
 
 #user-name{
     font-size: 92%;
-    padding-left: 3em;
+    padding-top: 0.5em;
 }
 
 .vertical-align-style{
@@ -340,12 +375,7 @@ button{
 }
 
 input[name="image-uploaded"] {
-    width: 70px;
-    height: 70px;
     opacity: 0;
-    position: relative;
-    left: -1.5em;
-    top: -1.2em;
 }
 
 .count-keys{
@@ -356,15 +386,11 @@ input[name="image-uploaded"] {
 }
 
 #icon-key{
-    width: 20%;
-    min-width: 3.5em;
-    padding-right: 1em;
+    background: url("../img/icon/chave_icon.png") no-repeat center;
+    background-size: 100%;
+    width: 71%;
+    margin: 1em 0 1em 0;
 }
-
-.center {
-    margin: auto;
-}
-
 
     /* PAGES */
 
@@ -497,7 +523,11 @@ input[name="image-uploaded"] {
 }
 
 .select-image{
-    padding-left: 1em;
+    background: url("../img/icon/default_profile.png") no-repeat center;
+    background-size: 100%;
+    display: flex;
+    width: 4.5em;
+    height: 4.5em;
 }
 
 /* MENU */
@@ -506,20 +536,30 @@ input[name="image-uploaded"] {
 
 .background{
     background-color: rgba(249, 250, 251, 0.75); /* quando clicar no desafio -> background-color: rgba(140,140,140,0.70) */
-    padding-bottom: 2em;
 }
 
-
 .homepage-header{
+    background: linear-gradient(to right, rgba(247,152,104,0.90) , rgba(246,181,62,0.90));
+    padding: 1em 0 1em 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.header button {
+    padding: 0 0.6em 0 0.6em;
+}
+
+.header{
     background: linear-gradient(to right, rgba(247,152,104,0.90) , rgba(246,181,62,0.90)); /* GRADIENT */
-    padding: 0.5em 0 0.5em 0;
+    padding: 1em 0 1em 0;
     margin-bottom: 0.5em;
     justify-content: space-between;
     align-items: center;
     z-index: 0; /* quando clicar no desafio -> z-index: -1 */
 }
 
-.homepage-header img {
+.header button {
     padding: 0 0.6em 0 0.6em;
 }
 
@@ -565,7 +605,7 @@ input[name="image-uploaded"] {
     align-self: center;
     text-align: center;
     width: 35%;
-    padding: 0.5em 0 0.5em 0;
+    padding: 0.7em 0 0.7em 0;
     margin-right: 0.5em;
 }
 
@@ -649,8 +689,13 @@ input[name="image-uploaded"] {
 .homepage-content-link-item{
     align-self: center;
     text-align: center;
-    width: 35%;
-    padding: 0.5em 0 0.5em 0;
+    margin-bottom: 3em;
+    width: 45%;
+    padding: 0.9em 0 0.9em 0;
+    border-radius: 3px;
+    letter-spacing: 0.10em;
+    font-size: 104%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 1px 6px rgba(0,0,0,0.23);
 }
 
 /* HOMEPAGE */
@@ -665,6 +710,7 @@ input[name="image-uploaded"] {
     border-radius: 7px;
     margin: 0.5em 0.4em 0.5em 0.4em;
     cursor: pointer;
+    /*background-color: #F9FAFB;*/
 }
 
 .desafio-content-items {
@@ -708,11 +754,19 @@ input[name="image-uploaded"] {
 
     .yes-or-not-display{
         display: none; /*quando clicar no desafio -> .yes-or-not-display -> display: flex*/
-        background: linear-gradient(to right, rgba(247,152,104,0.70) , rgba(246,181,62,0.70));
+        background: linear-gradient(to right, rgb(247,152,104) , rgb(246,181,62));
+        border-radius: 7px;
+    }
+
+    #hide-desafio-content{
+
     }
 
     .hide-desafio{
-        display: block; /* quando clicar no desafio -> display: none */
+        /*display: block; /* quando clicar no desafio -> display: none */
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s, opacity 0s ease-in;
         padding: 0.8em 0 0 0;
     }
 
@@ -775,8 +829,15 @@ input[name="image-uploaded"] {
 
 .carta-size{
     padding: 0 0.2em 0 0.2em;
-    width: 100%;
+    width: 100%
 }
+
+.carta-size-premio{
+    padding: 0 0.2em 0 0.2em;
+    width: 18%;
+    max-width: 18%;
+}
+
 
 /* PREMIOS */
 
@@ -810,6 +871,8 @@ input[name="image-uploaded"] {
 }
 
 .login-box{
+    position: fixed;
+    height: 100%;
     background-color: rgb(249, 250, 251);
     margin: 0.5em 0.4em 0.5em 0.4em;
     border-radius: 7px 7px 0 0;
@@ -987,6 +1050,24 @@ input[name="image-uploaded"] {
     }
 }
 
+@-webkit-keyframes fadeIn {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
 
 
 
@@ -1002,18 +1083,26 @@ input[name="image-uploaded"] {
 }
 
 .icon-bau{
-    width: 5.5em;
+    background: url('../img/icon/icon_chest.png') no-repeat center scroll;
+    background-size: 100%;
 }
 
+.icon-bau-close{
+    display: none;
+    background: url('../img/icon/close_baus.png') no-repeat center scroll;
+    background-size: 100%;
+}
 
 .baus{
     display: none;
     border-radius: 7px;
-    position: absolute;
+    position: fixed;
     background-color: transparent;
     align-items: center;
     width: 100%;
-    margin-bottom: 12.8em;
+    margin-bottom: 3.8em;
+    height: 100%;
+    top: 0;
 }
 
 .chest-line{
@@ -1141,14 +1230,294 @@ input[name="image-uploaded"] {
 }
 
 .chest-animation{
-    display: none;
-}
-
-.chest-close-baus{
-    display: none;
+    display: flex;
+    background-color: rgb(249, 250, 251);
+    position: relative;
+    bottom: -8.5em;
+    z-index: 0;
 }
 
 /* BAUS */
+
+/* POP-UP-CARTAS */
+
+.cartas-chest-animation{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.fundo-carta{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+.fundo-carta{
+
+    opacity: 0;
+    transform: scale(0.0);
+
+    -webkit-animation: carta ease-in 1;
+    -moz-animation: carta ease-in 1;
+    animation: carta ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:0.5s;
+    -moz-animation-duration:0.5s;
+    animation-duration: 0.5s;
+
+    -webkit-animation-delay:1.8s;
+    -moz-animation-delay:1.8s;
+    animation-delay: 1.8s;
+}
+
+@-moz-keyframes carta {
+    0% {
+        opacity: 0;
+        transform: scale(0.0);
+    }
+    /*50% {
+        opacity: 0.5;
+    }*/
+    100% {
+        opacity: 1;
+        transform: scale(0.999);
+    }
+}
+
+.pop-up-carta{
+    width: 20em;
+    height: 32.5em;
+    display: none;
+}
+
+.slider-item{
+    /*background-color: black;*/
+    border: 1px solid black;
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 9px;
+    margin: 0.4em;
+}
+
+.detalhe-bau{
+    background-color: #F9FAFB;
+    border-radius: 18px;
+    width: 20.5em;
+    height: 30em;
+    margin: 1.2em;
+}
+
+.detalhe-bau-img{
+    background: rgb(71,193,102) url('../img/icon/chest_complete_open.png') no-repeat center;
+    background-size: 100%;
+    width: 10.35em;
+    height: 10em;
+}
+
+.detalhe-bau-numero_cartas{
+    width: 71%;
+    justify-content: space-between;
+    border-top: 1.9px solid black;
+    border-bottom: 1.9px solid black;
+    padding: 0.7em;
+    margin: 2.5em 0 2.5em 0;
+    font-size: 118%;
+}
+
+.numero-cartas-item1{
+    font-size: 83%;
+}
+
+.numero-cartas-item2{
+    font-size: 135%;
+}
+
+.detalhe-bau-colecoes{
+    width: 69%;
+    padding: 0.8em 0 0.8em 0;
+    border-radius: 3px;
+    letter-spacing: 0.11em;
+    font-size: 125%;
+}
+
+.detalhe-bau-descricao{
+    font-size: 70%;
+    margin-top: 0.7em;
+}
+
+
+.pop-up-carta-img{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(140, 140, 140, 0.75);
+    bottom: 0;
+}
+
+
+/* POP-UP-CARTAS */
+
+/* PREMIO-DETALHE */
+
+.premio-detalhe-title{
+    padding: 0.8em 0 0.8em 0;
+    font-size: 150%;
+    letter-spacing: 2px;
+    color: rgba(247,152,104,0.6);
+}
+
+.premio-detalhe-extra{
+    color: rgb(247,152,104);
+}
+
+.premio-detalhe-colecoes{
+    margin-bottom: 1.2em;
+}
+
+.premio-detalhe-colecao{
+    margin: 0.4em;
+    justify-content: start;
+}
+
+.premio-detalhe-btn{
+    margin-bottom: 1.5em;
+    background: linear-gradient(to right, rgb(247,152,104) , rgb(246,181,62));
+    margin-top: 0.5em;
+    cursor: pointer;
+}
+
+
+/* PREMIO-DETALHE */
+
+/* LISTAS-FOTOS-ENVIADAS */
+
+.btn{
+    width: 9.5em;
+    height: 4.5em;
+}
+
+.validar{
+    background: url('../img/icon/validar.png') no-repeat center;
+    background-size: 100%;
+    margin-right: 0.1em;
+}
+
+.reportar{
+    background: url('../img/icon/reportar.png') no-repeat center;
+    background-size: 100%;
+    margin-left: 0.1em;
+}
+
+.validar-reportar{
+    margin-top: 1.2em;
+}
+
+.lista-fotos-fundo{
+    background-color: transparent;
+    border-radius: 7px;
+    width: 95%;
+    height: 28%;
+}
+
+#lista-fotos-fundo1{
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 1s, opacity 1s ease-in;
+}
+
+.verification-animation-lista-fotos{
+    width: 30%;
+}
+
+.verification-title-lista-fotos{
+    padding: 0.2em 0 0.2em 0;
+    font-size: 120%;
+}
+
+.lista-fotos-conteudo{
+    padding: 1em 0 1em 0;
+    font-size: 102%;
+    display: none;
+    justify-content: start  ;
+}
+
+.lista-fotos-validar-reportar{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.lista-fotos-close{
+    background: url('../img/icon/close-lista-fotos.png') no-repeat center;
+    background-size: 100%;
+    width: 2em;
+    height: 2.5em;
+    align-self: end;
+    margin-right: 0.5em;
+    position: absolute;
+    margin-bottom: 1.5em;
+    margin-top: -0.9em;
+}
+
+.verification-fade-in-fotos{
+    opacity: 0;
+    -webkit-animation:fadeInFotos ease-in 1;
+    -moz-animation:fadeInFotos ease-in 1;
+    animation:fadeInFotos ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:1.5s;
+    -moz-animation-duration:1.5s;
+    animation-duration: 1.5s;
+
+    -moz-animation-delay: 1.8s;
+    -o-animation-delay: 1.8s;
+    -webkit-animation-delay: 1.8s;
+    animation-delay: 1.8s;
+}
+
+@-moz-keyframes fadeInFotos {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes fadeInFotos {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@keyframes fadeInFotos {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+/* LISTAS-FOTOS-ENVIADAS */
+
 
 
 /* RESPONSIVE-WIDTH */
@@ -1328,6 +1697,8 @@ input[name="image-uploaded"] {
     .login-box {
         height: 32.8em;
     }
+
+
 
 }
 

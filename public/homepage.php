@@ -15,47 +15,22 @@
 
 <!-- header -->
 
-    <div class="homepage-header font700 white">
+    <div class="homepage-header flex-row shadow font700 white">
 
-        <img class="pointer" src="../img/icon/menu-home.png"><!-- hamburguer menu-->
-        <span>PÁGINA PRINCIPAL</span>
+        <button id="menu" class="menu-img">&nbsp</button><!-- hamburguer menu-->
+        <span class="center">PÁGINA PRINCIPAL</span>
 
     </div>
 
 <!-- header -->
 
 <!-- profile -->
+    <div id="profile-menu" class="profile-menu-style-homepage gradient-background white">
 
-    <div class="profile profile-menu-style"> <!-- PHP -->
-
-        <form id="profile-image" method="post" action="">
-
-            <div class="image-upload">
-
-                <div class="select-image">
-
-                    <img id="default-image" class="default-position image-default" src="../img/icon/default_profile.png"> <!-- php -->
-
-                    <input type="file" name="image-uploaded" class=""><!-- default-image; background-image; display:block -> display:none -->
-
-                </div>
-
-                <span id="user-name" class="profile-position font600">Ricardo Jorge</span>
-
-            </div>
-
-
-        </form>
-
-        <div class="count-keys font700">
-            <span id="keys">CHAVES</span>
-            <img src="../img/icon/chave_icon.png" id="icon-key" class="center">
-            <span id="keys-number" class="profile-font-size">0</span>
-        </div>
+    <?php include "../components/public/profile_details.php"; ?>
 
     </div>
-
-<!-- profile -->
+    <!-- profile -->
 
 
 <!-- desafio do dia -->
@@ -69,7 +44,7 @@
         <div class="accept-or-decline font600">
 
             <a class="accept-or-decline-item gradient-background gradient-border white" href="">aceitar</a>
-                <a class="accept-or-decline-item gradient-border gray" href="">rejeitar</a>
+                <a class="accept-or-decline-item gradient-border orange" href="">rejeitar</a>
 
         </div>
 
@@ -100,7 +75,7 @@
             <span class="homepage-content-description font500">Necessitas de limpar o mais rapido possivel</span> <!-- descricao do conteudo -->
 
 
-            <a class="homepage-content-link-item gradient-background gradient-border white font600" href="">abrir báus</a> <!-- hiperligaçao de cada pagina; #links = #login -->
+            <a class="homepage-content-link-item gradient-background gradient-border shadow white font600" href="">abrir báus</a> <!-- hiperligaçao de cada pagina; #links = #login -->
 
 
         </div>
@@ -123,7 +98,7 @@
             <span class="homepage-content-description font500">Necessitas de limpar o mais rapido possivel</span> <!-- descricao do conteudo -->
 
 
-            <a class="homepage-content-link-item gradient-background gradient-border white font600" href="">desafios</a> <!-- hiperligaçao de cada pagina; #links = #login -->
+            <a class="homepage-content-link-item gradient-background gradient-border shadow white font600" href="">desafios</a> <!-- hiperligaçao de cada pagina; #links = #login -->
 
 
         </div>
@@ -146,7 +121,7 @@
             <span class="homepage-content-description font500">Necessitas de limpar o mais rapido possivel</span> <!-- descricao do conteudo -->
 
 
-            <a class="homepage-content-link-item gradient-background gradient-border white font600" href="">coleções</a> <!-- hiperligaçao de cada pagina; #links = #login -->
+            <a class="homepage-content-link-item gradient-background gradient-border shadow white font600" href="">coleções</a> <!-- hiperligaçao de cada pagina; #links = #login -->
 
 
         </div>
@@ -169,7 +144,7 @@
             <span class="homepage-content-description font500">Necessitas de limpar o mais rapido possivel</span> <!-- descricao do conteudo -->
 
 
-            <a class="homepage-content-link-item gradient-background gradient-border white font600" href="">prêmios</a> <!-- hiperligaçao de cada pagina; #links = #login -->
+            <a class="homepage-content-link-item gradient-background gradient-border shadow white font600" href="">prêmios</a> <!-- hiperligaçao de cada pagina; #links = #login -->
 
 
         </div>

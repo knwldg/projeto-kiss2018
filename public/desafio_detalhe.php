@@ -24,8 +24,8 @@
         <div class="flex login-logo">
 
             <div class="flex-column">
-                <button type="button" id="voltar" class="voltar pointer"><img class="voltar-size" src="../img/icon/voltar.svg"></button>
-                <span class="white font400">voltar</span>
+                <a href="desafios.php" id="voltar" class="voltar pointer"><img class="voltar-size" src="../img/icon/voltar_branco.png"></a>
+                <span class="white font600">voltar</span>
             </div>
 
         </div>
