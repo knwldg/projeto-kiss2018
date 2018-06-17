@@ -8,10 +8,11 @@
 
 session_start();
 
-require_once "logincontrol.php";
 
-if (loginUser($_POST['inputUsername'], $_POST['inputPassword'])) {
+require_once "./logincontrol.php";
 
-    header('Location: /public/homepage.php');
+if (registerUser($_POST['inputUsername'], $_POST['inputPassword'])) {
+
+    header('Location: /public/login.php');
 
 } else header('Location: /public/registo.php');

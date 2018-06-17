@@ -5,7 +5,8 @@
  * Date: 4/11/2018
  * Time: 22:12
  */
-require_once "../php/connection.php";
+
+require_once "../php/general.php";
 
 function listUsers()
 {
@@ -31,6 +32,31 @@ function listUsers()
     }
 
     return true;
+
+}
+
+function getUserData($userId)
+{
+
+    global $sql_connection;
+    global $name;
+    global $keys;
+
+    $sql_op = $sql_connection->prepare("SELECT `name`, `keys` FROM users WHERE idusers = ?");
+
+    $sql_op->bind_param('i', $userId);
+
+    if (!$sql_op->execute()) {
+
+        return false;
+
+    }
+
+    $sql_op->store_result();
+    $sql_op->bind_result($name, $keys);
+    $sql_op->fetch();
+
+    return array($name, $keys);
 
 }
 
@@ -101,4 +127,4 @@ function createBox($owner)
 
 }
 
-/
+*/

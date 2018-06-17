@@ -6,7 +6,10 @@
  * Time: 22:12
  */
 
-require_once "../php/general.php";
+require_once "general.php";
+require_once "connection.php";
+
+global $sql_connection;
 
 function checkIfUserExists($value) {
 
@@ -14,7 +17,7 @@ function checkIfUserExists($value) {
 
     global $sql_connection;
 
-    $sql_op = $sql_connection->prepare("SELECT username FROM users WHERE username = ?");
+    $sql_op = $sql_connection->prepare("SELECT name FROM users WHERE name = ?");
 
     try {
 
@@ -68,27 +71,31 @@ function registerUser($inputUser, $inputPass) {
 
     try {
 
+        /*
+
         if (!isset ($sql_connection)) {
 
             throw new Exception('SQL Connection failure');
 
         }
 
-        if (!isset($_POST['inputUsername']) || !isset($_POST['inputPassword']) || !isset($_POST['confirmPassword']) || $_POST['inputPassword'] != $_POST['confirmPassword']) {
+        if (!isset($_POST['inputUsername']) || !isset($_POST['inputPassword'])){
 
             throw new Exception('One or more fields were incorrectly filled');
 
         }
 
 
-        if(checkIfUserExists($inputUser)) {
+         if(checkIfUserExists($inputUser)) {
 
             throw new Exception('User already exists in database');
 
         }
 
+        */
+
         $hash = password_hash($inputPass, PASSWORD_DEFAULT);
-        $sql_op = $sql_connection->prepare("INSERT INTO users (username, password_hash) VALUES (?,?)");
+        $sql_op = $sql_connection->prepare("INSERT INTO users (name, password_hash) VALUES (?,?)");
         $sql_op->bind_param('ss', $inputUser, $hash);
 
         if (!$sql_op->execute()) {
@@ -117,7 +124,8 @@ function loginUser($inputUser, $inputPass) {
 
     try {
 
-        $sql_op = $sql_connection->prepare("SELECT password_hash FROM users WHERE username = ? LIMIT 1");
+        $sql_op = $sql_connection->prepare("SELECT password_hash FROM users WHERE name = ?");
+
         $sql_op->bind_param('s', $inputUser);
 
         if (!$sql_op->execute()) {

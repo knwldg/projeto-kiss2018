@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html>
+<?php
+
+if (isset($_SESSION['username'])) {
+
+    header('Location: ../homepage.php');
+
+}
+
+?>
+
 
 <head>
 
@@ -32,12 +42,13 @@
 
             <span class="login-register-title font800 orange">Registo</span>
 
-            <form id="loginForm" action="../components/php/loginform.php" method="post" role="form">
+            <form id="loginForm" action="../components/php/registerform.php" method="post" role="form">
 
                 <div class="login-item flex-row">
                     <img src="../img/icon/user.jpg" class="login-item-img">
                     <!-- username -->
-                    <input type="text" name="user" id="user" placeholder="username" class="login-item-form gray font700">
+                    <input type="text" name="inputUsername" id="inputUsername" placeholder="username"
+                           class="login-item-form gray font700">
                 </div>
 
                 <div class="login-item flex-row">
@@ -49,7 +60,8 @@
                 <div class="login-item flex-row">
                     <img src="../img/icon/pass.jpg" class="login-item-img">
                     <!-- pass -->
-                    <input type="password" name="pass" id="pass" placeholder="password" class="login-item-form gray font700">
+                    <input type="password" name="inputPassword" id="inputPassword" placeholder="password"
+                           class="login-item-form gray font700">
                 </div>
 
                 <div class="login-register-link text-center gray font500">Já tem uma conta? <a href="" class="pointer orange font600">Entre agora</a></div>

@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
-<?php session_start(); ?>
+<?php session_start();
+
+if (isset($_SESSION['username'])) {
+
+    header('Location: ../homepage.php');
+
+}
+
+
+?>
 <head>
 
     <meta charset="utf-8">
@@ -33,7 +42,7 @@
 
             <span class="login-register-title font800 orange">Log In</span>
 
-            <form id="loginForm" action="../components/php/loginform.php" method="post" role="form">
+            <form id="loginForm" action="/components/php/loginform.php" method="post" role="form">
 
                 <div class="login-item flex-row">
                     <img src="../img/icon/user.jpg" class="login-item-img">
