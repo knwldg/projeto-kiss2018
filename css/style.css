@@ -858,6 +858,52 @@ input[name="image-uploaded"] {
 
 /* LOGIN */
 
+#submit:not(:active){
+    transform: translate3d(0,0,0);
+    animation: shake 0.65s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    10%{
+        transform: translate3d(0.2em,0,0);
+    }
+    30%{
+        transform: translate3d(-0.2em,0,0);
+    }
+    40%{
+        transform: translate3d(0.2em,0,0);
+    }
+    50%{
+        transform: translate3d(-0.2,0,0);
+    }
+    60%{
+        transform: translate3d(0,0,0);
+    }
+
+}
+
+@keyframes voltar {
+    0%{
+        background: 0;
+    }
+    100%{
+        background: linear-gradient(to right, rgba(247,152,104,0.90) , rgba(246,181,62,0.90));
+    }
+}
+
+
+
+
+
+.verification-login-registo{
+    opacity: 0;
+    color: #ff0000;
+    font-size: 70%;
+}
+
 .background-color{
     background: linear-gradient(to right, rgba(247,152,104,0.70) , rgba(246,181,62,0.70));
 }
@@ -881,6 +927,7 @@ input[name="image-uploaded"] {
 }
 
 .login-btn{
+    visibility: hidden;
     width: 65%;
     padding: 0.9em 0 0.9em 0;
     font-size: 120%;

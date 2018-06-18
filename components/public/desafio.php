@@ -135,9 +135,9 @@
 
                 </div>
             <!-- validado/reportado -->
-
+                </div>
     <!-- lista de fotos enviadas -->
-    </div>
+
 </div>
 
 

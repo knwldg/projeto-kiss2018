@@ -13,6 +13,6 @@ require_once "./logincontrol.php";
 
 if (registerUser($_POST['inputUsername'], $_POST['inputPassword'])) {
 
-    header('Location: /public/login.php');
+    header('Location: /projeto-kiss2018/public/login.php');
 
-} else header('Location: /public/registo.php');
+} else header('Location: /projeto-kiss2018/public/registo.php');

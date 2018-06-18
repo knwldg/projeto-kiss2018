@@ -8,10 +8,10 @@
 
 session_start();
 
-require_once "logincontrol.php";
+require_once "./logincontrol.php";
 
-if (loginUser($_POST['inputUsername'], $_POST['inputPassword'])) {
+if (registerUser($_POST['inputUsername'], $_POST['inputPassword']))
+{    header('Location: /projeto-kiss2018/public/homepage.php');}
+else header('Location: /projeto-kiss2018/public/login.php');
 
-    header('Location: /public/homepage.php');
 
-} else header('Location: /public/registo.php');

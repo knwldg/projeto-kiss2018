@@ -4,7 +4,7 @@
 
 if (isset($_SESSION['username'])) {
 
-    header('Location: ../homepage.php');
+    header('Location: /projeto-kiss2018/public/homepage.php');
 
 }
 
@@ -42,31 +42,33 @@ if (isset($_SESSION['username'])) {
 
             <span class="login-register-title font800 orange">Log In</span>
 
-            <form id="loginForm" action="/components/php/loginform.php" method="post" role="form">
+            <form id="loginForm" action="../components/php/loginform.php" method="post" role="form">
 
                 <div class="login-item flex-row">
                     <img src="../img/icon/user.jpg" class="login-item-img">
                     <!-- Parte do formulário para utilizador-->
-                    <input type="text" name="inputUsername" id="inputUsername" placeholder="username" class="login-item-form gray font700">
+                    <input type="text" onfocus="change_submit()" name="inputUsername" id="inputUsername" placeholder="username" class="login-item-form gray font700">
                 </div>
 
                 <div class="login-item flex-row">
                     <img src="../img/icon/pass.jpg" class="login-item-img">
                     <!-- Parte do formulário para pass-->
-                    <input type="password" name="inputPassword" id="inputPassword" placeholder="password" class="login-item-form gray font700">
+                    <input type="password" onfocus="change_submit()" name="inputPassword" id="inputPassword" placeholder="password" class="login-item-form gray font700">
                 </div>
 
                 <div class="login-register-link text-center gray font500">Já se registou? <a href="" class="pointer orange font600">Crie agora</a></div>
 
-                <div class="submit text-center"><input id="submit" type="submit" name="submitlogin" value="log in" class="login-btn gradient-background gradient-border pointer white font700"></div>
+
+                <div onclick="verification_login()" class="submit text-center"><input id="submit" type="submit" name="submitlogin" value="log in" class="login-btn gradient-background gradient-border pointer white font700"></div>
+                    <h5 id="login-verification" class="verification-login-registo font600"></h5>
+
             </form>
 
         </div>
     </div>
 </div>
 
-
-
+<script src="../js/verifications.js" type="text/javascript"></script>
 
 </body>
 </html>
