@@ -7,14 +7,14 @@
         <span class="font800 desafio-title">Mantém o espaço limpo!</span>
 
         <div class="desafio-content-items flex-row">
-            <img src="../img/marca/logo-320w.svg" class="desafio-logo">
+            <img src="../../img/marca/logo-320w.svg" class="desafio-logo">
             <span class="font800 desafio-subtitle">Desafio:</span>
             <span class="font500 desafio-description">Descrição do Desafio para ouvir algo fuixe di fh d </span>
         </div>
 
         <div class="challenge-time-keys flex-row font500 desafio-time-keys">
-            <!-- icon time --> <span class="challenge-time flex-row orange"><img class="time" src="../img/icon/relogio.png">14:00 - 14:35</span>
-            <img class="challenge-keys" src="../img/icon/chave_laranja.png">
+            <!-- icon time --> <span class="challenge-time flex-row orange"><img class="time" src="../../img/icon/relogio.png">14:00 - 14:35</span>
+            <img class="challenge-keys" src="../../img/icon/chave_laranja.png">
         </div>
 
     </div>
@@ -23,9 +23,9 @@
 
     <!-- yes or not -->
     <div id="modal" class="flex-row yes-or-not yes-or-not-display"><!-- quando clicar no desafio -> .yes-or-not-display -> display: flex -->
-        <div id="accept" class="flex"><a href=""><img class="yes-or-not-item pointer" src="../img/icon/yes.png"></a></div><!-- aceitar o desafio -->
-        <div class="flex"><img class="yes-or-not-item yes-or-not-item-padding" src="../img/icon/divisoria.png"></div>
-        <div id="reject" class="flex"><img class="yes-or-not-item yes-or-not-item-width pointer" src="../img/icon/no.png"></div><!-- rejeitar o desafio -->
+        <div id="accept" class="flex"><a href=""><img class="yes-or-not-item pointer" src="../../img/icon/yes.png"></a></div><!-- aceitar o desafio -->
+        <div class="flex"><img class="yes-or-not-item yes-or-not-item-padding" src="../../img/icon/divisoria.png"></div>
+        <div id="reject" class="flex"><img class="yes-or-not-item yes-or-not-item-width pointer" src="../../img/icon/no.png"></div><!-- rejeitar o desafio -->
     </div>
     <!-- yes or not -->
 
@@ -34,10 +34,10 @@
     <div id="lista-fotos" class="lista-fotos-conteudo flex-row">
         <div class="flex-column center-items">
             <span class="verification-images-preview-title orange font700">antes</span>
-            <img id="lista-fotos-antes" class="clip-mask" src="../img/preview-images/antes.jpg">
+            <img id="lista-fotos-antes" class="clip-mask" src="../../img/preview-images/antes.jpg">
         </div>
         <div class="flex-column center-items"><span class="verification-images-preview-title orange font700">depois</span>
-            <img id="lista-fotos-depois" class="clip-mask" src="../img/preview-images/depois.jpg">
+            <img id="lista-fotos-depois" class="clip-mask" src="../../img/preview-images/depois.jpg">
         </div>
         <button onclick="validado()" id="validar" class="btn validar"></button>
         <button onclick="reportado()" id="reportar" class="btn reportar"></button>
@@ -48,7 +48,7 @@
 
             <div id="verificacao-animacao" class="verification-animation">
                 <object>
-                    <embed id="verificacao" src="../img/icon/verification.svg">
+                    <embed id="verificacao" src="../../img/icon/verification.svg">
                 </object>
             </div>
 
@@ -73,14 +73,14 @@
             <span class="font800 desafio-title">Mantém o espaço limpo!</span>
 
             <div class="desafio-content-items flex-row">
-                <img src="../img/marca/logo-320w.svg" class="desafio-logo">
+                <img src="../../img/marca/logo-320w.svg" class="desafio-logo">
                 <span class="font800 desafio-subtitle">Desafio:</span>
                 <span class="font500 desafio-description">Descrição do Desafio para ouvir algo fuixe di fh d </span>
             </div>
 
             <div class="challenge-time-keys flex-row font500 desafio-time-keys">
-                <!-- icon time --> <span class="challenge-time flex-row orange"><img class="time" src="../img/icon/relogio.png">14:00 - 14:35</span>
-                <img class="challenge-keys" src="../img/icon/chave_laranja.png">
+                <!-- icon time --> <span class="challenge-time flex-row orange"><img class="time" src="../../img/icon/relogio.png">14:00 - 14:35</span>
+                <img class="challenge-keys" src="../../img/icon/chave_laranja.png">
             </div>
 
         </div>
@@ -90,9 +90,9 @@
         <!-- yes or not -->
 
         <div id="modal" class="flex-row yes-or-not yes-or-not-display"><!-- quando clicar no desafio -> .yes-or-not-display -> display: flex -->
-            <div id="accept" class="flex"><a href=""><img class="yes-or-not-item pointer" src="../img/icon/yes.png"></a></div><!-- aceitar o desafio -->
-            <div class="flex"><img class="yes-or-not-item yes-or-not-item-padding" src="../img/icon/divisoria.png"></div>
-            <div id="reject" class="flex"><img class="yes-or-not-item yes-or-not-item-width pointer" src="../img/icon/no.png"></div><!-- rejeitar o desafio -->
+            <div id="accept" class="flex"><a href=""><img class="yes-or-not-item pointer" src="../../img/icon/yes.png"></a></div><!-- aceitar o desafio -->
+            <div class="flex"><img class="yes-or-not-item yes-or-not-item-padding" src="../../img/icon/divisoria.png"></div>
+            <div id="reject" class="flex"><img class="yes-or-not-item yes-or-not-item-width pointer" src="../../img/icon/no.png"></div><!-- rejeitar o desafio -->
         </div>
 
         <!-- yes or not -->
@@ -101,14 +101,13 @@
 
         <!-- lista de fotos enviadas -->
         <div id="lista-fotos1" class="lista-fotos-conteudo flex-column">
-            <!--<button class="lista-fotos-close">&nbsp</button>-->
             <div class="flex-row">
-                <div class="flex-column center-items">
+                <div class="lista-fotos-size flex-column center-items">
                     <span class="verification-images-preview-title orange font700">antes</span>
-                    <img id="lista-fotos-antes" class="clip-mask" src="../img/preview-images/antes.jpg">
+                    <img id="lista-fotos-antes" class="clip-mask" src="../../img/preview-images/antes.jpg">
                 </div>
-                <div class="flex-column center-items"><span class="verification-images-preview-title orange font700">depois</span>
-                    <img id="lista-fotos-depois" class="clip-mask" src="../img/preview-images/depois.jpg">
+                <div class="lista-fotos-size flex-column center-items"><span class="verification-images-preview-title orange font700">depois</span>
+                    <img id="lista-fotos-depois" class="clip-mask" src="../../img/preview-images/depois.jpg">
                 </div>
             </div>
 
@@ -150,14 +149,14 @@
         <span class="font800 desafio-title">Mantém o espaço limpo!</span>
 
         <div class="desafio-content-items flex-row">
-            <img src="../img/marca/logo-320w.svg" class="desafio-logo">
+            <img src="../../img/marca/logo-320w.svg" class="desafio-logo">
             <span class="font800 desafio-subtitle">Desafio:</span>
             <span class="font500 desafio-description">Descrição do Desafio para ouvir algo fuixe di fh d </span>
         </div>
 
         <div class="challenge-time-keys flex-row font500 desafio-time-keys">
-            <!-- icon time --> <span class="challenge-time flex-row orange"><img class="time" src="../img/icon/relogio.png">14:00 - 14:35</span>
-            <img class="challenge-keys" src="../img/icon/chave_laranja.png">
+            <!-- icon time --> <span class="challenge-time flex-row orange"><img class="time" src="../../img/icon/relogio.png">14:00 - 14:35</span>
+            <img class="challenge-keys" src="../../img/icon/chave_laranja.png">
         </div>
 
     </div>
@@ -166,9 +165,9 @@
 
     <!-- yes or not -->
     <div id="modal" class="flex-row yes-or-not yes-or-not-display"><!-- quando clicar no desafio -> .yes-or-not-display -> display: flex -->
-        <div id="accept" class="flex"><a href=""><img class="yes-or-not-item pointer" src="../img/icon/yes.png"></a></div><!-- aceitar o desafio -->
-        <div class="flex"><img class="yes-or-not-item yes-or-not-item-padding" src="../img/icon/divisoria.png"></div>
-        <div id="reject" class="flex"><img class="yes-or-not-item yes-or-not-item-width pointer" src="../img/icon/no.png"></div><!-- rejeitar o desafio -->
+        <div id="accept" class="flex"><a href=""><img class="yes-or-not-item pointer" src="../../img/icon/yes.png"></a></div><!-- aceitar o desafio -->
+        <div class="flex"><img class="yes-or-not-item yes-or-not-item-padding" src="../../img/icon/divisoria.png"></div>
+        <div id="reject" class="flex"><img class="yes-or-not-item yes-or-not-item-width pointer" src="../../img/icon/no.png"></div><!-- rejeitar o desafio -->
     </div>
     <!-- yes or not -->
 
@@ -177,10 +176,10 @@
     <div id="lista-fotos" class="lista-fotos-conteudo flex-row">
         <div class="flex-column center-items">
             <span class="verification-images-preview-title orange font700">antes</span>
-            <img id="lista-fotos-antes" class="clip-mask" src="../img/preview-images/antes.jpg">
+            <img id="lista-fotos-antes" class="clip-mask" src="../../img/preview-images/antes.jpg">
         </div>
         <div class="flex-column center-items"><span class="verification-images-preview-title orange font700">depois</span>
-            <img id="lista-fotos-depois" class="clip-mask" src="../img/preview-images/depois.jpg">
+            <img id="lista-fotos-depois" class="clip-mask" src="../../img/preview-images/depois.jpg">
         </div>
         <button onclick="validado()" id="validar" class="btn validar"></button>
         <button onclick="reportado()" id="reportar" class="btn reportar"></button>
@@ -191,7 +190,7 @@
 
             <div id="verificacao-animacao" class="verification-animation">
                 <object>
-                    <embed id="verificacao" src="../img/icon/verification.svg">
+                    <embed id="verificacao" src="../../img/icon/verification.svg">
                 </object>
             </div>
 
@@ -215,14 +214,14 @@
         <span class="font800 desafio-title">Mantém o espaço limpo!</span>
 
         <div class="desafio-content-items flex-row">
-            <img src="../img/marca/logo-320w.svg" class="desafio-logo">
+            <img src="../../img/marca/logo-320w.svg" class="desafio-logo">
             <span class="font800 desafio-subtitle">Desafio:</span>
             <span class="font500 desafio-description">Descrição do Desafio para ouvir algo fuixe di fh d </span>
         </div>
 
         <div class="challenge-time-keys flex-row font500 desafio-time-keys">
-            <!-- icon time --> <span class="challenge-time flex-row orange"><img class="time" src="../img/icon/relogio.png">14:00 - 14:35</span>
-            <img class="challenge-keys" src="../img/icon/chave_laranja.png">
+            <!-- icon time --> <span class="challenge-time flex-row orange"><img class="time" src="../../img/icon/relogio.png">14:00 - 14:35</span>
+            <img class="challenge-keys" src="../../img/icon/chave_laranja.png">
         </div>
 
     </div>
@@ -231,9 +230,9 @@
 
     <!-- yes or not -->
     <div id="modal" class="flex-row yes-or-not yes-or-not-display"><!-- quando clicar no desafio -> .yes-or-not-display -> display: flex -->
-        <div id="accept" class="flex"><a href=""><img class="yes-or-not-item pointer" src="../img/icon/yes.png"></a></div><!-- aceitar o desafio -->
-        <div class="flex"><img class="yes-or-not-item yes-or-not-item-padding" src="../img/icon/divisoria.png"></div>
-        <div id="reject" class="flex"><img class="yes-or-not-item yes-or-not-item-width pointer" src="../img/icon/no.png"></div><!-- rejeitar o desafio -->
+        <div id="accept" class="flex"><a href=""><img class="yes-or-not-item pointer" src="../../img/icon/yes.png"></a></div><!-- aceitar o desafio -->
+        <div class="flex"><img class="yes-or-not-item yes-or-not-item-padding" src="../../img/icon/divisoria.png"></div>
+        <div id="reject" class="flex"><img class="yes-or-not-item yes-or-not-item-width pointer" src="../../img/icon/no.png"></div><!-- rejeitar o desafio -->
     </div>
     <!-- yes or not -->
 
@@ -242,10 +241,10 @@
     <div id="lista-fotos" class="lista-fotos-conteudo flex-row">
         <div class="flex-column center-items">
             <span class="verification-images-preview-title orange font700">antes</span>
-            <img id="lista-fotos-antes" class="clip-mask" src="../img/preview-images/antes.jpg">
+            <img id="lista-fotos-antes" class="clip-mask" src="../../img/preview-images/antes.jpg">
         </div>
         <div class="flex-column center-items"><span class="verification-images-preview-title orange font700">depois</span>
-            <img id="lista-fotos-depois" class="clip-mask" src="../img/preview-images/depois.jpg">
+            <img id="lista-fotos-depois" class="clip-mask" src="../../img/preview-images/depois.jpg">
         </div>
         <button onclick="validado()" id="validar" class="btn validar"></button>
         <button onclick="reportado()" id="reportar" class="btn reportar"></button>
@@ -256,7 +255,7 @@
 
             <div id="verificacao-animacao" class="verification-animation">
                 <object>
-                    <embed id="verificacao" src="../img/icon/verification.svg">
+                    <embed id="verificacao" src="../../img/icon/verification.svg">
                 </object>
             </div>
 
@@ -280,14 +279,14 @@
         <span class="font800 desafio-title">Mantém o espaço limpo!</span>
 
         <div class="desafio-content-items flex-row">
-            <img src="../img/marca/logo-320w.svg" class="desafio-logo">
+            <img src="../../img/marca/logo-320w.svg" class="desafio-logo">
             <span class="font800 desafio-subtitle">Desafio:</span>
             <span class="font500 desafio-description">Descrição do Desafio para ouvir algo fuixe di fh d </span>
         </div>
 
         <div class="challenge-time-keys flex-row font500 desafio-time-keys">
-            <!-- icon time --> <span class="challenge-time flex-row orange"><img class="time" src="../img/icon/relogio.png">14:00 - 14:35</span>
-            <img class="challenge-keys" src="../img/icon/chave_laranja.png">
+            <!-- icon time --> <span class="challenge-time flex-row orange"><img class="time" src="../../img/icon/relogio.png">14:00 - 14:35</span>
+            <img class="challenge-keys" src="../../img/icon/chave_laranja.png">
         </div>
 
     </div>
@@ -296,9 +295,9 @@
 
     <!-- yes or not -->
     <div id="modal" class="flex-row yes-or-not yes-or-not-display"><!-- quando clicar no desafio -> .yes-or-not-display -> display: flex -->
-        <div id="accept" class="flex"><a href=""><img class="yes-or-not-item pointer" src="../img/icon/yes.png"></a></div><!-- aceitar o desafio -->
-        <div class="flex"><img class="yes-or-not-item yes-or-not-item-padding" src="../img/icon/divisoria.png"></div>
-        <div id="reject" class="flex"><img class="yes-or-not-item yes-or-not-item-width pointer" src="../img/icon/no.png"></div><!-- rejeitar o desafio -->
+        <div id="accept" class="flex"><a href=""><img class="yes-or-not-item pointer" src="../../img/icon/yes.png"></a></div><!-- aceitar o desafio -->
+        <div class="flex"><img class="yes-or-not-item yes-or-not-item-padding" src="../../img/icon/divisoria.png"></div>
+        <div id="reject" class="flex"><img class="yes-or-not-item yes-or-not-item-width pointer" src="../../img/icon/no.png"></div><!-- rejeitar o desafio -->
     </div>
     <!-- yes or not -->
 
@@ -307,10 +306,10 @@
     <div id="lista-fotos" class="lista-fotos-conteudo flex-row">
         <div class="flex-column center-items">
             <span class="verification-images-preview-title orange font700">antes</span>
-            <img id="lista-fotos-antes" class="clip-mask" src="../img/preview-images/antes.jpg">
+            <img id="lista-fotos-antes" class="clip-mask" src="../../img/preview-images/antes.jpg">
         </div>
         <div class="flex-column center-items"><span class="verification-images-preview-title orange font700">depois</span>
-            <img id="lista-fotos-depois" class="clip-mask" src="../img/preview-images/depois.jpg">
+            <img id="lista-fotos-depois" class="clip-mask" src="../../img/preview-images/depois.jpg">
         </div>
         <button onclick="validado()" id="validar" class="btn validar"></button>
         <button onclick="reportado()" id="reportar" class="btn reportar"></button>
@@ -321,7 +320,7 @@
 
             <div id="verificacao-animacao" class="verification-animation">
                 <object>
-                    <embed id="verificacao" src="../img/icon/verification.svg">
+                    <embed id="verificacao" src="../../img/icon/verification.svg">
                 </object>
             </div>
 
@@ -345,14 +344,14 @@
         <span class="font800 desafio-title">Mantém o espaço limpo!</span>
 
         <div class="desafio-content-items flex-row">
-            <img src="../img/marca/logo-320w.svg" class="desafio-logo">
+            <img src="../../img/marca/logo-320w.svg" class="desafio-logo">
             <span class="font800 desafio-subtitle">Desafio:</span>
             <span class="font500 desafio-description">Descrição do Desafio para ouvir algo fuixe di fh d </span>
         </div>
 
         <div class="challenge-time-keys flex-row font500 desafio-time-keys">
-            <!-- icon time --> <span class="challenge-time flex-row orange"><img class="time" src="../img/icon/relogio.png">14:00 - 14:35</span>
-            <img class="challenge-keys" src="../img/icon/chave_laranja.png">
+            <!-- icon time --> <span class="challenge-time flex-row orange"><img class="time" src="../../img/icon/relogio.png">14:00 - 14:35</span>
+            <img class="challenge-keys" src="../../img/icon/chave_laranja.png">
         </div>
 
     </div>
@@ -361,9 +360,9 @@
 
     <!-- yes or not -->
     <div id="modal" class="flex-row yes-or-not yes-or-not-display"><!-- quando clicar no desafio -> .yes-or-not-display -> display: flex -->
-        <div id="accept" class="flex"><a href=""><img class="yes-or-not-item pointer" src="../img/icon/yes.png"></a></div><!-- aceitar o desafio -->
-        <div class="flex"><img class="yes-or-not-item yes-or-not-item-padding" src="../img/icon/divisoria.png"></div>
-        <div id="reject" class="flex"><img class="yes-or-not-item yes-or-not-item-width pointer" src="../img/icon/no.png"></div><!-- rejeitar o desafio -->
+        <div id="accept" class="flex"><a href=""><img class="yes-or-not-item pointer" src="../../img/icon/yes.png"></a></div><!-- aceitar o desafio -->
+        <div class="flex"><img class="yes-or-not-item yes-or-not-item-padding" src="../../img/icon/divisoria.png"></div>
+        <div id="reject" class="flex"><img class="yes-or-not-item yes-or-not-item-width pointer" src="../../img/icon/no.png"></div><!-- rejeitar o desafio -->
     </div>
     <!-- yes or not -->
 
@@ -372,10 +371,10 @@
     <div id="lista-fotos" class="lista-fotos-conteudo flex-row">
         <div class="flex-column center-items">
             <span class="verification-images-preview-title orange font700">antes</span>
-            <img id="lista-fotos-antes" class="clip-mask" src="../img/preview-images/antes.jpg">
+            <img id="lista-fotos-antes" class="clip-mask" src="../../img/preview-images/antes.jpg">
         </div>
         <div class="flex-column center-items"><span class="verification-images-preview-title orange font700">depois</span>
-            <img id="lista-fotos-depois" class="clip-mask" src="../img/preview-images/depois.jpg">
+            <img id="lista-fotos-depois" class="clip-mask" src="../../img/preview-images/depois.jpg">
         </div>
         <button onclick="validado()" id="validar" class="btn validar"></button>
         <button onclick="reportado()" id="reportar" class="btn reportar"></button>
@@ -386,7 +385,7 @@
 
             <div id="verificacao-animacao" class="verification-animation">
                 <object>
-                    <embed id="verificacao" src="../img/icon/verification.svg">
+                    <embed id="verificacao" src="../../img/icon/verification.svg">
                 </object>
             </div>
 

@@ -35,6 +35,39 @@ function listUsers()
 
 }
 
+function listCards() {
+
+    // disponibiliza lista de cartas por ordem de registo na db no array global $cardList
+
+    global $sql_connection;
+    global $cardList;
+
+    $cardList = [];
+    $sql_op = $sql_connection->prepare("SELECT name, rarity, collection FROM cards");
+    $sql_op->execute();
+    $sql_op->store_result();
+
+    $num_cards = $sql_op->num_rows;
+
+    for ($i = 0; $i < $num_cards; $i++) {
+
+        $sql_op->store_result();
+        $sql_op->bind_result($cardList[$i]);
+        $sql_op->fetch();
+
+    }
+
+    return true;
+
+}
+
+function getUserCards($userId) {
+
+
+
+
+}
+
 function getUserData($userId)
 {
 
@@ -126,5 +159,61 @@ function createBox($owner)
     $sql_op->execute();
 
 }
-
 */
+
+function loot($userId) {
+
+    whatCard();
+
+    addCard($userId, whatCard());
+
+
+}
+
+function whatCard() {
+
+    // retorna o id da carta de reward
+
+      return rand(1, 19);
+
+}
+
+function addCard($userId, $cardId) {
+    global $sql_connection;
+    try {
+        if (!isset ($sql_connection)) {
+            throw new Exception('SQL Connection failure');
+        }
+
+        $sql_op = $sql_connection->prepare("SELECT quantity FROM ark WHERE users_idusers = ? AND cards_idcards = ?");
+
+        $sql_op->bind_param('ii', $userId, $cardId);
+
+        if (!$sql_op->execute()) {
+
+            return false;
+
+        }
+
+        $sql_op->store_result();
+        $sql_op->bind_result($quantity);
+        $sql_op->fetch();
+
+        $newQuantity = $quantity+1;
+
+        unset($sql_op);
+
+        $sql_op = $sql_connection->prepare("INSERT IGNORE INTO ark (users_idusers, cards_idcards, quantity) VALUES (?,?,?)");
+        $sql_op->bind_param('iii', $userId, $cardId, $newQuantity);
+
+        if (!$sql_op->execute()) {
+            throw new Exception('Cannot register plant in database');
+        }
+        else return true;
+    }
+    catch (Exception $exception) {
+        echo ("Error: $exception");
+        return false;
+    }
+}
+

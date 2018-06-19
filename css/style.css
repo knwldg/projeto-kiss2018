@@ -1060,6 +1060,7 @@ input[name="image-uploaded"] {
 
 .clip-mask{
     width: 150%;
+    height: 100%;
     -webkit-clip-path: inset(5% 22% 15% 12%);
     clip-path: inset(0 20% 0 20%);
 }
@@ -1549,8 +1550,12 @@ input[name="image-uploaded"] {
 
 /* LISTAS-FOTOS-ENVIADAS */
 
+.lista-fotos-size{
+    height: 130%;
+}
+
 .btn{
-    width: 9.5em;
+    width: 7.7em;
     height: 4.5em;
 }
 
@@ -1567,7 +1572,8 @@ input[name="image-uploaded"] {
 }
 
 .validar-reportar{
-    margin-top: 1.2em;
+    position: relative;
+    margin-top: 2.5em;
 }
 
 .lista-fotos-fundo{
@@ -1593,8 +1599,8 @@ input[name="image-uploaded"] {
 }
 
 .lista-fotos-conteudo{
-    padding: 1em 0 1em 0;
-    font-size: 102%;
+    padding: 0.8em 0 0.6em 0;
+    font-size: 90%;
     display: none;
     justify-content: start  ;
 }

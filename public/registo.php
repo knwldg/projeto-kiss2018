@@ -2,13 +2,13 @@
 <html>
 <?php
 session_start();
-
+/*
 if (isset($_SESSION['username'])) {
 
     header('Location: /public/homepage.php');
 
 }
-
+*/
 ?>
 
 
@@ -23,6 +23,98 @@ if (isset($_SESSION['username'])) {
     <link rel="stylesheet" href="../css/style.css">
 
     <title>Registar</title>
+
+    <script type="text/javascript">
+        function validateForm() {
+
+            var username = document.forms["registoForm"]["inputUsername"].value;
+            var password = document.forms["registoForm"]["inputPassword"].value;
+            //var email = document.forms["registoForm"]["inputEmail"].value;
+            var id_password = document.getElementById("inputPassword");
+           // var id_email = document.getElementById("inputEmail");
+
+
+            if (!(username == "") && password == ""){
+
+                document.getElementById("inputPassword").style.border ="2px solid #ff0000";
+
+                document.getElementById("submit").style.background ="0";
+                document.getElementById("submit").style.backgroundColor ="#ff0000";
+                document.getElementById("submit").value = "erro";
+                document.getElementById("submit").style.transition = "all 0.1s ease-in";
+
+                document.getElementById("login-verification").style.opacity = "1";
+                document.getElementById("login-verification").innerHTML = "é necessario password!";//depois colocas a tua maneira
+                document.getElementById("login-verification").style.transition = "opacity 1s ease-in";
+                document.getElementById("login-verification").style.transitionDelay = "0.2s";
+                return false;
+            }
+
+            if (!(password == "") && username == ""){
+
+                document.getElementById("inputUsername").style.border ="2px solid #ff0000";
+
+                document.getElementById("submit").style.background ="0";
+                document.getElementById("submit").style.backgroundColor ="#ff0000";
+                document.getElementById("submit").value = "erro";
+                document.getElementById("submit").style.transition = "all 0.1s ease-in";
+
+                document.getElementById("login-verification").style.opacity = "1";
+                document.getElementById("login-verification").innerHTML = "é necessario username!";
+                document.getElementById("login-verification").style.transition = "opacity 1s ease-in";
+                document.getElementById("login-verification").style.transitionDelay = "0.2s";
+                return false;
+
+            }
+
+            if(!(password == "") && !(username == "")){
+
+                if(id_password.value.length >= 8) {
+
+                    document.getElementById("submit").style.animation ="0";
+                    document.getElementById("submit").style.background ="0";
+                    document.getElementById("submit").style.backgroundColor ="#009245";
+                    document.getElementById("submit").value = "registado";
+                    document.getElementById("submit").style.transition = "background 0.1s, background-color 0.1s ease-in";
+                    return true;
+
+                } else {
+
+                    document.getElementById("inputPassword").style.border ="2px solid #ff0000";
+
+                    document.getElementById("submit").style.background ="0";
+                    document.getElementById("submit").style.backgroundColor ="#ff0000";
+                    document.getElementById("submit").value = "erro";
+                    document.getElementById("submit").style.transition = "all 0.1s ease-in";
+
+                    document.getElementById("login-verification").style.opacity = "1";
+                    document.getElementById("login-verification").innerHTML = "igual ou maior a 8 caracteres!";
+                    document.getElementById("login-verification").style.transition = "opacity 1s ease-in";
+                    document.getElementById("login-verification").style.transitionDelay = "0.2s";
+                    return false;
+                }
+
+            } else {
+                document.getElementById("inputUsername").style.border ="2px solid #ff0000";
+                document.getElementById("inputPassword").style.border ="2px solid #ff0000";
+
+                document.getElementById("submit").style.background ="0";
+                document.getElementById("submit").style.backgroundColor ="#ff0000";
+                document.getElementById("submit").value = "erro";
+                document.getElementById("submit").style.transition = "all 0.1s ease-in";
+
+                document.getElementById("login-verification").style.opacity = "1";
+                document.getElementById("login-verification").innerHTML = "é necessario username e password!";//depois colocas a tua maneira
+                document.getElementById("login-verification").style.transition = "opacity 1s ease-in";
+                document.getElementById("login-verification").style.transitionDelay = "0.2s";
+                return false;
+            }
+
+
+        }
+
+    </script>
+
 </head>
 
 <body>
@@ -43,7 +135,7 @@ if (isset($_SESSION['username'])) {
 
             <span class="login-register-title font800 orange">Registo</span>
 
-            <form id="loginForm" action="../components/php/registerform.php?id='submit'" method="post" role="form">
+            <form id="registoForm" action="../components/php/registerform.php" onsubmit="return validateForm()" method="post" role="form">
 
                 <div class="login-item flex-row">
                     <img src="../img/icon/user.jpg" class="login-item-img">

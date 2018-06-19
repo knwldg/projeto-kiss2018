@@ -23,6 +23,8 @@ if (isset($_SESSION['username'])) {
     <link rel="stylesheet" href="../css/style.css">
 
     <title>Log In</title>
+
+
 </head>
 
 
@@ -44,7 +46,7 @@ if (isset($_SESSION['username'])) {
 
             <span class="login-register-title font800 orange">Log In</span>
 
-            <form id="loginForm" action="../components/php/loginform.php" method="post" role="form">
+            <form id="loginForm" action="../components/php/loginform.php" method="post" onsubmit="return validateForm()" role="form">
 
                 <div class="login-item flex-row">
                     <img src="../img/icon/user.jpg" class="login-item-img">
