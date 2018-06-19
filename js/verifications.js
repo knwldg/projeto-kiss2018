@@ -1,4 +1,5 @@
 
+/*
 function verification_login() {
     //nao enviado
     document.getElementById("submit").style.background ="0";
@@ -13,13 +14,13 @@ function verification_login() {
 }
 
 function verification_registo() {
-    /*  //enviado
-      document.getElementById("submit").style.animation ="0";
-      document.getElementById("submit").style.background ="0";
-      document.getElementById("submit").style.backgroundColor ="#009245";
-      document.getElementById("submit").value = "registado";
-      document.getElementById("submit").style.transition = "background 0.1s, background-color 0.1s ease-in";
-      */
+    //enviado
+    document.getElementById("submit").style.animation ="0";
+    document.getElementById("submit").style.background ="0";
+    document.getElementById("submit").style.backgroundColor ="#009245";
+    document.getElementById("submit").value = "registado";
+    document.getElementById("submit").style.transition = "background 0.1s, background-color 0.1s ease-in";
+
     //nao enviado
     document.getElementById("submit").style.background ="0";
     document.getElementById("submit").style.backgroundColor ="#ff0000";
@@ -31,6 +32,7 @@ function verification_registo() {
     document.getElementById("login-verification").style.transition = "opacity 1s ease-in";
     document.getElementById("login-verification").style.transitionDelay = "0.2s";
 }
+*/
 
 function change_submit() {
 

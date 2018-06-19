@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
-<?php session_start();
+<?php
+session_start();
 
 if (isset($_SESSION['username'])) {
 
-    header('Location: /projeto-kiss2018/public/homepage.php');
+    header('Location: /homepage.php');
 
 }
 
