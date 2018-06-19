@@ -142,25 +142,6 @@ function findIdByUsername($value)
 
 // TODO redo this
 
-/*
-function createBox($owner)
-{
-
-    global $sql_connection;
-
-    $type = luck();
-
-    $ownerid = findIdByUsername($owner);
-
-    $sql_op = $sql_connection->prepare("INSERT INTO boxes (type, owner) VALUES (?,?)");
-
-    $sql_op->bind_param('ii', $type, $ownerid);
-
-    $sql_op->execute();
-
-}
-*/
-
 function loot($userId) {
 
     whatCard();
@@ -199,18 +180,35 @@ function addCard($userId, $cardId) {
         $sql_op->bind_result($quantity);
         $sql_op->fetch();
 
-        $newQuantity = $quantity+1;
+        if($sql_op->mysql_num_rows($quantity)==0) {
 
-        unset($sql_op);
+            $sql_op = $sql_connection->prepare("INSERT IGNORE INTO ark (users_idusers, cards_idcards, quantity) VALUES (?,?,1)");
+            $sql_op->bind_param('ii', $userId, $cardId);
 
-        $sql_op = $sql_connection->prepare("INSERT IGNORE INTO ark (users_idusers, cards_idcards, quantity) VALUES (?,?,?)");
-        $sql_op->bind_param('iii', $userId, $cardId, $newQuantity);
+            if (!$sql_op->execute()) {
+                throw new Exception('Error');
+            }
 
-        if (!$sql_op->execute()) {
-            throw new Exception('Cannot register plant in database');
+
         }
-        else return true;
-    }
+
+        else {
+
+            $newQuantity = $quantity+1;
+
+            unset($sql_op);
+
+            $sql_op = $sql_connection->prepare("INSERT IGNORE INTO ark (users_idusers, cards_idcards, quantity) VALUES (?,?,?)");
+            $sql_op->bind_param('iii', $userId, $cardId, $newQuantity);
+
+            if (!$sql_op->execute()) {
+                throw new Exception('error');
+            }
+            else return true;
+        }
+
+        }
+
     catch (Exception $exception) {
         echo ("Error: $exception");
         return false;
