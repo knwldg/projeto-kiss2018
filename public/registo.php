@@ -3,14 +3,15 @@
 <?php
 session_start();
 
+
+/*
 if (isset($_SESSION['username'])) {
 
     header('Location: /public/homepage.php');
 
 }
-
+*/
 ?>
-
 
 <head>
 
@@ -23,6 +24,95 @@ if (isset($_SESSION['username'])) {
     <link rel="stylesheet" href="../css/style.css">
 
     <title>Registar</title>
+
+    <script type="text/javascript">
+        function validateForm() {
+
+            var username = document.forms["registoForm"]["inputUsername"].value;
+            var password = document.forms["registoForm"]["inputPassword"].value;
+            var id_password = document.getElementById("inputPassword");
+
+
+            if (!(username == "") && password == ""){
+
+                document.getElementById("inputPassword").style.border ="2px solid #ff0000";
+
+                document.getElementById("submit").style.background ="0";
+                document.getElementById("submit").style.backgroundColor ="#ff0000";
+                document.getElementById("submit").value = "erro";
+                document.getElementById("submit").style.transition = "all 0.1s ease-in";
+
+                document.getElementById("login-verification").style.opacity = "1";
+                document.getElementById("login-verification").innerHTML = "é necessario password!";//depois colocas a tua maneira
+                document.getElementById("login-verification").style.transition = "opacity 1s ease-in";
+                document.getElementById("login-verification").style.transitionDelay = "0.2s";
+                return false;
+            }
+
+            if (!(password == "") && username == ""){
+
+                document.getElementById("inputUsername").style.border ="2px solid #ff0000";
+
+                document.getElementById("submit").style.background ="0";
+                document.getElementById("submit").style.backgroundColor ="#ff0000";
+                document.getElementById("submit").value = "erro";
+                document.getElementById("submit").style.transition = "all 0.1s ease-in";
+
+                document.getElementById("login-verification").style.opacity = "1";
+                document.getElementById("login-verification").innerHTML = "é necessario username!";
+                document.getElementById("login-verification").style.transition = "opacity 1s ease-in";
+                document.getElementById("login-verification").style.transitionDelay = "0.2s";
+                return false;
+
+            }
+
+            if(!(password == "") && !(username == "")){
+
+                if(id_password.value.length >= 8) {
+
+                    document.getElementById("submit").style.animation ="0";
+                    document.getElementById("submit").style.background ="0";
+                    document.getElementById("submit").style.backgroundColor ="#009245";
+                    document.getElementById("submit").value = "registado";
+                    document.getElementById("submit").style.transition = "background 0.1s, background-color 0.1s ease-in";
+                    return true;
+
+                } else {
+
+                    document.getElementById("inputPassword").style.border ="2px solid #ff0000";
+
+                    document.getElementById("submit").style.background ="0";
+                    document.getElementById("submit").style.backgroundColor ="#ff0000";
+                    document.getElementById("submit").value = "erro";
+                    document.getElementById("submit").style.transition = "all 0.1s ease-in";
+
+                    document.getElementById("login-verification").style.opacity = "1";
+                    document.getElementById("login-verification").innerHTML = "igual ou maior a 8 caracteres!";
+                    document.getElementById("login-verification").style.transition = "opacity 1s ease-in";
+                    document.getElementById("login-verification").style.transitionDelay = "0.2s";
+                    return false;
+                }
+
+            } else {
+                document.getElementById("inputUsername").style.border ="2px solid #ff0000";
+                document.getElementById("inputPassword").style.border ="2px solid #ff0000";
+
+                document.getElementById("submit").style.background ="0";
+                document.getElementById("submit").style.backgroundColor ="#ff0000";
+                document.getElementById("submit").value = "erro";
+                document.getElementById("submit").style.transition = "all 0.1s ease-in";
+
+                document.getElementById("login-verification").style.opacity = "1";
+                document.getElementById("login-verification").innerHTML = "é necessario username e password!";//depois colocas a tua maneira
+                document.getElementById("login-verification").style.transition = "opacity 1s ease-in";
+                document.getElementById("login-verification").style.transitionDelay = "0.2s";
+                return false;
+            }
+
+
+        }
+    </script>
+
 </head>
 
 <body>
@@ -41,9 +131,9 @@ if (isset($_SESSION['username'])) {
 
         <div class="login-box flex-column shadow">
 
-            <span class="login-register-title font800 orange">Registo</span>
+            <span id="registo" class="login-register-title font800 orange">Registo</span>
 
-            <form id="loginForm" action="../components/php/registerform.php?id='submit'" method="post" role="form">
+            <form id="registoForm" action="../components/php/registerform.php" method="post" onsubmit="return validateForm()" role="form">
 
                 <div class="login-item flex-row">
                     <img src="../img/icon/user.jpg" class="login-item-img">
@@ -55,13 +145,13 @@ if (isset($_SESSION['username'])) {
                 <div class="login-item flex-row">
                     <img src="../img/icon/mail.jpg" class="login-item-img">
                     <!-- email -->
-                    <input type="email" name="email" id="email" placeholder="email" class="login-item-form gray font700">
+                    <input type="email"  name="email" id="email" placeholder="email" class="login-item-form gray font700">
                 </div>
 
                 <div class="login-item flex-row">
                     <img src="../img/icon/pass.jpg" class="login-item-img">
                     <!-- pass -->
-                    <input type="password" name="inputPassword" id="inputPassword" placeholder="password"
+                    <input type="password" onfocus="change_submit()" name="inputPassword" id="inputPassword" placeholder="password"
                            class="login-item-form gray font700">
                 </div>
 
@@ -77,7 +167,6 @@ if (isset($_SESSION['username'])) {
 </div>
 
 <script src="../js/verifications.js" type="text/javascript"></script>
-
 
 </body>
 </html>

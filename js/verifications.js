@@ -36,6 +36,10 @@ function verification_registo() {
 
 function change_submit() {
 
+    document.getElementById("inputUsername").style.border ="2px solid rgba(140,140,140,0.70)";
+    document.getElementById("inputPassword").style.border ="2px solid rgba(140,140,140,0.70)";
+
+
     document.getElementById("submit").style.visibility ="visible";//queria que o btn login aparecesse depois dos users escreverem nos 2 inputs
     document.getElementById("submit").style.transition = "visibility 1s ease-in";
 
