@@ -18,11 +18,12 @@
 <div id="cromos">
     <!-- /.row -->
     <div id="cards">
-        <h1>Baús</h1>
+        <h1>Cromos</h1>
     </div>
     <div id="table_cromos">
         <table>
             <tr>
+                <th>Nome</th>
                 <th>Coleção</th>
                 <?php
 
@@ -31,7 +32,6 @@
                 listUsers();
 
                 ?>
-
                 <th>Raridade</th>
                 <th>Descrição</th>
             </tr>
