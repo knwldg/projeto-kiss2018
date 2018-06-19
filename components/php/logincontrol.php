@@ -71,6 +71,8 @@ function registerUser($inputUser, $inputPass) {
 
     try {
 
+        unset($sql_op);
+
         /*
 
         if (!isset ($sql_connection)) {
