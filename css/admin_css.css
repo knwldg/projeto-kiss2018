@@ -123,6 +123,7 @@ background-color: white;
 
 #desafios_title{
     color: rgba(247,152,104,1);
+    margin-left: 3px;
 }
 
 
@@ -146,12 +147,17 @@ background-color: white;
     color: rgba(247,152,104,1);
 }
 
+
+
+
 .apagar_desafio{
     color: white;
     background-color: rgba(247,152,104,1);
     border: none;
     outline: none;
     padding: 5px;
+    margin-left: 3px;
+
 }
 
 .apagar_desafio:hover {
@@ -205,6 +211,7 @@ background-color: white;
 
 #premios_title{
     color: rgba(247,152,104,1);
+    margin-left: 3px;
 }
 
 
@@ -228,6 +235,7 @@ background-color: white;
     border: none;
     outline: none;
     padding: 5px;
+    margin-left: 3px;
 }
 
 .apagar_premio:hover {
@@ -266,6 +274,7 @@ background-color: white;
 
 #utilizadores{
     color: rgba(247,152,104,1);
+    margin-left: 3px;
 }
 
 
@@ -288,6 +297,7 @@ background-color: white;
     border: none;
     outline: none;
     padding: 5px;
+    margin-left: 3px;
 }
 
 .apagar_utilizador:hover {
@@ -307,6 +317,7 @@ background-color: white;
 
 #caixas{
     color: rgba(247,152,104,1);
+    margin-left: 3px;
 }
 
 
@@ -330,6 +341,7 @@ background-color: white;
     border: none;
     outline: none;
     padding: 5px;
+    margin-left: 3px;
 }
 
 .apagar_caixa:hover {
@@ -365,6 +377,7 @@ background-color: white;
 
 #cards{
     color: rgba(247,152,104,1);
+    margin-left: 3px;
 }
 
 
@@ -388,6 +401,7 @@ background-color: white;
     border: none;
     outline: none;
     padding: 5px;
+    margin-left: 3px;
 }
 
 .apagar_cromo:hover {
@@ -439,6 +453,7 @@ background-color: white;
 
 #chaves{
     color: rgba(247,152,104,1);
+    margin-left: 3px;
 }
 
 
@@ -462,6 +477,7 @@ background-color: white;
     border: none;
     outline: none;
     padding: 5px;
+    margin-left: 3px;
 }
 
 .apagar_chaves:hover {

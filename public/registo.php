@@ -55,8 +55,7 @@ if (isset($_SESSION['username'])) {
                 <div class="login-item flex-row">
                     <img src="../img/icon/mail.jpg" class="login-item-img">
                     <!-- email -->
-                    <input type="email" name="inputEmail" id="inputEmail" placeholder="email"
-                           class="login-item-form gray font700">
+                    <input type="email" name="inputEmail" id="inputEmail" placeholder="email" class="login-item-form gray font700">
                 </div>
 
                 <div class="login-item flex-row">
