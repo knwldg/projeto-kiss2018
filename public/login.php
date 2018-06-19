@@ -57,7 +57,9 @@ if (isset($_SESSION['username'])) {
                     <input type="password" onfocus="change_submit()" name="inputPassword" id="inputPassword" placeholder="password" class="login-item-form gray font700">
                 </div>
 
-                <div class="login-register-link text-center gray font500">Já se registou? <a href="" class="pointer orange font600">Crie agora</a></div>
+                <div class="login-register-link text-center gray font500">Já se registou? <a href="/public/registo.php"
+                                                                                             class="pointer orange font600">Crie
+                        agora</a></div>
 
 
                 <div onclick="verification_login()" class="submit text-center"><input id="submit" type="submit" name="submitlogin" value="log in" class="login-btn gradient-background gradient-border pointer white font700"></div>

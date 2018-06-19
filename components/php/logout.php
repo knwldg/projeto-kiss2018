@@ -6,5 +6,7 @@
  * Time: 16:19
  */
 session_start();
+
 $_SESSION = array();
+
 session_destroy();

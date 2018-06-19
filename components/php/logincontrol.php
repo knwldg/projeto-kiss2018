@@ -62,7 +62,8 @@ function checkIfUserExists($value) {
 
 }
 
-function registerUser($inputUser, $inputPass) {
+function registerUser($inputUser, $inputPass, $inputEmail)
+{
 
     // retorna verdadeiro se o registo foi feito com sucesso
     // caso contrário, retorna falso
@@ -97,8 +98,10 @@ function registerUser($inputUser, $inputPass) {
         */
 
         $hash = password_hash($inputPass, PASSWORD_DEFAULT);
-        $sql_op = $sql_connection->prepare("INSERT INTO users (name, password_hash) VALUES (?,?)");
-        $sql_op->bind_param('ss', $inputUser, $hash);
+
+        $sql_op = $sql_connection->prepare("INSERT INTO users (name, email , password_hash) VALUES (?,?,?)");
+
+        $sql_op->bind_param('sss', $inputUser, $inputEmail, $hash);
 
         if (!$sql_op->execute()) {
 

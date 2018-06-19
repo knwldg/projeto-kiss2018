@@ -11,11 +11,12 @@ session_start();
 require_once "./logincontrol.php";
 
 
-if (registerUser($_POST['inputUsername'], $_POST['inputPassword'])) {
+if (registerUser($_POST['inputUsername'], $_POST['inputPassword'], $_POST['inputEmail'])) {
 
     header('Location: /public/login.php');
 
 } else {
+
     header('Location: /public/registo.php');
 
 }
