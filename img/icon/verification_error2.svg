@@ -1,0 +1,92 @@
+
+<svg version="1.1" id="verification" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="-252 343 105.8 107" style="enable-background:new -252 343 105.8 107;" xml:space="preserve">
+<style type="text/css">
+
+	.st0{fill:none;stroke:#FF0000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+
+	.st1{fill:none;stroke:#FF0000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+
+	.st2{fill:none;stroke:#FF0000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+
+
+	<defs>
+		<style>
+
+			.st0{
+				stroke-dasharray: 2000;
+				stroke-dashoffset: 0;
+
+				opacity:0;
+				-webkit-animation:dash ease-in 1;
+				-moz-animation:dash ease-in 1;
+				animation:dash ease-in 1;
+
+				-webkit-animation-fill-mode:forwards;
+				-moz-animation-fill-mode:forwards;
+				animation-fill-mode:forwards;
+
+				-webkit-animation-duration:3s;
+				-moz-animation-duration:3s;
+				animation-duration:3s;
+
+			}
+
+			.st1{
+				stroke-dasharray: 2000;
+				stroke-dashoffset: 0;
+
+				opacity:0 ;
+				-webkit-animation:dash2 ease-in 1;
+				-moz-animation:dash2 ease-in 1;
+				animation:dash2 ease-in 1;
+
+				-webkit-animation-fill-mode:forwards;
+				-moz-animation-fill-mode:forwards;
+				animation-fill-mode:forwards;
+
+				-webkit-animation-duration:3s;
+				-moz-animation-duration:3s;
+				animation-duration:3s;
+
+				-moz-animation-delay: 1.5s;
+				-o-animation-delay: 1.5s;
+				-webkit-animation-delay: 1.5s;
+				animation-delay: 1.5s;
+			}
+
+			.st2{
+				stroke-dasharray: 2000;
+				stroke-dashoffset: 0;
+
+				opacity:0 ;
+				-webkit-animation:dash3 ease-in 1;
+				-moz-animation:dash3 ease-in 1;
+				animation:dash3 ease-in 1;
+
+				-webkit-animation-fill-mode:forwards;
+				-moz-animation-fill-mode:forwards;
+				animation-fill-mode:forwards;
+
+				-webkit-animation-duration:2s;
+				-moz-animation-duration:2s;
+				animation-duration:2s;
+
+				-moz-animation-delay: 1.8s;
+				-o-animation-delay: 1.8s;
+				-webkit-animation-delay: 1.8s;
+				animation-delay: 1.8s;
+			}
+
+			@-moz-keyframes dash { from { stroke-dashoffset: 2000; opacity:0.8; } to { stroke-dashoffset: 0; opacity:1; } }
+			@-moz-keyframes dash2 { from { stroke-dashoffset: 2000; opacity:0.8;} to { stroke-dashoffset: 0; opacity:1;} }
+			@-moz-keyframes dash3 { from { stroke-dashoffset: 2000; opacity:0.8;} to { stroke-dashoffset: 0; opacity:1;} }
+
+
+		</style>
+	</defs>
+</style>
+<ellipse class="st0" cx="-199.1" cy="396.5" rx="49.2" ry="49.8"/>
+<line class="st1" x1="-220.3" y1="416.6" x2="-177.9" y2="375.2"/>
+<line class="st2" x1="-177.9" y1="416.6" x2="-220.3" y2="375.2"/>
+</svg>

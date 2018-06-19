@@ -26,6 +26,7 @@
         <div id="fundo-carta" class="fundo-carta fundo-verde">
 
             <div class="flex-column center-items">
+
                 <div class="flex-column text-center">
                     <a href="" onclick="close_baus()" id="voltar" class="voltar pointer"><img class="voltar-size" src="../img/icon/voltar.png"></a>
                     <span class="black font600">voltar</span>

@@ -535,7 +535,7 @@ input[name="image-uploaded"] {
 /* HOMEPAGE */
 
 .background{
-    background-color: rgba(249, 250, 251, 0.75); /* quando clicar no desafio -> background-color: rgba(140,140,140,0.70) */
+        background-color: rgba(249, 250, 251, 0.75); /* quando clicar no desafio -> background-color: rgba(140,140,140,0.70) */
 }
 
 .homepage-header{
@@ -953,7 +953,7 @@ input[name="image-uploaded"] {
 }
 
 .login-item-img{
-    min-width: 12%;
+    max-width: 12%;
     padding-left: 0.7em;
     z-index: 1;
 }
@@ -1346,6 +1346,11 @@ input[name="image-uploaded"] {
     display: none;
 }
 
+.pop-up-carta-zoom{
+    width: 20em;
+    height: 29.8em;
+}
+
 .slider-item{
     /*background-color: black;*/
     border: 1px solid black;
@@ -1407,10 +1412,106 @@ input[name="image-uploaded"] {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: rgba(140, 140, 140, 0.75);
+    background-color: rgba(140, 140, 140, 0.65);
     bottom: 0;
 }
 
+/* FLIP CARTA */
+.zoom-img{
+    justify-content: space-between;
+    align-items: center;
+    perspective: 1000px;
+}
+/*
+.flipper:hover  {
+    transform: rotateY(180deg);
+}
+*/
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    align-self: center;
+    margin-bottom: 3.7em;
+}
+
+.front {
+    backface-visibility: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+
+}
+
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    text-align: center;
+}
+
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.level{
+    background: url('../img/icon/level_up.png') no-repeat center scroll;
+    background-size: 100%;
+}
+
+.back-descricao{
+    padding: 1em;
+    font-size: 85%;
+    width: 70%;
+}
+
+.aviso{
+    visibility: hidden;
+    opacity: 0;
+    background-color: rgba(140,140,140,0.75);
+    position: absolute;
+    width: 99%;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+    border-radius: 17px;
+    z-index: 3;
+}
+
+.aviso{
+    animation: aviso 3s ease-out forwards;
+}
+
+@keyframes aviso {
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+    50%{
+        visibility: visible;
+        opacity: 1;
+    }
+    100%{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.aviso-title{
+    width: 50%;
+    font-size: 122%;
+    color: black;
+}
+
+/* FLIP-CARTA */
 
 /* POP-UP-CARTAS */
 
@@ -1722,7 +1823,7 @@ input[name="image-uploaded"] {
 
 
 
-/* RESPONSIVE-HEIGHT */
+/*
 
 @media screen and (max-height: 992px) {
 
@@ -1757,6 +1858,6 @@ input[name="image-uploaded"] {
 
 }
 
-/* RESPONSIVE-HEIGHT */
+ */
 
 

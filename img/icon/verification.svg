@@ -1,0 +1,87 @@
+
+<svg version="1.1" id="verification" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-258.5 340.4 105.8 107" style="enable-background:new -258.5 340.4 105.8 107;" xml:space="preserve">
+<style type="text/css">
+	.st0{
+	fill: none;
+	stroke:url(#SVGID_1_);
+	stroke-width:2;
+	stroke-linecap:round;
+	stroke-linejoin:round;
+	stroke-miterlimit:10;
+	}
+
+	.st1{
+	fill: none;
+	stroke:url(#SVGID_2_);
+	stroke-width:2;
+	stroke-linecap:round;
+	stroke-linejoin:round;
+	stroke-miterlimit:10;
+	}
+
+	<defs>
+		<style>
+
+			.st0{
+				stroke-dasharray: 2000;
+				stroke-dashoffset: 0;
+
+				opacity:0;
+				-webkit-animation:dash ease-in 1;
+				-moz-animation:dash ease-in 1;
+				animation:dash ease-in 1;
+
+				-webkit-animation-fill-mode:forwards;
+				-moz-animation-fill-mode:forwards;
+				animation-fill-mode:forwards;
+
+				-webkit-animation-duration:3s;
+				-moz-animation-duration:3s;
+				animation-duration:3s;
+
+			}
+
+			.st1{
+				stroke-dasharray: 2000;
+				stroke-dashoffset: 0;
+
+				opacity:0 ;
+				-webkit-animation:dash2 ease-in 1;
+				-moz-animation:dash2 ease-in 1;
+				animation:dash2 ease-in 1;
+
+				-webkit-animation-fill-mode:forwards;
+				-moz-animation-fill-mode:forwards;
+				animation-fill-mode:forwards;
+
+				-webkit-animation-duration:3s;
+				-moz-animation-duration:3s;
+				animation-duration:3s;
+
+				-moz-animation-delay: 1.5s;
+				-o-animation-delay: 1.5s;
+				-webkit-animation-delay: 1.5s;
+				animation-delay: 1.5s;
+			}
+
+			@-moz-keyframes dash { from { stroke-dashoffset: 2000; opacity:0.8; } to { stroke-dashoffset: 0; opacity:1; } }
+			@-moz-keyframes dash2 { from { stroke-dashoffset: 2000; opacity:0.8;} to { stroke-dashoffset: 0; opacity:1;} }
+
+		</style>
+	</defs>
+
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-255.8527" y1="393.9" x2="-155.3973" y2="393.9">
+	<stop  offset="0" style="stop-color:#009245"/>
+	<stop  offset="0.6676" style="stop-color:#07A718"/>
+	<stop  offset="1" style="stop-color:#0BB300"/>
+</linearGradient>
+<ellipse class="st0" cx="-205.6" cy="393.9" rx="49.2" ry="49.8"/>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="-226.75" y1="393.3167" x2="-184.25" y2="393.3167">
+	<stop  offset="0" style="stop-color:#009245"/>
+	<stop  offset="0.6676" style="stop-color:#07A718"/>
+	<stop  offset="1" style="stop-color:#0BB300"/>
+</linearGradient>
+<polyline class="st1" points="-225.8,397.3 -212.3,414.6 -185.3,372 "/>
+</svg>
