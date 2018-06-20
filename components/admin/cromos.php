@@ -13,6 +13,7 @@
 
 
 <body>
+<?php require_once "../php/general.php"; ?>
 <?php require_once "navigation.php"; ?>
 
 <div id="cromos">
@@ -23,16 +24,11 @@
     <div id="table_cromos">
         <table>
             <tr>
-                <th>Nome</th>
-                <th>Coleção</th>
-                <?php
-
-                require_once "../php/general.php";
-
-                listUsers();
-
-                ?>
-                <th>Raridade</th>
+                <th>Nome
+                <td><?php SELECT `name` FROM `cards`; ?></td>
+                </th>
+                <th>Coleção<td>equipa</td></th>
+                <th>Raridade<td>2</td></th>
                 <th>Descrição</th>
             </tr>
         </table>
