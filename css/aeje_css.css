@@ -54,11 +54,12 @@ h1{
     width: 100%;
     background: rgba(5, 127, 149, 0.17);
     border: none;
-    position: fixed;
+    position: relative;
     left: 0;
     padding: 3vh;
     text-align: center;
-    bottom: -20vh;
+    bottom: -5vh;
+    display: block;
 }
 
 p{
@@ -82,10 +83,12 @@ p{
 
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1000px){
 
   .footer{
       bottom: 0;
+      position: fixed;
+      display: grid;
   }
 
 }
