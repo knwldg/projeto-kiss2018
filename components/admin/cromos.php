@@ -16,6 +16,8 @@
 <?php require_once "../php/general.php"; ?>
 <?php require_once "navigation.php"; ?>
 
+
+
 <div id="cromos">
     <!-- /.row -->
     <div id="cards">
@@ -24,12 +26,41 @@
     <div id="table_cromos">
         <table>
             <tr>
-                <th>Nome
-                <td><?php SELECT `name` FROM `cards`; ?></td>
-                </th>
-                <th>Coleção<td>equipa</td></th>
-                <th>Raridade<td>2</td></th>
-                <th>Descrição</th>
+                <th>Nome</th>
+                <th>Coleção</th>
+                <th>Raridade</th>
+
+            </tr>
+            <tr>
+                <!-- /query nome -->
+                <?php
+                $nome = "SELECT 'name' FROM 'cards'";
+                $result = mysqli_query($nome);
+                $row_nome = mysqli_query($result);
+                ?>
+                <!-- /query coleção -->
+                <?php
+                $rarity = "SELECT 'rarity' FROM 'cards'";
+                $result2 = mysqli_query($rarity);
+                $row_rarity = mysqli_query($result2);
+                ?>
+                <!-- /query raridade -->
+                <?php
+                $collection = "SELECT 'collection' FROM 'cards'";
+                $result3 = mysqli_query($collection);
+                $row_collection = mysqli_query($result3);
+                ?>
+
+                <th id="echos">
+                    <?php
+                    echo $row_nome["name"];
+                    ?></th>
+                <th><?php
+                    echo $row_rarity['rarity'];
+                    ?></th>
+                <th><?php
+                    echo $row_collection['collection'];
+                    ?></th>
             </tr>
         </table>
     </div>
@@ -40,9 +71,6 @@
     </button>
     <button class="adicionar_cromo">
         Adicionar Cromo
-    </button>
-    <button class="editar_descrição">
-        Editar Descrição
     </button>
 </div>
 </body>
