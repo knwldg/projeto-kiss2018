@@ -13,6 +13,8 @@
 
 <body>
 <?php require_once "navigation.php"; ?>
+<?php require_once "../php/connection.php"; ?>
+<?php require_once "../php/general.php"; ?>
 <div id="users">
     <!-- /.row -->
     <div id="utilizadores">
@@ -22,8 +24,17 @@
         <table>
             <tr>
                 <th>Username</th>
-                <th>Imagem de Perfil</th>
-                <th>Número de Cromos</th>
+                <th>Nome Real</th>
+                <th>Email</th>
+            </tr>
+            <tr id="echos">
+                <?php listUsers() ?>
+                <th>
+                    <?php echo listUsers($userList, 'name') ?></th>
+                <th>
+                    <?php echo listUsers($userList, 'realname') ?></th>
+                <th>
+                    <?php echo listUsers($userList, 'email') ?></th>
             </tr>
         </table>
     </div>

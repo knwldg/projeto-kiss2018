@@ -25,14 +25,17 @@
         <table>
             <tr>
                 <th>Utilizador</th>
+                <th>Nome Real</th>
                 <th>Chaves</th>
             </tr>
-            <tr>
+            <tr id="echos">
                 <?php listUsers() ?>
-                <th id="echos">
-                    <?php echo listUsers($userList) ?></th>
-                <th id="echos">
-                    <?php echo listUsers($userList) ?></th>
+                <th>
+                    <?php echo listUsers($userList, 'username') ?></th>
+                <th>
+                    <?php echo listUsers($userList, 'nome real') ?></th>
+                <th>
+                    <?php echo listUsers($userList, 'keys') ?></th>
             </tr>
         </table>
     </div>

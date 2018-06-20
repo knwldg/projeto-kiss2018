@@ -13,6 +13,7 @@
 
 
 <body>
+<?php require_once "../php/connection.php"; ?>
 <?php require_once "../php/general.php"; ?>
 <?php require_once "navigation.php"; ?>
 
@@ -32,35 +33,14 @@
 
             </tr>
             <tr>
-                <!-- /query nome -->
-                <?php
-                $nome = "SELECT 'name' FROM 'cards'";
-                $result = mysqli_query($nome);
-                $row_nome = mysqli_query($result);
-                ?>
-                <!-- /query coleção -->
-                <?php
-                $rarity = "SELECT 'rarity' FROM 'cards'";
-                $result2 = mysqli_query($rarity);
-                $row_rarity = mysqli_query($result2);
-                ?>
-                <!-- /query raridade -->
-                <?php
-                $collection = "SELECT 'collection' FROM 'cards'";
-                $result3 = mysqli_query($collection);
-                $row_collection = mysqli_query($result3);
-                ?>
-
-                <th id="echos">
-                    <?php
-                    echo $row_nome["name"];
-                    ?></th>
-                <th><?php
-                    echo $row_rarity['rarity'];
-                    ?></th>
-                <th><?php
-                    echo $row_collection['collection'];
-                    ?></th>
+            <tr id="echos">
+                <?php listUsers() ?>
+                <th>
+                    <?php echo listUsers($cardList, 'name') ?></th>
+                <th>
+                    <?php echo listUsers($cardList, 'collection') ?></th>
+                <th>
+                    <?php echo listUsers($cardList, 'rarity') ?></th>
             </tr>
         </table>
     </div>

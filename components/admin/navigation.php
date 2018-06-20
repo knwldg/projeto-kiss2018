@@ -8,8 +8,8 @@
             <a href="chaves.php">Chaves</a>
             <a href="cromos.php">Cromos</a>
             <a href="desafios.php">Desafios</a>
-            <a href="premios.php">Prémios</a>
             <a href="users.php">Utilizadores</a>
+            <a href="premios.php">Prémios</a>
         </div>
     </div>
 </div>
