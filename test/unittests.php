@@ -10,4 +10,7 @@ require_once "../components/php/general.php";
 require_once "../components/php/connection.php";
 
 addCard(11, 7);
-var_dump(getUserCards(11));
+echo(numCards(11, 7));
+
+addCard(11, 14);
+echo(numCards(11, 14));

@@ -77,9 +77,12 @@ function getUserCards($userId) {
 
     }
 
+    echo($sql_op->num_rows);
+
     $sql_op->store_result();
     $sql_op->bind_result($cards, $quantity);
     $sql_op->fetch();
+
 
     $userCards = [$cards, $quantity];
 
@@ -219,7 +222,8 @@ function addCard($userId, $cardId)
 
         if ($quantity == 0) {
 
-            $sql_op = $sql_connection->prepare("INSERT IGNORE INTO ark (users_idusers, cards_idcards, quantity) VALUES (?,?,1)");
+            $sql_op = $sql_connection->prepare("INSERT INTO ark (users_idusers, cards_idcards, quantity) VALUES (?,?,1)");
+
             $sql_op->bind_param('ii', $userId, $cardId);
 
             if (!$sql_op->execute()) {
@@ -233,10 +237,8 @@ function addCard($userId, $cardId)
 
             $newQuantity = $quantity+1;
 
-            unset($sql_op);
-
-            $sql_op = $sql_connection->prepare("INSERT IGNORE INTO ark (users_idusers, cards_idcards, quantity) VALUES (?,?,?)");
-            $sql_op->bind_param('iii', $userId, $cardId, $newQuantity);
+            $sql_op = $sql_connection->prepare("UPDATE ark SET quantity = ? WHERE users_idusers = ? AND cards_idcards = ?");
+            $sql_op->bind_param('iii', $newQuantity, $userId, $cardId);
 
             if (!$sql_op->execute()) {
                 throw new Exception('error');
