@@ -329,6 +329,12 @@ button{
 
 /* MENU */
 
+/*
+#main-menu{
+    visibility: hidden;
+    opacity: 0;
+}*/
+
 .profile-font-size{
     font-size: 2.1em;
 }
@@ -354,7 +360,7 @@ button{
     justify-content: space-around;
     align-items: center;
     margin-bottom: 3em;
-    padding-top: 0.5em;
+    padding-top: 1.5em;
 }
 
 .profile-menu-style-homepage{
@@ -438,7 +444,7 @@ input[name="image-uploaded"] {
     #main-pages ul{
         text-align: left;
         font-weight: 500;
-        font-size: 72%;
+        font-size: 77%;
         letter-spacing: 0.08em;
         padding: 0;
         color: rgba(249, 250, 251, 0.78);
@@ -465,7 +471,7 @@ input[name="image-uploaded"] {
     }
 
         #main-pages ul li a span {
-            padding: 1.5em 0 1.5em 2.5em;
+            padding: 2em 0 2em 2.5em;
         }
 
             #main-pages ul li a span:active{
@@ -659,25 +665,10 @@ input[name="image-uploaded"] {
     align-items: center;
 }
 
-    .homepage-content-icon-lootboxes{
-        padding: 0 2em 0 2em;
-        max-width: 50%;
-    }
-
-    .homepage-content-icon-keys{
-        padding: 0 2em 0 2em;
-        max-width: 50%;
-    }
-
-    .homepage-content-icon-colections{
-        padding: 0 2em 0 2em;
-        max-width: 50%;
-    }
-
-    .homepage-content-icon-awards{
-        padding: 0 2em 0 2em;
-        max-width: 50%;
-    }
+.homepage-content-icon{
+    padding: 0 2em 0 2em;
+    max-width: 25%;
+}
 
 .homepage-content-description{
     width: 72%;
@@ -825,6 +816,7 @@ input[name="image-uploaded"] {
 
 .colection{
     padding: 1em 0.7em 0.7em 0.7em;
+    text-align: center;
 }
 
 .carta-size{
@@ -849,6 +841,11 @@ input[name="image-uploaded"] {
     width: 12%;
 }
 
+.carta-premio{
+    padding: 0 0.2em 0 0.2em;
+    align-items: center;
+}
+
 .colection-numbers{
     padding-top: 0.5em;
     font-size: 1.2em;
@@ -861,6 +858,50 @@ input[name="image-uploaded"] {
 #submit:not(:active){
     transform: translate3d(0,0,0);
     animation: shake 0.65s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@-moz-keyframes shake {
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    10%{
+        transform: translate3d(0.2em,0,0);
+    }
+    30%{
+        transform: translate3d(-0.2em,0,0);
+    }
+    40%{
+        transform: translate3d(0.2em,0,0);
+    }
+    50%{
+        transform: translate3d(-0.2,0,0);
+    }
+    60%{
+        transform: translate3d(0,0,0);
+    }
+
+}
+
+@-webkit-keyframes shake {
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    10%{
+        transform: translate3d(0.2em,0,0);
+    }
+    30%{
+        transform: translate3d(-0.2em,0,0);
+    }
+    40%{
+        transform: translate3d(0.2em,0,0);
+    }
+    50%{
+        transform: translate3d(-0.2,0,0);
+    }
+    60%{
+        transform: translate3d(0,0,0);
+    }
+
 }
 
 @keyframes shake {
@@ -885,7 +926,7 @@ input[name="image-uploaded"] {
 
 }
 
-@keyframes voltar {
+@-moz-keyframes voltar {
     0%{
         background: 0;
     }
@@ -894,9 +935,23 @@ input[name="image-uploaded"] {
     }
 }
 
+@-webkit-keyframes voltar {
+    0%{
+        background: 0;
+    }
+    100%{
+        background: linear-gradient(to right, rgba(247,152,104,0.90) , rgba(246,181,62,0.90));
+    }
+}
 
-
-
+@keyframes voltar {
+    0%{
+        background: 0;
+    }
+    100%{
+        background: linear-gradient(to right, rgba(247,152,104,0.90) , rgba(246,181,62,0.90));
+    }
+}
 
 .verification-login-registo{
     opacity: 0;
@@ -912,13 +967,12 @@ input[name="image-uploaded"] {
 
 }
 
-.background-color-item{
+.simbolo{
     padding: 2.8em 0 1.5em 0;
+    width: 78%;
 }
 
 .login-box{
-    position: fixed;
-    height: 100%;
     background-color: rgb(249, 250, 251);
     margin: 0.5em 0.4em 0.5em 0.4em;
     border-radius: 7px 7px 0 0;
@@ -950,6 +1004,8 @@ input[name="image-uploaded"] {
     position: relative;
     left: -1.5em;
     letter-spacing: 1px;
+    color: rgb(140,140,140);
+    opacity: 0.75;
 }
 
 .login-item-img{
@@ -1055,13 +1111,13 @@ input[name="image-uploaded"] {
 }
 
 .images-preview{
-    padding: 1.5em 0 1.5em 0;
+    padding-top: 3.5em;
 }
 
 .clip-mask{
     width: 150%;
     height: 100%;
-    -webkit-clip-path: inset(5% 22% 15% 12%);
+    /*-webkit-clip-path: inset(5% 22% 15% 12%);*/
     clip-path: inset(0 20% 0 20%);
 }
 
@@ -1173,47 +1229,73 @@ input[name="image-uploaded"] {
     width: 11em;
 }
 
-.chest-animation-item{
 
-    -webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0);
-    clip-path: polygon(0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0);
-
-    height: 0;
-
-    -webkit-animation: grow linear 1;
-    -moz-animation: grow linear 1;
-    animation: grow linear 1;
-
-    -webkit-animation-fill-mode:forwards;
-    -moz-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
-
-    -webkit-animation-duration:1.2s;
-    -moz-animation-duration:1.2s;
-    animation-duration: 1.2s;
-
-    -webkit-animation-delay:0.7s;
-    -moz-animation-delay:0.7s;
-    animation-delay: 0.7s;
-
-}
-
-@-moz-keyframes grow {
+@-webkit-keyframes grow {
     0% {
-        -webkit-clip-path: inset(100% 0 0 0);
+        /*-webkit-clip-path: inset(100% 0 0 0);*/
         clip-path: inset(100% 0 0 0);
         height: 0;
     }
     50% {
-        -webkit-clip-path: inset(30% 0 0 0);
+        /*-webkit-clip-path: inset(30% 0 0 0);*/
         clip-path: inset(30% 0 0 0);
 
     }
     100% {
-        -webkit-clip-path: inset(0 0 0 0);
+        /*-webkit-clip-path: inset(0 0 0 0);*/
         clip-path: inset(0 0 0 0);
         height: 10.3em;
     }
+}
+
+@-moz-keyframes grow {
+    0% {
+        /*-webkit-clip-path: inset(100% 0 0 0);*/
+        clip-path: inset(100% 0 0 0);
+        height: 0;
+    }
+    50% {
+        /*-webkit-clip-path: inset(30% 0 0 0);*/
+        clip-path: inset(30% 0 0 0);
+
+    }
+    100% {
+        /*-webkit-clip-path: inset(0 0 0 0);*/
+        clip-path: inset(0 0 0 0);
+        height: 10.3em;
+    }
+}
+
+@keyframes grow {
+    0% {
+        /*-webkit-clip-path: inset(100% 0 0 0);*/
+        clip-path: inset(100% 0 0 0);
+        height: 0;
+    }
+    50% {
+        /*-webkit-clip-path: inset(30% 0 0 0);*/
+        clip-path: inset(30% 0 0 0);
+
+    }
+    100% {
+        /*-webkit-clip-path: inset(0 0 0 0);*/
+        clip-path: inset(0 0 0 0);
+        height: 10.3em;
+    }
+}
+
+.chest-animation-item{
+
+    /*-webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0);*/
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0);
+
+    -webkit-animation: grow 1.2s linear forwards;
+    -moz-animation: grow 1.2s linear forwards;
+    animation: grow 1.2s linear forwards;
+
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
 }
 
 
@@ -1245,10 +1327,40 @@ input[name="image-uploaded"] {
     -moz-animation-duration:1.2s;
     animation-duration: 1.2s;
 
-    -webkit-animation-delay:0.7s;
-    -moz-animation-delay:0.7s;
-    animation-delay: 0.7s;
+    -webkit-animation-delay:1s;
+    -moz-animation-delay:1s;
+    animation-delay: 1s;
 
+}
+
+@keyframes sprite {
+    0% {
+        background: url("../img/icon/chest.png") no-repeat center;
+        background-size: 11em;
+    }
+    50% {
+        background: url("../img/icon/chest_little_open.png") no-repeat center;
+        background-size: 11em;
+    }
+    100% {
+        background: url("../img/icon/chest_complete_open.png") no-repeat center;
+        background-size: 11em;
+    }
+}
+
+@-webkit-keyframes sprite {
+    0% {
+        background: url("../img/icon/chest.png") no-repeat center;
+        background-size: 11em;
+    }
+    50% {
+        background: url("../img/icon/chest_little_open.png") no-repeat center;
+        background-size: 11em;
+    }
+    100% {
+        background: url("../img/icon/chest_complete_open.png") no-repeat center;
+        background-size: 11em;
+    }
 }
 
 @-moz-keyframes sprite {
@@ -1322,12 +1434,40 @@ input[name="image-uploaded"] {
     -moz-animation-duration:0.5s;
     animation-duration: 0.5s;
 
-    -webkit-animation-delay:1.8s;
-    -moz-animation-delay:1.8s;
-    animation-delay: 1.8s;
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    animation-delay: 2s;
 }
 
 @-moz-keyframes carta {
+    0% {
+        opacity: 0;
+        transform: scale(0.0);
+    }
+    /*50% {
+        opacity: 0.5;
+    }*/
+    100% {
+        opacity: 1;
+        transform: scale(0.999);
+    }
+}
+
+@-webkit-keyframes carta {
+    0% {
+        opacity: 0;
+        transform: scale(0.0);
+    }
+    /*50% {
+        opacity: 0.5;
+    }*/
+    100% {
+        opacity: 1;
+        transform: scale(0.999);
+    }
+}
+
+@keyframes carta {
     0% {
         opacity: 0;
         transform: scale(0.0);
@@ -1489,6 +1629,36 @@ input[name="image-uploaded"] {
 
 .aviso{
     animation: aviso 3s ease-out forwards;
+}
+
+@-moz-keyframes aviso {
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+    50%{
+        visibility: visible;
+        opacity: 1;
+    }
+    100%{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes aviso {
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+    50%{
+        visibility: visible;
+        opacity: 1;
+    }
+    100%{
+        visibility: hidden;
+        opacity: 0;
+    }
 }
 
 @keyframes aviso {
@@ -1705,6 +1875,10 @@ input[name="image-uploaded"] {
         width: 18%;
     }
 
+    .carta-premio{
+        width: 30%;
+    }
+
     .premios-unlock{
         width: 6%;
     }
@@ -1745,6 +1919,10 @@ input[name="image-uploaded"] {
 
     .carta{
         width: 20%;
+    }
+
+    .carta-premio{
+        width: 25%;
     }
 
     .premios-unlock{
@@ -1799,6 +1977,10 @@ input[name="image-uploaded"] {
         width: 25%;
     }
 
+    .carta-premio{
+        width: 22%;
+    }
+
     .premios-unlock{
         width: 10%;
     }
@@ -1829,12 +2011,12 @@ input[name="image-uploaded"] {
 
 
 
-/*
+
 
 @media screen and (max-height: 992px) {
 
     .login-box {
-        height: 32.8em;
+        height: 48.8em;
     }
 
 }
@@ -1842,28 +2024,26 @@ input[name="image-uploaded"] {
 @media screen and (max-height: 740px) {
 
     .login-box {
-        height: 37.1em;
+        height: 43.7em;
     }
 }
 
 @media screen and (max-height: 667px) {
 
     .login-box {
-        height: 32.8em;
+        height: 38.8em;
     }
-
-
 
 }
 
 @media screen and (max-height: 640px) {
 
     .login-box {
-        height: 31.1em;
+        height: 36.9em;
     }
 
 }
 
- */
+
 
 

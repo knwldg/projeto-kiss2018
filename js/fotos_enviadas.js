@@ -19,7 +19,7 @@ document.getElementById("verificacao-tempo").innerHTML ="13:00";
 document.getElementById("verification-fade-in").style.animationDuration = "1.5s";
 document.getElementById("verification-fade-in").style.animationDelay = "1.8s";
 
-
+/*
 //nao enviado
 document.getElementById("verificacao").src="../img/icon/verification_error.svg";
 
@@ -38,4 +38,4 @@ document.getElementById("relogio-sem-sucesso").src="../img/icon/relogio_vermelho
 document.getElementById("verificacao-tempo").innerHTML ="--";
 
 document.getElementById("verification-fade-in").style.animationDuration = "1s";
-document.getElementById("verification-fade-in").style.animationDelay = "0";
+document.getElementById("verification-fade-in").style.animationDelay = "0";*/

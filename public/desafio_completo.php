@@ -30,7 +30,7 @@
 
         </div>
 
-        <div class="general-box flex-column shadow">
+        <div class="login-box flex-column shadow">
 
             <div class="verification flex-column">
 
@@ -64,7 +64,7 @@
     </div>
 </div>
 
-<!--<script type="text/javascript" src="../js/fotos_enviadas.js"></script>-->
+<script type="text/javascript" src="../js/fotos_enviadas.js"></script>
 
 
 </body>

@@ -34,11 +34,14 @@ function verification_registo() {
 }
 */
 
-function change_submit() {
+function change_submit(clicked_id) {
 
     document.getElementById("inputUsername").style.border ="2px solid rgba(140,140,140,0.70)";
     document.getElementById("inputPassword").style.border ="2px solid rgba(140,140,140,0.70)";
+    document.getElementById("inputEmail").style.border ="2px solid rgba(140,140,140,0.70)";
 
+    document.getElementById(clicked_id).style.borderColor = "rgba(247,152,104,1)";
+    document.getElementById(clicked_id).style.opacity = "1";
 
     document.getElementById("submit").style.visibility ="visible";//queria que o btn login aparecesse depois dos users escreverem nos 2 inputs
     document.getElementById("submit").style.transition = "visibility 1s ease-in";
@@ -50,5 +53,25 @@ function change_submit() {
     document.getElementById("login-verification").style.opacity = "0";
     document.getElementById("login-verification").style.transition = "opacity 0.2s ease-out"; //php
 
+
+}
+
+function change_submit_login(clicked_id) {
+
+    document.getElementById("inputUsername").style.border ="2px solid rgba(140,140,140,0.70)";
+    document.getElementById("inputPassword").style.border ="2px solid rgba(140,140,140,0.70)";
+
+    document.getElementById(clicked_id).style.borderColor = "rgba(247,152,104,1)";
+    document.getElementById(clicked_id).style.opacity = "1";
+
+    document.getElementById("submit").style.visibility ="visible";//queria que o btn login aparecesse depois dos users escreverem nos 2 inputs
+    document.getElementById("submit").style.transition = "visibility 1s ease-in";
+
+    document.getElementById("submit").style.background ="linear-gradient(to right, rgba(247,152,104,0.90) , rgba(246,181,62,0.90))";
+    document.getElementById("submit").value = "log in";
+    document.getElementById("submit").style.transition = "all 1s ease-out"; //php
+
+    document.getElementById("login-verification").style.opacity = "0";
+    document.getElementById("login-verification").style.transition = "opacity 0.2s ease-out"; //php
 
 }

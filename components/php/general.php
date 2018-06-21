@@ -8,6 +8,8 @@
 
 require_once "../php/general.php";
 
+
+
 function listUsers()
 {
 
@@ -34,6 +36,7 @@ function listUsers()
     return true;
 
 }
+
 
 function listCards() {
 

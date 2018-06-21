@@ -2,13 +2,13 @@
 <html>
 <?php
 session_start();
-/*
+
 if (isset($_SESSION['username'])) {
 
     header('Location: /public/homepage.php');
 
 }
-*/
+
 ?>
 
 
@@ -29,12 +29,12 @@ if (isset($_SESSION['username'])) {
 
             var username = document.forms["registoForm"]["inputUsername"].value;
             var password = document.forms["registoForm"]["inputPassword"].value;
-            //var email = document.forms["registoForm"]["inputEmail"].value;
+            var email = document.forms["registoForm"]["inputEmail"].value;
+
             var id_password = document.getElementById("inputPassword");
-           // var id_email = document.getElementById("inputEmail");
 
 
-            if (!(username == "") && password == ""){
+            if (!(username === "") && password === ""){
 
                 document.getElementById("inputPassword").style.border ="2px solid #ff0000";
 
@@ -44,13 +44,13 @@ if (isset($_SESSION['username'])) {
                 document.getElementById("submit").style.transition = "all 0.1s ease-in";
 
                 document.getElementById("login-verification").style.opacity = "1";
-                document.getElementById("login-verification").innerHTML = "é necessario password!";//depois colocas a tua maneira
+                document.getElementById("login-verification").innerHTML = "é necessário password!";//depois colocas a tua maneira
                 document.getElementById("login-verification").style.transition = "opacity 1s ease-in";
                 document.getElementById("login-verification").style.transitionDelay = "0.2s";
                 return false;
             }
 
-            if (!(password == "") && username == ""){
+            if (!(password === "") && username === ""){
 
                 document.getElementById("inputUsername").style.border ="2px solid #ff0000";
 
@@ -60,14 +60,14 @@ if (isset($_SESSION['username'])) {
                 document.getElementById("submit").style.transition = "all 0.1s ease-in";
 
                 document.getElementById("login-verification").style.opacity = "1";
-                document.getElementById("login-verification").innerHTML = "é necessario username!";
+                document.getElementById("login-verification").innerHTML = "é necessário username!";
                 document.getElementById("login-verification").style.transition = "opacity 1s ease-in";
                 document.getElementById("login-verification").style.transitionDelay = "0.2s";
                 return false;
 
             }
 
-            if(!(password == "") && !(username == "")){
+            if(!(password === "") && !(username === "") && !(email === "")){
 
                 if(id_password.value.length >= 8) {
 
@@ -97,6 +97,7 @@ if (isset($_SESSION['username'])) {
             } else {
                 document.getElementById("inputUsername").style.border ="2px solid #ff0000";
                 document.getElementById("inputPassword").style.border ="2px solid #ff0000";
+                document.getElementById("inputEmail").style.border ="2px solid #ff0000";
 
                 document.getElementById("submit").style.background ="0";
                 document.getElementById("submit").style.backgroundColor ="#ff0000";
@@ -104,7 +105,7 @@ if (isset($_SESSION['username'])) {
                 document.getElementById("submit").style.transition = "all 0.1s ease-in";
 
                 document.getElementById("login-verification").style.opacity = "1";
-                document.getElementById("login-verification").innerHTML = "é necessario username e password!";//depois colocas a tua maneira
+                document.getElementById("login-verification").innerHTML = "é necessário username, password e e-mail!";//depois colocas a tua maneira
                 document.getElementById("login-verification").style.transition = "opacity 1s ease-in";
                 document.getElementById("login-verification").style.transitionDelay = "0.2s";
                 return false;
@@ -124,11 +125,7 @@ if (isset($_SESSION['username'])) {
     <div class="background-color">
 
         <div class="flex login-logo">
-            <img srcset="   ../img/marca/logo-320w.svg 320w,
-                            ../img/marca/logo-480w.svg 480w,
-                            ../img/marca/logo-800w.svg 800w" sizes="(max-width: 320px) 100px,
-                           (max-width: 480px) 150px,
-                           200px" src="../img/marca/logo-800w.svg" class="background-color-item">
+            <div><img src="../img/marca/simbolo-800w.png" class="simbolo"></div>
         </div>
 
         <div class="login-box flex-column shadow">
@@ -140,24 +137,24 @@ if (isset($_SESSION['username'])) {
                 <div class="login-item flex-row">
                     <img src="../img/icon/user.jpg" class="login-item-img">
                     <!-- username -->
-                    <input onfocus="change_submit()" type="text" name="inputUsername" id="inputUsername" placeholder="username"
+                    <input onfocus="change_submit(this.id)" type="text" name="inputUsername" id="inputUsername" placeholder="username"
                            class="login-item-form gray font700">
                 </div>
 
                 <div class="login-item flex-row">
                     <img src="../img/icon/mail.jpg" class="login-item-img">
                     <!-- email -->
-                    <input type="email" name="inputEmail" id="inputEmail" placeholder="email" class="login-item-form gray font700">
+                    <input onfocus="change_submit(this.id)" type="email" name="inputEmail" id="inputEmail" placeholder="email" class="login-item-form gray font700">
                 </div>
 
                 <div class="login-item flex-row">
                     <img src="../img/icon/pass.jpg" class="login-item-img">
                     <!-- pass -->
-                    <input type="password" name="inputPassword" id="inputPassword" placeholder="password"
+                    <input onfocus="change_submit(this.id)" type="password" name="inputPassword" id="inputPassword" placeholder="password"
                            class="login-item-form gray font700">
                 </div>
 
-                <div class="login-register-link text-center gray font500">Já tem uma conta? <a href="" class="pointer orange font600">Entre agora</a></div>
+                <div class="login-register-link text-center gray font500">Já tem uma conta? <a href="login.php" class="pointer orange font600">Entre agora</a></div>
 
                 <div onclick="" class="submit text-center"><input id="submit" type="submit" name="submitlogin" value="registar" class="login-btn gradient-background gradient-border pointer white font700"></div>
                 <h5 id="login-verification" class="verification-login-registo font600"></h5>

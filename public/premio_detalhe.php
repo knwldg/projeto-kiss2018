@@ -37,18 +37,18 @@
             <div class="premio-detalhe-colecoes flex-column">
 
                 <div class="premio-detalhe-colecao flex-row"><!-- colecao1 -->
-                    <img class="carta-size-premio" src="../img/cartas/equipa/thumbnail/frente/equipa1.png">
-                    <img class="carta-size-premio" src="../img/cartas/equipa/thumbnail/frente/equipa2.png">
+                    <div class="carta-premio flex"><img class="carta-size" src="../img/cartas/equipa/thumbnail/frente/equipa1.png"></div>
+                    <div class="carta-premio flex"><img class="carta-size" src="../img/cartas/equipa/thumbnail/frente/equipa2.png"></div>
                 </div>
 
                 <div class="premio-detalhe-colecao flex-row"><!-- colecao2 -->
-                    <img class="carta-size-premio" src="../img/cartas/equipa/thumbnail/frente/equipa1.png">
-                    <img class="carta-size-premio" src="../img/cartas/equipa/thumbnail/frente/equipa2.png">
+                    <div class="carta-premio flex"><img class="carta-size" src="../img/cartas/equipa/thumbnail/frente/equipa1.png"></div>
+                    <div class="carta-premio flex"><img class="carta-size" src="../img/cartas/equipa/thumbnail/frente/equipa2.png"></div>
                 </div>
 
                 <div class="premio-detalhe-colecao flex-row"><!-- colecao3 -->
-                    <img class="carta-size-premio" src="../img/cartas/equipa/thumbnail/frente/equipa1.png">
-                    <img class="carta-size-premio" src="../img/cartas/equipa/thumbnail/frente/equipa2.png">
+                    <div class="carta-premio flex"><img class="carta-size" src="../img/cartas/equipa/thumbnail/frente/equipa1.png"></div>
+                    <div class="carta-premio flex"><img class="carta-size" src="../img/cartas/equipa/thumbnail/frente/equipa2.png"></div>
                 </div>
 
             </div>

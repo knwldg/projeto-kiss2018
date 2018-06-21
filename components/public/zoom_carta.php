@@ -1,7 +1,7 @@
 <div id="pop-up-carta-img" class="pop-up-carta-img zoom-img flex-column">
 
     <div class="flex-column text-center">
-        <a href="" onclick="close_baus()" id="voltar" class="voltar pointer"><img class="voltar-size" src="../img/icon/voltar.png"></a>
+        <a href="" onclick="close_baus()" id="voltar" class="voltar pointer"><img class="voltar-size" src="../../img/icon/voltar.png"></a>
         <span class="black font600">voltar</span>
     </div>
 
@@ -22,6 +22,7 @@
 </div>
 
 <script type="text/javascript">
+
     document.getElementById("front").style.background = "url('../img/cartas/equipa/frente/equipa1.png') no-repeat center";
     document.getElementById("front").style.backgroundSize = "98%";
     document.getElementById("back").style.background = "url('../img/cartas/equipa/tras/branco.png') no-repeat center";
@@ -41,6 +42,5 @@
         document.getElementById("back").style.backgroundSize = "rotateY(0)";
 
     }
-
 
 </script>

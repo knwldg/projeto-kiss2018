@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
 <?php
-/*
+
 if (!isset($_SESSION['username'])) {
 
     header('Location: /public/login.php');
 
 }
-*/
+
 ?>
 
 <head>
@@ -43,9 +43,9 @@ if (!isset($_SESSION['username'])) {
     <!-- profile -->
 
 
-<!-- desafio do dia -->
+<!-- daily challenge -->
 
-    <div class="day-challenge-title font700 white">DESAFIO DO DIA</div>
+    <div id="desafio-do-dia" class="day-challenge-title font700 white">DESAFIO DO DIA</div>
 
     <div class="day-challenge gradient-border">
 
@@ -65,19 +65,19 @@ if (!isset($_SESSION['username'])) {
 
     </div>
 
-<!-- desafio do dia -->
+<!-- daily challenge -->
 
 
 <!-- home -->
 
     <!-- LOOTBOXES -->
-    <div class="homepage-content">
+    <div id="baus" class="homepage-content">
 
         <div class="homepage-content-elements">
 
             <div class="homepage-content-lines flex-row">
                 <div class="homepage-content-line gradient-border-homepage"> line1</div>
-                <img class="homepage-content-icon-lootboxes" src="../img/icon/colecoes_icon.png"> <!-- icon de cada conteudo (desafio, premio, colecao, etc) css: colocar por cima da div "lines" -->
+                <img class="homepage-content-icon" src="../img/icon/colecoes_icon.png"> <!-- icon de cada conteudo (desafio, premio, colecao, etc) css: colocar por cima da div "lines" -->
                 <div class="homepage-content-line gradient-border-homepage"> lin2</div>
             </div>
 
@@ -93,14 +93,14 @@ if (!isset($_SESSION['username'])) {
     </div>
     <!-- LOOTBOXES -->
 
-    <!-- KEYS -->
-    <div class="homepage-content">
+    <!-- CHALLENGES -->
+<div id="desafios" class="homepage-content">
 
         <div class="homepage-content-elements">
 
             <div class="homepage-content-lines flex-row">
                 <div class="homepage-content-line gradient-border-homepage"> line1</div>
-                <img class="homepage-content-icon-keys" src="../img/icon/premios_icon.png"> <!-- icon de cada conteudo (desafio, premio, colecao, etc) css: colocar por cima da div "lines" -->
+                <img class="homepage-content-icon" src="../img/icon/premios_icon.png"> <!-- icon de cada conteudo (desafio, premio, colecao, etc) css: colocar por cima da div "lines" -->
                 <div class="homepage-content-line gradient-border-homepage"> lin2</div>
             </div>
 
@@ -114,16 +114,16 @@ if (!isset($_SESSION['username'])) {
         </div>
 
     </div>
-    <!-- KEYS -->
+    <!-- CHALLENGES -->
 
     <!-- COLECTIONS -->
-    <div class="homepage-content">
+    <div id="colecoes" class="homepage-content">
 
         <div class="homepage-content-elements">
 
             <div class="homepage-content-lines flex-row">
                 <div class="homepage-content-line gradient-border-homepage"> line1</div>
-                <img class="homepage-content-icon-colections" src="../img/icon/premios_icon.png"> <!-- icon de cada conteudo (desafio, premio, colecao, etc) css: colocar por cima da div "lines" -->
+                <img class="homepage-content-icon" src="../img/icon/premios_icon.png"> <!-- icon de cada conteudo (desafio, premio, colecao, etc) css: colocar por cima da div "lines" -->
                 <div class="homepage-content-line gradient-border-homepage"> lin2</div>
             </div>
 
@@ -140,13 +140,13 @@ if (!isset($_SESSION['username'])) {
     <!-- COLECTIONS -->
 
     <!-- AWARDS -->
-    <div class="homepage-content">
+    <div id="premios" class="homepage-content">
 
         <div class="homepage-content-elements">
 
             <div class="homepage-content-lines flex-row">
                 <div class="homepage-content-line gradient-border-homepage"> line1</div>
-                <img class="homepage-content-icon-awards" src="../img/icon/premios_icon.png"> <!-- icon de cada conteudo (desafio, premio, colecao, etc) css: colocar por cima da div "lines" -->
+                <img class="homepage-content-icon" src="../img/icon/premios_icon.png"> <!-- icon de cada conteudo (desafio, premio, colecao, etc) css: colocar por cima da div "lines" -->
                 <div class="homepage-content-line gradient-border-homepage"> lin2</div>
             </div>
 
@@ -161,8 +161,6 @@ if (!isset($_SESSION['username'])) {
 
     </div>
     <!-- AWARDS -->
-
-
 
 <!-- home -->
 
