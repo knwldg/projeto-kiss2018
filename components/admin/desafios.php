@@ -13,6 +13,8 @@
 
 <body>
 <?php require_once "navigation.php"; ?>
+<?php require_once "../php/connection.php"; ?>
+<?php require_once "../php/general.php"; ?>
 <div id="desafios">
     <!-- /.row -->
     <div id="desafios_title">
@@ -23,8 +25,16 @@
             <tr>
                 <th>Nome</th>
                 <th>Descrição</th>
-                <th>Imagem</th>
                 <th>Chaves Atribuidas</th>
+            </tr>
+            <tr id="echos">
+                <?php listUsers() ?>
+                <th>
+                    <?php echo listUsers($cardList, 'title') ?></th>
+                <th>
+                    <?php echo listUsers($cardList, 'description') ?></th>
+                <th>
+                    <?php echo listUsers($cardList, 'reward') ?></th>
             </tr>
         </table>
     </div>

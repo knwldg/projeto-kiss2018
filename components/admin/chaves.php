@@ -14,6 +14,8 @@
 
 <body>
 <?php require_once "navigation.php"; ?>
+<?php require_once "../php/connection.php"; ?>
+<?php require_once "../php/general.php"; ?>
 <div id="keys">
     <!-- /.row -->
     <div id="chaves">
@@ -23,7 +25,17 @@
         <table>
             <tr>
                 <th>Utilizador</th>
-                <th>Chaves Utilizadas</th>
+                <th>Nome Real</th>
+                <th>Chaves</th>
+            </tr>
+            <tr id="echos">
+                <?php listUsers() ?>
+                <th>
+                    <?php echo listUsers($userList, 'username') ?></th>
+                <th>
+                    <?php echo listUsers($userList, 'nome real') ?></th>
+                <th>
+                    <?php echo listUsers($userList, 'keys') ?></th>
             </tr>
         </table>
     </div>

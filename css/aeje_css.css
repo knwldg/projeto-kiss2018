@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+#header{
+    width: 100%;
+    margin: -1.5vh;
+    background: #05acc3;
+
+
+    padding: 2vh;
+    border: none;
+}
+
+
+.aeje_site{
+    width: 5vw;
+    padding: 0.5vw;
+}
+
+h1{
+    font-size: 2vw;
+    padding: 1vw;
+    float: right;
+}
+
+.marca{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20vw;
+    margin-top: 8vh;
+}
+
+#botao{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 7vw;
+    border: 2px solid rgba(140,140,140,0.70);
+    background-color: transparent;
+    padding: 1.5vw;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 6vh;
+}
+
+.footer{
+    width: 100%;
+    background: rgba(5, 127, 149, 0.17);
+    border: none;
+    position: relative;
+    left: 0;
+    padding: 3vh;
+    text-align: center;
+    bottom: -5vh;
+    display: block;
+}
+
+p{
+    float: left;
+    padding: 1vw;
+}
+
+#governo{
+    height: 9vh;
+
+}
+
+#ua{
+    height: 9vh;
+    padding: 0.5vw;
+
+}
+#aeje{
+    height: 9vh;
+    padding: 0.5vw;
+
+}
+
+@media screen and (max-width: 1000px){
+
+  .footer{
+      bottom: 0;
+      position: fixed;
+      display: grid;
+  }
+
+}

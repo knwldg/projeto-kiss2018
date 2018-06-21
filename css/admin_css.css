@@ -4,47 +4,6 @@ body {
     font-family: "Montserrat", sans-serif;
     letter-spacing: 0.05em;
 }
-/*DASHBOARD */
-#dashboard {
-background-color: white;
-
-}
-
-#dash{
-    color: rgba(247,152,104,1);
-}
-
-#estatistica_caixas{
-    font-family: "Montserrat", sans-serif;
-    letter-spacing: 0.05em;
-    border-bottom: lightgrey 1px;
-
-}
-
-#estatistica_caixas h2{
-    color: rgba(247,152,104,1);
-}
-
-
-#estatisticas_users{
-    font-family: "Montserrat", sans-serif;
-    letter-spacing: 0.05em;
-    border-bottom: lightgrey 1px;
-
-}
-
-#estatisticas_users table, tr, th {
-    border: 1px lightgrey;
-}
-
-#estatisticas_users table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-#estatisticas_users th {
-    color: rgba(247,152,104,1);
-}
 
 /* Navbar container */
 .navbar {
@@ -81,7 +40,7 @@ background-color: white;
     margin: 0; /* vertical align on mobile phones */
 }
 
-/* Add a red background color to navbar links on hover */
+/* Add a orange background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
     background-color: rgba(247,152,104,1);
 }
@@ -122,7 +81,7 @@ background-color: white;
 }
 
 #desafios_title{
-    color: rgba(247,152,104,1);
+    color: black;
     margin-left: 3px;
 }
 
@@ -210,7 +169,7 @@ background-color: white;
 }
 
 #premios_title{
-    color: rgba(247,152,104,1);
+    color: black;
     margin-left: 3px;
 }
 
@@ -273,7 +232,7 @@ background-color: white;
 }
 
 #utilizadores{
-    color: rgba(247,152,104,1);
+    color: black;
     margin-left: 3px;
 }
 
@@ -316,7 +275,7 @@ background-color: white;
 }
 
 #caixas{
-    color: rgba(247,152,104,1);
+    color: black;
     margin-left: 3px;
 }
 
@@ -376,13 +335,14 @@ background-color: white;
 }
 
 #cards{
-    color: rgba(247,152,104,1);
+    color: black;
     margin-left: 3px;
 }
 
 
 #table_cromos table, tr, th {
     border: 1px lightgrey;
+    align-content: center;
 }
 
 #table_cromos table {
@@ -452,7 +412,7 @@ background-color: white;
 }
 
 #chaves{
-    color: rgba(247,152,104,1);
+    color: black;
     margin-left: 3px;
 }
 
@@ -502,4 +462,15 @@ background-color: white;
     border: none;
     outline: none;
     padding: 5px;
+}
+
+#echos {
+    color: black;
+
+}
+
+#burger:hover {
+    background-color: lightgrey;
+    border: none;
+    outline: none;
 }

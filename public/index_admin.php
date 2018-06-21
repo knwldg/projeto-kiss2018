@@ -14,5 +14,4 @@
 <body>
 <?php require_once "components/admin/navigation.php"; ?>
 
-<?php require_once "components/admin/dashboard.php"; ?>
-</body>
+<?php require_once "components/php/general.php"; ?>

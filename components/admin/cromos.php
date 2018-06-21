@@ -13,7 +13,11 @@
 
 
 <body>
+<?php require_once "../php/connection.php"; ?>
+<?php require_once "../php/general.php"; ?>
 <?php require_once "navigation.php"; ?>
+
+
 
 <div id="cromos">
     <!-- /.row -->
@@ -25,15 +29,18 @@
             <tr>
                 <th>Nome</th>
                 <th>Coleção</th>
-                <?php
-
-                require_once "../php/general.php";
-
-                listUsers();
-
-                ?>
                 <th>Raridade</th>
-                <th>Descrição</th>
+
+            </tr>
+            <tr>
+            <tr id="echos">
+                <?php listUsers() ?>
+                <th>
+                    <?php echo listUsers($cardList, 'name') ?></th>
+                <th>
+                    <?php echo listUsers($cardList, 'collection') ?></th>
+                <th>
+                    <?php echo listUsers($cardList, 'rarity') ?></th>
             </tr>
         </table>
     </div>
@@ -44,9 +51,6 @@
     </button>
     <button class="adicionar_cromo">
         Adicionar Cromo
-    </button>
-    <button class="editar_descrição">
-        Editar Descrição
     </button>
 </div>
 </body>
