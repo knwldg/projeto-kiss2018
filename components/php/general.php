@@ -6,9 +6,7 @@
  * Time: 22:12
  */
 
-require_once "../php/general.php";
-
-
+require_once "connection.php";
 
 function listUsers()
 {
@@ -66,8 +64,27 @@ function listCards() {
 
 function getUserCards($userId) {
 
+    global $sql_connection;
+    global $userCards;
+
+    $sql_op = $sql_connection->prepare("SELECT `cards_idcards`, `quantity` FROM ark WHERE users_idusers = ?");
+
+    $sql_op->bind_param('i', $userId);
+
+    if (!$sql_op->execute()) {
+
+        return false;
+
+    }
+
+    $sql_op->store_result();
+    $sql_op->bind_result($cards, $quantity);
+    $sql_op->fetch();
+
+    $userCards = [$cards, $quantity];
 
 
+    return $userCards;
 
 }
 
@@ -162,28 +179,45 @@ function whatCard() {
 
 }
 
-function addCard($userId, $cardId) {
+function numCards($userId, $cardId)
+{
+
     global $sql_connection;
+
+    $sql_op = $sql_connection->prepare("SELECT quantity FROM ark WHERE users_idusers = ? AND cards_idcards = ?");
+
+    $sql_op->bind_param('ii', $userId, $cardId);
+
+    if (!$sql_op->execute()) {
+
+        return false;
+
+    }
+
+    $sql_op->store_result();
+    $sql_op->bind_result($quantity);
+    $sql_op->fetch();
+
+    return $quantity;
+
+}
+
+function addCard($userId, $cardId)
+{
+
+    global $sql_connection;
+
     try {
+
         if (!isset ($sql_connection)) {
+
             throw new Exception('SQL Connection failure');
-        }
-
-        $sql_op = $sql_connection->prepare("SELECT quantity FROM ark WHERE users_idusers = ? AND cards_idcards = ?");
-
-        $sql_op->bind_param('ii', $userId, $cardId);
-
-        if (!$sql_op->execute()) {
-
-            return false;
 
         }
 
-        $sql_op->store_result();
-        $sql_op->bind_result($quantity);
-        $sql_op->fetch();
+        $quantity = numCards($userId, $cardId);
 
-        if($sql_op->mysql_num_rows($quantity)==0) {
+        if ($quantity == 0) {
 
             $sql_op = $sql_connection->prepare("INSERT IGNORE INTO ark (users_idusers, cards_idcards, quantity) VALUES (?,?,1)");
             $sql_op->bind_param('ii', $userId, $cardId);
@@ -210,12 +244,14 @@ function addCard($userId, $cardId) {
             else return true;
         }
 
+
         }
 
     catch (Exception $exception) {
         echo ("Error: $exception");
         return false;
     }
+    return true;
 }
 
 
