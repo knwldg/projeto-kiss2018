@@ -1,3 +1,11 @@
+<?php
+
+#TODO BUSCAR O USER
+
+$carta = getUserCards(1);
+
+?>
+
 <div id="pop-up-carta-img" class="pop-up-carta-img zoom-img flex-column">
 
     <div class="flex-column text-center">
@@ -23,7 +31,7 @@
 
 <script type="text/javascript">
 
-    document.getElementById("front").style.background = "url('../img/cartas/equipa/frente/equipa1.png') no-repeat center";
+    document.getElementById("front").style.background = 'url("../img/cartas/equipa/frente/equipa<?php echo "$v[0]" ?>.png") no-repeat center';
     document.getElementById("front").style.backgroundSize = "98%";
     document.getElementById("back").style.background = "url('../img/cartas/equipa/tras/branco.png') no-repeat center";
     document.getElementById("back").style.backgroundSize = "98%";

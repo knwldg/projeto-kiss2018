@@ -1,5 +1,17 @@
+<?php
 
-<div id="colecao1" class="desafio-premios-colecoes flex-column shadow">
+//$carta = getUserCards(1)[0][0];
+//$num_cartas = getUserCards(1)[0][1];
+
+#TODO BUSCAR O USER
+
+$carta = getUserCards(1);//com session (?)
+
+
+?>
+
+<?php foreach ($carta as $k => $v){ ?>
+<div id="colecao<?php echo "$k" ?>" class="desafio-premios-colecoes flex-column shadow">
 
     <div class="premios-title flex-row">
 
@@ -16,16 +28,20 @@
     <div class="colection flex-row font700 equipa-color">
 
         <!-- para o ciclo utilizar este -->
+
         <div class="carta">
-            <a id="colecao1_carta1" href="#pop-up-carta-img" onclick="click_carta()" class="flex-column center-items">
-                <img id="carta1" class="carta-size" src="../../img/cartas/equipa/frente/equipa1.png">
-                <span id="carta1_numero1" class="colection-numbers">0</span>
+            <a id="carta<?php echo "$v[0]" ?>" href="#pop-up-carta-img<?php echo "$v[0]" ?>" onclick="click_carta()" class="flex-column center-items">
+                <img id="carta" class="carta-size" src="../../img/cartas/equipa/frente/equipa<?php echo "$v[0]" ?>.png">
+                <span class="colection-numbers"><?php echo "$v[1]"?></span>
             </a>
         </div>
+
+
         <!-- para o ciclo utilizar este -->
 
     </div>
 
 </div>
+<?php } ?>
 
 
