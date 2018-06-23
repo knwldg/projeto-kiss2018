@@ -6,16 +6,13 @@
  * Time: 16:33
  */
 
+global $challenges;
+
 require_once "../components/php/general.php";
 require_once "../components/php/connection.php";
+require_once "../components/php/challengeControl.php";
 
-addCard(12, 7);
-addCard(12, 14);
+issueChallenge("farts", "butts", 2);
 
-print_r(findIdByUsername("testing"));
-
-findIdByUsername("testing");
-
-evolveCard(12, 7);
-
+dailyChallenge();
 

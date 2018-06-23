@@ -7,9 +7,11 @@
  */
 
 require_once "../php/connection.php";
+require_once "../php/challengeControl.php";
 
 global $dailyChallenge;
 
+/*
 function addDailyChallenge() {
 
     global $sql_connection;
@@ -52,3 +54,5 @@ function addDailyChallenge() {
         return false;
     }
 }
+*/
+
