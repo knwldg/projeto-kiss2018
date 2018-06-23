@@ -6,7 +6,7 @@
         <span class="div-baus-title font700 white">Escolhe um báu</span>
 
         <div class="chest-line flex-row"><!-- 3 itens -->
-            <div id="chest-line-item" onclick="open_chest(this.id)" class="chest-line-item"><img class="chest-line-item-img" src="../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest(this.id)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
         </div>
         <div class="chest-line flex-row"><!-- 3 itens -->
 
@@ -28,7 +28,7 @@
             <div class="flex-column center-items">
 
                 <div class="flex-column text-center">
-                    <a href="" onclick="close_baus()" id="voltar" class="voltar pointer"><img class="voltar-size" src="../img/icon/voltar.png"></a>
+                    <a href="" onclick="close_baus()" id="voltar" class="voltar pointer"><img class="voltar-size" src="../../img/icon/voltar.png"></a>
                     <span class="black font600">voltar</span>
                 </div>
 
@@ -41,13 +41,13 @@
                     <!-- detalhe bau -->
                     <div class="detalhe-bau shadow center-items flex-column">
 
-                        <div id="detalhe-bau-chest" class="detalhe-bau-img">&nbsp</div>
+                        <img src="../../img/icon/bau5.png" id="detalhe-bau-chest" class="detalhe-bau-img bau-verde">
 
                         <div class="detalhe-bau-numero_cartas center-items flex-row">
                             <span class="numero-cartas-item1 font700">CARTAS</span> <span id="detalhe-bau-numero" class="numero-cartas-item2 font800">+5</span>
                         </div>
 
-                        <a href="colecoes.php" id="detalhe-bau-colecoes" class="detalhe-bau-colecoes shadow white font700 bau-verde">coleções</a>
+                        <a href="../../public/colecoes.php" id="detalhe-bau-colecoes" class="detalhe-bau-colecoes shadow white font700 btn-verde">coleções</a>
                         <span class="detalhe-bau-descricao gray font500">descubra as nossas coleções</span>
 
                     </div>

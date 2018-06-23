@@ -115,23 +115,23 @@ button{
 /* ANIMACAO / POP-UP-CARTAS */
 
 .bau-branco{
-    background-color: rgb(255,255,255);
+    background: linear-gradient(to top, rgb(236,233,230) , rgb(255,255,255));
 }
 
 .bau-verde{
-    background-color: rgb(71,193,102);
+    background: linear-gradient(to top, rgb(123,146,10) , rgb(173,209,0));
 }
 
 .bau-azul{
-    background-color: rgb(38,160,218);
+    background: linear-gradient(to top, rgb(58,123,213) , rgb(0,210,255));
 }
 
 .bau-roxo{
-    background-color: rgb(127,127,213);
+    background: linear-gradient(to top, rgb(110,72,170) , rgb(157,80,221));
 }
 
 .bau-dourado{
-    background-color: rgb(253,209,81);
+    background: linear-gradient(to top, rgb(244,208,63) , rgb(255,242,0));
 }
 
 .fundo-branco{
@@ -139,7 +139,7 @@ button{
 }
 
 .fundo-verde{
-    background-color: rgba(71,193,102,0.65);
+    background-color: rgba(123,146,10,0.65);
 }
 
 .fundo-azul{
@@ -154,7 +154,25 @@ button{
     background-color: rgba(253,209,81,0.65);
 }
 
+.btn-branco{
+    background-color: #BFBDBA;
+}
 
+.btn-verde{
+    background-color: #7B920A;
+}
+
+.btn-azul{
+    background-color: #3A7BD5;
+}
+
+.btn-roxo{
+    background-color: #6E48AA;
+}
+
+.btn-dourado{
+    background-color: #F4D03F;
+}
 
 /* ANIMACAO / POP-UP-CARTAS  */
 
@@ -1334,11 +1352,6 @@ input[name="image-uploaded"] {
     cursor: pointer;
 }
 
-.chest-animation-item{
-    position: absolute;
-    bottom: 5.5em;
-    width: 11em;
-}
 
 
 @-webkit-keyframes grow {
@@ -1346,16 +1359,30 @@ input[name="image-uploaded"] {
         /*-webkit-clip-path: inset(100% 0 0 0);*/
         clip-path: inset(100% 0 0 0);
         height: 0;
+        bottom: 6.1em;
+    }
+    25% {
+        /*-webkit-clip-path: inset(30% 0 0 0);*/
+        clip-path: inset(75% 0 0 0);
+
     }
     50% {
         /*-webkit-clip-path: inset(30% 0 0 0);*/
-        clip-path: inset(30% 0 0 0);
+        clip-path: inset(50% 0 0 0);
+
+
+    }
+    75% {
+        /*-webkit-clip-path: inset(0 0 0 0);*/
+        clip-path: inset(25% 0 0 0);
 
     }
     100% {
         /*-webkit-clip-path: inset(0 0 0 0);*/
         clip-path: inset(0 0 0 0);
-        height: 10.3em;
+        height: 10.8em;
+        bottom: 5em;
+
     }
 }
 
@@ -1364,16 +1391,30 @@ input[name="image-uploaded"] {
         /*-webkit-clip-path: inset(100% 0 0 0);*/
         clip-path: inset(100% 0 0 0);
         height: 0;
+        bottom: 6.1em;
+    }
+    25% {
+        /*-webkit-clip-path: inset(30% 0 0 0);*/
+        clip-path: inset(75% 0 0 0);
+
     }
     50% {
         /*-webkit-clip-path: inset(30% 0 0 0);*/
-        clip-path: inset(30% 0 0 0);
+        clip-path: inset(50% 0 0 0);
+
+
+    }
+    75% {
+        /*-webkit-clip-path: inset(0 0 0 0);*/
+        clip-path: inset(25% 0 0 0);
 
     }
     100% {
         /*-webkit-clip-path: inset(0 0 0 0);*/
         clip-path: inset(0 0 0 0);
-        height: 10.3em;
+        height: 10.8em;
+        bottom: 5em;
+
     }
 }
 
@@ -1382,16 +1423,30 @@ input[name="image-uploaded"] {
         /*-webkit-clip-path: inset(100% 0 0 0);*/
         clip-path: inset(100% 0 0 0);
         height: 0;
+        bottom: 6.1em;
+    }
+    25% {
+        /*-webkit-clip-path: inset(30% 0 0 0);*/
+        clip-path: inset(75% 0 0 0);
+
     }
     50% {
         /*-webkit-clip-path: inset(30% 0 0 0);*/
-        clip-path: inset(30% 0 0 0);
+        clip-path: inset(50% 0 0 0);
+
 
     }
+    75% {
+         /*-webkit-clip-path: inset(0 0 0 0);*/
+         clip-path: inset(25% 0 0 0);
+
+     }
     100% {
         /*-webkit-clip-path: inset(0 0 0 0);*/
         clip-path: inset(0 0 0 0);
-        height: 10.3em;
+        height: 10.8em;
+        bottom: 5em;
+
     }
 }
 
@@ -1400,31 +1455,31 @@ input[name="image-uploaded"] {
     /*-webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0);*/
     clip-path: polygon(0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0);
 
-    -webkit-animation: grow 1.2s linear forwards;
+    -webkit-animation: grow 2s linear forwards;
     -moz-animation: grow 1.2s linear forwards;
     animation: grow 1.2s linear forwards;
 
-    -webkit-animation-delay: 1s;
-    -moz-animation-delay: 1s;
-    animation-delay: 1s;
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+    animation-delay: 1.5s;
 }
 
-
-.chest-animation-item-img{
-    /*width: 11em;
-    position: relative;
-    bottom: 0.3em;
-    margin: 6em;*/
-
+.chest-animation-item{
+    position: absolute;
     width: 11em;
+}
+
+.chest-animation-item-img{
     position: relative;
-    height: 19em;
+    width: 11em;
+    height: 11.4em;
+    margin: 4.8em;
 }
 
 .chest-animation-item-img{
 
-    background: url("../img/icon/chest.png") no-repeat center;
-    background-size: 11em;
+    background: url("../img/icon/bau1.png") no-repeat center;
+    background-size: 100%;
 
     -webkit-animation: sprite linear 1;
     -moz-animation: sprite linear 1;
@@ -1434,58 +1489,82 @@ input[name="image-uploaded"] {
     -moz-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 
-    -webkit-animation-duration:1.2s;
+    -webkit-animation-duration:2s;
     -moz-animation-duration:1.2s;
     animation-duration: 1.2s;
 
-    -webkit-animation-delay:1s;
-    -moz-animation-delay:1s;
-    animation-delay: 1s;
+    -webkit-animation-delay:1.5s;
+    -moz-animation-delay:1.5s;
+    animation-delay: 1.5s;
 
 }
 
 @keyframes sprite {
     0% {
-        background: url("../img/icon/chest.png") no-repeat center;
-        background-size: 11em;
+        background: url("../img/icon/bau1.png") no-repeat center;
+        background-size: 100%;
+    }
+    25% {
+        background: url("../img/icon/bau2.png") no-repeat center;
+        background-size: 100%;
     }
     50% {
-        background: url("../img/icon/chest_little_open.png") no-repeat center;
-        background-size: 11em;
+        background: url("../img/icon/bau3.png") no-repeat center;
+        background-size: 100%;
+    }
+    75% {
+        background: url("../img/icon/bau4.png") no-repeat center;
+        background-size: 100%;
     }
     100% {
-        background: url("../img/icon/chest_complete_open.png") no-repeat center;
-        background-size: 11em;
+        background: url("../img/icon/bau5.png") no-repeat center;
+        background-size: 100%;
     }
 }
 
 @-webkit-keyframes sprite {
     0% {
-        background: url("../img/icon/chest.png") no-repeat center;
-        background-size: 11em;
+        background: url("../img/icon/bau1.png") no-repeat center;
+        background-size: 100%;
+    }
+    25% {
+        background: url("../img/icon/bau2.png") no-repeat center;
+        background-size: 100%;
     }
     50% {
-        background: url("../img/icon/chest_little_open.png") no-repeat center;
-        background-size: 11em;
+        background: url("../img/icon/bau3.png") no-repeat center;
+        background-size: 100%;
+    }
+    75% {
+        background: url("../img/icon/bau4.png") no-repeat center;
+        background-size: 100%;
     }
     100% {
-        background: url("../img/icon/chest_complete_open.png") no-repeat center;
-        background-size: 11em;
+        background: url("../img/icon/bau5.png") no-repeat center;
+        background-size: 100%;
     }
 }
 
 @-moz-keyframes sprite {
     0% {
-        background: url("../img/icon/chest.png") no-repeat center;
-        background-size: 11em;
+        background: url("../img/icon/bau1.png") no-repeat center;
+        background-size: 100%;
+    }
+    25% {
+        background: url("../img/icon/bau2.png") no-repeat center;
+        background-size: 100%;
     }
     50% {
-        background: url("../img/icon/chest_little_open.png") no-repeat center;
-        background-size: 11em;
+        background: url("../img/icon/bau3.png") no-repeat center;
+        background-size: 100%;
+    }
+    75% {
+        background: url("../img/icon/bau4.png") no-repeat center;
+        background-size: 100%;
     }
     100% {
-        background: url("../img/icon/chest_complete_open.png") no-repeat center;
-        background-size: 11em;
+        background: url("../img/icon/bau5.png") no-repeat center;
+        background-size: 100%;
     }
 }
 
@@ -1554,9 +1633,9 @@ input[name="image-uploaded"] {
     -moz-animation-duration:0.5s;
     animation-duration: 0.5s;
 
-    -webkit-animation-delay: 2s;
-    -moz-animation-delay: 2s;
-    animation-delay: 2s;
+    -webkit-animation-delay: 2.2s;
+    -moz-animation-delay: 2.8s;
+    animation-delay: 2.8s;
 }
 
 @-moz-keyframes carta {
@@ -1630,10 +1709,8 @@ input[name="image-uploaded"] {
 }
 
 .detalhe-bau-img{
-    background: rgb(71,193,102) url('../img/icon/chest_complete_open.png') no-repeat center;
-    background-size: 100%;
     width: 10.35em;
-    height: 10em;
+    height: 10.6em;
 }
 
 .detalhe-bau-numero_cartas{
