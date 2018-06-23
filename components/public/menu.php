@@ -4,9 +4,9 @@
 
     <div id="main-menu-itens" class="main-menu-style">
 
-        <div id="profile-menu" class="profile-menu-style">
+        <!--<div id="profile-menu" class="profile-menu-style">
             <?php include "../../components/public/profile_details.php"; ?>
-        </div>
+        </div>-->
 
         <div id="menu" class="menu-pages border"><!-- responsive mode: width 15% -->
 
