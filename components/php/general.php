@@ -62,34 +62,42 @@ function listCards() {
 
 }
 
-function getUserCards($userId) {
+function getUserCards($userId)
+{
 
     global $sql_connection;
-    global $userCards;
+    global $userCollection;
 
-    $sql_op = $sql_connection->prepare("SELECT `cards_idcards`, `quantity` FROM ark WHERE users_idusers = ?");
-
-    $sql_op->bind_param('i', $userId);
-
-    if (!$sql_op->execute()) {
-
-        return false;
-
+    if ($sql_connection->connect_errno) {
+        printf("Connect failed: %s\n", $sql_connection->connect_error);
+        exit();
     }
 
-    echo($sql_op->num_rows);
+    $query = $sql_connection->prepare("SELECT `cards_idcards`, `quantity` FROM ark WHERE users_idusers = ?");
+    $query->bind_param("i", $userId);
+    $query->execute();
+    $result = $query->get_result();
 
-    $sql_op->store_result();
-    $sql_op->bind_result($cards, $quantity);
-    $sql_op->fetch();
+    $userCollection = array();
 
+    if ($result->num_rows === 0) exit('No rows');
+    while ($row = $result->fetch_assoc()) {
+        $cardId[] = $row['cards_idcards'];
+        $quantity[] = $row['quantity'];
+    }
 
-    $userCards = [$cards, $quantity];
+    for ($i = 0; $result->num_rows > $i; $i++) {
 
+        array_push($userCollection, [$cardId[$i], $quantity[$i]]);
+    }
 
-    return $userCards;
+    $query->close();
+
+    return $userCollection;
 
 }
+
+
 
 function getUserData($userId)
 {
@@ -161,9 +169,6 @@ function findIdByUsername($value)
     }
 
 }
-
-
-// TODO redo this
 
 function loot($userId) {
 
@@ -243,6 +248,7 @@ function addCard($userId, $cardId)
             if (!$sql_op->execute()) {
                 throw new Exception('error');
             }
+
             else return true;
         }
 
@@ -254,6 +260,105 @@ function addCard($userId, $cardId)
         return false;
     }
     return true;
+}
+
+function evolveCard($userId, $cardId)
+{
+
+    global $sql_connection;
+
+    try {
+
+        if (!isset ($sql_connection)) {
+
+            throw new Exception('SQL Connection failure');
+
+        }
+
+        $quantity = numCards($userId, $cardId);
+
+        if ($quantity > 2) {
+
+            $newQuantity = $quantity - 4;
+
+            $sql_op = $sql_connection->prepare("UPDATE ark SET quantity = ? WHERE users_idusers = ? AND cards_idcards = ?");
+            $sql_op->bind_param('iii', $newQuantity, $userId, $cardId);
+
+
+            if (!$sql_op->execute()) {
+                throw new Exception('Error');
+            }
+
+            $evolutionId = $cardId + 1000;
+
+            addCard($userId, $evolutionId);
+
+        } else {
+
+            exit("not enough cards bud");
+
+        }
+
+
+    } catch (Exception $exception) {
+        echo("Error: $exception");
+        return false;
+    }
+    return true;
+
+}
+
+function luck()
+{
+
+    $first_spin = rand(0, 20);
+
+    if ($first_spin > 8) {
+        $second_spin = rand(0, 20);
+
+        if ($second_spin > 10) {
+            $third_spin = rand(0, 20);
+
+            if ($third_spin > 14) {
+                $fourth_spin = rand(0, 20);
+
+                if ($fourth_spin > 18) {
+
+                    return 4;
+
+                } else return 3;
+
+            } else return 2;
+
+        } else return 1;
+
+    } else return 0;
+
+}
+
+function openBox($userId)
+{
+
+    global $rewards;
+
+    $rewards = array();
+
+    //determinar a luck, aka quantas cartas vamos dar
+
+    $luck = luck();
+
+    //array com os rewards para mostrar clientside
+
+    $rewards = array();
+
+    for ($i = 0; $luck > $i; $i++) {
+
+        $rewardCard = addCard($userId, whatCard());
+
+        array_push($rewards, $rewardCard);
+
+    }
+
 }
 
 

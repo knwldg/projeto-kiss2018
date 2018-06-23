@@ -9,8 +9,13 @@
 require_once "../components/php/general.php";
 require_once "../components/php/connection.php";
 
-addCard(11, 7);
-echo(numCards(11, 7));
+addCard(12, 7);
+addCard(12, 14);
 
-addCard(11, 14);
-echo(numCards(11, 14));
+print_r(findIdByUsername("testing"));
+
+findIdByUsername("testing");
+
+evolveCard(12, 7);
+
+
