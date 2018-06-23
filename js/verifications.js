@@ -75,3 +75,11 @@ function change_submit_login(clicked_id) {
     document.getElementById("login-verification").style.transition = "opacity 0.2s ease-out"; //php
 
 }
+
+function rejeitar_daily_challenge() {
+
+    document.getElementById("rejeitar-desafio").style.display = "none";
+    document.getElementById("rejeitar-desafio").style.opacity = "0";
+    document.getElementById("rejeitar-desafio").style.transition = "opacity 2s ease-out";
+
+}

@@ -3,13 +3,13 @@
 <?php
 session_start();
 
-/*
+
 if (isset($_SESSION['username'])) {
 
     header('Location: /public/homepage.php');
 
 }
-*/
+
 
 ?>
 <head>
@@ -23,8 +23,8 @@ if (isset($_SESSION['username'])) {
     <link rel="stylesheet" href="../css/style.css">
 
     <title>Log In</title>
-    
-    <script type="text/javascript">
+
+   <script type="text/javascript">
         function validateForm() {
 
             var username = document.forms["loginForm"]["inputUsername"].value;
@@ -73,7 +73,6 @@ if (isset($_SESSION['username'])) {
                     document.getElementById("submit").style.animation ="0";
                     document.getElementById("submit").style.background ="0";
                     document.getElementById("submit").style.backgroundColor ="#009245";
-                    document.getElementById("submit").value = "registado";
                     document.getElementById("submit").style.transition = "background 0.1s, background-color 0.1s ease-in";
                     return true;
 

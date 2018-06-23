@@ -114,6 +114,126 @@ function click_carta() {
 
 }
 
+function open_menu_home() {
+
+    document.getElementById("main-menu").style.visibility = "visible";
+    document.getElementById("main-menu").style.transition = "all 0.2s ease-in";
+
+    document.getElementById("hide-menu").style.visibility = "visible";
+    document.getElementById("hide-menu").style.transition = "all 0.2s ease-in";
+    document.getElementById("hide-menu").style.transitionDelay = "0.3s";
+
+    document.getElementById("main-menu-itens").style.opacity = "1";
+    document.getElementById("main-menu-itens").style.right = "0";
+    document.getElementById("main-menu-itens").style.transition = "all 0.3s linear";
+
+
+}
+
+function close_menu_home() {
+
+    document.getElementById("main-menu").style.visibility = "hidden";
+    document.getElementById("main-menu").style.transition = "all 0.2s ease-in";
+
+    document.getElementById("hide-menu").style.visibility = "hidden";
+    document.getElementById("hide-menu").style.transition = "all 0.5ms ease-in";
+
+    document.getElementById("main-menu-itens").style.opacity = "0";
+    document.getElementById("main-menu-itens").style.right = "24em";
+    document.getElementById("main-menu-itens").style.transition = "all 0.3s linear";
+
+}
+
+function open_menu() {
+
+    document.getElementById("chest").style.zIndex = "-1";
+
+    document.getElementById("main-menu").style.visibility = "visible";
+    document.getElementById("main-menu").style.transition = "all 0.2s ease-in";
+
+    document.getElementById("hide-menu").style.visibility = "visible";
+    document.getElementById("hide-menu").style.transition = "all 0.2s ease-in";
+    document.getElementById("hide-menu").style.transitionDelay = "0.3s";
+
+    document.getElementById("main-menu-itens").style.opacity = "1";
+    document.getElementById("main-menu-itens").style.right = "0";
+    document.getElementById("main-menu-itens").style.transition = "all 0.3s linear";
+
+}
+
+function close_menu() {
+
+    document.getElementById("main-menu").style.visibility = "hidden";
+    document.getElementById("main-menu").style.transition = "all 0.2s ease-in";
+
+    document.getElementById("hide-menu").style.visibility = "hidden";
+    document.getElementById("hide-menu").style.transition = "all 0.5ms ease-in";
+
+    document.getElementById("main-menu-itens").style.opacity = "0";
+    document.getElementById("main-menu-itens").style.right = "24em";
+    document.getElementById("main-menu-itens").style.transition = "all 0.3s linear";
+
+    document.getElementById("chest").style.zIndex = "1";
+    document.getElementById("chest").style.transitionDelay = "0.2s";
+
+}
+
+function hide_main_pages() {
+
+    document.getElementById("main-pages").style.borderTop = "0";
+
+    document.getElementById("arrow").style.visibility = "hidden";
+    document.getElementById("arrow-up").style.visibility = "visible";
+
+    document.getElementById("pages").style.display = "none";
+    document.getElementById("pages").style.opacity = "0";
+    document.getElementById("pages").style.transition = "all 0.2s ease-in";
+
+}
+
+function show_main_pages() {
+
+    document.getElementById("main-pages").style.borderTop = "2px solid rgba(249, 250, 251, 1)";
+
+    document.getElementById("pages").style.display = "block";
+    document.getElementById("pages").style.opacity = "1";
+    document.getElementById("pages").style.transition = "all 0.2s ease-in";
+
+    document.getElementById("arrow").style.visibility = "visible";
+    document.getElementById("arrow-up").style.visibility = "hidden";
+
+
+}
+
+function hide_notifications() {
+
+
+    document.getElementById("notification-line").style.borderBottom = "0";
+
+    document.getElementById("arrow-notifications").style.visibility = "hidden";
+    document.getElementById("arrow-notifications-up").style.visibility = "visible";
+
+    document.getElementById("notification-pages").style.display = "none";
+    document.getElementById("notification-pages").style.opacity = "0";
+    document.getElementById("notification-pages").style.transition = "all 0.2s ease-in";
+
+}
+
+function show_notifications() {
+
+    document.getElementById("notification-line").style.borderBottom = "2px solid rgba(249, 250, 251, 1)";
+
+    document.getElementById("notification-pages").style.display = "block";
+    document.getElementById("notification-pages").style.opacity = "1";
+    document.getElementById("notification-pages").style.transition = "all 0.2s ease-in";
+
+    document.getElementById("arrow-notifications").style.visibility = "visible";
+    document.getElementById("arrow-notifications-up").style.visibility = "hidden";
+
+}
+
+
+
 /*function yes_or_not(clicked_id) {
 
     var hide_desafios;

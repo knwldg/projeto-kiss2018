@@ -329,26 +329,81 @@ button{
 
 /* MENU */
 
-/*
-#main-menu{
-    visibility: hidden;
-    opacity: 0;
-}*/
+.home{
+    padding: 1em;
+}
+
+.home-page{
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-text{
+    padding-left: 2.3em;
+}
+
+.main-new{
+    background: rgba(249, 250, 251, 1);
+    width: 8%;
+    padding: 0.18em;
+    position: relative;
+    left: 1.4em;
+    font-size: 1.2em;
+    border-radius: 29px;
+    align-self: center;
+}
+
+.new{
+    background: rgba(249, 250, 251, 1);
+    align-self: center;
+    padding: 0.33em;
+    border-radius: 29px;
+    width: 6%;
+    font-size: 1.2em;
+}
+
+.notification-pages-item{
+    justify-content: space-between;
+}
+
 
 .profile-font-size{
     font-size: 2.1em;
 }
-
+/*
 .back-style{
     width: 100%;
     height: 100%;
     background-color: rgba(249, 250, 251, 0.75);
     opacity: 0.75;
 }
+*/
+
+#main-pages{
+    display: block;
+    opacity: 1;
+}
+
+.hide-menu{
+    position: absolute;
+    width: 15%;
+    height: 100%;
+    background-color: rgba(249, 250, 251, 0.75);
+    z-index: 1;
+    right: 0;
+}
+
+.back-style{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+}
 
 .main-menu-style{
-    width: 100%;
-    height: auto;
+    width: 85%;
+    height: 100%;
     background-color: #8C8C8C;
     color: #F9FAFB;
     padding-bottom: 0.5em;
@@ -392,7 +447,7 @@ input[name="image-uploaded"] {
 }
 
 #icon-key{
-    background: url("../img/icon/chave_icon.png") no-repeat center;
+    /*background: url("../img/icon/chave_icon.png") no-repeat center;*/
     background-size: 100%;
     width: 71%;
     margin: 1em 0 1em 0;
@@ -415,6 +470,7 @@ input[name="image-uploaded"] {
     .stroke2{
         border-width: 2px;
         border-color: rgba(249, 250, 251, 1);
+        padding: 0.3em;
     }
 
     .menu-pages{
@@ -458,6 +514,7 @@ input[name="image-uploaded"] {
 
     .click-area{
         padding: 1em 0 1em 0;
+        width: 80%;
     }
 
         .click-area:active{
@@ -482,7 +539,8 @@ input[name="image-uploaded"] {
     .pages{
         display: flex;
         flex-direction: row;
-        padding: 1em 1em 1em 1em;
+        padding: 1em 0.3em 1em 1em;
+        justify-content: space-between;
     }
 
     /* PAGES */
@@ -490,14 +548,20 @@ input[name="image-uploaded"] {
 
 .menu-text{
     align-self: center;
-    width: 80%; /* cria um espaçamento entre os elementos sem precisar de utilizar padding*/
-    margin: auto;
 }
 
 .menu-icon{
-    width: 10%;
+    width: 11%;
     min-width: 2em;
     align-self: center; /*flex items*/
+}
+
+.menu-img{
+    background: url("../img/icon/burguer.png") no-repeat center;
+    background-size: 100%;
+    width: 2.5em;
+    height: 2.5em;
+    margin-left: 1em;
 }
 
 .menu-icon-arrow{
@@ -536,6 +600,30 @@ input[name="image-uploaded"] {
     height: 4.5em;
 }
 
+#main-menu{
+    visibility: hidden;
+}
+
+#hide-menu{
+    visibility: hidden;
+}
+
+#main-menu-itens{
+    position: relative;
+    opacity: 0;
+    right: 24em;
+}
+
+.arrow-up{
+    visibility: hidden;
+    position: absolute;
+    width: 1em;
+    height: 0.8em;
+    right: 0;
+    padding-right: 1.95em;
+    align-self: center;
+}
+
 /* MENU */
 
 /* HOMEPAGE */
@@ -546,7 +634,7 @@ input[name="image-uploaded"] {
 
 .homepage-header{
     background: linear-gradient(to right, rgba(247,152,104,0.90) , rgba(246,181,62,0.90));
-    padding: 1em 0 1em 0;
+    padding: 0.8em 0 0.8em 0;
     justify-content: center;
     align-items: center;
     z-index: 0;
@@ -558,7 +646,7 @@ input[name="image-uploaded"] {
 
 .header{
     background: linear-gradient(to right, rgba(247,152,104,0.90) , rgba(246,181,62,0.90)); /* GRADIENT */
-    padding: 1em 0 1em 0;
+    padding: 0.8em 0 0.8em 0;
     margin-bottom: 0.5em;
     justify-content: space-between;
     align-items: center;
@@ -583,7 +671,8 @@ input[name="image-uploaded"] {
     align-self: center;
     width: 50%;
     margin-top: 2em;
-    border-radius: 0.2em;
+    border-top-left-radius: 0.2em;
+    border-top-right-radius: 0.2em;
 }
 
 .day-challenge{
@@ -667,7 +756,13 @@ input[name="image-uploaded"] {
 
 .homepage-content-icon{
     padding: 0 2em 0 2em;
-    max-width: 25%;
+    max-width: 33%;
+    width: 30em;
+}
+
+.challenge{
+    width: 30em;
+    max-width: 35%;
 }
 
 .homepage-content-description{
@@ -685,8 +780,12 @@ input[name="image-uploaded"] {
     padding: 0.9em 0 0.9em 0;
     border-radius: 3px;
     letter-spacing: 0.10em;
-    font-size: 104%;
+    font-size: 105%;
     box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 1px 6px rgba(0,0,0,0.23);
+}
+
+#rejeitar-desafio{
+    opacity: 1;
 }
 
 /* HOMEPAGE */
@@ -1209,6 +1308,18 @@ input[name="image-uploaded"] {
     top: 0;
 }
 
+.home-baus{
+    display: none;
+    border-radius: 7px;
+    position: absolute;
+    background-color: transparent;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 3.8em;
+    height: 100%;
+    top: 24.9em;
+}
+
 .chest-line{
     text-align: center;
 }
@@ -1407,6 +1518,15 @@ input[name="image-uploaded"] {
     width: 100%;
     height: 100%;
     z-index: 0;
+}
+
+.cartas-chest-home-animation{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    padding-bottom: 3.5em;
 }
 
 .fundo-carta{
@@ -1902,10 +2022,6 @@ input[name="image-uploaded"] {
     }
 
     /* MENU */
-    .main-menu-style{
-        width: 85%;
-        height: auto;
-    }
 
     .border{
         width: 90%;
@@ -1957,10 +2073,6 @@ input[name="image-uploaded"] {
     }
 
     /* MENU */
-    .main-menu-style{
-        width: 85%;
-        height: auto;
-    }
 
     .border{
         width: 90%;

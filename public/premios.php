@@ -32,9 +32,15 @@
 
         <?php include "../components/public/icon_chest.php"; ?>
 
+        <?php include "../components/public/menu.php"; ?>
+
     </div>
+
 </div>
 
-<script type="text/javascript" src="../js/baus_cartas.js"></script>
+<script type="text/javascript" src="../js/baus.js"></script>
+<script type="text/javascript" src="../js/cartas.js"></script>
+<script type="text/javascript" src="../js/modal.js"></script>
+
 
 </body>

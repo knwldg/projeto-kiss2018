@@ -7,7 +7,7 @@
 
 
         <div id="concluido1" class="premios-unlock flex-column">
-            <img id="premios-unlock-logo" class="premios-unlock-logo" src="../../img/marca/logo-480w.svg" ><!-- colecao bloqueada -> opacity: 0.4 -->
+            <div><img id="premios-unlock-logo" class="premios-unlock-logo" src="../../img/marca/simbolo-800w.png"></div><!-- colecao bloqueada -> opacity: 0.4 -->
             <span id="premios-unlock-title" class="premios-unlock-title font500 orange">CONCLUÍDO</span><!-- colecao bloqueada -> display: none -->
         </div>
 
