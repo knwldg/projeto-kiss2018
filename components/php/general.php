@@ -43,22 +43,36 @@ function listCards() {
     global $sql_connection;
     global $cardList;
 
-    $cardList = [];
-    $sql_op = $sql_connection->prepare("SELECT name, rarity, collection FROM cards");
-    $sql_op->execute();
-    $sql_op->store_result();
-
-    $num_cards = $sql_op->num_rows;
-
-    for ($i = 0; $i < $num_cards; $i++) {
-
-        $sql_op->store_result();
-        $sql_op->bind_result($cardList[$i]);
-        $sql_op->fetch();
-
+    if ($sql_connection->connect_errno) {
+        printf("Connect failed: %s\n", $sql_connection->connect_error);
+        exit();
     }
 
-    return true;
+    $legendaryCap = 1000;
+
+    $query = $sql_connection->prepare("SELECT * FROM cards WHERE idcards < ?");
+    $query->bind_param("i", $legendaryCap);
+    $query->execute();
+    $result = $query->get_result();
+
+    $cardList = array();
+
+    if ($result->num_rows === 0) exit('No rows');
+    while ($row = $result->fetch_assoc()) {
+        $cardName[] = $row['name'];
+        $rarity[] = $row['rarity'];
+        $collection[] = $row['collection'];
+        $Id[] = $row['idcards'];
+    }
+
+    for ($i = 0; $result->num_rows > $i; $i++) {
+
+        array_push($cardList, [$Id[$i], $cardName[$i], $rarity[$i], $collection[$i]]);
+    }
+
+    $query->close();
+
+    return $cardList;
 
 }
 
