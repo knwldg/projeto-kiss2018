@@ -13,17 +13,19 @@
         <button onclick="open_menu()" id="menu" class="menu-img pointer">&nbsp</button>
         <span class="header-title">PÁGINA PRINCIPAL</span></div>
 
-    <div id="logo-aeje"></div>
+<div class="flex-column center-items">
+    <div id="logo-aeje" class="logo-aeje"></div>
 
-    <div id="main" class="flex-row">
-        <div></div>
-        <div id="img"></div>
-        <div></div>
+    <div id="main" class="flex-column">
+        <div class="flex-column"><img src=""><p>Escola Secundária <br> José Estevão</p></div>
+        <div class="flex-column"><img src=""><p>Aveiro</p></div>
     </div>
 
     <div id="contact"></div>
 
     <div id="footer" class="footer flex-row"></div>
+</div>
+
 
     <?php include "components/public/menu_aeje.php"; ?>
 
