@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 
 <?php
-/*
+session_start();
+
+require_once "../components/php/general.php";
+require_once "../components/php/logincontrol.php";
+
 if (!isset($_SESSION['username'])) {
 
-    header('Location: /public/login.php');
+    header("Location: /public/login.php");
 
 }
-*/
+
+global $userData;
+
+getUserData($_SESSION['userId']);
+
 ?>
 
 <head>
