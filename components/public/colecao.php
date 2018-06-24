@@ -90,6 +90,8 @@ listCards();
             if ($cardList[$i][3] === 2) {
                 $colecao = $cardList[$i][3];
                 $raridade = $cardList[$i][2];
+                $name = $cardList[$i][1];
+
                 ?>
                 <div id="carta<?php echo "$colecao" ?>" class="carta">
                     <a href="?id=<?php echo "$raridade"?>&name=<?php echo "$name"?>#pop-up-carta-img" onclick="click_carta()"
@@ -130,6 +132,8 @@ listCards();
             if ($cardList[$i][3] === 3) {
                 $colecao = $cardList[$i][3];
                 $raridade = $cardList[$i][2];
+                $name = $cardList[$i][1];
+
                 ?>
                 <div id="carta<?php echo "$colecao" ?>" class="carta">
                     <a href="?id=<?php echo "$raridade"?>&name=<?php echo "$name"?>#pop-up-carta-img" onclick="click_carta()"

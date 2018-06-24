@@ -21,7 +21,7 @@ $name = $_GET['name'];
         <div id="front" onclick="flip_back()" class="front pop-up-carta-zoom pointer">&nbsp</div>
 
         <div id="back" onclick="flip_front()" class="back pop-up-carta-zoom flex-column pointer">
-            <h4 id="name" class="font700"><?php echo "$name" ?></h4>
+            <h4 class="font700"><?php echo "$name" ?></h4>
             <p class="back-descricao font500">eu sou muito linda e gosto muito de ir a praia</p>
         </div>
     </div>
