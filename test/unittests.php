@@ -13,7 +13,4 @@ require_once "../components/php/general.php";
 require_once "../components/php/connection.php";
 require_once "../components/php/challengeControl.php";
 
-
-listCards();
-
-var_dump(listCards());
+var_export(listCards());

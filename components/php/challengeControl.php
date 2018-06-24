@@ -37,33 +37,42 @@ function dailyChallenge()
 
 }
 
-//TODO make this not horribly broken
-/*
-function retrieveChallenges() {
+function listChallenges()
+{
+
+    // disponibiliza lista de cartas por ordem de registo na db no array global $cardList
 
     global $sql_connection;
-    global $challenges;
+    global $challengeList;
 
     if ($sql_connection->connect_errno) {
         printf("Connect failed: %s\n", $sql_connection->connect_error);
         exit();
     }
 
-    $result = $sql_connection->query("SELECT `title`, `description`, `rewards` FROM challenges");
+    $legendaryCap = 4;
 
-    $challenges = array();
+    $query = $sql_connection->prepare("SELECT * FROM challenges WHERE reward < ?");
+    $query->bind_param("i", $legendaryCap);
+    $query->execute();
+    $result = $query->get_result();
+
+    $challengeList = array();
 
     if ($result->num_rows === 0) exit('No rows');
     while ($row = $result->fetch_assoc()) {
-        $title[] = $row['title'];
-        $description[] = $row['description'];
-        $rewards[] = $row['rewards'];
+        $challengeTitle[] = $row['title'];
+        $challengeDescription[] = $row['description'];
+        $challengeRarity[] = $row['reward'];
     }
 
     for ($i = 0; $result->num_rows > $i; $i++) {
 
-        array_push($challenges, [$title[$i], $description[$i], $rewards[$i]]);
+        array_push($challengeList, [$challengeTitle[$i], $challengeDescription[$i], $challengeRarity[$i]]);
     }
 
+    $query->close();
+
+    return $challengeList;
+
 }
-*/
