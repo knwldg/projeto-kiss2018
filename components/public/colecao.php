@@ -53,8 +53,7 @@ listCards();
 
                 ?>
                 <div id="carta<?php echo "$colecao" ?>" class="carta">
-                    <a href="?id=<?php echo "$raridade"?>&name=<?php echo "$name"?>#pop-up-carta-img" onclick="click_carta()"
-                                                     class="flex-column center-items">
+                    <a href="?id=<?php echo "$raridade"?>&name=<?php echo "$name"?>#pop-up-carta-img" onclick="click_carta()">
                         <img id="carta" class="carta-size" src="../../img/cartas/equipa/frente/equipa<?php echo "$raridade" ?>.png">
                         <!-- raridade do listCards -->
                         <span class="colection-numbers"><?php //$v[1] ?></span>
@@ -95,8 +94,7 @@ listCards();
 
                 ?>
                 <div id="carta<?php echo "$colecao" ?>" class="carta">
-                    <a href="?id=<?php echo "$raridade"?>&name=<?php echo "$name"?>#pop-up-carta-img" onclick="click_carta()"
-                       class="flex-column center-items">
+                    <a href="?id=<?php echo "$raridade"?>&name=<?php echo "$name"?>#pop-up-carta-img" onclick="click_carta()">
                         <img id="carta" class="carta-size" src="../../img/cartas/equipa/frente/equipa<?php echo "$raridade" ?>.png">
                         <!-- raridade do listCards -->
                         <span class="colection-numbers"><?php //$v[1] ?></span>
@@ -139,8 +137,7 @@ listCards();
 
                 ?>
                 <div id="carta<?php echo "$colecao" ?>" class="carta">
-                    <a href="?id=<?php echo "$raridade"?>&name=<?php echo "$name"?>#pop-up-carta-img" onclick="click_carta()"
-                       class="flex-column center-items">
+                    <a href="?id=<?php echo "$raridade"?>&name=<?php echo "$name"?>#pop-up-carta-img" onclick="click_carta()">
                         <img id="carta" class="carta-size" src="../../img/cartas/equipa/frente/equipa<?php echo "$raridade" ?>.png">
                         <!-- raridade do listCards -->
                         <span class="colection-numbers"><?php //$v[1] ?></span>
