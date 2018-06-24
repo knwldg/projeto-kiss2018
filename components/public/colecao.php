@@ -50,11 +50,13 @@ listCards();
                 $colecao = $cardList[$i][3];
                 $raridade = $cardList[$i][2];
                 $name = $cardList[$i][1];
+                $id = $cardList[$i][0];
+
 
                 ?>
-                <div id="carta<?php echo "$colecao" ?>" class="carta">
-                    <a href="?id=<?php echo "$raridade"?>&name=<?php echo "$name"?>#pop-up-carta-img" onclick="click_carta()">
-                        <img id="carta" class="carta-size" src="../../img/cartas/equipa/frente/equipa<?php echo "$raridade" ?>.png">
+                <div class="carta">
+                    <a id="carta<?php echo "$colecao" ?>" href="#pop-up-carta-img" onclick="click_carta('<?php echo "$name"?>',<?php echo "$raridade" ?>)">
+                        <img class="carta-size" src="../../img/cartas/equipa/frente/equipa<?php echo "$raridade" ?>.png">
                         <!-- raridade do listCards -->
                         <span class="colection-numbers"><?php //$v[1] ?></span>
                     </a>

@@ -107,3 +107,43 @@ button{
     height: 7em;
     width: 6em;
 }
+
+.main-aeje{
+    background: url("../img/aeje/aeje.jpg") no-repeat center;
+    background-size: 100%;
+    height: 20em;
+    width: 23.5em;
+}
+
+.img-aeje{
+    width: 100%;
+    max-width: 15%;
+}
+
+.main-aeje-item{
+    align-items: center;
+    text-align: center;
+    padding-top: 1em;
+}
+
+.contact-item{
+    width: 68%;
+    padding-right: 2.5em;
+}
+
+.contact-item-email{
+    width: 50%;
+}
+
+.email{
+    font-size: 64%;
+}
+
+.phone-number{
+    font-size: 69%;
+}
+
+.img-aeje-email{
+    width: 100%;
+    max-width: 27%;
+}

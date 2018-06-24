@@ -1827,6 +1827,7 @@ input[name="image-uploaded"] {
 
 .aviso{
     animation: aviso 3s ease-out forwards;
+    animation-iteration-count: 1;
 }
 
 @-moz-keyframes aviso {
