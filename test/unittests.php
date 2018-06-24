@@ -12,7 +12,4 @@ require_once "../components/php/general.php";
 require_once "../components/php/connection.php";
 require_once "../components/php/challengeControl.php";
 
-issueChallenge("farts", "butts", 2);
-
-dailyChallenge();
-
+listCards();

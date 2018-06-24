@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
 <?php
+
 session_start();
 
+/*
 if (isset($_SESSION['username'])) {
 
     header('Location: /public/homepage.php');
 
 }
+*/
 
 ?>
 
@@ -27,12 +30,13 @@ if (isset($_SESSION['username'])) {
     <script type="text/javascript">
         function validateForm() {
 
+
+
             var username = document.forms["registoForm"]["inputUsername"].value;
             var password = document.forms["registoForm"]["inputPassword"].value;
             var email = document.forms["registoForm"]["inputEmail"].value;
 
             var id_password = document.getElementById("inputPassword");
-
 
             if (!(username === "") && password === ""){
 
@@ -80,6 +84,8 @@ if (isset($_SESSION['username'])) {
 
                 } else {
 
+
+
                     document.getElementById("inputPassword").style.border ="2px solid #ff0000";
 
                     document.getElementById("submit").style.background ="0";
@@ -92,6 +98,8 @@ if (isset($_SESSION['username'])) {
                     document.getElementById("login-verification").style.transition = "opacity 1s ease-in";
                     document.getElementById("login-verification").style.transitionDelay = "0.2s";
                     return false;
+
+
                 }
 
             } else {
@@ -110,7 +118,6 @@ if (isset($_SESSION['username'])) {
                 document.getElementById("login-verification").style.transitionDelay = "0.2s";
                 return false;
             }
-
 
         }
 

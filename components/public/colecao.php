@@ -6,12 +6,11 @@
 #TODO BUSCAR O USER
 
 $carta = getUserCards(1);//com session (?)
-
+//listCards()
 
 ?>
-
-<?php foreach ($carta as $k => $v){ ?>
-<div id="colecao<?php echo "$k" ?>" class="desafio-premios-colecoes flex-column shadow">
+<!-- colecao do listCards -->
+<div id="colecao" class="desafio-premios-colecoes flex-column shadow">
 
     <div class="premios-title flex-row">
 
@@ -28,20 +27,21 @@ $carta = getUserCards(1);//com session (?)
     <div class="colection flex-row font700 equipa-color">
 
         <!-- para o ciclo utilizar este -->
+        <?php foreach ($carta as $k => $v){ ?>
 
-        <div class="carta">
-            <a id="carta<?php echo "$v[0]" ?>" href="#pop-up-carta-img<?php echo "$v[0]" ?>" onclick="click_carta()" class="flex-column center-items">
-                <img id="carta" class="carta-size" src="../../img/cartas/equipa/frente/equipa<?php echo "$v[0]" ?>.png">
+        <div class="carta<?php echo "$v[0]" ?>">
+            <!-- raridade do listCards --><a href="#pop-up-carta-img<?php echo "$v[0]" ?>" onclick="click_carta()" class="flex-column center-items">
+                <img id="carta" class="carta-size" src="../../img/cartas/equipa/frente/equipa<?php echo "$v[0]" ?>.png"><!-- raridade do listCards -->
                 <span class="colection-numbers"><?php echo "$v[1]"?></span>
             </a>
         </div>
-
+        <?php } ?>
 
         <!-- para o ciclo utilizar este -->
 
     </div>
 
 </div>
-<?php } ?>
+
 
 

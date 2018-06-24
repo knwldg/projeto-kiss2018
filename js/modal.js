@@ -106,6 +106,9 @@ function reportado() {
 
 }
 
+
+
+
 function click_carta() {
 
     document.getElementById("pop-up-carta-img").style.display = "flex";

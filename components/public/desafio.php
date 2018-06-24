@@ -1,4 +1,7 @@
+<?php
 
+    
+?>
 <div id="desafio" class="desafio-premios-colecoes flex-column shadow"> <!-- yes_or_not(document.getElementsByClassName('yes-or-not-display')[0],document.getElementsByClassName('hide-desafio')[0]) -->
 
     <!-- desafio -->
@@ -8,7 +11,7 @@
         <span class="font800 desafio-title">Mantém o espaço limpo!</span>
 
         <div class="desafio-content-items flex-row">
-            <img src="../../img/marca/logo-320w.png" class="desafio-logo">
+            <img src="../../img/marca/simbolo-800w.png" class="desafio-logo">
             <span class="font800 desafio-subtitle">Desafio:</span>
             <span class="font500 desafio-description">Descrição do Desafio para ouvir algo fuixe di fh d </span>
         </div>
@@ -74,7 +77,7 @@
             <span class="font800 desafio-title">Mantém o espaço limpo!</span>
 
             <div class="desafio-content-items flex-row">
-                <img src="../../img/marca/logo-320w.png" class="desafio-logo">
+                <img src="../../img/marca/simbolo-800w.png" class="desafio-logo">
                 <span class="font800 desafio-subtitle">Desafio:</span>
                 <span class="font500 desafio-description">Descrição do Desafio para ouvir algo fuixe di fh d </span>
             </div>
