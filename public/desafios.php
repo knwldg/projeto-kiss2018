@@ -1,3 +1,10 @@
+<?php
+
+require_once "../components/php/general.php";
+require_once "../components/php/connection.php";
+
+?>
+
 <!DOCTYPE html>
 
 <head>

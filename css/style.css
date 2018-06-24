@@ -225,6 +225,10 @@ button{
     align-items: center;
 }
 
+.text-center{
+    text-align: center;
+}
+
 .general-box{
     background-color: rgb(249, 250, 251);
     margin: 0.5em 0.4em 0.5em 0.4em;
@@ -287,9 +291,6 @@ button{
 
 .line2-content-width{
     width: 52%;
-}
-.text-center{
-    text-align: center;
 }
 
 /* ELEMENTOS RECENTES/ANTIGOS */

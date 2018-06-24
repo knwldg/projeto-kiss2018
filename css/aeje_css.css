@@ -6,89 +6,97 @@ body {
     overflow-x: hidden;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
 
-#header{
-    width: 100%;
-    margin: -1.5vh;
-    background: #05acc3;
-
-
-    padding: 2vh;
+button{
     border: none;
+    background: none;
 }
 
-
-.aeje_site{
-    width: 5vw;
-    padding: 0.5vw;
+.font400{
+    font-weight: 400;
 }
 
-h1{
-    font-size: 2vw;
-    padding: 1vw;
-    float: right;
+.font500{
+    font-weight: 500;
 }
 
-.marca{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20vw;
-    margin-top: 8vh;
+.font600{
+    font-weight: 600;
 }
 
-#botao{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 7vw;
-    border: 2px solid rgba(140,140,140,0.70);
-    background-color: transparent;
-    padding: 1.5vw;
-    letter-spacing: 1px;
+.font700{
+    font-weight: 700;
+}
+
+.font800{
+    font-weight: 800;
+}
+
+.font900{
+    font-weight: 900;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
     text-align: center;
-    margin-top: 6vh;
+}
+
+
+.flex-column{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.flex-row{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.center-items{
+    align-items: center;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.menu-img{
+    background: url("../img/icon/burguer.png") no-repeat center;
+    background-size: 100%;
+    width: 2.5em;
+    height: 2.5em;
+    margin-left: 1em;
+}
+
+.header-aeje{
+    background-color: yellow;
+    padding: 0.8em 0 0.8em 0;
+    margin-bottom: 0.5em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title{
+    width: 100%;
+}
+
+.menu-pages{
+    padding-top: 3.5em;
 }
 
 .footer{
+    position: fixed;
+    background-color: green;
+    padding: 0.8em 0 0.8em 0;
+    justify-content: space-evenly;
+    align-items: center;
     width: 100%;
-    background: rgba(5, 127, 149, 0.17);
-    border: none;
-    position: relative;
-    left: 0;
-    padding: 3vh;
-    text-align: center;
-    bottom: -5vh;
-    display: block;
-}
-
-p{
-    float: left;
-    padding: 1vw;
-}
-
-#governo{
-    height: 9vh;
-
-}
-
-#ua{
-    height: 9vh;
-    padding: 0.5vw;
-
-}
-#aeje{
-    height: 9vh;
-    padding: 0.5vw;
-
-}
-
-@media screen and (max-width: 1000px){
-
-  .footer{
-      bottom: 0;
-      position: fixed;
-      display: grid;
-  }
-
+    bottom: 0;
 }
