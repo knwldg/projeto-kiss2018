@@ -9,8 +9,20 @@
 global $challenges;
 global $cardList;
 
+session_start();
+
 require_once "../components/php/general.php";
 require_once "../components/php/connection.php";
 require_once "../components/php/challengeControl.php";
 
-var_export(listCards());
+echo(findIdByUsername($_SESSION['username']));
+
+echo(findIdByUsername($_SESSION['userId']));
+
+echo(numKeys(findIdByUsername($_SESSION['username'])));
+
+addKey(findIdByUsername($_SESSION['username']));
+
+echo(numKeys(findIdByUsername($_SESSION['username'])));
+
+openBox($_SESSION['userId']);

@@ -1,37 +1,6 @@
 <?php
-session_start();
 
-#TODO FIX THIS STUPID INCLUDE
-
-$sql_connection = new mysqli('localhost', 'root', '', 'kiss');
-mysqli_set_charset($sql_connection, "utf8");
-
-function getUserData($userId)
-{
-
-    global $sql_connection;
-    global $name;
-    global $keys;
-
-    $sql_op = $sql_connection->prepare("SELECT `name`, `keys` FROM users WHERE name = ?");
-
-    $sql_op->bind_param('i', $userId);
-
-    if (!$sql_op->execute()) {
-
-        return false;
-
-    }
-
-    $sql_op->store_result();
-    $sql_op->bind_result($name, $keys);
-    $sql_op->fetch();
-
-    return array($name, $keys);
-
-}
-
-$userData = getUserData($_SESSION['username']);
+global $userData;
 
 ?>
 
@@ -57,6 +26,6 @@ $userData = getUserData($_SESSION['username']);
 <div class="count-keys font700">
     <span>CHAVES</span>
     <span id="icon-key" class="center">&nbsp</span>
-    <span class="profile-font-size"><?= $userData[1] ?></span>
+    <span class="profile-font-size"><?= $userData[1]; ?></span>
 </div>
 

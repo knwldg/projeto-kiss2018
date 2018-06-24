@@ -55,6 +55,7 @@ function listCards() {
     $query->execute();
     $result = $query->get_result();
 
+
     $cardList = array();
 
     if ($result->num_rows === 0) exit('No rows');
@@ -71,7 +72,6 @@ function listCards() {
     }
 
     $query->close();
-
     return $cardList;
 
 }
@@ -117,6 +117,7 @@ function getUserData($userId)
 {
 
     global $sql_connection;
+    global $userData;
     global $name;
     global $keys;
 
@@ -134,7 +135,11 @@ function getUserData($userId)
     $sql_op->bind_result($name, $keys);
     $sql_op->fetch();
 
-    return array($name, $keys);
+    $sql_op->close();
+
+    $userData = array($name, $keys);
+
+    return true;
 
 }
 
@@ -163,20 +168,26 @@ function findIdByUsername($value)
             $sql_op->bind_result($value_db);
             $sql_op->fetch();
 
+
             if ($sql_op->num_rows > 0) {
 
+                $sql_op->close();
                 return $value_db;
 
-            } else return false;
+            } else {
+                $sql_op->close();
+                return false;
+
+            }
 
         } else {
-
+            $sql_op->close();
             throw new Exception('Type not defined');
 
         }
 
     } catch (Exception $exception) {
-
+        $sql_op->close();
         echo("Error: $exception");
         return true;
 
@@ -219,6 +230,7 @@ function numCards($userId, $cardId)
     $sql_op->store_result();
     $sql_op->bind_result($quantity);
     $sql_op->fetch();
+    $sql_op->close();
 
     return $quantity;
 
@@ -249,6 +261,8 @@ function addCard($userId, $cardId)
                 throw new Exception('Error');
             }
 
+            $sql_op->close();
+
 
         }
 
@@ -260,10 +274,13 @@ function addCard($userId, $cardId)
             $sql_op->bind_param('iii', $newQuantity, $userId, $cardId);
 
             if (!$sql_op->execute()) {
+                $sql_op->close();
                 throw new Exception('error');
-            }
+            } else {
 
-            else return true;
+                $sql_op->close();
+                return true;
+            }
         }
 
 
@@ -303,6 +320,8 @@ function evolveCard($userId, $cardId)
                 throw new Exception('Error');
             }
 
+            $sql_op->close();
+
             $evolutionId = $cardId + 1000;
 
             addCard($userId, $evolutionId);
@@ -322,6 +341,79 @@ function evolveCard($userId, $cardId)
 
 }
 
+function numKeys($userId)
+{
+
+    global $sql_connection;
+
+    $sql_op = $sql_connection->prepare("SELECT `keys` FROM users WHERE idusers = ?");
+
+    $sql_op->bind_param('i', $userId);
+
+    if (!$sql_op->execute()) {
+
+        return false;
+
+    }
+
+    $sql_op->store_result();
+    $sql_op->bind_result($keys);
+    $sql_op->fetch();
+
+    $sql_op->close();
+
+    return $keys;
+
+}
+
+function addKey($userId)
+{
+
+    global $sql_connection;
+
+    $quantity = numKeys($userId);
+
+    $newQuantity = $quantity + 1;
+
+    $sql_op = $sql_connection->prepare("UPDATE users SET `keys` = ? WHERE idusers = ?");
+    $sql_op->bind_param('ii', $newQuantity, $userId);
+
+    if (!$sql_op->execute()) {
+        $sql_op->close();
+        return false;
+    } else {
+        $sql_op->close();
+        return true;
+    }
+
+
+}
+
+function removeKey($userId)
+{
+
+    global $sql_connection;
+
+    $quantity = numKeys($userId);
+
+    $newQuantity = $quantity - 1;
+
+    $sql_op = $sql_connection->prepare("UPDATE users SET `keys` = ? WHERE idusers = ?");
+    $sql_op->bind_param('ii', $newQuantity, $userId);
+
+    if (!$sql_op->execute()) {
+        $sql_op->close();
+        return false;
+    } else {
+        $sql_op->close();
+        return true;
+    }
+
+
+}
+
+
+
 function luck()
 {
 
@@ -334,20 +426,15 @@ function luck()
             $third_spin = rand(0, 20);
 
             if ($third_spin > 14) {
-                $fourth_spin = rand(0, 20);
-
-                if ($fourth_spin > 18) {
-
-                    return 4;
-
-                } else return 3;
+                return 3;
 
             } else return 2;
 
         } else return 1;
 
-    } else return 0;
+    }
 
+    return true;
 }
 
 function openBox($userId)
@@ -372,6 +459,8 @@ function openBox($userId)
         array_push($rewards, $rewardCard);
 
     }
+
+    removeKey($_SESSION['userId']);
 
 }
 
