@@ -112,6 +112,10 @@ function reportado() {
 function click_carta() {
 
     document.getElementById("pop-up-carta-img").style.display = "flex";
+
+    //document.getElementById("front").style.background = 'url("../img/cartas/equipa/frente/equipa'+raridade+'.png") no-repeat center';
+    //document.getElementById("cards-name").innerHTML = name;
+
     document.getElementById("chest").style.zIndex = "-1";
 
 

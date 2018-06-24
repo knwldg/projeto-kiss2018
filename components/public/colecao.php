@@ -1,6 +1,7 @@
 <?php
 #TODO BUSCAR O USER
 
+
 global $cardList;
 
 //$carta = getUserCards(1)[0][0];
@@ -101,6 +102,8 @@ listCards();
                         <span class="colection-numbers"><?php //$v[1] ?></span>
                     </a>
                 </div>
+
+
 
                 <?php
             }
