@@ -16,9 +16,8 @@ if (registerUser($_POST['inputUsername'], $_POST['inputPassword'], $_POST['input
     header('Location: /public/login.php');
 
 } else {
-
     header('Location: /public/registo.php');
-
 }
+
 
 

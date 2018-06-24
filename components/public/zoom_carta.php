@@ -2,7 +2,8 @@
 
 #TODO BUSCAR O USER
 
-$carta = getUserCards(1);
+$id = $_GET['id'];
+$name = $_GET['name'];
 
 ?>
 
@@ -20,7 +21,7 @@ $carta = getUserCards(1);
         <div id="front" onclick="flip_back()" class="front pop-up-carta-zoom pointer">&nbsp</div>
 
         <div id="back" onclick="flip_front()" class="back pop-up-carta-zoom flex-column pointer">
-            <h4 class="font700">Maria Almeida</h4>
+            <h4 id="name" class="font700"><?php echo "$name" ?></h4>
             <p class="back-descricao font500">eu sou muito linda e gosto muito de ir a praia</p>
         </div>
     </div>
@@ -31,7 +32,7 @@ $carta = getUserCards(1);
 
 <script type="text/javascript">
 
-    document.getElementById("front").style.background = 'url("../img/cartas/equipa/frente/equipa<?php echo "$v[0]" ?>.png") no-repeat center';
+    document.getElementById("front").style.background = 'url("../img/cartas/equipa/frente/equipa<?php echo "$id" ?>.png") no-repeat center';
     document.getElementById("front").style.backgroundSize = "98%";
     document.getElementById("back").style.background = "url('../img/cartas/equipa/tras/branco.png') no-repeat center";
     document.getElementById("back").style.backgroundSize = "98%";
