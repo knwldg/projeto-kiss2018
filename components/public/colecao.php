@@ -3,24 +3,24 @@
 
 
 global $cardList;
+global $userCollection;
 
 //$carta = getUserCards(1)[0][0];
 //$num_cartas = getUserCards(1)[0][1];
 
 
 
-//$user = getUserCards(1);//com session (?)
-//global $userCollection;
+getUserCards(1);//com session (?)
 
 listCards();
 
-/*for($i=0; $i < sizeof($cardList); $i++){
+for($i=0; $i < sizeof($userCollection); $i++){
 
-    $colecao = $cardList[$i][3] = 1;
+    $user_cards_id = $userCollection[$i][0];
+    $user_cards_num = $userCollection[$i][1];
 
-    print_r($colecao);
+}
 
-}*/
 
 
 ?>
@@ -45,20 +45,26 @@ listCards();
 
         <!-- para o ciclo utilizar este -->
         <?php for($i=0; $i < sizeof($cardList); $i++){
+
             if ($cardList[$i][3] === 1) {
 
-                $colecao = $cardList[$i][3];
                 $raridade = $cardList[$i][2];
                 $name = $cardList[$i][1];
                 $id = $cardList[$i][0];
 
-
                 ?>
                 <div class="carta">
-                    <a id="carta<?php echo "$colecao" ?>" href="#pop-up-carta-img" onclick="click_carta('<?php echo "$name"?>',<?php echo "$raridade" ?>)">
+                    <a id="carta<?php echo "$id" ?>" href="#pop-up-carta-img" onclick="click_carta('<?php echo "$name"?>',<?php echo "$raridade" ?>)">
                         <img class="carta-size" src="../../img/cartas/equipa/frente/equipa<?php echo "$raridade" ?>.png">
-                        <!-- raridade do listCards -->
-                        <span class="colection-numbers"><?php //$v[1] ?></span>
+                        <!-- userCards -->
+                        <?php
+                        foreach ($userCollection as $v){
+                        if($v[0] == $id) {
+                            ?>
+                        <span class="colection-numbers"><?php echo"$v[1]" ?></span>
+                        <?php }
+                        }?>
+                        <!-- userCards -->
                     </a>
                 </div>
 
@@ -90,16 +96,24 @@ listCards();
         <!-- para o ciclo utilizar este -->
         <?php for($i=0; $i < sizeof($cardList); $i++){
             if ($cardList[$i][3] === 2) {
-                $colecao = $cardList[$i][3];
+
                 $raridade = $cardList[$i][2];
                 $name = $cardList[$i][1];
+                $id = $cardList[$i][0];
 
                 ?>
-                <div id="carta<?php echo "$colecao" ?>" class="carta">
-                    <a href="?id=<?php echo "$raridade"?>&name=<?php echo "$name"?>#pop-up-carta-img" onclick="click_carta()">
+                <div id="carta<?php echo "$id" ?>" class="carta">
+                    <a href="?id=<?php echo "$raridade"?>&name=<?php echo "$name"?>#pop-up-carta-img" onclick="click_carta('<?php echo "$name"?>',<?php echo "$raridade" ?>)">
                         <img id="carta" class="carta-size" src="../../img/cartas/equipa/frente/equipa<?php echo "$raridade" ?>.png">
-                        <!-- raridade do listCards -->
-                        <span class="colection-numbers"><?php //$v[1] ?></span>
+                        <!-- userCards -->
+                        <?php
+                        foreach ($userCollection as $v){
+                            if($v[0] == $id) {
+                                ?>
+                                <span class="colection-numbers"><?php echo"$v[1]" ?></span>
+                            <?php }
+                        }?>
+                        <!-- userCards -->
                     </a>
                 </div>
 
@@ -133,16 +147,24 @@ listCards();
         <!-- para o ciclo utilizar este -->
         <?php for($i=0; $i < sizeof($cardList); $i++){
             if ($cardList[$i][3] === 3) {
-                $colecao = $cardList[$i][3];
+
                 $raridade = $cardList[$i][2];
                 $name = $cardList[$i][1];
+                $id = $cardList[$i][0];
 
                 ?>
-                <div id="carta<?php echo "$colecao" ?>" class="carta">
-                    <a href="?id=<?php echo "$raridade"?>&name=<?php echo "$name"?>#pop-up-carta-img" onclick="click_carta()">
+                <div id="carta<?php echo "$id" ?>" class="carta">
+                    <a href="?id=<?php echo "$raridade"?>&name=<?php echo "$name"?>#pop-up-carta-img" onclick="click_carta('<?php echo "$name"?>',<?php echo "$raridade" ?>)">
                         <img id="carta" class="carta-size" src="../../img/cartas/equipa/frente/equipa<?php echo "$raridade" ?>.png">
-                        <!-- raridade do listCards -->
-                        <span class="colection-numbers"><?php //$v[1] ?></span>
+                        <!-- userCards -->
+                        <?php
+                        foreach ($userCollection as $v){
+                            if($v[0] == $id) {
+                                ?>
+                                <span class="colection-numbers"><?php echo"$v[1]" ?></span>
+                            <?php }
+                        }?>
+                        <!-- userCards -->
                     </a>
                 </div>
 
