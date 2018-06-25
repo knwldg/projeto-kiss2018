@@ -103,7 +103,7 @@ for($i=0; $i < sizeof($userCollection); $i++){
 
                 ?>
                 <div id="carta<?php echo "$id" ?>" class="carta">
-                    <a href="?id=<?php echo "$raridade"?>&name=<?php echo "$name"?>#pop-up-carta-img" onclick="click_carta('<?php echo "$name"?>',<?php echo "$raridade" ?>)">
+                    <a href="#pop-up-carta-img" onclick="click_carta('<?php echo "$name"?>',<?php echo "$raridade" ?>)">
                         <img id="carta" class="carta-size" src="../../img/cartas/equipa/frente/equipa<?php echo "$raridade" ?>.png">
                         <!-- userCards -->
                         <?php
@@ -154,7 +154,7 @@ for($i=0; $i < sizeof($userCollection); $i++){
 
                 ?>
                 <div id="carta<?php echo "$id" ?>" class="carta">
-                    <a href="?id=<?php echo "$raridade"?>&name=<?php echo "$name"?>#pop-up-carta-img" onclick="click_carta('<?php echo "$name"?>',<?php echo "$raridade" ?>)">
+                    <a href="#pop-up-carta-img" onclick="click_carta('<?php echo "$name"?>',<?php echo "$raridade" ?>)">
                         <img id="carta" class="carta-size" src="../../img/cartas/equipa/frente/equipa<?php echo "$raridade" ?>.png">
                         <!-- userCards -->
                         <?php
