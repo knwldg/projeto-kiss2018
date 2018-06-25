@@ -1,3 +1,11 @@
+<?php
+
+global $rewards;
+
+print_r($rewards);
+
+?>
+
 <div id="div-baus" class="baus flex-column">
 
     <!-- grelha de baus -->
@@ -6,7 +14,7 @@
         <span class="div-baus-title font700 white">Escolhe um báu</span>
 
         <div class="chest-line flex-row"><!-- 3 itens -->
-            <div id="chest-line-item" onclick="open_chest(this.id)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest()" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
         </div>
         <div class="chest-line flex-row"><!-- 3 itens -->
 

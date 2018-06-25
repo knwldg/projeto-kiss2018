@@ -15,7 +15,7 @@ require_once "../components/php/general.php";
 require_once "../components/php/connection.php";
 require_once "../components/php/challengeControl.php";
 
-echo(findIdByUsername($_SESSION['username']));
+/*echo(findIdByUsername($_SESSION['username']));
 
 echo(findIdByUsername($_SESSION['userId']));
 
@@ -25,4 +25,6 @@ addKey(findIdByUsername($_SESSION['username']));
 
 echo(numKeys(findIdByUsername($_SESSION['username'])));
 
-openBox($_SESSION['userId']);
+openBox($_SESSION['userId']);*/
+
+//issueChallenge("Ajuda um colega!","Tira uma fotografia com o que estiveste a ajudar o teu colega com, e mostra o bom camarada que és!",1);

@@ -1,6 +1,8 @@
 <?php
+
 #TODO BUSCAR O USER
 
+session_start();
 
 global $cardList;
 global $userCollection;
@@ -14,14 +16,8 @@ getUserCards(1);//com session (?)
 
 listCards();
 
-for($i=0; $i < sizeof($userCollection); $i++){
-
-    $user_cards_id = $userCollection[$i][0];
-    $user_cards_num = $userCollection[$i][1];
-
-}
-
-
+$num_cartas = $_SESSION['id'];
+$num_cartas_user = $_SESSION['cartas'];
 
 ?>
 
@@ -31,7 +27,7 @@ for($i=0; $i < sizeof($userCollection); $i++){
 
     <div class="premios-title flex-row">
 
-        <span class="premios-title-size font800 orange equipa-color">EQUIPA<span id="premios-subtitle" class="premios-subtitle font600 gray">(5/5)</span></span><!-- quantidade de cartas desbloqueadas -->
+        <span class="premios-title-size font800 orange equipa-color">EQUIPA<span id="premios-subtitle" class="premios-subtitle font600 gray">(<?php echo "$num_cartas_user"?>/<?php echo "$num_cartas"?>)</span></span><!-- quantidade de cartas desbloqueadas -->
 
 
         <div id="concluido1" class="premios-unlock flex-column">
@@ -52,6 +48,8 @@ for($i=0; $i < sizeof($userCollection); $i++){
                 $name = $cardList[$i][1];
                 $id = $cardList[$i][0];
 
+                $_SESSION['id'] = $id;
+
                 ?>
                 <div class="carta">
                     <a id="carta<?php echo "$id" ?>" href="#pop-up-carta-img" onclick="click_carta('<?php echo "$name"?>',<?php echo "$raridade" ?>)">
@@ -60,6 +58,7 @@ for($i=0; $i < sizeof($userCollection); $i++){
                         <?php
                         foreach ($userCollection as $v){
                         if($v[0] == $id) {
+                            $_SESSION['cartas'] = $v[0];
                             ?>
                         <span class="colection-numbers"><?php echo"$v[1]" ?></span>
                         <?php }
@@ -103,7 +102,7 @@ for($i=0; $i < sizeof($userCollection); $i++){
 
                 ?>
                 <div id="carta<?php echo "$id" ?>" class="carta">
-                    <a href="?id=<?php echo "$raridade"?>&name=<?php echo "$name"?>#pop-up-carta-img" onclick="click_carta('<?php echo "$name"?>',<?php echo "$raridade" ?>)">
+                    <a href="#pop-up-carta-img" onclick="click_carta('<?php echo "$name"?>',<?php echo "$raridade" ?>)">
                         <img id="carta" class="carta-size" src="../../img/cartas/equipa/frente/equipa<?php echo "$raridade" ?>.png">
                         <!-- userCards -->
                         <?php
@@ -134,12 +133,12 @@ for($i=0; $i < sizeof($userCollection); $i++){
 
         <span class="premios-title-size font800 orange equipa-color">FUNCIONÁRIOS<span id="premios-subtitle" class="premios-subtitle font600 gray">(5/5)</span></span><!-- quantidade de cartas desbloqueadas -->
 
-
+        <?php ?>
         <div id="concluido1" class="premios-unlock flex-column">
             <div><img id="premios-unlock-logo" class="premios-unlock-logo" src="../../img/marca/simbolo-800w.png"></div><!-- colecao bloqueada -> opacity: 0.4 -->
             <span id="premios-unlock-title" class="premios-unlock-title font600 orange">CONCLUÍDO</span><!-- colecao bloqueada -> display: none -->
         </div>
-
+        <?php ?>
     </div>
 
     <div class="colection flex-row font700 equipa-color">
@@ -154,7 +153,7 @@ for($i=0; $i < sizeof($userCollection); $i++){
 
                 ?>
                 <div id="carta<?php echo "$id" ?>" class="carta">
-                    <a href="?id=<?php echo "$raridade"?>&name=<?php echo "$name"?>#pop-up-carta-img" onclick="click_carta('<?php echo "$name"?>',<?php echo "$raridade" ?>)">
+                    <a href="#pop-up-carta-img" onclick="click_carta('<?php echo "$name"?>',<?php echo "$raridade" ?>)">
                         <img id="carta" class="carta-size" src="../../img/cartas/equipa/frente/equipa<?php echo "$raridade" ?>.png">
                         <!-- userCards -->
                         <?php

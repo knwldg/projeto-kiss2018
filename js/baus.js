@@ -2,7 +2,6 @@
 //baus - passar id
 function open_chest() {
 
-
     document.getElementById("hide-chests").style.display = "none";
     document.getElementById("cartas-chest-animation").style.display = "block";
     document.getElementById("chest-close-baus").style.display = "none";
