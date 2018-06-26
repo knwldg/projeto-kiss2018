@@ -142,6 +142,41 @@ function getUserData($userId)
 
 }
 
+function getCardData($cardId)
+
+    // retorna um array $cardData em que 0 é o id, 1 é o nome, 2 a raridade e 3 a coleção
+{
+
+    global $sql_connection;
+    global $cardData;
+
+    global $cardName;
+    global $cardRarity;
+    global $cardCollection;
+
+
+    $sql_op = $sql_connection->prepare("SELECT `name`, `rarity`, `collection` FROM cards WHERE idcards = ?");
+
+    $sql_op->bind_param('i', $cardId);
+
+    if (!$sql_op->execute()) {
+
+        return false;
+
+    }
+
+    $sql_op->store_result();
+    $sql_op->bind_result($cardName, $cardRarity, $cardCollection);
+    $sql_op->fetch();
+
+    $sql_op->close();
+
+    $cardData = array($cardId, $cardName, $cardRarity, $cardCollection);
+
+    return $cardData;
+
+}
+
 function findIdByUsername($value)
 {
 
@@ -156,6 +191,58 @@ function findIdByUsername($value)
         if (isset($sql_op)) {
 
             $sql_op->bind_param('s', $value);
+
+            if (!$sql_op->execute()) {
+
+                throw new Exception('SQL query failure');
+
+            }
+
+            $sql_op->store_result();
+            $sql_op->bind_result($value_db);
+            $sql_op->fetch();
+
+
+            if ($sql_op->num_rows > 0) {
+
+                $sql_op->close();
+                return $value_db;
+
+            } else {
+                $sql_op->close();
+                return false;
+
+            }
+
+        } else {
+            $sql_op->close();
+            throw new Exception('Type not defined');
+
+        }
+
+    } catch (Exception $exception) {
+        $sql_op->close();
+        echo("Error: $exception");
+        return true;
+
+    }
+
+}
+
+function findCardById($value)
+{
+
+    // retorna o nome da carta dado por id
+
+    global $sql_connection;
+
+    $sql_op = $sql_connection->prepare("SELECT name FROM cards WHERE idcards = ?");
+
+    try {
+
+        if (isset($sql_op)) {
+
+            $sql_op->bind_param('i', $value);
 
             if (!$sql_op->execute()) {
 
@@ -278,7 +365,7 @@ function addCard($userId, $cardId)
             } else {
 
                 $sql_op->close();
-                return true;
+                return $cardId;
             }
         }
 
@@ -289,7 +376,7 @@ function addCard($userId, $cardId)
         echo ("Error: $exception");
         return false;
     }
-    return true;
+    return $cardId;
 }
 
 function evolveCard($userId, $cardId)
@@ -439,7 +526,13 @@ function luck()
 function openBox($userId)
 {
 
+    if (numKeys($userId) < 1) {
+
+        exit("Not enough keys");
+    }
+
     global $rewards;
+    global $luck;
 
     if (!isset($rewards)) {
 
@@ -461,6 +554,7 @@ function openBox($userId)
         array_push($rewards, $rewardCard);
 
     }
+
 
     removeKey($_SESSION['userId']);
 
