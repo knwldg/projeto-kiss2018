@@ -4,6 +4,7 @@
 
 global $rewards;
 global $cardList;
+$rewards = array();
 
 
 listCards();
@@ -13,7 +14,9 @@ openBox(1);
 
  for($i=0; $i < sizeof($cardList); $i++) {
 
-            $raridade = $cardList[$i][2];
+     $raridade = $cardList[$i][1];
+
+     //arrays começam em 0...
 
 /*
             switch ($raridade) {

@@ -12,7 +12,8 @@
 </head>
 
 <body>
-<?php require_once "navigation.php"; ?>
+<?php require_once "navigation.php";
+global $userList ?>
 <?php require_once "../php/connection.php"; ?>
 <?php require_once "../php/general.php"; ?>
 <div id="users">
@@ -29,12 +30,14 @@
             </tr>
             <tr id="echos">
                 <?php listUsers() ?>
+
                 <th>
-                    <?php echo listUsers($userList, 'name') ?></th>
+                    <?php echo $userList ?></th>
                 <th>
-                    <?php echo listUsers($userList, 'realname') ?></th>
+                    <?php echo listUsers() ?></th>
                 <th>
-                    <?php echo listUsers($userList, 'email') ?></th>
+                    <?php echo listUsers() ?></th>
+
             </tr>
         </table>
     </div>
