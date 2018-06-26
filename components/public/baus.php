@@ -1,44 +1,9 @@
 <?php
 
 
-//global $rewards;
 
-global $cardList;
-/*
-print_r($rewards);
-
-openBox(1);
-loot(1);
-*/
-
-listCards();
-
- for($i=0; $i < sizeof($cardList); $i++) {
-
-            $raridade = $cardList[$i][2];
-
-            print_r($raridade);
-
-/*
-            switch ($raridade) {
-                case 1:
-                    echo "<script>document.getElementById(\"animation\").style.background = \"linear-gradient(to top, rgb(236,233,230) , rgb(255,255,255))\";</script>";
-                    break;
-                case 2:
-                    echo "<script>document.getElementById(\"animation\").style.background = \"linear-gradient(to top, rgb(123,146,10) , rgb(173,209,0))\";</script>";
-                    break;
-                case 3:
-                    echo "<script>document.getElementById(\"animation\").style.background = \"linear-gradient(to top, rgb(110,72,170) , rgb(157,80,221))\";</script>";
-                    break;
-                case 4:
-                    echo "<script>document.getElementById(\"animation\").style.background = \"linear-gradient(to top, rgb(58,123,213) , rgb(0,210,255))\";</script>";
-                    break;
-                case 5:
-                    echo "<script>document.getElementById(\"animation\").style.background = \"linear-gradient(to top, rgb(244,208,63) , rgb(255,242,0))\";</script>";
-                    break;
-            }*/
-        }
-
+global $rewards;
+global $luck;
 
 ?>
 
@@ -47,14 +12,15 @@ listCards();
     <!-- grelha de baus -->
     <div id="hide-chests" class="hide-chests text-center flex-column">
 
-        <span class="div-baus-title font700 white">Escolhe um báu</span>
-<?php //for($i=0; $i < sizeof($cardList); $i++) {
-    //$raridade = $cardList[$i][2];
-    ?>
+        <span class="div-baus-title font700 white">Escolhe um bau</span>
+
         <div class="chest-line flex-row"><!-- 3 itens -->
-            <div id="chest-line-item" onclick="open_chest(<?php echo"$raridade"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
-            <div id="chest-line-item" onclick="open_chest(<?php echo"$raridade"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
-            <div id="chest-line-item" onclick="open_chest(<?php echo"$raridade"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest(<?php echo "$luck"; ?>)" class="chest-line-item"><img
+                        class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest(<?php echo "$luck"; ?>)" class="chest-line-item"><img
+                        class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest(<?php echo "$luck"; ?>)" class="chest-line-item"><img
+                        class="chest-line-item-img" src="../../img/icon/chest.png"></div>
         </div>
         <div class="chest-line flex-row"><!-- 3 itens -->
             <div id="chest-line-item" onclick="open_chest()" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
@@ -87,6 +53,22 @@ listCards();
                 <div id="pop-up-cartas" class="text-center">
 
                     <!-- cartas saidas -->
+
+                    <?php
+
+                    $rewards = array();
+
+
+                    for ($i = 0; $i < sizeof($rewards); $i++) {
+
+                        // faz o que entenderes aqui
+
+                        echo "recebeste a carta:" . getCardData(($rewards[$i])[0]);
+
+                    }
+
+                    ?>
+                    <div id="pop_up_carta" onclick="change_carta()" class="pop-up-carta">&nbsp</div>
                     <div id="pop_up_carta" onclick="change_carta()" class="pop-up-carta">&nbsp</div>
                     <!-- cartas saidas -->
 
@@ -137,6 +119,7 @@ listCards();
 
 <script>
     document.getElementById("chest-line-item").addEventListener("click", function(){
-        <?php // loot(1) ?>
+        <?php openBox(findIdByUsername($_SESSION['username'])); ?>
     });
 </script>
+

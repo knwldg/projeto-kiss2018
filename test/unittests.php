@@ -8,6 +8,9 @@
 
 global $challenges;
 global $cardList;
+global $rewards;
+
+$rewards = array();
 
 session_start();
 
@@ -15,16 +18,14 @@ require_once "../components/php/general.php";
 require_once "../components/php/connection.php";
 require_once "../components/php/challengeControl.php";
 
-/*echo(findIdByUsername($_SESSION['username']));
+openBox(1);
 
-echo(findIdByUsername($_SESSION['userId']));
 
-echo(numKeys(findIdByUsername($_SESSION['username'])));
+for ($i = 0; $i < sizeof($rewards); $i++) {
 
-addKey(findIdByUsername($_SESSION['username']));
+    // faz o que entenderes aqui
 
-echo(numKeys(findIdByUsername($_SESSION['username'])));
+    echo "recebeste a carta:" . getCardData(($rewards[$i]))[1];
 
-openBox($_SESSION['userId']);*/
+}
 
-//issueChallenge("Ajuda um colega!","Tira uma fotografia com o que estiveste a ajudar o teu colega com, e mostra o bom camarada que és!",1);

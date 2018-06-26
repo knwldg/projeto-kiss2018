@@ -16,11 +16,10 @@ function listUsers()
     global $sql_connection;
     global $userList;
 
-    $userList = [];
+    $userList = array();
     $sql_op = $sql_connection->prepare("SELECT name FROM users");
     $sql_op->execute();
     $sql_op->store_result();
-
     $num_users = $sql_op->num_rows;
 
     for ($i = 0; $i < $num_users; $i++) {
@@ -49,26 +48,26 @@ function listCards() {
     }
 
     $legendaryCap = 1000;
-
     $query = $sql_connection->prepare("SELECT * FROM cards WHERE idcards < ?");
     $query->bind_param("i", $legendaryCap);
     $query->execute();
     $result = $query->get_result();
-
-
     $cardList = array();
 
     if ($result->num_rows === 0) exit('No rows');
     while ($row = $result->fetch_assoc()) {
+
+        $Id[] = $row['idcards'];
         $cardName[] = $row['name'];
         $rarity[] = $row['rarity'];
         $collection[] = $row['collection'];
-        $Id[] = $row['idcards'];
+
     }
 
     for ($i = 0; $result->num_rows > $i; $i++) {
 
         array_push($cardList, [$Id[$i], $cardName[$i], $rarity[$i], $collection[$i]]);
+
     }
 
     $query->close();
@@ -143,6 +142,41 @@ function getUserData($userId)
 
 }
 
+function getCardData($cardId)
+
+    // retorna um array $cardData em que 0 é o id, 1 é o nome, 2 a raridade e 3 a coleção
+{
+
+    global $sql_connection;
+    global $cardData;
+
+    global $cardName;
+    global $cardRarity;
+    global $cardCollection;
+
+
+    $sql_op = $sql_connection->prepare("SELECT `name`, `rarity`, `collection` FROM cards WHERE idcards = ?");
+
+    $sql_op->bind_param('i', $cardId);
+
+    if (!$sql_op->execute()) {
+
+        return false;
+
+    }
+
+    $sql_op->store_result();
+    $sql_op->bind_result($cardName, $cardRarity, $cardCollection);
+    $sql_op->fetch();
+
+    $sql_op->close();
+
+    $cardData = array($cardId, $cardName, $cardRarity, $cardCollection);
+
+    return $cardData;
+
+}
+
 function findIdByUsername($value)
 {
 
@@ -195,9 +229,61 @@ function findIdByUsername($value)
 
 }
 
+function findCardById($value)
+{
+
+    // retorna o nome da carta dado por id
+
+    global $sql_connection;
+
+    $sql_op = $sql_connection->prepare("SELECT name FROM cards WHERE idcards = ?");
+
+    try {
+
+        if (isset($sql_op)) {
+
+            $sql_op->bind_param('i', $value);
+
+            if (!$sql_op->execute()) {
+
+                throw new Exception('SQL query failure');
+
+            }
+
+            $sql_op->store_result();
+            $sql_op->bind_result($value_db);
+            $sql_op->fetch();
+
+
+            if ($sql_op->num_rows > 0) {
+
+                $sql_op->close();
+                return $value_db;
+
+            } else {
+                $sql_op->close();
+                return false;
+
+            }
+
+        } else {
+            $sql_op->close();
+            throw new Exception('Type not defined');
+
+        }
+
+    } catch (Exception $exception) {
+        $sql_op->close();
+        echo("Error: $exception");
+        return true;
+
+    }
+
+}
+
 function loot($userId) {
 
-    whatCard();
+    // gera o loot do utilizador
 
     addCard($userId, whatCard());
 
@@ -279,7 +365,7 @@ function addCard($userId, $cardId)
             } else {
 
                 $sql_op->close();
-                return true;
+                return $cardId;
             }
         }
 
@@ -290,7 +376,7 @@ function addCard($userId, $cardId)
         echo ("Error: $exception");
         return false;
     }
-    return true;
+    return $cardId;
 }
 
 function evolveCard($userId, $cardId)
@@ -440,17 +526,26 @@ function luck()
 function openBox($userId)
 {
 
-    global $rewards;
+    if (numKeys($userId) < 1) {
 
-    $rewards = array();
+        exit("Not enough keys");
+    }
+
+    global $rewards;
+    global $luck;
+
+    if (!isset($rewards)) {
+
+        $rewards = array();
+
+    }
+
 
     //determinar a luck, aka quantas cartas vamos dar
 
     $luck = luck();
 
     //array com os rewards para mostrar clientside
-
-    $rewards = array();
 
     for ($i = 0; $luck > $i; $i++) {
 
@@ -460,7 +555,21 @@ function openBox($userId)
 
     }
 
+
     removeKey($_SESSION['userId']);
+
+}
+
+function getLatestSubmission()
+{
+
+    global $sql_connection;
+
+    $result = $sql_connection->query("SELECT idsubmissions FROM submissions ORDER BY idsubmissions DESC LIMIT 1");
+
+    $latest = $result->fetch_all();
+
+    return $latest[0];
 
 }
 
