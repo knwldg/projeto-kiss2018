@@ -1,6 +1,17 @@
+<?php
+
+session_start();
+
+require_once "../components/php/connection.php";
+require_once "../components/php/challengeControl.php";
+
+$title = $_SESSION['title'];
+$description = $_SESSION['description'];
+
+?>
 <!DOCTYPE html>
 <html>
-<?php session_start(); ?>
+
 <head>
 
     <meta charset="utf-8">
@@ -32,7 +43,7 @@
 
         <div class="general-box flex-column shadow">
 
-            <span class="desafio-detalhe-title font800 orange">Mantem o espaço limpo!</span>
+            <span class="desafio-detalhe-title font800 orange"><?php echo"$title"; ?></span>
 
             <div class="lines-content flex-row">
                 <div class="line-desafio-detalhe-width line-desafio-detalhe-border"> </div>
@@ -44,7 +55,7 @@
 
             <!-- descricao do desafio -->
 
-            <p class="description-content gray font400">Lorem ipsum dolor sit amet, taciti  facilisis elit blandit commodo dolor magna. Id suscipit iaculis. Porttitor  aliquam id dui amet pulvinar sed, imperdiet erat ullamcorper nunc dignissim ipsa, dapibus egestas libero, vel sagittis dolorum nibh facilisis morbi rutrum</p>
+            <p class="description-content gray font500"><?php echo"$description"; ?></p>
 
             <!-- descricao do desafio -->
 
@@ -62,17 +73,23 @@
 
             <div class="fotos flex-row">
                 <div class="flex-column">
-                    <span class="orange">antes</span>
-                    <button type="button" id="foto-antes" class="fotos-antes-depois pointer"><img src="../img/icon/take_photo.png"></button>
+                    <span class="orange font500">antes</span>
+                    <button type="button" onclick="" id="foto-antes" class="fotos-antes-depois pointer"><img src="../img/icon/take_photo.png"></button>
                 </div> <!-- nao tenho certeza do que colocar -->
 
                 <div class="flex-column">
-                    <span class="orange">depois</span>
-                    <button type="button" id="foto-depois" class="fotos-antes-depois pointer"><img src="../img/icon/take_photo.png"></button>
+                    <span class="orange font500">depois</span>
+                    <button type="button" onclick="" id="foto-depois" class="fotos-antes-depois pointer"><img src="../img/icon/take_photo.png"></button>
                 </div> <!-- nao tenho certeza do que colocar -->
             </div>
 
             <!-- fotos antes e depois -->
+
+            <!-- foto tirada -->
+
+            <div></div>
+
+            <!-- fotos tirada -->
 
         </div>
     </div>

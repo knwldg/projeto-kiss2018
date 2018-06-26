@@ -10,7 +10,7 @@
 
 <div>
     <div class="header-aeje flex-row shadow font700 text-center">
-        <button onclick="open_menu()" id="menu" class="menu-img pointer">&nbsp</button>
+        <button onclick="open_menu()" id="menu" class="menu-img-aeje pointer">&nbsp</button>
         <span class="header-title">PÁGINA PRINCIPAL</span></div>
 
 <div class="flex-column center-items">
@@ -26,7 +26,11 @@
         <div class="contact-item-email center-items flex-column"><img class="img-aeje-email" src="img/aeje/email.png"><p class="email font700">geral@aeje.pt</p></div>
     </div>
 
-    <div id="footer" class="footer flex-row"></div>
+    <div id="footer" class="footer flex-row">
+        <img class="ua-aeje" src="img/aeje/ua.png">
+        <p class="txt-aeje font500">Proposta de uma WebApp <br> criada na Universidade de Aveiro</p>
+        <img class="ministerio-aeje" src="img/aeje/ministerio.png">
+    </div>
 </div>
 
 

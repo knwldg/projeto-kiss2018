@@ -61,14 +61,17 @@ function listChallenges()
 
     if ($result->num_rows === 0) exit('No rows');
     while ($row = $result->fetch_assoc()) {
+        $challengeId[] = $row['idchallenge'];
         $challengeTitle[] = $row['title'];
+        $challengePreview[] = $row['preview'];
         $challengeDescription[] = $row['description'];
+        $challengeCategory[] = $row['categoria'];
         $challengeRarity[] = $row['reward'];
     }
 
     for ($i = 0; $result->num_rows > $i; $i++) {
 
-        array_push($challengeList, [$challengeTitle[$i], $challengeDescription[$i], $challengeRarity[$i]]);
+        array_push($challengeList, [$challengeId[$i],$challengeTitle[$i],$challengePreview[$i],$challengeDescription[$i],$challengeCategory[$i],$challengeRarity[$i]]);
     }
 
     $query->close();

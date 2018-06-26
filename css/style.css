@@ -466,7 +466,7 @@ input[name="image-uploaded"] {
 }
 
 #icon-key{
-    /*background: url("../img/icon/chave_icon.png") no-repeat center;*/
+    background: url("../img/icon/icon_chave.png") no-repeat center;
     background-size: 100%;
     width: 71%;
     margin: 1em 0 1em 0;
@@ -833,7 +833,7 @@ input[name="image-uploaded"] {
     text-align: center;
     letter-spacing: 0.05em;
     align-self: center;
-    margin-left: 2.5em;
+    margin-left: 4.35em;
 }
 
 .desafio-subtitle{
@@ -1156,7 +1156,7 @@ input[name="image-uploaded"] {
 
 .desafio-detalhe-title{
     padding: 1.2em 0 1.2em 0;
-    font-size: 135%;
+    font-size: 150%;
     letter-spacing: 2px;
 }
 
@@ -2210,12 +2210,26 @@ input[name="image-uploaded"] {
         height: 48.8em;
     }
 
+    .general-box{
+        height: 48.8em;
+    }
+    .desafio-detalhe-time-keys{
+        margin: 3.3em 0 7.3em 0;
+    }
 }
 
 @media screen and (max-height: 740px) {
 
     .login-box {
         height: 43.7em;
+    }
+
+    .general-box{
+        height: 38.3em;
+    }
+
+    .desafio-detalhe-time-keys{
+        margin: 3.3em 0 7.3em 0;
     }
 }
 
@@ -2225,12 +2239,28 @@ input[name="image-uploaded"] {
         height: 38.8em;
     }
 
+    .general-box{
+        height: 34.2em;
+    }
+
+    .desafio-detalhe-time-keys{
+        margin: 3.3em 0 3.3em 0;
+    }
+
 }
 
 @media screen and (max-height: 640px) {
 
     .login-box {
         height: 36.9em;
+    }
+
+    .general-box{
+        height: 35em;
+    }
+
+    .desafio-detalhe-time-keys{
+        margin: 3.3em 0 3.3em 0;
     }
 
 }

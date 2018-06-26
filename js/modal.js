@@ -1,21 +1,24 @@
 
 function get_id(clicked_id) {
 
-    var hide_desafio;
+   var hide_desafio;
     var hide_desafios;
+    var fotos_enviadas = clicked_id + 1;
 
 
-    document.getElementById(clicked_id).style.display = "none";
-    document.getElementById("modal").style.display = "flex";// nao consigo buscar o id
+    document.getElementById("hide-desafio-content"+clicked_id).style.display = "none";
+    document.getElementById("modal"+clicked_id).style.display = "flex";
 
-    document.getElementById("lista-fotos1").style.display = "flex";//php
-    document.getElementById("desafio1").style.backgroundColor = "#F9FAFB";//php
 
-    hide_desafio = document.getElementById("hide-desafio-content1");
-    hide_desafio.style.position = "absolute";
-    hide_desafio.style.visibility = "hidden";
-    hide_desafio.style.opacity = "0";
-    hide_desafio.style.transition = "visibility 0s, opacity 0s ease-out";
+        document.getElementById("lista-fotos"+fotos_enviadas).style.display = "flex";//php
+        document.getElementById("desafio"+fotos_enviadas).style.backgroundColor = "#F9FAFB";//p
+
+
+        hide_desafio = document.getElementById("hide-desafio-content"+fotos_enviadas);
+        hide_desafio.style.position = "absolute";
+        hide_desafio.style.visibility = "hidden";
+        hide_desafio.style.opacity = "0";
+        hide_desafio.style.transition = "visibility 0s, opacity 0s ease-out";
 
 
     hide_desafios = document.getElementsByClassName("hide-desafio");
@@ -25,18 +28,44 @@ function get_id(clicked_id) {
         hide_desafios[i].style.zIndex = "-1";
 
     }
-    document.getElementById("lista-fotos-fundo1").style.position = "relative";//php
+
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.position = "relative";//php
 
     document.getElementById("background").style.backgroundColor = "rgba(140,140,140,0.75)";
     document.getElementById("header").style.zIndex = "-1";
     document.getElementById("chest").style.zIndex = "-1";
 }
 
-function validado() {
+function rejeitar_desafio(clicked_id) {
+
+    var hide_desafios;
+
+    document.getElementById("hide-desafio-content"+clicked_id).style.display = "block";
+    document.getElementById("modal"+clicked_id).style.display = "none";
+
+    hide_desafios = document.getElementsByClassName("hide-desafio");
+
+    for (var i = 0; i < hide_desafios.length; i++) {
+
+        hide_desafios[i].style.zIndex = "0";
+
+    }
+
+    //document.getElementById("lista-fotos-fundo1").style.position = "relative";//php
+
+    document.getElementById("background").style.backgroundColor = "transparent";
+    document.getElementById("header").style.zIndex = "0";
+    document.getElementById("chest").style.zIndex = "10";
+
+}
+
+function validado(clicked_id) {
+
+    var fotos_enviadas = clicked_id;
 
     var background_desafios;
 
-    document.getElementById("lista-fotos1").style.display = "none";//php
+    document.getElementById("lista-fotos"+fotos_enviadas).style.display = "none";//php
 
     background_desafios = document.getElementsByClassName("desafio-premios-colecoes");
 
@@ -46,34 +75,36 @@ function validado() {
 
     }
 
-    document.getElementById("lista-fotos-fundo1").style.position = "absolute";//php
-    document.getElementById("lista-fotos-fundo1").style.visibility = "hidden"; //php
-    document.getElementById("lista-fotos-fundo1").style.opacity = "0"; //php
-    document.getElementById("lista-fotos-fundo1").style.backgroundColor = "#F9FAFB";//php
-    document.getElementById("lista-fotos-fundo1").style.border = "3px solid #009245"; //php
-    document.getElementById("lista-fotos-fundo1").style.transition = "position 0s, visibility 1s, opacity 1s ease-out"; //php
-    document.getElementById("lista-fotos-fundo1").style.transitionDelay = "4s"; //php
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.position = "absolute";//php
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.visibility = "hidden"; //php
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.opacity = "0"; //php
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.backgroundColor = "#F9FAFB";//php
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.border = "3px solid #009245"; //php
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.transition = "position 0s, visibility 1s, opacity 1s ease-out"; //php
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.transitionDelay = "4s"; //php
 
-    document.getElementById("hide-desafio-content1").style.position = "relative"; //php
-    document.getElementById("hide-desafio-content1").style.visibility = "visible"; //php
-    document.getElementById("hide-desafio-content1").style.opacity = "1"; //php
-    document.getElementById("hide-desafio-content1").style.transition = "visibility 1s, opacity 1s ease-in"; //php
-    document.getElementById("hide-desafio-content1").style.transitionDelay = "4.5s"; //php
+    document.getElementById("hide-desafio-content"+fotos_enviadas).style.position = "relative"; //php
+    document.getElementById("hide-desafio-content"+fotos_enviadas).style.visibility = "visible"; //php
+    document.getElementById("hide-desafio-content"+fotos_enviadas).style.opacity = "1"; //php
+    document.getElementById("hide-desafio-content"+fotos_enviadas).style.transition = "visibility 1s, opacity 1s ease-in"; //php
+    document.getElementById("hide-desafio-content"+fotos_enviadas).style.transitionDelay = "4.5s"; //php
 
-    document.getElementById("lista-fotos-validar-reportar").style.display = "flex";
+    document.getElementById("lista-fotos-validar-reportar"+fotos_enviadas).style.display = "flex";
 
-    document.getElementById("verificacao").src="../img/icon/verification2.svg";
-    document.getElementById("verificacao-titulo").innerHTML ="VALIDADO!";
-    document.getElementById("verificacao-titulo").style.color ="#009245";
+    document.getElementById("verificacao"+fotos_enviadas).src="../img/icon/verification2.svg";
+    document.getElementById("verificacao-titulo"+fotos_enviadas).innerHTML ="VALIDADO!";
+    document.getElementById("verificacao-titulo"+fotos_enviadas).style.color ="#009245";
 
 
 }
 
-function reportado() {
+function reportado(clicked_id) {
+
+    var fotos_enviadas = clicked_id;
 
     var background_desafios;
 
-    document.getElementById("lista-fotos1").style.display = "none";//php
+    document.getElementById("lista-fotos"+fotos_enviadas).style.display = "none";//php
 
     background_desafios = document.getElementsByClassName("desafio-premios-colecoes");
 
@@ -83,26 +114,26 @@ function reportado() {
 
     }
 
-    document.getElementById("lista-fotos-fundo1").style.position = "absolute";//php
-    document.getElementById("lista-fotos-fundo1").style.visibility = "hidden"; //php
-    document.getElementById("lista-fotos-fundo1").style.opacity = "0"; //php
-    document.getElementById("lista-fotos-fundo1").style.backgroundColor = "#F9FAFB";//php
-    document.getElementById("lista-fotos-fundo1").style.border = "3px solid #ff0000"; //php
-    document.getElementById("lista-fotos-fundo1").style.transition = "position 0s, visibility 1s, opacity 1s ease-out"; //php
-    document.getElementById("lista-fotos-fundo1").style.transitionDelay = "4s"; //php
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.position = "absolute";//php
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.visibility = "hidden"; //php
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.opacity = "0"; //php
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.backgroundColor = "#F9FAFB";//php
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.border = "3px solid #ff0000"; //php
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.transition = "position 0s, visibility 1s, opacity 1s ease-out"; //php
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.transitionDelay = "4s"; //php
 
 
-    document.getElementById("hide-desafio-content1").style.position = "relative"; //php
-    document.getElementById("hide-desafio-content1").style.visibility = "visible"; //php
-    document.getElementById("hide-desafio-content1").style.opacity = "1"; //php
-    document.getElementById("hide-desafio-content1").style.transition = "visibility 1s, opacity 1s ease-in"; //php
-    document.getElementById("hide-desafio-content1").style.transitionDelay = "4.5s"; //php
+    document.getElementById("hide-desafio-content"+fotos_enviadas).style.position = "relative"; //php
+    document.getElementById("hide-desafio-content"+fotos_enviadas).style.visibility = "visible"; //php
+    document.getElementById("hide-desafio-content"+fotos_enviadas).style.opacity = "1"; //php
+    document.getElementById("hide-desafio-content"+fotos_enviadas).style.transition = "visibility 1s, opacity 1s ease-in"; //php
+    document.getElementById("hide-desafio-content"+fotos_enviadas).style.transitionDelay = "4.5s"; //php
 
-    document.getElementById("lista-fotos-validar-reportar").style.display = "flex";
+    document.getElementById("lista-fotos-validar-reportar"+fotos_enviadas).style.display = "flex";
 
-    document.getElementById("verificacao").src="../img/icon/verification_error2.svg";
-    document.getElementById("verificacao-titulo").innerHTML ="REPORTADO!";
-    document.getElementById("verificacao-titulo").style.color ="#ff0000";
+    document.getElementById("verificacao"+fotos_enviadas).src="../img/icon/verification_error2.svg";
+    document.getElementById("verificacao-titulo"+fotos_enviadas).innerHTML ="REPORTADO!";
+    document.getElementById("verificacao-titulo"+fotos_enviadas).style.color ="#ff0000";
 
 }
 

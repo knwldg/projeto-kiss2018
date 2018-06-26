@@ -5,6 +5,7 @@ session_start();
 
 require_once "../components/php/general.php";
 require_once "../components/php/logincontrol.php";
+require_once "../components/php/challengeControl.php";
 
 if (!isset($_SESSION['username'])) {
 
@@ -15,6 +16,8 @@ if (!isset($_SESSION['username'])) {
 global $userData;
 
 getUserData($_SESSION['userId']);
+
+dailyChallenge();
 
 ?>
 
@@ -48,10 +51,9 @@ getUserData($_SESSION['userId']);
 
         <!-- profile -->
 
-        <!-- <div id="profile-menu" class="profile-menu-style-homepage gradient-background white">
-
-
-         </div>-->
+        <div id="profile-menu" class="profile-menu-style-homepage gradient-background white">
+            <?php include "../components/public/profile_details.php"; ?>
+         </div>
 
         <!-- profile -->
 
