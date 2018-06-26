@@ -16,11 +16,10 @@ function listUsers()
     global $sql_connection;
     global $userList;
 
-    $userList = [];
+    $userList = array();
     $sql_op = $sql_connection->prepare("SELECT name FROM users");
     $sql_op->execute();
     $sql_op->store_result();
-
     $num_users = $sql_op->num_rows;
 
     for ($i = 0; $i < $num_users; $i++) {
@@ -49,26 +48,26 @@ function listCards() {
     }
 
     $legendaryCap = 1000;
-
     $query = $sql_connection->prepare("SELECT * FROM cards WHERE idcards < ?");
     $query->bind_param("i", $legendaryCap);
     $query->execute();
     $result = $query->get_result();
-
-
     $cardList = array();
 
     if ($result->num_rows === 0) exit('No rows');
     while ($row = $result->fetch_assoc()) {
+
+        $Id[] = $row['idcards'];
         $cardName[] = $row['name'];
         $rarity[] = $row['rarity'];
         $collection[] = $row['collection'];
-        $Id[] = $row['idcards'];
+
     }
 
     for ($i = 0; $result->num_rows > $i; $i++) {
 
         array_push($cardList, [$Id[$i], $cardName[$i], $rarity[$i], $collection[$i]]);
+
     }
 
     $query->close();
@@ -197,7 +196,7 @@ function findIdByUsername($value)
 
 function loot($userId) {
 
-    whatCard();
+    // gera o loot do utilizador
 
     addCard($userId, whatCard());
 
@@ -442,15 +441,18 @@ function openBox($userId)
 
     global $rewards;
 
-    $rewards = array();
+    if (!isset($rewards)) {
+
+        $rewards = array();
+
+    }
+
 
     //determinar a luck, aka quantas cartas vamos dar
 
     $luck = luck();
 
     //array com os rewards para mostrar clientside
-
-    $rewards = array();
 
     for ($i = 0; $luck > $i; $i++) {
 
@@ -461,6 +463,19 @@ function openBox($userId)
     }
 
     removeKey($_SESSION['userId']);
+
+}
+
+function getLatestSubmission()
+{
+
+    global $sql_connection;
+
+    $result = $sql_connection->query("SELECT idsubmissions FROM submissions ORDER BY idsubmissions DESC LIMIT 1");
+
+    $latest = $result->fetch_all();
+
+    return $latest[0];
 
 }
 
