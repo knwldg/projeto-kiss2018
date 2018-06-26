@@ -1,8 +1,40 @@
 <?php
 
-global $rewards;
 
-print_r($rewards);
+
+global $rewards;
+global $cardList;
+
+
+listCards();
+
+openBox(1);
+
+
+ for($i=0; $i < sizeof($cardList); $i++) {
+
+            $raridade = $cardList[$i][2];
+
+/*
+            switch ($raridade) {
+                case 1:
+                    echo "<script>document.getElementById(\"animation\").style.background = \"linear-gradient(to top, rgb(236,233,230) , rgb(255,255,255))\";</script>";
+                    break;
+                case 2:
+                    echo "<script>document.getElementById(\"animation\").style.background = \"linear-gradient(to top, rgb(123,146,10) , rgb(173,209,0))\";</script>";
+                    break;
+                case 3:
+                    echo "<script>document.getElementById(\"animation\").style.background = \"linear-gradient(to top, rgb(110,72,170) , rgb(157,80,221))\";</script>";
+                    break;
+                case 4:
+                    echo "<script>document.getElementById(\"animation\").style.background = \"linear-gradient(to top, rgb(58,123,213) , rgb(0,210,255))\";</script>";
+                    break;
+                case 5:
+                    echo "<script>document.getElementById(\"animation\").style.background = \"linear-gradient(to top, rgb(244,208,63) , rgb(255,242,0))\";</script>";
+                    break;
+            }*/
+        }
+
 
 ?>
 
@@ -12,17 +44,25 @@ print_r($rewards);
     <div id="hide-chests" class="hide-chests text-center flex-column">
 
         <span class="div-baus-title font700 white">Escolhe um báu</span>
-
+<?php //for($i=0; $i < sizeof($cardList); $i++) {
+    //$raridade = $cardList[$i][2];
+    ?>
+        <div class="chest-line flex-row"><!-- 3 itens -->
+            <div id="chest-line-item" onclick="open_chest(<?php echo"$raridade"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest(<?php echo"$raridade"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest(<?php echo"$raridade"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+        </div>
         <div class="chest-line flex-row"><!-- 3 itens -->
             <div id="chest-line-item" onclick="open_chest()" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
-        </div>
-        <div class="chest-line flex-row"><!-- 3 itens -->
-
+            <div id="chest-line-item" onclick="open_chest()" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest()" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
         </div>
         <div class="chest-line flex-row"> <!-- 3 itens -->
-
+            <div id="chest-line-item" onclick="open_chest()" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest()" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest()" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
         </div>
-
+        <?php //} ?>
     </div>
     <!-- grelha de baus -->
 
@@ -66,7 +106,7 @@ print_r($rewards);
                 <div id="slider" class="flex-row">
                     <!-- cartas saidas -->
                     <div id="slider_carta" class="slider-item">&nbsp</div>
-                    <!-- cartas saidas -->
+                <!-- cartas saidas -->
 
                     <!-- detalhe bau -->
                     <div id="slider_detalhe_bau" class="slider-item">&nbsp</div>
@@ -79,12 +119,20 @@ print_r($rewards);
 
 
         <!-- animacao do bau -->
+
         <div id="chest-animation" class="chest-animation flex">
-            <div id="animation" class="chest-animation-item flex bau-verde"></div>
+            <div id="animation" class="chest-animation-item flex"></div>
             <p class="chest-animation-item-img"></p>
         </div>
+
         <!-- animacao do bau -->
     </div>
 
     <!-- pop-up-cartas | animacao do bau -->
 </div>
+
+<script>
+    document.getElementById("chest-line-item").addEventListener("click", function(){
+        <?php loot(1) ?>
+    });
+</script>

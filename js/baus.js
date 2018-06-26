@@ -1,13 +1,34 @@
 
 //baus - passar id
-function open_chest() {
+function open_chest(raridade) {
 
     document.getElementById("hide-chests").style.display = "none";
     document.getElementById("cartas-chest-animation").style.display = "block";
     document.getElementById("chest-close-baus").style.display = "none";
     document.getElementById("chest").style.zIndex = "-1";
 
+    switch (raridade) {
+        case 1:
+            document.getElementById("animation").style.background = "linear-gradient(to top, rgb(236,233,230) , rgb(255,255,255))";
+            break;
+        case 2:
+            document.getElementById("animation").style.background = "linear-gradient(to top, rgb(123,146,10) , rgb(173,209,0))";
+            break;
+        case 3:
+            document.getElementById("animation").style.background = "linear-gradient(to top, rgb(58,123,213) , rgb(0,210,255))";
+            break;
+        case 4:
+            document.getElementById("animation").style.background = "linear-gradient(to top, rgb(110,72,170) , rgb(157,80,221))";
+            break;
+        case 5:
+            document.getElementById("animation").style.background = "linear-gradient(to top, rgb(244,208,63) , rgb(255,242,0))";
+            break;
+    }
+
+
+
 }
+
 
 function open_baus() {
 

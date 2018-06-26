@@ -26,7 +26,7 @@ listChallenges(); ?>
         <span class="font800 desafio-title"><?php echo "$title" ?></span>
 
         <div class="desafio-content-items flex-row">
-            <img src="../../img/marca/simbolo-800w.png" class="desafio-logo">
+            <img src="../../img/icon/<?php echo "$category" ?>.png" class="desafio-logo">
             <span class="font800 desafio-subtitle">Desafio:</span>
             <span class="font500 desafio-description"><?php echo "$preview" ?></span>
         </div>
