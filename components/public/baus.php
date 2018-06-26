@@ -1,19 +1,23 @@
 <?php
 
 
+//global $rewards;
 
-global $rewards;
 global $cardList;
-
-
-listCards();
+/*
+print_r($rewards);
 
 openBox(1);
+loot(1);
+*/
 
+listCards();
 
  for($i=0; $i < sizeof($cardList); $i++) {
 
             $raridade = $cardList[$i][2];
+
+            print_r($raridade);
 
 /*
             switch ($raridade) {
@@ -133,6 +137,6 @@ openBox(1);
 
 <script>
     document.getElementById("chest-line-item").addEventListener("click", function(){
-        <?php loot(1) ?>
+        <?php // loot(1) ?>
     });
 </script>

@@ -2,8 +2,13 @@
 
 #TODO BUSCAR O USER
 
-//$id = $_GET['id'];
-//$name = $_GET['name'];
+$id = $_GET['id'];
+$quantidade = $_GET['quant'];
+
+if($quantidade >= 3){
+    evolveCard(1,$id);
+}
+
 
 ?>
 
@@ -26,10 +31,11 @@
         </div>
     </div>
 
+
     <div id="level-up" class="chest level"></div>
 
-</div>
 
+</div>
 
 
 
@@ -37,6 +43,8 @@
 
     document.getElementById("back").style.background = "url('../img/cartas/equipa/tras/branco.png') no-repeat center";
     document.getElementById("back").style.backgroundSize = "98%";
+
+
 
 
     function flip_back() {

@@ -4,7 +4,15 @@ session_start();
 require_once "../components/php/general.php";
 require_once "../components/php/connection.php";
 require_once "../components/php/challengeControl.php";
+/*
+global $rewards;
+$rewards = array();
 
+print_r($rewards);
+
+openBox(1);
+loot(1);
+*/
 ?>
 
 <!DOCTYPE html>

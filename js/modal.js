@@ -138,20 +138,31 @@ function reportado(clicked_id) {
 }
 
 
-
-
-function click_carta(name,raridade) {
+function click_carta(name,id,quantidade) {
 
     document.getElementById("pop-up-carta-img").style.display = "flex";
 
-    document.getElementById("front").style.background = 'url("../img/cartas/equipa/frente/equipa'+raridade+'.png") no-repeat center';
+    document.getElementById("front").style.background = 'url("../img/cartas/equipa/frente/equipa' + id + '.png") no-repeat center';
     document.getElementById("front").style.backgroundSize = "98%";
     document.getElementById("cards-name").innerHTML = name;
 
     document.getElementById("chest").style.zIndex = "-1";
 
+    if (quantidade >= 3) {
+
+        document.getElementById("level-up").style.display = "block";
+
+        document.getElementById("level-up").addEventListener("click", function () {
+
+            document.getElementById("front").style.background = 'url("../img/cartas/equipa/frente/equipa100' + id + '.png") no-repeat center';
+            document.getElementById("front").style.backgroundSize = "98%";
+
+        });
+
+    }
 
 }
+
 
 function open_menu_home() {
 

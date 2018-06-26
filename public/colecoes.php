@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require_once "../components/php/general.php";
 require_once "../components/php/connection.php";
 
@@ -45,6 +47,8 @@ require_once "../components/php/connection.php";
 
     </div>
 </div>
+
+
 
 <script type="text/javascript" src="../js/baus.js"></script>
 <script type="text/javascript" src="../js/cartas.js"></script>
