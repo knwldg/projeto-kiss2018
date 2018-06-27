@@ -1,5 +1,5 @@
 
-<div id="premio1" class="desafio-premios-colecoes flex-column shadow">
+<a href="../../public/premio_detalhe.php" id="premio1" class="desafio-premios-colecoes flex-column shadow">
 
     <div class="premios-title flex-row">
 
@@ -22,7 +22,7 @@
         <div class="carta flex"><img class="carta-size" src="../../img/cartas/equipa/thumbnail/frente/equipa5.png"></div>
     </div>
 
-</div>
+</a>
 
 
 

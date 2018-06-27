@@ -41,12 +41,6 @@ if($quantidade >= 3){
 
 <script type="text/javascript">
 
-    document.getElementById("back").style.background = "url('../img/cartas/equipa/tras/branco.png') no-repeat center";
-    document.getElementById("back").style.backgroundSize = "98%";
-
-
-
-
     function flip_back() {
 
         document.getElementById("flipper").style.transform = "rotateY(180deg)";

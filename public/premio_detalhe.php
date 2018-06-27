@@ -30,7 +30,7 @@
 
         </div>
 
-        <div class="general-box flex-column shadow center-items">
+        <div class="box flex-column shadow center-items">
 
             <span class="premio-detalhe-title font800">Que tal um <span class="premio-detalhe-extra">almoço</span>?</span>
 

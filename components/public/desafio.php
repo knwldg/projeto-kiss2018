@@ -42,7 +42,7 @@ listChallenges(); ?>
 
     <!-- yes or not -->
     <div id="modal<?php echo "$id" ?>" class="flex-row yes-or-not yes-or-not-display"><!-- quando clicar no desafio -> .yes-or-not-display -> display: flex -->
-        <div id="accept" class="text-center"><a href="../../public/desafio_detalhe.php"><img class="yes-or-not-item pointer" src="../../img/icon/yes.png"></a></div><!-- aceitar o desafio -->
+        <div id="accept" class="text-center"><a href="../../public/desafio_detalhe.php?t=<?php echo "$title" ?>&d=<?php echo "$description" ?>"><img class="yes-or-not-item pointer" src="../../img/icon/yes.png"></a></div><!-- aceitar o desafio -->
         <div class="text-center"><img class="yes-or-not-item yes-or-not-item-padding" src="../../img/icon/divisoria.png"></div>
         <div id="reject" onclick="rejeitar_desafio(<?php echo "$id" ?>)" class="text-center"><img class="yes-or-not-item yes-or-not-item-width pointer" src="../../img/icon/no.png"></div><!-- rejeitar o desafio -->
     </div>
