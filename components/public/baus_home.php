@@ -20,19 +20,19 @@ $cor = luck();
     //$raridade = $cardList[$i][2];
     ?>
         <div class="chest-line flex-row"><!-- 3 itens -->
-            <div id="chest-line-item1" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
-            <div id="chest-line-item" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
-            <div id="chest-line-item" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item1" onclick="open_chest_home(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest_home(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest_home(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
         </div>
         <div class="chest-line flex-row"><!-- 3 itens -->
-            <div id="chest-line-item" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
-            <div id="chest-line-item" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
-            <div id="chest-line-item" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest_home(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest_home(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest_home(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
         </div>
         <div class="chest-line flex-row"> <!-- 3 itens -->
-            <div id="chest-line-item" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
-            <div id="chest-line-item" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
-            <div id="chest-line-item" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest_home(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest_home(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest_home(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
         </div>
         <?php //} ?>
     </div>
@@ -48,7 +48,7 @@ $cor = luck();
             <div class="flex-column center-items">
 
                 <div class="flex-column text-center">
-                    <a href="" onclick="close_baus()" id="voltar" class="voltar pointer"><img class="voltar-size" src="../../img/icon/voltar.png"></a>
+                    <a href="" onclick="close_baus_home()" id="voltar" class="voltar pointer"><img class="voltar-size" src="../../img/icon/voltar.png"></a>
                     <span class="black font600">voltar</span>
                 </div>
 

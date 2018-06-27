@@ -2,8 +2,9 @@
 
 
 
-#TODO BUSCAR O USER
-
+#TODO buscar o user;
+#TODO tenta ver se consegues o nr de cartas do user;
+#TODO bug depois da evolucao começa a adc cartas novas e depois de evoluir uma carta ao clicar nela comeca a perder pontos do nada ( ver modal.js a funcao click_carta() )
 
 
 global $cardList;
@@ -74,7 +75,6 @@ for($i=0; $i < sizeof($cardList); $i++){
 
                             $_SESSION['quantidade'] = $v[1];
                             $quantidade = $_SESSION['quantidade'];
-                            $_SESSION['id'] = $id;
 
                             ?>
                         <a id="carta<?php echo "$id" ?>" href="?id=<?php echo "$id"?>&quant=<?php echo "$quantidade"?>#pop-up-carta-img" onclick="click_carta('<?php echo "$name"?>',<?php echo "$id" ?>,<?php echo "$quantidade" ?>)">
@@ -149,9 +149,11 @@ for($i=0; $i < sizeof($cardList); $i++){
                         foreach ($userCollection as $v){
                             if($v[0] == $id) {
 
+                                $_SESSION['quantidade'] = $v[1];
+                                $quantidade = $_SESSION['quantidade'];
                                 //$sum+= $v[0];
                                 ?>
-                    <a id="carta<?php echo "$id" ?>" href="#pop-up-carta-img" onclick="click_carta('<?php echo "$name"?>',<?php echo "$id" ?>)">
+                    <a id="carta<?php echo "$id" ?>" href="?id=<?php echo "$id"?>&quant=<?php echo "$quantidade"?>#pop-up-carta-img" onclick="click_carta('<?php echo "$name"?>',<?php echo "$id" ?>,<?php echo "$quantidade" ?>)">
                             <img class="carta-size" src="../../img/cartas/<?php echo "$id" ?>.png">
                                 <span class="colection-numbers"><?php echo"$v[1]" ?></span>
                     </a>
@@ -220,8 +222,10 @@ for($i=0; $i < sizeof($cardList); $i++){
                         <?php
                         foreach ($userCollection as $v){
                             if($v[0] == $id) {
+                                $_SESSION['quantidade'] = $v[1];
+                                $quantidade = $_SESSION['quantidade'];
                                 ?>
-                        <a href="#pop-up-carta-img" onclick="click_carta('<?php echo "$name"?>',<?php echo "$id" ?>)">
+                        <a href="?id=<?php echo "$id"?>&quant=<?php echo "$quantidade"?>#pop-up-carta-img" onclick="click_carta('<?php echo "$name"?>',<?php echo "$id" ?>,<?php echo "$quantidade" ?>)">
                             <img id="carta" class="carta-size" src="../../img/cartas/<?php echo "$id" ?>.png">
                                 <span class="colection-numbers"><?php echo"$v[1]" ?></span>
                         </a>

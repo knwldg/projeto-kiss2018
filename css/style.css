@@ -793,7 +793,7 @@ input[name="image-uploaded"] {
 }
 
 .homepage-content-description{
-    width: 72%;
+    width: 80%;
     text-align: center;
     padding: 1.5em 0 1.5em 0;
     color: #8C8C8C;
@@ -1692,6 +1692,9 @@ input[name="image-uploaded"] {
 .pop-up-carta{
     width: 20em;
     display: block;
+    position: relative;
+    left: -10.2em;
+    top: 0.2em;
 }
 
 .carta-out{
@@ -1705,7 +1708,7 @@ input[name="image-uploaded"] {
 }
 
 .slider{
-    margin-top: 0.5em;
+    margin-top: 1em;
     position: absolute;
     left: 10em;
     top: 38em;
@@ -1725,10 +1728,11 @@ input[name="image-uploaded"] {
     border-radius: 18px;
     width: 20em;
     height: 30em;
-    position: relative;
+    position: absolute;
     display: flex;
     z-index: -10;
-    top: 0.8em;
+    top: 7.8em;
+    left: 1.5em;
 }
 
 .detalhe-bau-img{

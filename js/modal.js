@@ -169,7 +169,7 @@ function click_carta(name,id,quantidade) {
 
         document.getElementById("level-up").addEventListener("click", function () {
 
-            document.getElementById("front").style.background = 'url("../img/cartas/' + 1000 + id + '.png") no-repeat center';
+            document.getElementById("front").style.background = 'url("../img/cartas/' + 100 + id + '.png") no-repeat center';
             document.getElementById("front").style.backgroundSize = "98%";
 
         });
@@ -270,7 +270,7 @@ function show_main_pages() {
 
 
 }
-
+/*
 function hide_notifications() {
 
 
@@ -297,7 +297,7 @@ function show_notifications() {
     document.getElementById("arrow-notifications-up").style.visibility = "hidden";
 
 }
-
+*/
 
 
 /*function yes_or_not(clicked_id) {
