@@ -5,8 +5,8 @@ session_start();
 require_once "../components/php/connection.php";
 require_once "../components/php/challengeControl.php";
 
-$title = $_SESSION['title'];
-$description = $_SESSION['description'];
+$title = $_GET['t'];
+$description = $_GET['d'];
 
 ?>
 <!DOCTYPE html>

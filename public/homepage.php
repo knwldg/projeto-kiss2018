@@ -19,6 +19,8 @@ getUserData($_SESSION['userId']);
 
 dailyChallenge();
 
+#TODO o desafio diario como vai ser
+
 ?>
 
 <head>

@@ -5,6 +5,9 @@
 global $rewards;
 global $luck;
 
+#TODO melhora isto
+$cor = luck();
+
 ?>
 
 <div id="div-baus" class="baus flex-column">
@@ -12,25 +15,24 @@ global $luck;
     <!-- grelha de baus -->
     <div id="hide-chests" class="hide-chests text-center flex-column">
 
-        <span class="div-baus-title font700 white">Escolhe um bau</span>
-
+        <span class="div-baus-title font700 white">Escolhe um báu</span>
+<?php //for($i=0; $i < sizeof($cardList); $i++) {
+    //$raridade = $cardList[$i][2];
+    ?>
         <div class="chest-line flex-row"><!-- 3 itens -->
-            <div id="chest-line-item" onclick="open_chest(<?php echo "$luck"; ?>)" class="chest-line-item"><img
-                        class="chest-line-item-img" src="../../img/icon/chest.png"></div>
-            <div id="chest-line-item" onclick="open_chest(<?php echo "$luck"; ?>)" class="chest-line-item"><img
-                        class="chest-line-item-img" src="../../img/icon/chest.png"></div>
-            <div id="chest-line-item" onclick="open_chest(<?php echo "$luck"; ?>)" class="chest-line-item"><img
-                        class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item1" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
         </div>
         <div class="chest-line flex-row"><!-- 3 itens -->
-            <div id="chest-line-item" onclick="open_chest()" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
-            <div id="chest-line-item" onclick="open_chest()" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
-            <div id="chest-line-item" onclick="open_chest()" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
         </div>
         <div class="chest-line flex-row"> <!-- 3 itens -->
-            <div id="chest-line-item" onclick="open_chest()" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
-            <div id="chest-line-item" onclick="open_chest()" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
-            <div id="chest-line-item" onclick="open_chest()" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
         </div>
         <?php //} ?>
     </div>
@@ -41,7 +43,7 @@ global $luck;
     <div id="cartas-chest-animation" class="cartas-chest-animation">
 
         <!-- pop-up-cartas -->
-        <div id="fundo-carta" class="fundo-carta fundo-verde">
+        <div id="fundo-carta" class="fundo-carta">
 
             <div class="flex-column center-items">
 
@@ -50,38 +52,56 @@ global $luck;
                     <span class="black font600">voltar</span>
                 </div>
 
+
                 <div id="pop-up-cartas" class="text-center">
-
-                    <!-- cartas saidas -->
-
                     <?php
+
+                    #TODO queria uma var para mostrar quantas cartas sairam ve a $sum
 
                     $rewards = array();
 
-
+                    openBox(1);
+                    $sum = 1;
                     for ($i = 0; $i < sizeof($rewards); $i++) {
 
-                        // faz o que entenderes aqui
-
-                        echo "recebeste a carta:" . getCardData(($rewards[$i])[0]);
-
-                    }
+                    $img = getCardData(($rewards[$i]))[0];
 
                     ?>
-                    <div id="pop_up_carta" onclick="change_carta()" class="pop-up-carta">&nbsp</div>
-                    <div id="pop_up_carta" onclick="change_carta()" class="pop-up-carta">&nbsp</div>
+                    <!-- cartas saidas -->
+                    <div class="carta-out"><img id="pop_up_carta<?php echo"$img"?>" src="../../img/cartas/equipa/frente/equipa<?php echo"$img"?>.png"
+                                                onclick="change_carta(<?php echo"$img"?>)" class="pop-up-carta"></div>
+                    <?php $sum += $i; }
+                    ?>
+                        <div id="slider" class="slider flex-row">
+
+                            <!-- detalhe bau -->
+                            <div id="slider_detalhe_bau" class="slider-item">&nbsp</div>
+                            <!-- detalhe bau -->
+
+                            <?php
+
+                            for ($i = 0; $i < sizeof($rewards); $i++) {
+
+                            $img2 = getCardData(($rewards[$i]))[0];
+
+                            ?>
+                            <div id="slider_carta<?php echo"$img2"?>" class="slider-item">&nbsp</div>
+                            <!-- cartas saidas -->
+                            <?php } ?>
+
+                        </div>
                     <!-- cartas saidas -->
 
                     <!-- detalhe bau -->
                     <div class="detalhe-bau shadow center-items flex-column">
 
-                        <img src="../../img/icon/bau5.png" id="detalhe-bau-chest" class="detalhe-bau-img bau-verde">
+                        <img src="../../img/icon/bau5.png" id="detalhe-bau-chest" class="detalhe-bau-img">
 
                         <div class="detalhe-bau-numero_cartas center-items flex-row">
-                            <span class="numero-cartas-item1 font700">CARTAS</span> <span id="detalhe-bau-numero" class="numero-cartas-item2 font800">+5</span>
+                            <span class="numero-cartas-item1 font700">CARTAS</span> <span id="detalhe-bau-numero" class="numero-cartas-item2 font800">+<?php echo "$sum"; ?></span>
                         </div>
 
-                        <a href="../../public/colecoes.php" id="detalhe-bau-colecoes" class="detalhe-bau-colecoes shadow white font700 btn-verde">coleções</a>
+                        <a href="../../public/colecoes.php" id="detalhe-bau-colecoes" class="detalhe-bau-colecoes shadow white font700">coleções</a>
                         <span class="detalhe-bau-descricao gray font500">descubra as nossas coleções</span>
 
                     </div>
@@ -89,16 +109,8 @@ global $luck;
 
                 </div>
 
-                <div id="slider" class="flex-row">
-                    <!-- cartas saidas -->
-                    <div id="slider_carta" class="slider-item">&nbsp</div>
-                <!-- cartas saidas -->
 
-                    <!-- detalhe bau -->
-                    <div id="slider_detalhe_bau" class="slider-item">&nbsp</div>
-                    <!-- detalhe bau -->
 
-                </div>
             </div>
         </div>
         <!-- pop-up-cartas -->
@@ -118,8 +130,9 @@ global $luck;
 </div>
 
 <script>
-    document.getElementById("chest-line-item").addEventListener("click", function(){
-        <?php openBox(findIdByUsername($_SESSION['username'])); ?>
+    document.getElementById("chest-line-item1").addEventListener("click", function(){
+        <?php //openBox(findIdByUsername($_SESSION['username']));
+        //openBox(1);
+        ?>
     });
 </script>
-

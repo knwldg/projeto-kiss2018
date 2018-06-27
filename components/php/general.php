@@ -294,7 +294,7 @@ function whatCard() {
 
     // retorna o id da carta de reward
 
-      return rand(1, 19);
+    return rand(1, 19);
 
 }
 
@@ -370,7 +370,7 @@ function addCard($userId, $cardId)
         }
 
 
-        }
+    }
 
     catch (Exception $exception) {
         echo ("Error: $exception");
@@ -572,5 +572,3 @@ function getLatestSubmission()
     return $latest[0];
 
 }
-
-

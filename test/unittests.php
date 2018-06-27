@@ -22,10 +22,9 @@ openBox(1);
 
 
 for ($i = 0; $i < sizeof($rewards); $i++) {
-
+    $img = getCardData(($rewards[$i]))[0];
     // faz o que entenderes aqui
 
-    echo "recebeste a carta:" . getCardData(($rewards[$i]))[1];
+    echo "recebeste a carta:" . $img;
 
 }
-
