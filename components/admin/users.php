@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<?php session_start();?>
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -12,8 +13,7 @@
 </head>
 
 <body>
-<?php require_once "navigation.php";
-global $userList ?>
+<?php require_once "navigation.php"; ?>
 <?php require_once "../php/connection.php"; ?>
 <?php require_once "../php/general.php"; ?>
 <div id="users">
@@ -22,29 +22,33 @@ global $userList ?>
         <h1>Utilizadores</h1>
     </div>
     <div id="table_users">
+
         <table>
             <tr>
-                <th>Username</th>
-                <th>Nome Real</th>
-                <th>Email</th>
+                <th class="nome">Username</th>
             </tr>
             <tr id="echos">
-                <?php listUsers() ?>
+                <?php
+                global $userList;
+                listUsers();
+                for($i=0; $i < sizeof($userList); $i++){
 
-                <th>
-                    <?php echo $userList ?></th>
-                <th>
-                    <?php echo listUsers() ?></th>
-                <th>
-                    <?php echo listUsers() ?></th>
+            if (isset($userList[$i])) {
+
+                $username = $userList[$i];
+                ?>
+                <th style="height: 4vh">
+                    <?php echo "$username" ?></th>
+            <?php }
+            }?>
 
             </tr>
         </table>
     </div>
 </div>
 <div>
-    <button class="apagar_utilizador">
-        Apagar Utilizador
+    <button class="apagar_utilizador" onclick="">
+         Apagar Utilizador
     </button>
 </div>
 </body>

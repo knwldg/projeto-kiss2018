@@ -24,19 +24,30 @@
     <div id="table_chaves">
         <table>
             <tr>
-                <th>Utilizador</th>
-                <th>Nome Real</th>
-                <th>Chaves</th>
+                <th class="nome">Utilizador</th>
+                <th class="nome">Chaves</th>
             </tr>
             <tr id="echos">
-                <?php listUsers() ?>
-                <th>
-                    <?php echo listUsers($userList, 'username') ?></th>
-                <th>
-                    <?php echo listUsers($userList, 'nome real') ?></th>
-                <th>
-                    <?php echo listUsers($userList, 'keys') ?></th>
+                <?php
+                global $userData;
+                getUserData(3);
+
+                for($i=0; $i < sizeof($userData); $i++){
+
+                    if (isset($userData[$i])) {
+
+                $username = $userData[$i];
+                $keys= $userData[$i];
+                ?>
+                <th style="height: 4vh">
+                <?php echo "$username" ?></th>
+                <th style="height: 4vh">
+                    <?php echo "$keys" ?></th>
+
+                    <?php }
+                }?>
             </tr>
+
         </table>
     </div>
 </div>
