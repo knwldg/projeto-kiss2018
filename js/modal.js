@@ -167,7 +167,7 @@ function click_carta_professores(name,id,quantidade) {
 
     document.getElementById("pop-up-carta-img").style.display = "flex";
 
-    document.getElementById("front").style.background = 'url("../img/cartas/professores/frente' + id + '.png") no-repeat center';
+    document.getElementById("front").style.background = 'url("../img/cartas/professores/frente/' + id + '.png") no-repeat center';
     document.getElementById("front").style.backgroundSize = "98%";
     document.getElementById("cards-name").innerHTML = name;
 
