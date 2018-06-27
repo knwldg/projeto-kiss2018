@@ -12,9 +12,6 @@ listChallenges(); ?>
     $description = $challengeList[$i][3];
     $category = $challengeList[$i][4];
 
-    $_SESSION['title'] = $title;
-    $_SESSION['description'] = $description;
-
     ?>
 
 <div id="desafio<?php echo "$id" ?>" class="desafio-premios-colecoes flex-column shadow"> <!-- yes_or_not(document.getElementsByClassName('yes-or-not-display')[0],document.getElementsByClassName('hide-desafio')[0]) -->

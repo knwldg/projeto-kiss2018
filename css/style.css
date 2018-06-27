@@ -1209,6 +1209,14 @@ input[name="image-uploaded"] {
     padding: 0.8em 0 0.8em 0;
 }
 
+.foto-antes{
+    width: 43%;
+}
+
+.foto-depois{
+    width: 43%;
+}
+
 /* DESAFIOS-DETALHE */
 
 /* DESAFIOS-COMPLETO */
@@ -1710,7 +1718,7 @@ input[name="image-uploaded"] {
 .slider{
     margin-top: 1em;
     position: absolute;
-    left: 10em;
+    left: 8em;
     top: 38em;
 }
 

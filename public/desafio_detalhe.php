@@ -2,7 +2,8 @@
 
 session_start();
 
-require_once "../components/php/connection.php";
+require_once "../components/php/general.php";
+require_once "../components/php/logincontrol.php";
 require_once "../components/php/challengeControl.php";
 
 $title = $_GET['t'];
@@ -74,12 +75,12 @@ $description = $_GET['d'];
             <div class="fotos flex-row">
                 <div class="flex-column">
                     <span class="orange font500">antes</span>
-                    <button type="button" onclick="enviado_antes()" class="fotos-antes-depois pointer"><img id="foto-antes" src="../img/icon/take_photo.png"></button>
+                    <button type="button" onclick="enviado_antes()" class="fotos-antes-depois pointer"><img id="foto-antes" class="foto-antes" src="../img/icon/take_photo.png"></button>
                 </div> <!-- nao tenho certeza do que colocar -->
 
                 <div class="flex-column">
                     <span class="orange font500">depois</span>
-                    <a href="desafio_completo.php" type="button" onclick="enviado_depois()" class="fotos-antes-depois pointer"><img id="foto-depois" src="../img/icon/take_photo.png"></a>
+                    <a href="desafio_completo.php" type="button" onclick="enviado_depois()" class="fotos-antes-depois pointer"><img id="foto-depois" class="foto-depois" src="../img/icon/take_photo.png"></a>
                 </div> <!-- nao tenho certeza do que colocar -->
             </div>
 
@@ -97,11 +98,14 @@ $description = $_GET['d'];
 
 <script>
     function enviado_antes() {
-        document.getElementById("foto-antes").src ="../img/icon/send_photo.png";
+        document.getElementById("foto-antes").src ="../img/icon/send_photo2.png";
+        document.getElementById("foto-antes").style.width ="43%";
+
     }
 
     function enviado_depois() {
-        document.getElementById("foto-depois").src ="../img/icon/send_photo.png";
+        document.getElementById("foto-depois").src ="../img/icon/send_photo2.png";
+        document.getElementById("foto-depois").style.width ="43%";
     }
 </script>
 

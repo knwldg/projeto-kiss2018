@@ -31,7 +31,7 @@ function open_chest(raridade) {
     document.getElementById("chest").style.zIndex = "-1";
 
     switch (raridade) {
-        case 1:
+        case 0:
             document.getElementById("animation").style.background = "linear-gradient(to top, rgb(236,233,230) , rgb(255,255,255))";
             document.getElementById("fundo-carta").style.backgroundColor = "rgba(255,255,255,0.65)";
             document.getElementById("detalhe-bau-chest").style.background = "linear-gradient(to top, rgb(236,233,230) , rgb(255,255,255))";
@@ -39,7 +39,7 @@ function open_chest(raridade) {
             document.getElementById("slider_detalhe_bau").style.backgroundColor="#BFBDBA";/* bau detalhe */
 
             break;
-        case 2:
+        case 1:
             document.getElementById("animation").style.background = "linear-gradient(to top, rgb(123,146,10) , rgb(173,209,0))";
             document.getElementById("fundo-carta").style.backgroundColor = "rgba(123,146,10,0.65)";
             document.getElementById("detalhe-bau-chest").style.background = "linear-gradient(to top, rgb(123,146,10) , rgb(173,209,0))";
@@ -47,7 +47,7 @@ function open_chest(raridade) {
             document.getElementById("slider_detalhe_bau").style.backgroundColor="#7B920A";/* bau detalhe */
 
             break;
-        case 3:
+        case 2:
             document.getElementById("animation").style.background = "linear-gradient(to top, rgb(58,123,213) , rgb(0,210,255))";
             document.getElementById("fundo-carta").style.backgroundColor = "rgba(38,160,218,0.65)";
             document.getElementById("detalhe-bau-chest").style.background = "linear-gradient(to top, rgb(58,123,213) , rgb(0,210,255))";
@@ -55,14 +55,14 @@ function open_chest(raridade) {
             document.getElementById("slider_detalhe_bau").style.backgroundColor="#3A7BD5";/* bau detalhe */
 
             break;
-        case 4:
+        case 3:
             document.getElementById("animation").style.background = "linear-gradient(to top, rgb(110,72,170) , rgb(157,80,221))";
             document.getElementById("fundo-carta").style.backgroundColor = "rgba(127,127,213,0.65)";
             document.getElementById("detalhe-bau-chest").style.background = "linear-gradient(to top, rgb(110,72,170) , rgb(157,80,221))";
             document.getElementById("detalhe-bau-colecoes").style.backgroundColor = "#6E48AA";
             document.getElementById("slider_detalhe_bau").style.backgroundColor="#6E48AA";
             break;
-        case 5:
+        case 4:
             document.getElementById("animation").style.background = "linear-gradient(to top, rgb(244,208,63) , rgb(255,242,0))";
             document.getElementById("fundo-carta").style.backgroundColor = "rgba(253,209,81,0.65)";
             document.getElementById("detalhe-bau-chest").style.background = "linear-gradient(to top, rgb(244,208,63) , rgb(255,242,0))";
@@ -81,7 +81,7 @@ function open_chest_home(raridade) {
     document.getElementById("cartas-chest-animation").style.display = "block";
 
     switch (raridade) {
-        case 1:
+        case 0:
             document.getElementById("animation").style.background = "linear-gradient(to top, rgb(236,233,230) , rgb(255,255,255))";
             document.getElementById("fundo-carta").style.backgroundColor = "rgba(255,255,255,0.65)";
             document.getElementById("detalhe-bau-chest").style.background = "linear-gradient(to top, rgb(236,233,230) , rgb(255,255,255))";
@@ -89,7 +89,7 @@ function open_chest_home(raridade) {
             document.getElementById("slider_detalhe_bau").style.backgroundColor="#BFBDBA";/* bau detalhe */
 
             break;
-        case 2:
+        case 1:
             document.getElementById("animation").style.background = "linear-gradient(to top, rgb(123,146,10) , rgb(173,209,0))";
             document.getElementById("fundo-carta").style.backgroundColor = "rgba(123,146,10,0.65)";
             document.getElementById("detalhe-bau-chest").style.background = "linear-gradient(to top, rgb(123,146,10) , rgb(173,209,0))";
@@ -97,7 +97,7 @@ function open_chest_home(raridade) {
             document.getElementById("slider_detalhe_bau").style.backgroundColor="#7B920A";/* bau detalhe */
 
             break;
-        case 3:
+        case 2:
             document.getElementById("animation").style.background = "linear-gradient(to top, rgb(58,123,213) , rgb(0,210,255))";
             document.getElementById("fundo-carta").style.backgroundColor = "rgba(38,160,218,0.65)";
             document.getElementById("detalhe-bau-chest").style.background = "linear-gradient(to top, rgb(58,123,213) , rgb(0,210,255))";
@@ -105,14 +105,14 @@ function open_chest_home(raridade) {
             document.getElementById("slider_detalhe_bau").style.backgroundColor="#3A7BD5";/* bau detalhe */
 
             break;
-        case 4:
+        case 3:
             document.getElementById("animation").style.background = "linear-gradient(to top, rgb(110,72,170) , rgb(157,80,221))";
             document.getElementById("fundo-carta").style.backgroundColor = "rgba(127,127,213,0.65)";
             document.getElementById("detalhe-bau-chest").style.background = "linear-gradient(to top, rgb(110,72,170) , rgb(157,80,221))";
             document.getElementById("detalhe-bau-colecoes").style.backgroundColor = "#6E48AA";
             document.getElementById("slider_detalhe_bau").style.backgroundColor="#6E48AA";
             break;
-        case 5:
+        case 4:
             document.getElementById("animation").style.background = "linear-gradient(to top, rgb(244,208,63) , rgb(255,242,0))";
             document.getElementById("fundo-carta").style.backgroundColor = "rgba(253,209,81,0.65)";
             document.getElementById("detalhe-bau-chest").style.background = "linear-gradient(to top, rgb(244,208,63) , rgb(255,242,0))";

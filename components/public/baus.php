@@ -5,6 +5,8 @@ global $luck;
 
 $cor = luck();
 
+
+//$cartas = $_SESSION['cartas'];
 ?>
 
 <div id="div-baus" class="baus flex-column">
@@ -58,7 +60,7 @@ $cor = luck();
                         <img src="../../img/icon/bau5.png" id="detalhe-bau-chest" class="detalhe-bau-img">
 
                         <div class="detalhe-bau-numero_cartas center-items flex-row">
-                            <span class="numero-cartas-item1 font700">CARTAS</span> <span id="detalhe-bau-numero" class="numero-cartas-item2 font800"><?php //echo "$sum"; ?></span>
+                            <span class="numero-cartas-item1 font700">CARTAS</span> <span id="detalhe-bau-numero" class="numero-cartas-item2 font800">+<?php //echo "$cartas"; ?></span>
                         </div>
 
                         <a href="../../public/colecoes.php" id="detalhe-bau-colecoes" class="detalhe-bau-colecoes shadow white font700">coleções</a>
@@ -69,14 +71,15 @@ $cor = luck();
 
                     <?php
 
-                    #TODO queria uma var para mostrar quantas cartas sairam ve a $sum
-
                     //o numero de cartas é dado por sizeOf($rewards) (tamanho do array)
 
                     $rewards = array();
 
-                    openBox($_SESSION['username']);
-                    $sum = sizeOf($rewards);
+                    openBox(findIdByUsername($_SESSION['username']));
+
+                    //$sum = sizeOf($rewards);
+                    //$_SESSION['cartas'] = $sum;
+
                     for ($i = 0; $i < sizeof($rewards); $i++) {
 
                     $img = getCardData(($rewards[$i]))[0];
@@ -88,8 +91,6 @@ $cor = luck();
 
 
                         <?php
-                        // WAT
-                        $sum += $i;
                     }
                     ?>
                         <div id="slider" class="slider flex-row">
@@ -103,7 +104,7 @@ $cor = luck();
                             for ($i = 0; $i < sizeof($rewards); $i++) {
 
                             $img2 = getCardData(($rewards[$i]))[0];
-                                // what is this $img2
+
                             ?>
 
 

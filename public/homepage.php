@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
 <?php
 session_start();
 
@@ -19,8 +17,10 @@ getUserData($_SESSION['userId']);
 
 #TODO o desafio diario como vai ser
 
-?>
+addKey(findIdByUsername($_SESSION['username']));
 
+?>
+<!DOCTYPE html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

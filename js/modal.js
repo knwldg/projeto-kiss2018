@@ -163,7 +163,7 @@ function click_carta(name,id,quantidade) {
 
     document.getElementById("chest").style.zIndex = "-1";
 
-    if (quantidade >= 3) {
+    if (quantidade >= 4) {
 
         document.getElementById("level-up").style.display = "block";
 
@@ -172,7 +172,10 @@ function click_carta(name,id,quantidade) {
             document.getElementById("front").style.background = 'url("../img/cartas/' + 100 + id + '.png") no-repeat center';
             document.getElementById("front").style.backgroundSize = "98%";
 
+            document.getElementById("level-up").style.display = "none";
+
         });
+
 
     }
 

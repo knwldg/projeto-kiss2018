@@ -1,12 +1,13 @@
 <?php
 
 
-
 global $rewards;
 global $luck;
 
-#TODO melhora isto
+
 $cor = luck();
+
+//$cartas = $_SESSION['cartas'];
 
 ?>
 
@@ -61,7 +62,7 @@ $cor = luck();
                         <img src="../../img/icon/bau5.png" id="detalhe-bau-chest" class="detalhe-bau-img">
 
                         <div class="detalhe-bau-numero_cartas center-items flex-row">
-                            <span class="numero-cartas-item1 font700">CARTAS</span> <span id="detalhe-bau-numero" class="numero-cartas-item2 font800"><?php //echo "$sum"; ?></span>
+                            <span class="numero-cartas-item1 font700">CARTAS</span> <span id="detalhe-bau-numero" class="numero-cartas-item2 font800"><?php //echo "+$cartas"; ?></span>
                         </div>
 
                         <a href="../../public/colecoes.php" id="detalhe-bau-colecoes" class="detalhe-bau-colecoes shadow white font700">coleções</a>
@@ -72,21 +73,20 @@ $cor = luck();
 
                     <?php
 
-                    #TODO queria uma var para mostrar quantas cartas sairam ve a $sum
-
                     $rewards = array();
 
-                    openBox(1);
-                    $sum = 1;
+                    openBox(findIdByUsername($_SESSION['username']));
+
+
                     for ($i = 0; $i < sizeof($rewards); $i++) {
 
                     $img = getCardData(($rewards[$i]))[0];
 
                     ?>
                     <!-- cartas saidas -->
-                    <div class="carta-out"><img id="pop_up_carta<?php echo"$img"?>" src="../../img/cartas/<?php echo"$img"?>.png"
-                                                onclick="change_carta(<?php echo"$img"?>)" class="pop-up-carta"></div>
-                    <?php $sum += $i; }
+                    <div class="carta-out">
+                        <img id="pop_up_carta<?php echo"$img"?>" src="../../img/cartas/<?php echo"$img"?>.png" onclick="change_carta(<?php echo"$img"?>)" class="pop-up-carta"></div>
+                    <?php }
                     ?>
                         <div id="slider" class="slider flex-row">
 

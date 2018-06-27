@@ -1,5 +1,11 @@
 <?php
 
+session_start();
+
+require_once "../components/php/general.php";
+require_once "../components/php/logincontrol.php";
+require_once "../components/php/challengeControl.php";
+
 #TODO colocar add chaves aqui
 
 ?>

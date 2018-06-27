@@ -5,8 +5,8 @@
 $id = $_GET['id'];
 $quantidade = $_GET['quant'];
 
-if($quantidade >= 3){
-    evolveCard(1,$id);
+if($quantidade >= 4){
+    evolveCard(findIdByUsername($_SESSION['username']),$id);
 }
 
 
