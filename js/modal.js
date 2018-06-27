@@ -142,7 +142,7 @@ function click_carta(name,id,quantidade) {
 
     document.getElementById("pop-up-carta-img").style.display = "flex";
 
-    document.getElementById("front").style.background = 'url("../img/cartas/equipa/frente/equipa' + id + '.png") no-repeat center';
+    document.getElementById("front").style.background = 'url("../img/cartas/equipa/frente/' + id + '.png") no-repeat center';
     document.getElementById("front").style.backgroundSize = "98%";
     document.getElementById("cards-name").innerHTML = name;
 
@@ -154,7 +154,7 @@ function click_carta(name,id,quantidade) {
 
         document.getElementById("level-up").addEventListener("click", function () {
 
-            document.getElementById("front").style.background = 'url("../img/cartas/equipa/frente/equipa100' + id + '.png") no-repeat center';
+            document.getElementById("front").style.background = 'url("../img/cartas/equipa/frente/evolucoes/' + id + '.png") no-repeat center';
             document.getElementById("front").style.backgroundSize = "98%";
 
         });
