@@ -163,6 +163,56 @@ function click_carta(name,id,quantidade) {
 
 }
 
+function click_carta_professores(name,id,quantidade) {
+
+    document.getElementById("pop-up-carta-img").style.display = "flex";
+
+    document.getElementById("front").style.background = 'url("../img/cartas/professores/frente' + id + '.png") no-repeat center';
+    document.getElementById("front").style.backgroundSize = "98%";
+    document.getElementById("cards-name").innerHTML = name;
+
+    document.getElementById("chest").style.zIndex = "-1";
+
+    if (quantidade >= 3) {
+
+        document.getElementById("level-up").style.display = "block";
+
+        document.getElementById("level-up").addEventListener("click", function () {
+
+            document.getElementById("front").style.background = 'url("../img/cartas/professores/frente/evolucoes/' + id + '.png") no-repeat center';
+            document.getElementById("front").style.backgroundSize = "98%";
+
+        });
+
+    }
+
+}
+
+function click_carta_funcionarios(name,id,quantidade) {
+
+    document.getElementById("pop-up-carta-img").style.display = "flex";
+
+    document.getElementById("front").style.background = 'url("../img/cartas/funcionarios/frente/' + id + '.png") no-repeat center';
+    document.getElementById("front").style.backgroundSize = "98%";
+    document.getElementById("cards-name").innerHTML = name;
+
+    document.getElementById("chest").style.zIndex = "-1";
+
+    if (quantidade >= 3) {
+
+        document.getElementById("level-up").style.display = "block";
+
+        document.getElementById("level-up").addEventListener("click", function () {
+
+            document.getElementById("front").style.background = 'url("../img/cartas/funcionarios/frente/evolucoes' + id + '.png") no-repeat center';
+            document.getElementById("front").style.backgroundSize = "98%";
+
+        });
+
+    }
+
+}
+
 
 function open_menu_home() {
 

@@ -151,7 +151,7 @@ for($i=0; $i < sizeof($cardList); $i++){
 
                                 //$sum+= $v[0];
                                 ?>
-                    <a id="carta<?php echo "$id" ?>" href="#pop-up-carta-img" onclick="click_carta('<?php echo "$name"?>',<?php echo "$id" ?>)">
+                    <a id="carta<?php echo "$id" ?>" href="#pop-up-carta-img" onclick="click_carta_professores('<?php echo "$name"?>',<?php echo "$id" ?>)">
                             <img class="carta-size" src="../../img/cartas/professores/frente/<?php echo "$id" ?>.png">
                                 <span class="colection-numbers"><?php echo"$v[1]" ?></span>
                     </a>
@@ -221,7 +221,7 @@ for($i=0; $i < sizeof($cardList); $i++){
                         foreach ($userCollection as $v){
                             if($v[0] == $id) {
                                 ?>
-                        <a href="#pop-up-carta-img" onclick="click_carta('<?php echo "$name"?>',<?php echo "$id" ?>)">
+                        <a href="#pop-up-carta-img" onclick="click_carta_funcionarios('<?php echo "$name"?>',<?php echo "$id" ?>)">
                             <img id="carta" class="carta-size" src="../../img/cartas/funcionarios/frente<?php echo "$id" ?>.png">
                                 <span class="colection-numbers"><?php echo"$v[1]" ?></span>
                         </a>
