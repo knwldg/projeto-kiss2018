@@ -15,7 +15,15 @@
 
 <body>
 
-<div id="info">
+<?php
+
+include ('../components/public/header.php')
+
+
+?>
+
+
+<div id="cubo" class="info_box shadow font700">
     <h1>
         O que é o Cubo?
     </h1>
@@ -25,6 +33,9 @@ O Cubo é uma web-app que pretende tornar atividades e ações civicas num jogo 
     <p class="info_strong">
         Explora o Jogo!
     </p>
+</div>
+
+<div id="jogar" class="info_box shadow font700">
     <h1>
         Como Jogar?
     </h1>
@@ -38,6 +49,8 @@ Completa Desafios para obteres chaves !
         <p class="info_strong">
         Diverte-te
     </p>
+</div>
+<div id="feito" class="info_box shadow font700">
     <h1>
         Desenvolvido por:
     </h1>
@@ -54,6 +67,8 @@ Completa Desafios para obteres chaves !
         e deram uma ajuda especial aos desenvolvedores da web-app!
 
     </p>
+</div>
+<div id="thanks" class="info_box shadow font700">
     <h1>
         Agradecimentos
     </h1>
@@ -65,6 +80,7 @@ Agradecemos a todos envolvidos neste projeto, mas em especial a:
         Professora Anabela Pais;
         E a todos os co-designers que fizeram parte do desenvolvimento do jogo!
     </p>
+
 </div>
 
 </body>
