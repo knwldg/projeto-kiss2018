@@ -1,7 +1,5 @@
 <?php
 
-#TODO BUSCAR O USER
-
 $id = $_GET['id'];
 $quantidade = $_GET['quant'];
 

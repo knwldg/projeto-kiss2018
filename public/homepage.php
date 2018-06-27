@@ -15,10 +15,6 @@ global $userData;
 
 getUserData($_SESSION['userId']);
 
-#TODO o desafio diario como vai ser
-
-addKey(findIdByUsername($_SESSION['username']));
-
 ?>
 <!DOCTYPE html>
 <head>
@@ -239,7 +235,7 @@ a zona dos desafios
 -->
                         <li class="lineB lineT stroke2"><a class="flex-row" href="../public/info.php"><img class="menu-icon" src="../img/icon/help.png"><span class="click-area">AJUDA</span></a></li><!--icon-->
 
-                        <li class="lineB stroke2"><a class="flex-row" href=""><img class="menu-icon" src="../img/icon/out.png"><span class="click-area">SAIR</span></a></li><!--icon-->
+                        <li class="lineB stroke2"><a class="flex-row" href="../components/php/logout.php"><img class="menu-icon" src="../img/icon/out.png"><span class="click-area">SAIR</span></a></li><!--icon-->
 
                     </ul>
 
