@@ -1,10 +1,7 @@
 <?php
 
-
-
 global $rewards;
 global $luck;
-
 
 $cor = luck();
 
@@ -78,7 +75,7 @@ $cor = luck();
 
                     $rewards = array();
 
-                    openBox(1);
+                    openBox($_SESSION['username']);
                     $sum = sizeOf($rewards);
                     for ($i = 0; $i < sizeof($rewards); $i++) {
 
@@ -89,9 +86,11 @@ $cor = luck();
                     <div class="carta-out"><img id="pop_up_carta<?php echo"$img"?>" src="../../img/cartas/<?php echo"$img"?>.png"
                                                 onclick="change_carta(<?php echo"$img"?>)" class="pop-up-carta"></div>
 
-                        // WAT
 
-                    <?php $sum += $i; }
+                        <?php
+                        // WAT
+                        $sum += $i;
+                    }
                     ?>
                         <div id="slider" class="slider flex-row">
 
@@ -104,9 +103,11 @@ $cor = luck();
                             for ($i = 0; $i < sizeof($rewards); $i++) {
 
                             $img2 = getCardData(($rewards[$i]))[0];
-
+                                // what is this $img2
                             ?>
-                            <div id="slider_carta<?php echo"$img2"?>" class="slider-item">&nbsp</div>
+
+
+                                <div id="slider_carta<?php echo"$img2"?>" class="slider-item">&nbsp</div>
                             <!-- cartas saidas -->
                             <?php } ?>
 
