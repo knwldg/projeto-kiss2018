@@ -11,7 +11,7 @@ global $userData;
 
         <div class="select-image">
 
-            <input type="file" name="image-uploaded" class="pointer">
+            <input type="text" name="image-uploaded" class="pointer">
             <!-- default-image; background-image; display:block -> display:none -->
 
         </div>

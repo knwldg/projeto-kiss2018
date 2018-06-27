@@ -1,18 +1,14 @@
-//pop-up-cartas e slider
-document.getElementById("pop_up_carta").style.background = "url('../img/cartas/equipa/frente/equipa2.png') no-repeat center";
-document.getElementById("pop_up_carta").style.backgroundSize = "98%";
-
-document.getElementById("slider_carta").style.backgroundColor="black";/* carta atual */
-document.getElementById("slider_detalhe_bau").style.backgroundColor="rgb(71,193,102)";/* bau detalhe */
-//document.getElementById("slider_carta").style.backgroundColor="transparent";/* resto das cartas */
 
 
-function change_carta() {
+function change_carta(id) {
 
-    document.getElementById("pop_up_carta").style.background = "url('../img/cartas/equipa/frente/equipa4.png') no-repeat center";
-    document.getElementById("pop_up_carta").style.backgroundSize = "98%";
+   document.getElementById("pop_up_carta"+id).style.display = "none";
+    document.getElementById("slider_carta"+id).style.backgroundColor="transparent";
 
-    //document.getElementById("slider_carta").style.backgroundColor="transparent"; /* carta anterior */
-    // document.getElementById("slider_carta").style.backgroundColor="black"; /* carta atual */
+    if(!id){
+        document.getElementById("detalhe-bau").style.zIndex="0";
+    }
+
+
 
 }

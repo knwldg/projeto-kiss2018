@@ -17,7 +17,7 @@ global $userData;
 
 getUserData($_SESSION['userId']);
 
-dailyChallenge();
+#TODO o desafio diario como vai ser
 
 ?>
 
@@ -95,7 +95,7 @@ dailyChallenge();
                 </div>
 
 
-                <span class="homepage-content-description font500">Necessitas de limpar o mais rapido possivel</span> <!-- descricao do conteudo -->
+                <span class="homepage-content-description font500">Se já adquiriste chaves suficientes explora os diferentes baús para conseguires abri-los</span> <!-- descricao do conteudo -->
 
 
                 <div class="homepage-content-link-item gradient-background gradient-border shadow white font600 pointer" onclick="open_baus_homepage()">abrir báus</div> <!-- hiperligaçao de cada pagina; #links = #login -->
@@ -118,7 +118,9 @@ dailyChallenge();
                 </div>
 
 
-                <span class="homepage-content-description font500">Necessitas de limpar o mais rapido possivel</span> <!-- descricao do conteudo -->
+                <span class="homepage-content-description font500">Se ainda não tens chaves para abrires baús dirige-te
+a zona dos desafios
+</span> <!-- descricao do conteudo -->
 
 
                 <a class="homepage-content-link-item gradient-background gradient-border shadow white font600" href="desafios.php">desafios</a> <!-- hiperligaçao de cada pagina; #links = #login -->
@@ -141,7 +143,7 @@ dailyChallenge();
                 </div>
 
 
-                <span class="homepage-content-description font500">Necessitas de limpar o mais rapido possivel</span> <!-- descricao do conteudo -->
+                <span class="homepage-content-description font500">Explora as várias coleções de cartas que podes completar ao abrires baús para ganhares prémios</span> <!-- descricao do conteudo -->
 
 
                 <a class="homepage-content-link-item gradient-background gradient-border shadow white font600" href="colecoes.php">coleções</a> <!-- hiperligaçao de cada pagina; #links = #login -->
@@ -164,7 +166,7 @@ dailyChallenge();
                 </div>
 
 
-                <span class="homepage-content-description font500">Necessitas de limpar o mais rapido possivel</span> <!-- descricao do conteudo -->
+                <span class="homepage-content-description font500">Explora os vários prémios que podes ganhar</span> <!-- descricao do conteudo -->
 
 
                 <a class="homepage-content-link-item gradient-background gradient-border shadow white font600" href="premios.php">prêmios</a> <!-- hiperligaçao de cada pagina; #links = #login -->
@@ -175,7 +177,7 @@ dailyChallenge();
         </div>
         <!-- AWARDS -->
 
-        <?php include "../components/public/baus.php"; ?>
+        <?php include "../components/public/baus_home.php"; ?>
 
         <!-- menu -->
         <div id="main-menu" class="back-style pointer">
@@ -214,7 +216,7 @@ dailyChallenge();
                             </ul>
 
                         </li>
-
+<!--
                         <li id="notification-line" class="pages lineB lineT stroke2"><img class="menu-icon" src="../img/icon/notifications.png">
                             <span class="menu-text">NOVIDADES</span>
                             <div class="main-new gray font600 text-center">0</div>
@@ -222,7 +224,7 @@ dailyChallenge();
                             <img id="arrow-notifications-up" onclick="show_notifications()"  class="arrow-up pointer" src="../img/icon/arrow_up.png">
                         </li>
 
-                        <li id="main-pages">
+                        <li id="main-pages" style="display: none;">
 
                             <ul id="notification-pages">
                                 <li class="pages-item lineB stroke1">
@@ -234,7 +236,7 @@ dailyChallenge();
                             </ul>
 
                         </li>
-
+-->
                         <li class="lineB lineT stroke2"><a class="flex-row" href="../public/info.php"><img class="menu-icon" src="../img/icon/help.png"><span class="click-area">AJUDA</span></a></li><!--icon-->
 
                         <li class="lineB stroke2"><a class="flex-row" href=""><img class="menu-icon" src="../img/icon/out.png"><span class="click-area">SAIR</span></a></li><!--icon-->
@@ -254,5 +256,6 @@ dailyChallenge();
 <script type="text/javascript" src="../js/verifications.js"></script>
 <script type="text/javascript" src="../js/baus.js"></script>
 <script type="text/javascript" src="../js/modal.js"></script>
+<script type="text/javascript" src="../js/cartas.js"></script>
 
 </body>

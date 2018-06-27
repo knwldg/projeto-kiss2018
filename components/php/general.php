@@ -294,7 +294,7 @@ function whatCard() {
 
     // retorna o id da carta de reward
 
-      return rand(1, 19);
+    return rand(1, 19);
 
 }
 
@@ -315,6 +315,13 @@ function numCards($userId, $cardId)
 
     $sql_op->store_result();
     $sql_op->bind_result($quantity);
+
+    if ($sql_op->num_rows < 1) {
+
+        return false;
+
+    }
+
     $sql_op->fetch();
     $sql_op->close();
 
@@ -337,7 +344,9 @@ function addCard($userId, $cardId)
 
         $quantity = numCards($userId, $cardId);
 
-        if ($quantity == 0) {
+        echo $quantity;
+
+        if ($quantity == false) {
 
             $sql_op = $sql_connection->prepare("INSERT INTO ark (users_idusers, cards_idcards, quantity) VALUES (?,?,1)");
 
@@ -370,7 +379,7 @@ function addCard($userId, $cardId)
         }
 
 
-        }
+    }
 
     catch (Exception $exception) {
         echo ("Error: $exception");
@@ -392,25 +401,49 @@ function evolveCard($userId, $cardId)
 
         }
 
+        if (numCards($userId, $cardId) <= 0 || numCards($userId, $cardId) == false) {
+
+            exit();
+
+        }
+
+
         $quantity = numCards($userId, $cardId);
+
+        echo $quantity;
 
         if ($quantity > 2) {
 
-            $newQuantity = $quantity - 4;
+            $newQuantity = $quantity - 3;
 
-            $sql_op = $sql_connection->prepare("UPDATE ark SET quantity = ? WHERE users_idusers = ? AND cards_idcards = ?");
-            $sql_op->bind_param('iii', $newQuantity, $userId, $cardId);
+            if ($newQuantity >= 0) {
+
+                $sql_op = $sql_connection->prepare("UPDATE ark SET quantity = ? WHERE users_idusers = ? AND cards_idcards = ?");
+                $sql_op->bind_param('iii', $newQuantity, $userId, $cardId);
+
+                if (!$sql_op->execute()) {
+                    throw new Exception('Error');
+                }
 
 
-            if (!$sql_op->execute()) {
-                throw new Exception('Error');
+                $evolutionId = $cardId + 1000;
+
+                addCard($userId, $evolutionId);
+
             }
 
-            $sql_op->close();
 
-            $evolutionId = $cardId + 1000;
 
-            addCard($userId, $evolutionId);
+            if (numCards($userId, $cardId) == false) {
+
+                $sql_op = $sql_connection->prepare("DELETE FROM ark WHERE users_idusers = ? AND cards_idcards = ?");
+                $sql_op->bind_param('ii', $userId, $cardId);
+
+                if (!$sql_op->execute()) {
+                    throw new Exception('Error');
+                }
+
+            }
 
         } else {
 
@@ -433,7 +466,6 @@ function numKeys($userId)
     global $sql_connection;
 
     $sql_op = $sql_connection->prepare("SELECT `keys` FROM users WHERE idusers = ?");
-
     $sql_op->bind_param('i', $userId);
 
     if (!$sql_op->execute()) {
@@ -445,7 +477,6 @@ function numKeys($userId)
     $sql_op->store_result();
     $sql_op->bind_result($keys);
     $sql_op->fetch();
-
     $sql_op->close();
 
     return $keys;
@@ -481,7 +512,6 @@ function removeKey($userId)
     global $sql_connection;
 
     $quantity = numKeys($userId);
-
     $newQuantity = $quantity - 1;
 
     $sql_op = $sql_connection->prepare("UPDATE users SET `keys` = ? WHERE idusers = ?");
@@ -506,21 +536,21 @@ function luck()
     $first_spin = rand(0, 20);
 
     if ($first_spin > 8) {
+
         $second_spin = rand(0, 20);
 
         if ($second_spin > 10) {
             $third_spin = rand(0, 20);
 
             if ($third_spin > 14) {
-                return 3;
+                return 4;
+            } else return 3;
 
             } else return 2;
 
         } else return 1;
 
-    }
 
-    return true;
 }
 
 function openBox($userId)
@@ -547,7 +577,7 @@ function openBox($userId)
 
     //array com os rewards para mostrar clientside
 
-    for ($i = 0; $luck > $i; $i++) {
+    for ($i = 0; $luck >= $i; $i++) {
 
         $rewardCard = addCard($userId, whatCard());
 
@@ -572,5 +602,3 @@ function getLatestSubmission()
     return $latest[0];
 
 }
-
-

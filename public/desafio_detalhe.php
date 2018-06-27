@@ -5,8 +5,8 @@ session_start();
 require_once "../components/php/connection.php";
 require_once "../components/php/challengeControl.php";
 
-$title = $_SESSION['title'];
-$description = $_SESSION['description'];
+$title = $_GET['t'];
+$description = $_GET['d'];
 
 ?>
 <!DOCTYPE html>
@@ -74,12 +74,12 @@ $description = $_SESSION['description'];
             <div class="fotos flex-row">
                 <div class="flex-column">
                     <span class="orange font500">antes</span>
-                    <button type="button" onclick="" id="foto-antes" class="fotos-antes-depois pointer"><img src="../img/icon/take_photo.png"></button>
+                    <button type="button" onclick="enviado_antes()" class="fotos-antes-depois pointer"><img id="foto-antes" src="../img/icon/take_photo.png"></button>
                 </div> <!-- nao tenho certeza do que colocar -->
 
                 <div class="flex-column">
                     <span class="orange font500">depois</span>
-                    <button type="button" onclick="" id="foto-depois" class="fotos-antes-depois pointer"><img src="../img/icon/take_photo.png"></button>
+                    <a href="desafio_completo.php" type="button" onclick="enviado_depois()" class="fotos-antes-depois pointer"><img id="foto-depois" src="../img/icon/take_photo.png"></a>
                 </div> <!-- nao tenho certeza do que colocar -->
             </div>
 
@@ -95,8 +95,15 @@ $description = $_SESSION['description'];
     </div>
 </div>
 
+<script>
+    function enviado_antes() {
+        document.getElementById("foto-antes").src ="../img/icon/send_photo.png";
+    }
 
-
+    function enviado_depois() {
+        document.getElementById("foto-depois").src ="../img/icon/send_photo.png";
+    }
+</script>
 
 </body>
 </html>

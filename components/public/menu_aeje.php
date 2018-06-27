@@ -14,7 +14,7 @@
 
                 <li style="padding: 0.8em;" class="lineB stroke2"><a class="flex-row" href=""><img class="menu-icon" src="../../img/aeje/cantina.png"><span class="click-area">CANTINA</span></a></li><!--icon-->
 
-                <li style="padding: 0.8em;" class="lineB stroke2"><a class="flex-row" href="../../public/info.php"><img class="menu-icon" src="../../img/icon/help.png"><span class="click-area">FICHA TÉCNICA</span></a></li><!--icon-->
+                <li style="padding: 0.8em;" class="lineB stroke2"><a class="flex-row" href="../../public/info_aeje.php"><img class="menu-icon" src="../../img/icon/help.png"><span class="click-area">FICHA TÉCNICA</span></a></li><!--icon-->
 
             </ul>
 

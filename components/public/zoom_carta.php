@@ -27,7 +27,7 @@ if($quantidade >= 3){
 
         <div id="back" onclick="flip_front()" class="back pop-up-carta-zoom flex-column pointer">
             <h4 id="cards-name" class="font700"></h4>
-            <p class="back-descricao font500">eu sou muito linda e gosto muito de ir a praia</p>
+            <p class="back-descricao font500"></p>
         </div>
     </div>
 
@@ -40,12 +40,6 @@ if($quantidade >= 3){
 
 
 <script type="text/javascript">
-
-    document.getElementById("back").style.background = "url('../img/cartas/equipa/tras/branco.png') no-repeat center";
-    document.getElementById("back").style.backgroundSize = "98%";
-
-
-
 
     function flip_back() {
 

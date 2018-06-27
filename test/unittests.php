@@ -18,14 +18,6 @@ require_once "../components/php/general.php";
 require_once "../components/php/connection.php";
 require_once "../components/php/challengeControl.php";
 
-openBox(1);
+echo(findIdByUsername($_SESSION['username']));
 
-
-for ($i = 0; $i < sizeof($rewards); $i++) {
-
-    // faz o que entenderes aqui
-
-    echo "recebeste a carta:" . getCardData(($rewards[$i]))[1];
-
-}
-
+evolveCard(findIdByUsername($_SESSION['username']), 8);

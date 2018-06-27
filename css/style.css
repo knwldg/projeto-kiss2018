@@ -237,6 +237,14 @@ button{
     text-align: center;
 }
 
+.box{
+    background-color: rgb(249, 250, 251);
+    margin: 0.5em 0.4em 0.5em 0.4em;
+    border-radius: 7px 7px 0 0;
+    justify-content: normal;
+    text-align: center;
+}
+
 .voltar-size{
     width: 30%;
 }
@@ -785,7 +793,7 @@ input[name="image-uploaded"] {
 }
 
 .homepage-content-description{
-    width: 72%;
+    width: 80%;
     text-align: center;
     padding: 1.5em 0 1.5em 0;
     color: #8C8C8C;
@@ -1683,8 +1691,15 @@ input[name="image-uploaded"] {
 
 .pop-up-carta{
     width: 20em;
-    height: 32.5em;
-    display: none;
+    display: block;
+    position: relative;
+    left: -10.2em;
+    top: 0.2em;
+}
+
+.carta-out{
+    margin-top: 0.8em;
+    position: absolute;
 }
 
 .pop-up-carta-zoom{
@@ -1692,8 +1707,15 @@ input[name="image-uploaded"] {
     height: 29.8em;
 }
 
+.slider{
+    margin-top: 1em;
+    position: absolute;
+    left: 10em;
+    top: 38em;
+}
+
 .slider-item{
-    /*background-color: black;*/
+    background-color: black;
     border: 1px solid black;
     width: 0.7em;
     height: 0.7em;
@@ -1704,9 +1726,13 @@ input[name="image-uploaded"] {
 .detalhe-bau{
     background-color: #F9FAFB;
     border-radius: 18px;
-    width: 20.5em;
+    width: 20em;
     height: 30em;
-    margin: 1.2em;
+    position: absolute;
+    display: flex;
+    z-index: -10;
+    top: 7.8em;
+    left: 1.5em;
 }
 
 .detalhe-bau-img{
@@ -2263,6 +2289,13 @@ input[name="image-uploaded"] {
     .desafio-detalhe-time-keys{
         margin: 3.3em 0 3.3em 0;
     }
+
+}
+
+.info_box {
+    padding: 1vh;
+    border-radius: 7px;
+    margin: 0.5em 0.4em 0.5em 0.4em;
 
 }
 

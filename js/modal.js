@@ -39,6 +39,7 @@ function get_id(clicked_id) {
 function rejeitar_desafio(clicked_id) {
 
     var hide_desafios;
+    var lista_fotos;
 
     document.getElementById("hide-desafio-content"+clicked_id).style.display = "block";
     document.getElementById("modal"+clicked_id).style.display = "none";
@@ -51,11 +52,22 @@ function rejeitar_desafio(clicked_id) {
 
     }
 
+    lista_fotos = document.getElementsByClassName("lista-fotos-conteudo");
+
+    for (var a = 0; a < lista_fotos.length; a++) {
+
+        lista_fotos[a].style.display = "none";
+
+    }
+
+
     //document.getElementById("lista-fotos-fundo1").style.position = "relative";//php
 
     document.getElementById("background").style.backgroundColor = "transparent";
     document.getElementById("header").style.zIndex = "0";
     document.getElementById("chest").style.zIndex = "10";
+
+
 
 }
 
@@ -144,6 +156,9 @@ function click_carta(name,id,quantidade) {
 
     document.getElementById("front").style.background = 'url("../img/cartas/' + id + '.png") no-repeat center';
     document.getElementById("front").style.backgroundSize = "98%";
+    document.getElementById("back").style.background = "url('../img/cartas/equipa/tras/branco.png') no-repeat center";
+    document.getElementById("back").style.backgroundSize = "98%";
+
     document.getElementById("cards-name").innerHTML = name;
 
     document.getElementById("chest").style.zIndex = "-1";
@@ -255,7 +270,7 @@ function show_main_pages() {
 
 
 }
-
+/*
 function hide_notifications() {
 
 
@@ -282,7 +297,7 @@ function show_notifications() {
     document.getElementById("arrow-notifications-up").style.visibility = "hidden";
 
 }
-
+*/
 
 
 /*function yes_or_not(clicked_id) {

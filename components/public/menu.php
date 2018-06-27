@@ -4,9 +4,9 @@
 
     <div id="main-menu-itens" class="main-menu-style">
 
-        <!--<div id="profile-menu" class="profile-menu-style">
-            <?php include "../../components/public/profile_details.php"; ?>
-        </div>-->
+        <div id="profile-menu" class="profile-menu-style">
+            <?php include "profile_details.php"; ?>
+        </div>
 
         <div id="menu" class="menu-pages border"><!-- responsive mode: width 15% -->
 
@@ -33,7 +33,7 @@
 
                 </li>
 
-                <li id="notification-line" class="pages lineB lineT stroke2"><img class="menu-icon" src="../../img/icon/notifications.png">
+               <!-- <li id="notification-line" class="pages lineB lineT stroke2"><img class="menu-icon" src="../../img/icon/notifications.png">
                     <span class="menu-text">NOVIDADES</span>
                     <div class="main-new gray font600 text-center">0</div>
                     <img id="arrow-notifications" onclick="hide_notifications()"  class="menu-icon-arrow pointer" src="../../img/icon/arrow_down.png">
@@ -51,7 +51,7 @@
                                 <div class="new gray font600 text-center">0</div></a></li>
                     </ul>
 
-                </li>
+                </li>-->
 
                 <li class="lineB lineT stroke2"><a class="flex-row" href="../../public/info.php"><img class="menu-icon" src="../../img/icon/help.png"><span class="click-area">AJUDA</span></a></li><!--icon-->
 

@@ -66,12 +66,13 @@ function listChallenges()
         $challengePreview[] = $row['preview'];
         $challengeDescription[] = $row['description'];
         $challengeCategory[] = $row['categoria'];
+        $challengeDuration[] = $row['duracao'];
         $challengeRarity[] = $row['reward'];
     }
 
     for ($i = 0; $result->num_rows > $i; $i++) {
 
-        array_push($challengeList, [$challengeId[$i],$challengeTitle[$i],$challengePreview[$i],$challengeDescription[$i],$challengeCategory[$i],$challengeRarity[$i]]);
+        array_push($challengeList, [$challengeId[$i],$challengeTitle[$i],$challengePreview[$i],$challengeDescription[$i],$challengeCategory[$i],$challengeDuration[$i],$challengeRarity[$i]]);
     }
 
     $query->close();
