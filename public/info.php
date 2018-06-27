@@ -15,12 +15,13 @@
 
 <body>
 
-<?php
+<div id="header" class="homepage-header flex-row shadow font700 white">
 
-include ('../components/public/header.php')
+    <button onclick="open_menu_home()" id="menu" class="menu-img pointer">&nbsp</button><!-- hamburguer menu-->
+    <span class="center">Info</span>
 
+</div>
 
-?>
 
 
 <div id="cubo" class="info_box shadow font700">
@@ -83,5 +84,11 @@ Agradecemos a todos envolvidos neste projeto, mas em especial a:
 
 </div>
 
+<?php include "../components/public/menu.php"; ?>
+
+
 </body>
+
+<script type="text/javascript" src="../js/verifications.js"></script>
+<script type="text/javascript" src="../js/modal.js"></script>
 </html>
