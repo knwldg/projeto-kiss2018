@@ -27,7 +27,7 @@ if($quantidade >= 3){
 
         <div id="back" onclick="flip_front()" class="back pop-up-carta-zoom flex-column pointer">
             <h4 id="cards-name" class="font700"></h4>
-            <p class="back-descricao font500">eu sou muito linda e gosto muito de ir a praia</p>
+            <p class="back-descricao font500"></p>
         </div>
     </div>
 

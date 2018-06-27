@@ -1,8 +1,11 @@
 <?php
 
+
+
 global $rewards;
 global $luck;
 
+#TODO melhora isto
 $cor = luck();
 
 ?>
@@ -17,19 +20,19 @@ $cor = luck();
     //$raridade = $cardList[$i][2];
     ?>
         <div class="chest-line flex-row"><!-- 3 itens -->
-            <div id="chest-line-item1" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
-            <div id="chest-line-item" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
-            <div id="chest-line-item" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item1" onclick="open_chest_home(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest_home(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest_home(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
         </div>
         <div class="chest-line flex-row"><!-- 3 itens -->
-            <div id="chest-line-item" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
-            <div id="chest-line-item" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
-            <div id="chest-line-item" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest_home(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest_home(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest_home(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
         </div>
         <div class="chest-line flex-row"> <!-- 3 itens -->
-            <div id="chest-line-item" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
-            <div id="chest-line-item" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
-            <div id="chest-line-item" onclick="open_chest(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest_home(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest_home(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
+            <div id="chest-line-item" onclick="open_chest_home(<?php echo"$cor"; ?>)" class="chest-line-item"><img class="chest-line-item-img" src="../../img/icon/chest.png"></div>
         </div>
         <?php //} ?>
     </div>
@@ -45,7 +48,7 @@ $cor = luck();
             <div class="flex-column center-items">
 
                 <div class="flex-column text-center">
-                    <a href="" onclick="close_baus()" id="voltar" class="voltar pointer"><img class="voltar-size" src="../../img/icon/voltar.png"></a>
+                    <a href="" onclick="close_baus_home()" id="voltar" class="voltar pointer"><img class="voltar-size" src="../../img/icon/voltar.png"></a>
                     <span class="black font600">voltar</span>
                 </div>
 
@@ -71,12 +74,10 @@ $cor = luck();
 
                     #TODO queria uma var para mostrar quantas cartas sairam ve a $sum
 
-                    //o numero de cartas é dado por sizeOf($rewards) (tamanho do array)
-
                     $rewards = array();
 
-                    openBox($_SESSION['username']);
-                    $sum = sizeOf($rewards);
+                    openBox(1);
+                    $sum = 1;
                     for ($i = 0; $i < sizeof($rewards); $i++) {
 
                     $img = getCardData(($rewards[$i]))[0];
@@ -85,12 +86,7 @@ $cor = luck();
                     <!-- cartas saidas -->
                     <div class="carta-out"><img id="pop_up_carta<?php echo"$img"?>" src="../../img/cartas/<?php echo"$img"?>.png"
                                                 onclick="change_carta(<?php echo"$img"?>)" class="pop-up-carta"></div>
-
-
-                        <?php
-                        // WAT
-                        $sum += $i;
-                    }
+                    <?php $sum += $i; }
                     ?>
                         <div id="slider" class="slider flex-row">
 
@@ -103,11 +99,9 @@ $cor = luck();
                             for ($i = 0; $i < sizeof($rewards); $i++) {
 
                             $img2 = getCardData(($rewards[$i]))[0];
-                                // what is this $img2
+
                             ?>
-
-
-                                <div id="slider_carta<?php echo"$img2"?>" class="slider-item">&nbsp</div>
+                            <div id="slider_carta<?php echo"$img2"?>" class="slider-item">&nbsp</div>
                             <!-- cartas saidas -->
                             <?php } ?>
 

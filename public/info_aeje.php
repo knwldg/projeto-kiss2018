@@ -17,7 +17,7 @@
 
 <div id="header" class="header flex-row shadow font700 white">
 
-    <button onclick="open_menu_home()" id="menu" class="menu-img pointer">&nbsp</button><!-- hamburguer menu-->
+    <button onclick="open_menu()" id="menu" class="menu-img pointer">&nbsp</button><!-- hamburguer menu-->
     <span>INFO</span>
     <button id="filtro" class="filtro-img">&nbsp</button><!-- filter -->
 
@@ -84,9 +84,9 @@ Agradecemos a todos envolvidos neste projeto, mas em especial a:
 
 </div>
 
-<?php include "../components/public/menu.php"; ?>
+<?php include "../components/public/menu_aeje.php"; ?>
 
-<script type="text/javascript" src="../js/modal.js"></script>
+<script type="text/javascript" src="../js/modal_aeje.js"></script>
 
 </body>
 </html>

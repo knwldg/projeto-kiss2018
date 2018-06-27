@@ -17,8 +17,6 @@ global $userData;
 
 getUserData($_SESSION['userId']);
 
-dailyChallenge();
-
 #TODO o desafio diario como vai ser
 
 ?>
@@ -179,7 +177,7 @@ a zona dos desafios
         </div>
         <!-- AWARDS -->
 
-        <?php include "../components/public/baus.php"; ?>
+        <?php include "../components/public/baus_home.php"; ?>
 
         <!-- menu -->
         <div id="main-menu" class="back-style pointer">
@@ -218,7 +216,7 @@ a zona dos desafios
                             </ul>
 
                         </li>
-
+<!--
                         <li id="notification-line" class="pages lineB lineT stroke2"><img class="menu-icon" src="../img/icon/notifications.png">
                             <span class="menu-text">NOVIDADES</span>
                             <div class="main-new gray font600 text-center">0</div>
@@ -226,7 +224,7 @@ a zona dos desafios
                             <img id="arrow-notifications-up" onclick="show_notifications()"  class="arrow-up pointer" src="../img/icon/arrow_up.png">
                         </li>
 
-                        <li id="main-pages">
+                        <li id="main-pages" style="display: none;">
 
                             <ul id="notification-pages">
                                 <li class="pages-item lineB stroke1">
@@ -238,7 +236,7 @@ a zona dos desafios
                             </ul>
 
                         </li>
-
+-->
                         <li class="lineB lineT stroke2"><a class="flex-row" href="../public/info.php"><img class="menu-icon" src="../img/icon/help.png"><span class="click-area">AJUDA</span></a></li><!--icon-->
 
                         <li class="lineB stroke2"><a class="flex-row" href=""><img class="menu-icon" src="../img/icon/out.png"><span class="click-area">SAIR</span></a></li><!--icon-->
@@ -258,5 +256,6 @@ a zona dos desafios
 <script type="text/javascript" src="../js/verifications.js"></script>
 <script type="text/javascript" src="../js/baus.js"></script>
 <script type="text/javascript" src="../js/modal.js"></script>
+<script type="text/javascript" src="../js/cartas.js"></script>
 
 </body>
