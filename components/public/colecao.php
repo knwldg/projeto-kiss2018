@@ -222,7 +222,7 @@ for($i=0; $i < sizeof($cardList); $i++){
                             if($v[0] == $id) {
                                 ?>
                         <a href="#pop-up-carta-img" onclick="click_carta_funcionarios('<?php echo "$name"?>',<?php echo "$id" ?>)">
-                            <img id="carta" class="carta-size" src="../../img/cartas/funcionarios/frente<?php echo "$id" ?>.png">
+                            <img id="carta" class="carta-size" src="../../img/cartas/funcionarios/<?php echo "$id" ?>.png">
                                 <span class="colection-numbers"><?php echo"$v[1]" ?></span>
                         </a>
                             <?php }
