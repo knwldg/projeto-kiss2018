@@ -97,7 +97,7 @@ dailyChallenge();
                 </div>
 
 
-                <span class="homepage-content-description font500">Necessitas de limpar o mais rapido possivel</span> <!-- descricao do conteudo -->
+                <span class="homepage-content-description font500">Se já adquiriste chaves suficientes explora os diferentes baús para conseguires abri-los</span> <!-- descricao do conteudo -->
 
 
                 <div class="homepage-content-link-item gradient-background gradient-border shadow white font600 pointer" onclick="open_baus_homepage()">abrir báus</div> <!-- hiperligaçao de cada pagina; #links = #login -->
@@ -120,7 +120,9 @@ dailyChallenge();
                 </div>
 
 
-                <span class="homepage-content-description font500">Necessitas de limpar o mais rapido possivel</span> <!-- descricao do conteudo -->
+                <span class="homepage-content-description font500">Se ainda não tens chaves para abrires baús dirige-te
+a zona dos desafios
+</span> <!-- descricao do conteudo -->
 
 
                 <a class="homepage-content-link-item gradient-background gradient-border shadow white font600" href="desafios.php">desafios</a> <!-- hiperligaçao de cada pagina; #links = #login -->
@@ -143,7 +145,7 @@ dailyChallenge();
                 </div>
 
 
-                <span class="homepage-content-description font500">Necessitas de limpar o mais rapido possivel</span> <!-- descricao do conteudo -->
+                <span class="homepage-content-description font500">Explora as várias coleções de cartas que podes completar ao abrires baús para ganhares prémios</span> <!-- descricao do conteudo -->
 
 
                 <a class="homepage-content-link-item gradient-background gradient-border shadow white font600" href="colecoes.php">coleções</a> <!-- hiperligaçao de cada pagina; #links = #login -->
@@ -166,7 +168,7 @@ dailyChallenge();
                 </div>
 
 
-                <span class="homepage-content-description font500">Necessitas de limpar o mais rapido possivel</span> <!-- descricao do conteudo -->
+                <span class="homepage-content-description font500">Explora os vários prémios que podes ganhar</span> <!-- descricao do conteudo -->
 
 
                 <a class="homepage-content-link-item gradient-background gradient-border shadow white font600" href="premios.php">prêmios</a> <!-- hiperligaçao de cada pagina; #links = #login -->

@@ -2288,6 +2288,13 @@ input[name="image-uploaded"] {
 
 }
 
+.info_box {
+    padding: 1vh;
+    border-radius: 7px;
+    margin: 0.5em 0.4em 0.5em 0.4em;
+
+}
+
 
 
 

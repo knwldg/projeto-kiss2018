@@ -1,5 +1,14 @@
     <!DOCTYPE html>
 <html>
+<?php
+session_start();
+if (isset($_SESSION['username'])) {
+
+    header("Location: homepage.php");
+}
+
+?>
+
 <head>
 
     <meta charset="utf-8">

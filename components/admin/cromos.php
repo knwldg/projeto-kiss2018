@@ -27,20 +27,40 @@
     <div id="table_cromos">
         <table>
             <tr>
-                <th>Nome</th>
-                <th>Coleção</th>
-                <th>Raridade</th>
-
+                <th class="nome">ID</th>
+                <th class="nome">Nome</th>
+                <th class="nome">Raridade</th>
+                <th class="nome">Coleção</th>
             </tr>
-            <tr>
             <tr id="echos">
-                <?php listUsers() ?>
-                <th>
-                    <?php echo listUsers($cardList, 'name') ?></th>
-                <th>
-                    <?php echo listUsers($cardList, 'collection') ?></th>
-                <th>
-                    <?php echo listUsers($cardList, 'rarity') ?></th>
+                <?php
+                global $cardList;
+                listCards();
+
+
+                for($i=0; $i < sizeof($cardList); $i++){
+
+                    if (isset($cardList[$i])) {
+
+                        $id = $cardList[$i][0];
+                        $name = $cardList[$i][1];
+                        $raridade = $cardList[$i][2];
+                        $colecao = $cardList[$i][3];
+
+
+
+                        ?>
+                        <th style="height: 4vh">
+                            <? echo "$id"?></th>
+                        <th style="height: 4vh">
+                            <? echo "$name"?></th>
+                        <th style="height: 4vh">
+                            <? echo "$raridade"?></th>
+                        <th style="height: 4vh">
+                            <? echo "$colecao"?></th>
+                    <?php }
+                }?>
+
             </tr>
         </table>
     </div>

@@ -5,12 +5,18 @@ body {
     letter-spacing: 0.05em;
 }
 
+.nome{
+    color: rgba(247,152,104,1);
+}
+
 /* Navbar container */
 .navbar {
     overflow: hidden;
     background-color: rgba(247,152,104,1);
     font-family: Montserrat, sans-serif;
+
 }
+
 
 /* Links inside the navbar */
 .navbar a {
@@ -51,7 +57,7 @@ body {
     position: absolute;
     background-color: rgba(247,152,104,1);
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
 }
 
@@ -238,16 +244,14 @@ body {
 
 
 #table_users table, tr, th {
-    border: 1px lightgrey;
+    border: 3px lightgrey;
 }
+
+
 
 #table_users table {
     border-collapse: collapse;
     width: 100%;
-}
-
-#table_users th {
-    color: rgba(247,152,104,1);
 }
 
 .apagar_utilizador{
@@ -466,11 +470,7 @@ body {
 
 #echos {
     color: black;
+    vertical-align: auto;
 
 }
 
-#burger:hover {
-    background-color: lightgrey;
-    border: none;
-    outline: none;
-}

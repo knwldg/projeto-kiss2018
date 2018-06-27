@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<?php session_start();?>
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -21,27 +22,33 @@
         <h1>Utilizadores</h1>
     </div>
     <div id="table_users">
+
         <table>
             <tr>
-                <th>Username</th>
-                <th>Nome Real</th>
-                <th>Email</th>
+                <th class="nome">Username</th>
             </tr>
             <tr id="echos">
-                <?php listUsers() ?>
-                <th>
-                    <?php echo listUsers($userList, 'name') ?></th>
-                <th>
-                    <?php echo listUsers($userList, 'realname') ?></th>
-                <th>
-                    <?php echo listUsers($userList, 'email') ?></th>
+                <?php
+                global $userList;
+                listUsers();
+                for($i=0; $i < sizeof($userList); $i++){
+
+            if (isset($userList[$i])) {
+
+                $username = $userList[$i];
+                ?>
+                <th style="height: 4vh">
+                    <?php echo "$username" ?></th>
+            <?php }
+            }?>
+
             </tr>
         </table>
     </div>
 </div>
 <div>
-    <button class="apagar_utilizador">
-        Apagar Utilizador
+    <button class="apagar_utilizador" onclick="">
+         Apagar Utilizador
     </button>
 </div>
 </body>
