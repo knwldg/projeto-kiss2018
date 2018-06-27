@@ -667,9 +667,6 @@ input[name="image-uploaded"] {
     z-index: 0;
 }
 
-.header button {
-    padding: 0 0.6em 0 0.6em;
-}
 
 .header{
     background: linear-gradient(to right, rgba(247,152,104,0.90) , rgba(246,181,62,0.90)); /* GRADIENT */
