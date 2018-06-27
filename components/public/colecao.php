@@ -78,7 +78,7 @@ for($i=0; $i < sizeof($cardList); $i++){
 
                             ?>
                         <a id="carta<?php echo "$id" ?>" href="?id=<?php echo "$id"?>&quant=<?php echo "$quantidade"?>#pop-up-carta-img" onclick="click_carta('<?php echo "$name"?>',<?php echo "$id" ?>,<?php echo "$quantidade" ?>)">
-                            <img class="carta-size" src="../../img/cartas/equipa/frente/<?php echo "$id" ?>.png">
+                            <img class="carta-size" src="../../img/cartas/<?php echo "$id" ?>.png">
                             <span class="colection-numbers"><?php echo"$v[1]" ?></span>
                         </a>
                         <?php
@@ -151,8 +151,8 @@ for($i=0; $i < sizeof($cardList); $i++){
 
                                 //$sum+= $v[0];
                                 ?>
-                    <a id="carta<?php echo "$id" ?>" href="#pop-up-carta-img" onclick="click_carta_professores('<?php echo "$name"?>',<?php echo "$id" ?>)">
-                            <img class="carta-size" src="../../img/cartas/professores/frente/<?php echo "$id" ?>.png">
+                    <a id="carta<?php echo "$id" ?>" href="#pop-up-carta-img" onclick="click_carta('<?php echo "$name"?>',<?php echo "$id" ?>)">
+                            <img class="carta-size" src="../../img/cartas/<?php echo "$id" ?>.png">
                                 <span class="colection-numbers"><?php echo"$v[1]" ?></span>
                     </a>
                                 <?php
@@ -221,8 +221,8 @@ for($i=0; $i < sizeof($cardList); $i++){
                         foreach ($userCollection as $v){
                             if($v[0] == $id) {
                                 ?>
-                        <a href="#pop-up-carta-img" onclick="click_carta_funcionarios('<?php echo "$name"?>',<?php echo "$id" ?>)">
-                            <img id="carta" class="carta-size" src="../../img/cartas/funcionarios/frente/<?php echo "$id" ?>.png">
+                        <a href="#pop-up-carta-img" onclick="click_carta('<?php echo "$name"?>',<?php echo "$id" ?>)">
+                            <img id="carta" class="carta-size" src="../../img/cartas/<?php echo "$id" ?>.png">
                                 <span class="colection-numbers"><?php echo"$v[1]" ?></span>
                         </a>
                             <?php }
