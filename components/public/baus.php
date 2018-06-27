@@ -5,7 +5,7 @@
 global $rewards;
 global $luck;
 
-#TODO melhora isto
+
 $cor = luck();
 
 ?>
@@ -74,10 +74,12 @@ $cor = luck();
 
                     #TODO queria uma var para mostrar quantas cartas sairam ve a $sum
 
+                    //o numero de cartas é dado por sizeOf($rewards) (tamanho do array)
+
                     $rewards = array();
 
                     openBox(1);
-                    $sum = 1;
+                    $sum = sizeOf($rewards);
                     for ($i = 0; $i < sizeof($rewards); $i++) {
 
                     $img = getCardData(($rewards[$i]))[0];
@@ -86,6 +88,9 @@ $cor = luck();
                     <!-- cartas saidas -->
                     <div class="carta-out"><img id="pop_up_carta<?php echo"$img"?>" src="../../img/cartas/<?php echo"$img"?>.png"
                                                 onclick="change_carta(<?php echo"$img"?>)" class="pop-up-carta"></div>
+
+                        // WAT
+
                     <?php $sum += $i; }
                     ?>
                         <div id="slider" class="slider flex-row">

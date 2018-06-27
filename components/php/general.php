@@ -506,21 +506,21 @@ function luck()
     $first_spin = rand(0, 20);
 
     if ($first_spin > 8) {
+
         $second_spin = rand(0, 20);
 
         if ($second_spin > 10) {
             $third_spin = rand(0, 20);
 
             if ($third_spin > 14) {
-                return 3;
+                return 4;
+            } else return 3;
 
             } else return 2;
 
         } else return 1;
 
-    }
 
-    return true;
 }
 
 function openBox($userId)
@@ -547,7 +547,7 @@ function openBox($userId)
 
     //array com os rewards para mostrar clientside
 
-    for ($i = 0; $luck > $i; $i++) {
+    for ($i = 0; $luck >= $i; $i++) {
 
         $rewardCard = addCard($userId, whatCard());
 
