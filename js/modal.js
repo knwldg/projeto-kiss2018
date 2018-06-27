@@ -204,7 +204,7 @@ function click_carta_funcionarios(name,id,quantidade) {
 
         document.getElementById("level-up").addEventListener("click", function () {
 
-            document.getElementById("front").style.background = 'url("../img/cartas/funcionarios/frente/evolucoes' + id + '.png") no-repeat center';
+            document.getElementById("front").style.background = 'url("../img/cartas/funcionarios/frente/evolucoes/' + id + '.png") no-repeat center';
             document.getElementById("front").style.backgroundSize = "98%";
 
         });
