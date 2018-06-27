@@ -401,14 +401,22 @@ function evolveCard($userId, $cardId)
 
         }
 
+        if (numCards($userId, $cardId) <= 0 || numCards($userId, $cardId) == false) {
+
+            exit();
+
+        }
+
 
         $quantity = numCards($userId, $cardId);
+
+        echo $quantity;
 
         if ($quantity > 2) {
 
             $newQuantity = $quantity - 3;
 
-            if ($newQuantity < 1) {
+            if ($newQuantity >= 0) {
 
                 $sql_op = $sql_connection->prepare("UPDATE ark SET quantity = ? WHERE users_idusers = ? AND cards_idcards = ?");
                 $sql_op->bind_param('iii', $newQuantity, $userId, $cardId);
@@ -418,14 +426,13 @@ function evolveCard($userId, $cardId)
                 }
 
 
+                $evolutionId = $cardId + 1000;
+
+                addCard($userId, $evolutionId);
+
             }
 
 
-            $sql_op->close();
-
-            $evolutionId = $cardId + 1000;
-
-            addCard($userId, $evolutionId);
 
             if (numCards($userId, $cardId) == false) {
 
