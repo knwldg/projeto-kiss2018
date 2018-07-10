@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="css/aeje_css.css">
     <link rel="stylesheet" href="css/style.css">
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
     <title>WebAPP AEJE</title>
 </head>
 <body>
@@ -22,14 +22,16 @@
     </div>
 
     <div id="contact" class="flex-row">
-        <div class="contact-item center-items text-center flex-column"><img class="img-aeje" src="img/aeje/phone_number.png"><p class="phone-number font700">234 104 910 | 234 104 920</p></div>
+        <div class="contact-item center-items text-center flex-column">
+            <div style="flex-shrink: 0; max-width: 15%;"><img style="width: 100%;" src="img/aeje/phone_number.png"></div>
+            <p class="phone-number font700">234 104 910 | 234 104 920</p></div>
         <div class="contact-item-email center-items flex-column"><img class="img-aeje-email" src="img/aeje/email.png"><p class="email font700">geral@aeje.pt</p></div>
     </div>
 
     <div id="footer" class="footer flex-row">
-        <img class="ua-aeje" src="img/aeje/ua.png">
-        <p class="txt-aeje font500">Proposta de uma WebApp <br> criada na Universidade de Aveiro</p>
-        <img class="ministerio-aeje" src="img/aeje/ministerio.png">
+        <div style="margin: 0.1em;"><img class="ua-aeje" src="img/aeje/ua.png"></div>
+    <div style="flex: 0 0 auto; margin: 0.1em;"><p class="txt-aeje font500">Proposta de uma WebApp <br> criada na Universidade de Aveiro</p></div>
+    <div style="margin: 0.1em;"><img class="ministerio-aeje" src="img/aeje/ministerio.png"></div>
     </div>
 </div>
 

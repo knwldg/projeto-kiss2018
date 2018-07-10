@@ -16,7 +16,10 @@ document.getElementById("verificacao-titulo").innerHTML ="ENVIADO COM SUCESSO!";
 document.getElementById("relogio-sem-sucesso").src="../img/icon/relogio_verde.png";
 document.getElementById("verificacao-tempo").innerHTML ="13:00";
 
+document.getElementById("verification-fade-in").style.webkitAnimationDuration = "1.5s";
 document.getElementById("verification-fade-in").style.animationDuration = "1.5s";
+
+document.getElementById("verification-fade-in").style.webkitAnimationDelay = "1.8s";
 document.getElementById("verification-fade-in").style.animationDelay = "1.8s";
 
 /*

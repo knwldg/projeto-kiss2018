@@ -18,7 +18,9 @@ function get_id(clicked_id) {
         hide_desafio.style.position = "absolute";
         hide_desafio.style.visibility = "hidden";
         hide_desafio.style.opacity = "0";
-        hide_desafio.style.transition = "visibility 0s, opacity 0s ease-out";
+
+    hide_desafio.style.webkitTransition = "visibility 0s, opacity 0s ease-out";
+    hide_desafio.style.transition = "visibility 0s, opacity 0s ease-out";
 
 
     hide_desafios = document.getElementsByClassName("hide-desafio");
@@ -87,19 +89,27 @@ function validado(clicked_id) {
 
     }
 
-    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.position = "absolute";//php
-    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.visibility = "hidden"; //php
-    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.opacity = "0"; //php
-    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.backgroundColor = "#F9FAFB";//php
-    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.border = "3px solid #009245"; //php
-    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.transition = "position 0s, visibility 1s, opacity 1s ease-out"; //php
-    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.transitionDelay = "4s"; //php
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.position = "absolute";
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.visibility = "hidden";
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.opacity = "0";
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.backgroundColor = "#F9FAFB";
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.border = "3px solid #009245";
 
-    document.getElementById("hide-desafio-content"+fotos_enviadas).style.position = "relative"; //php
-    document.getElementById("hide-desafio-content"+fotos_enviadas).style.visibility = "visible"; //php
-    document.getElementById("hide-desafio-content"+fotos_enviadas).style.opacity = "1"; //php
-    document.getElementById("hide-desafio-content"+fotos_enviadas).style.transition = "visibility 1s, opacity 1s ease-in"; //php
-    document.getElementById("hide-desafio-content"+fotos_enviadas).style.transitionDelay = "4.5s"; //php
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.webkitTransition = "position 0s, visibility 1s, opacity 1s ease-out";
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.transition = "position 0s, visibility 1s, opacity 1s ease-out";
+
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.webkitTransitionDelay = "4s";
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.transitionDelay = "4s";
+
+    document.getElementById("hide-desafio-content"+fotos_enviadas).style.position = "relative";
+    document.getElementById("hide-desafio-content"+fotos_enviadas).style.visibility = "visible";
+    document.getElementById("hide-desafio-content"+fotos_enviadas).style.opacity = "1";
+
+    document.getElementById("hide-desafio-content"+fotos_enviadas).style.webkitTransition = "visibility 1s, opacity 1s ease-in";
+    document.getElementById("hide-desafio-content"+fotos_enviadas).style.transition = "visibility 1s, opacity 1s ease-in";
+
+    document.getElementById("hide-desafio-content"+fotos_enviadas).style.webkitTransitionDelay = "4.5s";
+    document.getElementById("hide-desafio-content"+fotos_enviadas).style.transitionDelay = "4.5s";
 
     document.getElementById("lista-fotos-validar-reportar"+fotos_enviadas).style.display = "flex";
 
@@ -126,20 +136,28 @@ function reportado(clicked_id) {
 
     }
 
-    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.position = "absolute";//php
-    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.visibility = "hidden"; //php
-    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.opacity = "0"; //php
-    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.backgroundColor = "#F9FAFB";//php
-    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.border = "3px solid #ff0000"; //php
-    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.transition = "position 0s, visibility 1s, opacity 1s ease-out"; //php
-    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.transitionDelay = "4s"; //php
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.position = "absolute";
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.visibility = "hidden";
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.opacity = "0";
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.backgroundColor = "#F9FAFB";
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.border = "3px solid #ff0000";
+
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.webkitTransition = "position 0s, visibility 1s, opacity 1s ease-out";
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.transition = "position 0s, visibility 1s, opacity 1s ease-out";
+
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.webkitTransitionDelay = "4s";
+    document.getElementById("lista-fotos-fundo"+fotos_enviadas).style.transitionDelay = "4s";
 
 
-    document.getElementById("hide-desafio-content"+fotos_enviadas).style.position = "relative"; //php
-    document.getElementById("hide-desafio-content"+fotos_enviadas).style.visibility = "visible"; //php
-    document.getElementById("hide-desafio-content"+fotos_enviadas).style.opacity = "1"; //php
-    document.getElementById("hide-desafio-content"+fotos_enviadas).style.transition = "visibility 1s, opacity 1s ease-in"; //php
-    document.getElementById("hide-desafio-content"+fotos_enviadas).style.transitionDelay = "4.5s"; //php
+    document.getElementById("hide-desafio-content"+fotos_enviadas).style.position = "relative";
+    document.getElementById("hide-desafio-content"+fotos_enviadas).style.visibility = "visible";
+    document.getElementById("hide-desafio-content"+fotos_enviadas).style.opacity = "1";
+
+    document.getElementById("hide-desafio-content"+fotos_enviadas).style.webkitTransition = "visibility 1s, opacity 1s ease-in";
+    document.getElementById("hide-desafio-content"+fotos_enviadas).style.transition = "visibility 1s, opacity 1s ease-in";
+
+    document.getElementById("hide-desafio-content"+fotos_enviadas).style.webkitTransitionDelay = "4.5s";
+    document.getElementById("hide-desafio-content"+fotos_enviadas).style.transitionDelay = "4.5s";
 
     document.getElementById("lista-fotos-validar-reportar"+fotos_enviadas).style.display = "flex";
 
@@ -186,14 +204,22 @@ function click_carta(name,id,quantidade) {
 function open_menu_home() {
 
     document.getElementById("main-menu").style.visibility = "visible";
+
+    document.getElementById("main-menu").style.webkitTransition = "all 0.2s ease-in";
     document.getElementById("main-menu").style.transition = "all 0.2s ease-in";
 
     document.getElementById("hide-menu").style.visibility = "visible";
+
+    document.getElementById("hide-menu").style.webkitTransition = "all 0.2s ease-in";
     document.getElementById("hide-menu").style.transition = "all 0.2s ease-in";
+
+    document.getElementById("hide-menu").style.webkitTransitionDelay = "0.3s";
     document.getElementById("hide-menu").style.transitionDelay = "0.3s";
 
     document.getElementById("main-menu-itens").style.opacity = "1";
     document.getElementById("main-menu-itens").style.right = "0";
+
+    document.getElementById("main-menu-itens").style.webkitTransition = "all 0.3s linear";
     document.getElementById("main-menu-itens").style.transition = "all 0.3s linear";
 
 
@@ -202,13 +228,19 @@ function open_menu_home() {
 function close_menu_home() {
 
     document.getElementById("main-menu").style.visibility = "hidden";
+
+    document.getElementById("main-menu").style.webkitTransition = "all 0.2s ease-in";
     document.getElementById("main-menu").style.transition = "all 0.2s ease-in";
 
     document.getElementById("hide-menu").style.visibility = "hidden";
+
+    document.getElementById("hide-menu").style.webkitTransition = "all 0.5ms ease-in";
     document.getElementById("hide-menu").style.transition = "all 0.5ms ease-in";
 
     document.getElementById("main-menu-itens").style.opacity = "0";
     document.getElementById("main-menu-itens").style.right = "24em";
+
+    document.getElementById("main-menu-itens").style.webkitTransition = "all 0.3s linear";
     document.getElementById("main-menu-itens").style.transition = "all 0.3s linear";
 
 }
@@ -218,14 +250,22 @@ function open_menu() {
     document.getElementById("chest").style.zIndex = "-1";
 
     document.getElementById("main-menu").style.visibility = "visible";
+
+    document.getElementById("main-menu").style.webkitTransition = "all 0.2s ease-in";
     document.getElementById("main-menu").style.transition = "all 0.2s ease-in";
 
     document.getElementById("hide-menu").style.visibility = "visible";
+
+    document.getElementById("hide-menu").style.webkitTransition = "all 0.2s ease-in";
     document.getElementById("hide-menu").style.transition = "all 0.2s ease-in";
+
+    document.getElementById("hide-menu").style.webkitTransitionDelay = "0.3s";
     document.getElementById("hide-menu").style.transitionDelay = "0.3s";
 
     document.getElementById("main-menu-itens").style.opacity = "1";
     document.getElementById("main-menu-itens").style.right = "0";
+
+    document.getElementById("main-menu-itens").style.webkitTransition = "all 0.3s linear";
     document.getElementById("main-menu-itens").style.transition = "all 0.3s linear";
 
 }
@@ -233,16 +273,24 @@ function open_menu() {
 function close_menu() {
 
     document.getElementById("main-menu").style.visibility = "hidden";
+
+    document.getElementById("main-menu").style.webkitTransition = "all 0.2s ease-in";
     document.getElementById("main-menu").style.transition = "all 0.2s ease-in";
 
     document.getElementById("hide-menu").style.visibility = "hidden";
+
+    document.getElementById("hide-menu").style.webkitTransition = "all 0.5ms ease-in";
     document.getElementById("hide-menu").style.transition = "all 0.5ms ease-in";
 
     document.getElementById("main-menu-itens").style.opacity = "0";
     document.getElementById("main-menu-itens").style.right = "24em";
+
+    document.getElementById("main-menu-itens").style.webkitTransition = "all 0.3s linear";
     document.getElementById("main-menu-itens").style.transition = "all 0.3s linear";
 
     document.getElementById("chest").style.zIndex = "1";
+
+    document.getElementById("chest").style.webkitTransitionDelay = "0.2s";
     document.getElementById("chest").style.transitionDelay = "0.2s";
 
 }
@@ -256,6 +304,8 @@ function hide_main_pages() {
 
     document.getElementById("pages").style.display = "none";
     document.getElementById("pages").style.opacity = "0";
+
+    document.getElementById("pages").style.webkitTransition = "all 0.2s ease-in";
     document.getElementById("pages").style.transition = "all 0.2s ease-in";
 
 }
@@ -266,6 +316,8 @@ function show_main_pages() {
 
     document.getElementById("pages").style.display = "block";
     document.getElementById("pages").style.opacity = "1";
+
+    document.getElementById("pages").style.webkitTransition = "all 0.2s ease-in";
     document.getElementById("pages").style.transition = "all 0.2s ease-in";
 
     document.getElementById("arrow").style.visibility = "visible";

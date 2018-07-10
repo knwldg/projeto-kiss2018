@@ -1174,6 +1174,7 @@ input[name="image-uploaded"] {
 
 .line-desafio-detalhe-title{
     color: rgb(247,152,104);
+    margin: 2.5em 0 0.5em 0;
 }
 
 .line-desafio-detalhe-width{
@@ -1181,7 +1182,7 @@ input[name="image-uploaded"] {
 }
 
 .description-content{
-    padding: 0.2em 1.5em 0 1.5em;
+    margin-bottom: 6em;
 }
 
 .desafio-detalhe-time-keys{
@@ -1257,6 +1258,7 @@ input[name="image-uploaded"] {
 }
 
 .verification-fade-in{
+
     opacity: 0;
     -webkit-animation:fadeIn ease-in 1;
     -moz-animation:fadeIn ease-in 1;
@@ -1920,7 +1922,7 @@ input[name="image-uploaded"] {
 /* PREMIO-DETALHE */
 
 .premio-detalhe-title{
-    padding: 0.8em 0 0.8em 0;
+    padding: 1.1em 0 1.1em 0;
     font-size: 150%;
     letter-spacing: 2px;
     color: rgba(247,152,104,0.6);
@@ -2073,6 +2075,12 @@ input[name="image-uploaded"] {
 
 /* LISTAS-FOTOS-ENVIADAS */
 
+.info_box {
+    padding: 1vh;
+    border-radius: 7px;
+    margin: 0.5em 0.4em 0.5em 0.4em;
+
+}
 
 
 /* RESPONSIVE-WIDTH */
@@ -2234,8 +2242,6 @@ input[name="image-uploaded"] {
 
 
 
-
-
 @media screen and (max-height: 992px) {
 
     .login-box {
@@ -2263,6 +2269,10 @@ input[name="image-uploaded"] {
     .desafio-detalhe-time-keys{
         margin: 3.3em 0 7.3em 0;
     }
+
+    .description-content {
+        margin-bottom: 11em;
+    }
 }
 
 @media screen and (max-height: 667px) {
@@ -2271,16 +2281,19 @@ input[name="image-uploaded"] {
         height: 38.8em;
     }
 
-    .general-box{
+    .general-box {
         height: 34.2em;
     }
 
-    .desafio-detalhe-time-keys{
+    .desafio-detalhe-time-keys {
         margin: 3.3em 0 3.3em 0;
     }
 
-}
+    .description-content {
+        margin-bottom: 8em;
+    }
 
+}
 @media screen and (max-height: 640px) {
 
     .login-box {
@@ -2295,14 +2308,12 @@ input[name="image-uploaded"] {
         margin: 3.3em 0 3.3em 0;
     }
 
-}
-
-.info_box {
-    padding: 1vh;
-    border-radius: 7px;
-    margin: 0.5em 0.4em 0.5em 0.4em;
+    .description-content {
+        margin-bottom: 8em;
+    }
 
 }
+
 
 
 

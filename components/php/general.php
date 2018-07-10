@@ -344,7 +344,7 @@ function addCard($userId, $cardId)
 
         $quantity = numCards($userId, $cardId);
 
-        echo $quantity;
+        //echo $quantity;
 
         if ($quantity == false) {
 
@@ -410,7 +410,7 @@ function evolveCard($userId, $cardId)
 
         $quantity = numCards($userId, $cardId);
 
-        echo $quantity;
+        //echo $quantity;
 
         if ($quantity > 2) {
 

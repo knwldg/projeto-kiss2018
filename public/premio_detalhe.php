@@ -30,32 +30,27 @@
 
         </div>
 
-        <div class="box flex-column shadow center-items">
+        <div class="general-box flex-column shadow center-items">
 
             <span class="premio-detalhe-title font800">Que tal um <span class="premio-detalhe-extra">almoço</span>?</span>
 
-            <div class="premio-detalhe-colecoes flex-column">
+            <div class="flex-column">
 
                 <div class="premio-detalhe-colecao flex-row"><!-- colecao1 -->
-                    <div class="carta-premio flex"><img class="carta-size" src="../img/cartas/equipa/thumbnail/frente/equipa1.png"></div>
-                    <div class="carta-premio flex"><img class="carta-size" src="../img/cartas/equipa/thumbnail/frente/equipa2.png"></div>
+                    <div class="carta flex"><img class="carta-size" src="../img/cartas/equipa/thumbnail/frente/equipa1.png"></div>
+                    <div class="carta flex"><img class="carta-size" src="../img/cartas/equipa/thumbnail/frente/equipa2.png"></div>
+                    <div class="carta flex"><img class="carta-size" src="../img/cartas/equipa/thumbnail/frente/equipa3.png"></div>
+                    <div class="carta flex"><img class="carta-size" src="../img/cartas/equipa/thumbnail/frente/equipa4.png"></div>
+                    <div class="carta flex"><img class="carta-size" src="../img/cartas/equipa/thumbnail/frente/equipa5.png"></div>
                 </div>
 
-                <div class="premio-detalhe-colecao flex-row"><!-- colecao2 -->
-                    <div class="carta-premio flex"><img class="carta-size" src="../img/cartas/equipa/thumbnail/frente/equipa1.png"></div>
-                    <div class="carta-premio flex"><img class="carta-size" src="../img/cartas/equipa/thumbnail/frente/equipa2.png"></div>
-                </div>
 
-                <div class="premio-detalhe-colecao flex-row"><!-- colecao3 -->
-                    <div class="carta-premio flex"><img class="carta-size" src="../img/cartas/equipa/thumbnail/frente/equipa1.png"></div>
-                    <div class="carta-premio flex"><img class="carta-size" src="../img/cartas/equipa/thumbnail/frente/equipa2.png"></div>
-                </div>
 
             </div>
 
             <span class="line-desafio-detalhe-title font800 letter-spacing">O QUE VAI GANHAR</span>
 
-            <p class="description-content gray font400">Lorem ipsum dolor sit amet, taciti  facilisis elit blandit commodo dolor magna. Id suscipit iaculis</p>
+            <p class="description-content gray font400">Habilita-te a ganhar um almoço na cantina da tua escola</p>
 
             <span id="premio-detalhe-btn" onclick="" class="detalhe-bau-colecoes premio-detalhe-btn shadow white font700">utilizar</span><!-- bloqueado -> linear-gradient(to right, rgba(247,152,104,0.4) , rgba(246,181,62,0.4)) -->
 
