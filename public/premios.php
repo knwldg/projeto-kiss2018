@@ -28,8 +28,13 @@ require_once "../components/php/challengeControl.php";
 
     <div class="flex-column position-chest">
 
-        <?php include "../components/public/header.php"; ?>
+        <div id="header" class="header flex-row shadow font700 white">
 
+            <button onclick="open_menu()" id="menu" class="menu-img pointer">&nbsp</button><!-- hamburguer menu-->
+            <span id="title">PRÊMIOS</span>
+            <button id="filtro" class="filtro-img">&nbsp</button><!-- filter -->
+
+        </div>
         <!-- barra que aparece em cima dos elementos recentes/antigos -->
 
         <?php include "../components/public/barra_recente_antigo.php"; ?>

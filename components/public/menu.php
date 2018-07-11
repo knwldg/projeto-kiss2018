@@ -26,9 +26,9 @@
 
                         <li class="lineB stroke1"><a href="../../public/homepage.php#desafio-do-dia" onclick="close_menu()"><span>DESAFIO DO DIA</span></a></li>
                         <li class="lineB stroke1"><a href="../../public/homepage.php#baus" onclick="close_menu()"><span>BAÚS</span></a></li>
-                        <li class="lineB stroke1"><a href="../../public/desafios.php"><span>DESAFIOS</span></a></li>
-                        <li class="lineB stroke1"><a href="../../public/colecoes.php"><div><span>COLEÇÕES</span></a></li>
-                        <li><a href="../../public/premios.php"><span>PRÊMIOS</span></a></li>
+                        <li class="lineB stroke1"><a href="../../public/desafios.php" onclick="change_desafios()"><span>DESAFIOS</span></a></li>
+                        <li class="lineB stroke1"><a href="../../public/colecoes.php" onclick="change_colecoes()"><div><span>COLEÇÕES</span></a></li>
+                        <li><a href="../../public/premios.php" onclick="change_premios()"><span>PRÊMIOS</span></a></li>
 
                     </ul>
 

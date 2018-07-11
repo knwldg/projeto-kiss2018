@@ -42,21 +42,21 @@ $description = $_GET['d'];
 
         </div>
 
-        <div class="general-box flex-column shadow">
+        <div class="box flex-column shadow">
 
             <span class="desafio-detalhe-title font800 orange"><?php echo"$title"; ?></span>
 
             <div class="lines-content flex-row">
                 <div class="line-desafio-detalhe-width line-desafio-detalhe-border"> </div>
 
-                <span class="line-desafio-detalhe-title font800 letter-spacing">DESAFIO</span><!-- muda comforme a data do elemento submetido -->
+                <span class="line-desafio-detalhe-title2 font800 letter-spacing">DESAFIO</span><!-- muda comforme a data do elemento submetido -->
 
                 <div class="line-desafio-detalhe-width line-desafio-detalhe-border"> </div>
             </div>
 
             <!-- descricao do desafio -->
 
-            <p class="description-content gray font500"><?php echo"$description"; ?></p>
+            <p class="desafio-full-description gray font500"><?php echo"$description"; ?></p>
 
             <!-- descricao do desafio -->
 

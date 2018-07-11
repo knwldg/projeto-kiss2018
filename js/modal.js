@@ -325,6 +325,18 @@ function show_main_pages() {
 
 
 }
+
+function change_desafios() {
+    document.getElementById("title").innerHTML = "desafios";
+}
+
+function change_colecoes() {
+    document.getElementById("title").innerHTML = "coleções";
+}
+
+function change_premios() {
+    document.getElementById("title").innerHTML = "prêmios";
+}
 /*
 function hide_notifications() {
 

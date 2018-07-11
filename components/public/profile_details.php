@@ -11,7 +11,7 @@ global $userData;
 
         <div class="select-image">
 
-            <input type="text" name="image-uploaded" class="pointer">
+            <input title="" type="text" name="image-uploaded" class="pointer">
             <!-- default-image; background-image; display:block -> display:none -->
 
         </div>
@@ -26,6 +26,6 @@ global $userData;
 <div class="count-keys font700">
     <span>CHAVES</span>
     <span id="icon-key" class="center">&nbsp</span>
-    <span class="profile-font-size"><?= $userData[1]; ?></span>
+    <span class="profile-font-size"><?= $_SESSION['keys']; ?></span>
 </div>
 

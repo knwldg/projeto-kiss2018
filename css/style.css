@@ -1177,6 +1177,11 @@ input[name="image-uploaded"] {
     margin: 2.5em 0 0.5em 0;
 }
 
+.line-desafio-detalhe-title2{
+    color: rgb(247,152,104);
+    margin: 0.5em 0 0.5em 0;
+}
+
 .line-desafio-detalhe-width{
     width: 50%;
 }
@@ -1215,7 +1220,12 @@ input[name="image-uploaded"] {
     width: 43%;
 }
 
-/* DESAFIOS-DETALHE */
+.desafio-full-description{
+    width: 85%;
+    align-self: center;
+}
+
+    /* DESAFIOS-DETALHE */
 
 /* DESAFIOS-COMPLETO */
 
@@ -2252,7 +2262,11 @@ input[name="image-uploaded"] {
         height: 48.8em;
     }
     .desafio-detalhe-time-keys{
-        margin: 3.3em 0 7.3em 0;
+        margin: 8.5em 0 8.5em 0;
+    }
+
+    .flipper{
+        margin-bottom: 9.8em;
     }
 }
 
@@ -2267,11 +2281,15 @@ input[name="image-uploaded"] {
     }
 
     .desafio-detalhe-time-keys{
-        margin: 3.3em 0 7.3em 0;
+        margin: 6.1em 0 6.1em 0;
     }
 
     .description-content {
         margin-bottom: 11em;
+    }
+
+    .flipper{
+        margin-bottom: 7.9em;
     }
 }
 
@@ -2286,11 +2304,15 @@ input[name="image-uploaded"] {
     }
 
     .desafio-detalhe-time-keys {
-        margin: 3.3em 0 3.3em 0;
+        margin: 3.9em 0 3.9em 0;
     }
 
     .description-content {
         margin-bottom: 8em;
+    }
+
+    .flipper{
+        margin-bottom: 4.7em;
     }
 
 }
@@ -2310,6 +2332,10 @@ input[name="image-uploaded"] {
 
     .description-content {
         margin-bottom: 8em;
+    }
+
+    .flipper{
+        margin-bottom: 2.8em;
     }
 
 }

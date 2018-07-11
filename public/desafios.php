@@ -7,7 +7,11 @@ require_once "../components/php/logincontrol.php";
 require_once "../components/php/challengeControl.php";
 
 
+
+
 ?>
+
+
 
 <!DOCTYPE html>
 
@@ -21,7 +25,10 @@ require_once "../components/php/challengeControl.php";
     <link rel="stylesheet" href="../css/style.css">
 
     <title>Desafios</title>
+
 </head>
+
+
 
 <body>
 
@@ -30,7 +37,14 @@ require_once "../components/php/challengeControl.php";
 
             <div id="hide-content" class="flex-column position-chest">
 
-                <?php include "../components/public/header.php"; ?><!-- quando clicar no desafio -> z-index: -1 -->
+
+                <div id="header" class="header flex-row shadow font700 white">
+
+                    <button onclick="open_menu()" id="menu" class="menu-img pointer">&nbsp</button><!-- hamburguer menu-->
+                    <span id="title">DESAFIOS</span>
+                    <button id="filtro" class="filtro-img">&nbsp</button><!-- filter -->
+
+                </div><!-- quando clicar no desafio -> z-index: -1 -->
 
                 <!-- barra que aparece em cima dos elementos recentes/antigos -->
 
@@ -47,7 +61,6 @@ require_once "../components/php/challengeControl.php";
                 <?php include "../components/public/menu.php"; ?>
 
              </div>
-
     </div>
 
 

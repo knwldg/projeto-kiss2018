@@ -1,5 +1,9 @@
 <?php
 
+session_start();
+
+require_once "../components/php/general.php";
+require_once "../components/php/logincontrol.php";
 
 ?>
 
@@ -23,7 +27,7 @@
 <div id="header" class="header flex-row shadow font700 white">
 
     <button onclick="open_menu_home()" id="menu" class="menu-img pointer">&nbsp</button><!-- hamburguer menu-->
-    <span>INFO</span>
+    <span>AJUDA</span>
     <button id="filtro" class="filtro-img">&nbsp</button><!-- filter -->
 
 </div>

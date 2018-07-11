@@ -60,7 +60,7 @@ $cor = luck();
                         <img src="../../img/icon/bau5.png" id="detalhe-bau-chest" class="detalhe-bau-img">
 
                         <div class="detalhe-bau-numero_cartas center-items flex-row">
-                            <span class="numero-cartas-item1 font700">CARTAS</span> <span id="detalhe-bau-numero" class="numero-cartas-item2 font800">+<?php //echo "$cartas"; ?></span>
+                            <span class="numero-cartas-item1 font700">CARTAS</span> <span id="detalhe-bau-numero" class="numero-cartas-item2 font800"><?php //echo "$cartas"; ?></span>
                         </div>
 
                         <a href="../../public/colecoes.php" id="detalhe-bau-colecoes" class="detalhe-bau-colecoes shadow white font700">coleções</a>

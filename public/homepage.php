@@ -15,6 +15,8 @@ global $userData;
 
 getUserData($_SESSION['userId']);
 
+$_SESSION['keys'] = $userData[1];
+
 ?>
 <!DOCTYPE html>
 <head>
@@ -94,7 +96,7 @@ getUserData($_SESSION['userId']);
                 <span class="homepage-content-description font500">Se já adquiriste chaves suficientes explora os diferentes baús para conseguires abri-los</span> <!-- descricao do conteudo -->
 
 
-                <div class="homepage-content-link-item gradient-background gradient-border shadow white font600 pointer" onclick="open_baus_homepage()">abrir báus</div> <!-- hiperligaçao de cada pagina; #links = #login -->
+                <div class="homepage-content-link-item gradient-background gradient-border shadow white font600 pointer" onclick="open_baus_homepage()">abrir baús</div> <!-- hiperligaçao de cada pagina; #links = #login -->
 
 
             </div>
